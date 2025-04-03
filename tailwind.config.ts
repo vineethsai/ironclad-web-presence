@@ -66,10 +66,10 @@ export default {
 				cyber: {
 					dark: '#121212',
 					darker: '#0A0A0A',
-					blue: '#0EA5E9',
-					'blue-dark': '#0284C7',
-					green: '#33FF33',
-					'green-muted': '#00CC00',
+					green: '#33CC66',
+					'green-muted': '#2DB058',
+					blue: '#0EA5E9', // kept for backward compatibility
+					'blue-dark': '#0284C7', // kept for backward compatibility
 					grey: '#222222',
 					'grey-light': '#2A2A2A'
 				}

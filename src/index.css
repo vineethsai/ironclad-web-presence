@@ -14,7 +14,7 @@
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 196 94% 48%;
+    --primary: 145 63% 40%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 240 3.7% 15.9%;
@@ -23,7 +23,7 @@
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 196 94% 48%;
+    --accent: 145 63% 40%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,18 +31,18 @@
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 196 94% 48%;
+    --ring: 145 63% 40%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 7%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 196 94% 48%;
+    --sidebar-primary: 145 63% 40%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 196 94% 48%;
+    --sidebar-ring: 145 63% 40%;
   }
 }
 
@@ -84,19 +84,19 @@
 }
 
 .cyber-glow {
-  text-shadow: 0 0 5px #0EA5E9, 0 0 10px #0EA5E9, 0 0 15px #0EA5E9;
+  text-shadow: 0 0 5px #33CC66, 0 0 10px #33CC66, 0 0 15px #33CC66;
 }
 
 .cyber-card {
-  @apply bg-cyber-grey border border-cyber-blue/30 rounded-lg transition-all duration-300 hover:border-cyber-blue/80 hover:shadow-md hover:shadow-cyber-blue/20;
+  @apply bg-cyber-grey border border-cyber-green/30 rounded-lg transition-all duration-300 hover:border-cyber-green/80 hover:shadow-md hover:shadow-cyber-green/20;
 }
 
 .cyber-gradient {
-  @apply bg-gradient-to-r from-cyber-blue to-cyber-blue-dark;
+  @apply bg-gradient-to-r from-cyber-green to-cyber-green-muted;
 }
 
 .cyber-button {
-  @apply px-6 py-2 bg-cyber-dark border border-cyber-blue text-cyber-blue rounded transition-all duration-300 hover:bg-cyber-blue hover:text-cyber-dark hover:shadow-md hover:shadow-cyber-blue/50;
+  @apply px-6 py-2 bg-cyber-dark border border-cyber-green text-cyber-green rounded transition-all duration-300 hover:bg-cyber-green hover:text-cyber-dark hover:shadow-md hover:shadow-cyber-green/50;
 }
 
 @layer base {
