@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Shield className="h-8 w-8 text-cyber-blue mr-2" />
-            <span className="text-xl font-bold text-white">CyberDefender</span>
+            <span className="text-xl font-bold text-white">Vineeth Sai</span>
           </div>
 
           {/* Desktop Navigation */}
