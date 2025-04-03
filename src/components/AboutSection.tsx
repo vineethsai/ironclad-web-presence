@@ -10,8 +10,9 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
           <div className="w-20 h-1 bg-cyber-blue mx-auto"></div>
           <p className="mt-8 text-lg text-gray-300 max-w-3xl mx-auto">
-            I'm a passionate Cybersecurity Engineer with expertise in protecting digital assets and infrastructure.
-            With a background in both offensive and defensive security measures, I help organizations safeguard their most valuable information.
+            I'm Vineeth Sai, a Cybersecurity Engineer with expertise in protecting digital assets and infrastructure.
+            Currently working at Amazon on the AWS incident detection team automating security detection and response.
+            I have a strong background in software security engineering, cloud security, and application security.
           </p>
         </div>
 
@@ -24,9 +25,9 @@ const AboutSection = () => {
                 <Shield className="h-6 w-6 text-cyber-blue" />
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Proactive Defense</h4>
+                <h4 className="text-xl font-semibold text-white mb-2">Security by Design</h4>
                 <p className="text-gray-300">
-                  I believe in staying ahead of threats through continuous monitoring, vulnerability assessments, and security posture improvements.
+                  I believe in integrating security from the beginning of the development lifecycle, focusing on proactive measures rather than reactive solutions.
                 </p>
               </div>
             </div>
@@ -36,9 +37,9 @@ const AboutSection = () => {
                 <Database className="h-6 w-6 text-cyber-blue" />
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Data-Driven Security</h4>
+                <h4 className="text-xl font-semibold text-white mb-2">Automation-First</h4>
                 <p className="text-gray-300">
-                  Leveraging data analytics and threat intelligence to identify patterns and anticipate potential security breaches.
+                  Leveraging automation to enhance security operations, reduce human error, and scale security practices across complex infrastructures.
                 </p>
               </div>
             </div>
@@ -48,9 +49,9 @@ const AboutSection = () => {
                 <User className="h-6 w-6 text-cyber-blue" />
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-white mb-2">Human-Centric</h4>
+                <h4 className="text-xl font-semibold text-white mb-2">Continuous Learning</h4>
                 <p className="text-gray-300">
-                  Acknowledging that people are both the greatest vulnerability and the strongest defense in cybersecurity.
+                  The security landscape is constantly evolving. I'm committed to staying updated with the latest threats, techniques, and best practices.
                 </p>
               </div>
             </div>
@@ -62,9 +63,9 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="cyber-card p-6">
                 <Lock className="h-10 w-10 text-cyber-blue mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">Network Security</h4>
+                <h4 className="text-xl font-semibold text-white mb-2">Application Security</h4>
                 <p className="text-gray-300">
-                  Designing and implementing secure network architectures with proper segmentation and access controls.
+                  Implementing secure coding practices, vulnerability assessment, and remediation for web and mobile applications.
                 </p>
               </div>
               
@@ -72,23 +73,23 @@ const AboutSection = () => {
                 <Server className="h-10 w-10 text-cyber-blue mb-4" />
                 <h4 className="text-xl font-semibold text-white mb-2">Cloud Security</h4>
                 <p className="text-gray-300">
-                  Securing cloud infrastructure across AWS, Azure, and GCP environments with compliance best practices.
+                  Securing AWS infrastructure with expertise in IAM, S3, Lambda, and other core services using security best practices.
                 </p>
               </div>
               
               <div className="cyber-card p-6">
                 <Globe className="h-10 w-10 text-cyber-blue mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">Web Application Security</h4>
+                <h4 className="text-xl font-semibold text-white mb-2">Security Automation</h4>
                 <p className="text-gray-300">
-                  Identifying vulnerabilities in web applications and implementing secure coding practices.
+                  Building automated security detection and response systems to identify and mitigate threats at scale.
                 </p>
               </div>
               
               <div className="cyber-card p-6">
                 <Shield className="h-10 w-10 text-cyber-blue mb-4" />
-                <h4 className="text-xl font-semibold text-white mb-2">Incident Response</h4>
+                <h4 className="text-xl font-semibold text-white mb-2">DevSecOps</h4>
                 <p className="text-gray-300">
-                  Preparing for, responding to, and recovering from security incidents with minimal impact.
+                  Integrating security into CI/CD pipelines and development workflows to ensure continuous security validation.
                 </p>
               </div>
             </div>

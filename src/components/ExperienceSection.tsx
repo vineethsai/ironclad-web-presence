@@ -5,40 +5,55 @@ import { Calendar, Award, Briefcase } from 'lucide-react';
 const ExperienceSection = () => {
   const workExperience = [
     {
-      title: 'Senior Cybersecurity Engineer',
-      company: 'SecureTech Solutions',
-      period: '2021 - Present',
-      description: 'Leading security assessments, penetration testing, and implementing comprehensive security frameworks for enterprise clients. Developed automated threat detection systems reducing incident response time by 60%.'
+      title: 'Software Development Engineer - Security',
+      company: 'Amazon',
+      period: 'Feb 2023 - Present',
+      description: 'Working on the AWS incident detection team automating security detection and response. Building security tooling in Python and Java, focusing on AWS services like Lambda, S3, SNS, SQS, IAM.'
     },
     {
-      title: 'Security Consultant',
-      company: 'CyberDefense Corp',
-      period: '2018 - 2021',
-      description: 'Conducted vulnerability assessments and penetration tests for clients across finance, healthcare, and government sectors. Implemented security solutions that improved clients\' security posture by an average of 75%.'
+      title: 'Security Engineer',
+      company: 'Verizon Media',
+      period: 'Jul 2021 - Feb 2023',
+      description: 'Built security features for Media Platform servicing Yahoo products. Worked on implementing authorization service, code hardening, and application vulnerability remediation. Designed and deployed security scans with ServiceNow.'
     },
     {
-      title: 'Network Security Specialist',
-      company: 'DataGuard Systems',
-      period: '2016 - 2018',
-      description: 'Managed network security infrastructure including firewalls, IDS/IPS, and VPN solutions. Led the implementation of zero-trust architecture, reducing security incidents by 40%.'
+      title: 'Software Security Engineer',
+      company: 'The Home Depot',
+      period: 'Jul 2019 - Jul 2021',
+      description: 'Led security architecture for various Home Depot applications. Implemented secure coding practices, SAST/DAST testing, and vulnerability remediation. Integrated security scanning into CI/CD pipelines and optimized IDE security plugins.'
+    }
+  ];
+
+  const education = [
+    {
+      institution: 'Georgia Institute of Technology',
+      degree: 'Master of Science in Cybersecurity',
+      period: '2019 - 2022',
+      description: 'Focused on information security principles, network security, and secure system design. Completed thesis on cloud security frameworks.'
+    },
+    {
+      institution: 'Vellore Institute of Technology',
+      degree: 'Bachelor of Technology in Computer Science',
+      period: '2015 - 2019',
+      description: 'Core coursework in computer science with a focus on information security. Participated in multiple cybersecurity competitions and hackathons.'
     }
   ];
 
   const projects = [
     {
-      title: 'Enterprise Security Framework',
-      description: 'Designed and implemented a comprehensive security framework for a Fortune 500 company, including threat modeling, security controls, and compliance measures.',
-      technologies: ['Risk Assessment', 'NIST Framework', 'Compliance']
+      title: 'AWS Security Automation',
+      description: 'Designed and implemented automated security detection and response systems for AWS infrastructure, reducing incident response time by 60%.',
+      technologies: ['Python', 'AWS Lambda', 'IAM', 'CloudFormation']
     },
     {
-      title: 'Cloud Security Migration',
-      description: 'Led the security aspects of a major cloud migration project, ensuring secure configuration and implementation of cloud-native security controls.',
-      technologies: ['AWS Security', 'Azure Sentinel', 'IAM']
+      title: 'Auth Service Implementation',
+      description: 'Built a scalable authorization service for Yahoo Media Platform to ensure secure access control across multiple products.',
+      technologies: ['Java', 'Spring Boot', 'OAuth 2.0', 'RBAC']
     },
     {
-      title: 'Advanced Threat Detection System',
-      description: 'Developed a machine learning-based threat detection system that identifies anomalous behavior and potential security incidents in real-time.',
-      technologies: ['Python', 'Machine Learning', 'SIEM Integration']
+      title: 'Security Pipeline Integration',
+      description: 'Integrated security scanning tools into CI/CD pipelines at Home Depot, improving vulnerability detection and remediation efficiency.',
+      technologies: ['Jenkins', 'SonarQube', 'OWASP ZAP', 'Docker']
     }
   ];
 
@@ -46,7 +61,7 @@ const ExperienceSection = () => {
     <section id="experience" className="py-20 bg-cyber-darker">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Experience & Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Experience & Education</h2>
           <div className="w-20 h-1 bg-cyber-blue mx-auto"></div>
         </div>
 
@@ -73,6 +88,32 @@ const ExperienceSection = () => {
                     </div>
                     <h5 className="text-lg text-cyber-blue mb-4">{job.company}</h5>
                     <p className="text-gray-300">{job.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center mt-12 mb-8">
+              <Award className="h-6 w-6 text-cyber-blue mr-3" />
+              <h3 className="text-2xl font-bold text-white">Education</h3>
+            </div>
+
+            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:w-0.5 before:bg-cyber-blue/30">
+              {education.map((edu, index) => (
+                <div key={index} className="relative pl-10">
+                  <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-cyber-dark border-4 border-cyber-blue flex items-center justify-center">
+                    <Calendar className="h-4 w-4 text-cyber-blue" />
+                  </div>
+                  
+                  <div className="bg-cyber-grey p-6 rounded-lg border border-cyber-blue/20">
+                    <div className="flex flex-wrap justify-between items-start mb-2">
+                      <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
+                      <span className="px-3 py-1 bg-cyber-blue/10 text-cyber-blue rounded text-sm">
+                        {edu.period}
+                      </span>
+                    </div>
+                    <h5 className="text-lg text-cyber-blue mb-4">{edu.institution}</h5>
+                    <p className="text-gray-300">{edu.description}</p>
                   </div>
                 </div>
               ))}
@@ -112,19 +153,19 @@ const ExperienceSection = () => {
                   <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-blue/20 border border-cyber-blue flex items-center justify-center mr-3 mt-1">
                     <div className="h-2 w-2 rounded-full bg-cyber-blue"></div>
                   </div>
-                  <span className="text-gray-300">Speaker at International Cybersecurity Conference 2023</span>
+                  <span className="text-gray-300">AWS Certified Security - Specialty</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-blue/20 border border-cyber-blue flex items-center justify-center mr-3 mt-1">
                     <div className="h-2 w-2 rounded-full bg-cyber-blue"></div>
                   </div>
-                  <span className="text-gray-300">Published research on emerging threats in cloud environments</span>
+                  <span className="text-gray-300">Certified Ethical Hacker (CEH)</span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-blue/20 border border-cyber-blue flex items-center justify-center mr-3 mt-1">
                     <div className="h-2 w-2 rounded-full bg-cyber-blue"></div>
                   </div>
-                  <span className="text-gray-300">Contributor to open-source security tools and frameworks</span>
+                  <span className="text-gray-300">AWS Certified Cloud Practitioner</span>
                 </li>
               </ul>
             </div>
