@@ -66,10 +66,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center space-y-6 max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-6">
-            <Shield className="h-16 w-16 text-cyber-green animate-pulse" />
+            <Shield className="h-16 w-16 text-cyber-blue animate-pulse" />
           </div>
           
-          <h2 className="text-2xl md:text-3xl font-medium text-cyber-green tracking-wider">
+          <h2 className="text-2xl md:text-3xl font-medium text-cyber-blue tracking-wider">
             CYBERSECURITY ENGINEER
           </h2>
           
@@ -82,12 +82,12 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-            <a href="#contact" className="cyber-button border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-cyber-dark">
+            <a href="#contact" className="cyber-button">
               Get In Touch
             </a>
             <a 
               href="#about" 
-              className="px-6 py-2 bg-transparent border border-cyber-green/30 text-white rounded transition-all duration-300 hover:border-cyber-green hover:bg-cyber-green/10"
+              className="px-6 py-2 bg-transparent border border-white/30 text-white rounded transition-all duration-300 hover:border-white hover:bg-white/10"
             >
               Learn More
             </a>
@@ -96,7 +96,7 @@ const HeroSection = () => {
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <a href="#about" className="text-white/70 hover:text-cyber-green transition-colors">
+        <a href="#about" className="text-white/70 hover:text-cyber-blue transition-colors">
           <ArrowDown className="h-8 w-8" />
         </a>
       </div>
@@ -105,4 +105,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
