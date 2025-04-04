@@ -83,7 +83,7 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-cyber-blue mx-auto"></div>
           <p className="mt-8 text-lg text-gray-300 max-w-3xl mx-auto">
-            Have a security concern or interested in my services? Feel free to reach out and I'll get back to you as soon as possible.
+            Want to get a coffee? Feel free to reach out and I'll get back to you as soon as possible.
           </p>
         </div>
 
@@ -100,18 +100,6 @@ const ContactSection = () => {
                   <h4 className="text-xl font-semibold text-white mb-2">Email</h4>
                   <a href="mailto:abcvineeth.sai@gmail.com" className="text-gray-300 hover:text-cyber-blue transition-colors">
                     abcvineeth.sai@gmail.com
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="mt-1 bg-cyber-blue/10 p-3 rounded-lg">
-                  <Phone className="h-6 w-6 text-cyber-blue" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Phone</h4>
-                  <a href="tel:+1234567890" className="text-gray-300 hover:text-cyber-blue transition-colors">
-                    +1 (234) 567-890
                   </a>
                 </div>
               </div>

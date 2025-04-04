@@ -11,18 +11,42 @@ const OpenSourceSection = () => {
       description: "Published a comprehensive guide on data security best practices for LLM and Generative AI systems, contributing to industry standards for secure AI implementation."
     }
   ];
-
+  
   const conferenceTalks = [
     {
       title: "Securing Generative AI in Enterprise Environments",
       event: "BSides Austin",
-      year: "2023",
+      year: "2024",
       description: "Presented techniques for implementing robust security controls for enterprise GenAI deployments."
     },
     {
       title: "Threat Modeling for LLM Applications",
       event: "BSides Baltimore",
-      year: "2023",
+      year: "2024",
+      description: "Shared methodologies for identifying and mitigating security risks in applications using large language models."
+    },
+    {
+      title: "Securing Generative AI in Enterprise Environments",
+      event: "CypherCon",
+      year: "2025",
+      description: "Presented techniques for implementing robust security controls for enterprise GenAI deployments."
+    },
+    {
+      title: "Threat Modeling for LLM Applications",
+      event: "BSides Seattle",
+      year: "2025",
+      description: "Shared methodologies for identifying and mitigating security risks in applications using large language models."
+    },
+    {
+      title: "Securing Generative AI in Enterprise Environments",
+      event: "RSA San Fransisco",
+      year: "2025",
+      description: "Presented techniques for implementing robust security controls for enterprise GenAI deployments."
+    },
+    {
+      title: "Threat Modeling for LLM Applications",
+      event: "OWASP AppSec Conference",
+      year: "2025",
       description: "Shared methodologies for identifying and mitigating security risks in applications using large language models."
     }
   ];
@@ -67,11 +91,11 @@ const OpenSourceSection = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-10">
-          {/* OWASP Publications */}
+          {/* Papers and Publications */}
           <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20">
             <div className="flex items-center mb-8">
               <Shield className="h-6 w-6 text-cyber-green mr-3" />
-              <h3 className="text-2xl font-bold text-white">OWASP Publications</h3>
+              <h3 className="text-2xl font-bold text-white">Papers and Publications</h3>
             </div>
             
             <div className="space-y-6">
