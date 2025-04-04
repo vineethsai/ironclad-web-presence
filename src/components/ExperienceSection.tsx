@@ -14,7 +14,7 @@ const ExperienceSection = () => {
       title: 'Application Security Engineer',
       company: 'Amazon Web Services',
       period: 'Nov 2021 - June 2024',
-      description: 'Conducted threat modeling, design reviews, and security testing for over 150 new feature launches for AWS Analytics and Big Data Services. Led security reviews for major AWS Spark launches. Built automated systems to detect vulnerabilities, resulting in the identification and remediation of over 350 true security findings.'
+      description: 'Conducted threat modeling, design reviews, and security testing for over 150 new feature launches for AWS Analytics and Big Data Services. Led security reviews for major AWS Spark launches including Glue 5, FGAC in Spark and Athena, and launched projects at re:Invent. Architected complex access models (RBAC, ABAC) for AWS services. Built automated vulnerability detection systems, identifying and remediating over 350 security findings.'
     },
     {
       title: 'Security Engineer',
@@ -41,7 +41,7 @@ const ExperienceSection = () => {
     },
     {
       title: 'AWS Analytics Security',
-      description: 'Led security reviews for major AWS Spark features, implementing complex access models (RBAC, ABAC) for AWS Analytics and Big Data Services.',
+      description: 'Led security reviews for major AWS Spark features, implementing complex access models (RBAC, ABAC) for AWS Analytics and Big Data Services. These systems are used by DOD and US Government as part of the $10 billion NSA contract award.',
       technologies: ['Hadoop Security', 'Spark', 'IAM', 'Lake Formation']
     },
     {

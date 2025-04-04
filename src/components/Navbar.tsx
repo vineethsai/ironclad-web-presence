@@ -25,6 +25,7 @@ const Navbar = () => {
             <a href="#about" className="text-white hover:text-cyber-blue transition-colors">About</a>
             <a href="#skills" className="text-white hover:text-cyber-blue transition-colors">Skills</a>
             <a href="#experience" className="text-white hover:text-cyber-blue transition-colors">Experience</a>
+            <a href="#open-source" className="text-white hover:text-cyber-blue transition-colors">Open Source</a>
             <a href="#contact" className="text-white hover:text-cyber-blue transition-colors">Contact</a>
           </div>
 
@@ -83,6 +84,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Experience
+            </a>
+            <a 
+              href="#open-source" 
+              className="block text-white hover:text-cyber-blue py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Open Source
             </a>
             <a 
               href="#contact" 
