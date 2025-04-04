@@ -99,6 +99,71 @@
   @apply px-6 py-2 bg-cyber-dark border border-cyber-green text-cyber-green rounded transition-all duration-300 hover:bg-cyber-green hover:text-cyber-dark hover:shadow-md hover:shadow-cyber-green/50;
 }
 
+/* Add markdown/prose styling */
+.prose {
+  @apply text-gray-300;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  @apply text-cyber-green mt-8 mb-4 font-semibold;
+}
+
+.prose h1 {
+  @apply text-3xl;
+}
+
+.prose h2 {
+  @apply text-2xl;
+}
+
+.prose h3 {
+  @apply text-xl;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul, .prose ol {
+  @apply pl-8 mb-4;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose a {
+  @apply text-cyber-green hover:underline;
+}
+
+.prose blockquote {
+  @apply pl-4 border-l-4 border-cyber-green/30 italic my-4;
+}
+
+.prose code {
+  @apply bg-cyber-grey-light px-1 py-0.5 rounded text-cyber-green;
+}
+
+.prose pre {
+  @apply bg-cyber-grey-light p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose hr {
+  @apply border-cyber-green/20 my-8;
+}
+
 @layer base {
   * {
     @apply border-border;

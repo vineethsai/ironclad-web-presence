@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Shield, Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,11 +32,12 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <a href="#home" className="text-gray-400 hover:text-cyber-blue transition-colors">Home</a>
-            <a href="#about" className="text-gray-400 hover:text-cyber-blue transition-colors">About</a>
-            <a href="#skills" className="text-gray-400 hover:text-cyber-blue transition-colors">Skills</a>
-            <a href="#experience" className="text-gray-400 hover:text-cyber-blue transition-colors">Experience</a>
-            <a href="#contact" className="text-gray-400 hover:text-cyber-blue transition-colors">Contact</a>
+            <Link to="/#home" className="text-gray-400 hover:text-cyber-blue transition-colors">Home</Link>
+            <Link to="/#about" className="text-gray-400 hover:text-cyber-blue transition-colors">About</Link>
+            <Link to="/#skills" className="text-gray-400 hover:text-cyber-blue transition-colors">Skills</Link>
+            <Link to="/#experience" className="text-gray-400 hover:text-cyber-blue transition-colors">Experience</Link>
+            <Link to="/blog" className="text-gray-400 hover:text-cyber-blue transition-colors">Blog</Link>
+            <Link to="/#contact" className="text-gray-400 hover:text-cyber-blue transition-colors">Contact</Link>
           </div>
 
           <div className="border-t border-cyber-blue/10 pt-8 w-full">
