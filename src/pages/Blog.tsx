@@ -1,59 +1,99 @@
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { blogPosts } from '@/data/blogPosts';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, Tag } from 'lucide-react';
 
 const Blog = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen bg-cyber-dark text-white">
+      <Helmet>
+        <title>Blog | Vineeth Sai Narajala - Cybersecurity Engineer</title>
+        <meta name="description" content="Read expert insights on AI security, cloud security, and cybersecurity best practices from Vineeth Sai Narajala, a Cybersecurity Engineer specializing in Generative AI Security." />
+        <meta name="keywords" content="Vineeth Sai, Vineeth Sai Narajala, AI Security, Cybersecurity, Generative AI, Cloud Security, AWS Security" />
+        <meta property="og:title" content="Cybersecurity Blog | Vineeth Sai" />
+        <meta property="og:description" content="Expert insights on AI security and cybersecurity from Vineeth Sai Narajala" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vineethsai.com/blog" />
+        <link rel="canonical" href="https://vineethsai.com/blog" />
+        
+        {/* JSON-LD structured data for Blog */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "headline": "Vineeth Sai's Cybersecurity Blog",
+            "description": "Expert insights on AI security, cloud security, and cybersecurity best practices",
+            "author": {
+              "@type": "Person",
+              "name": "Vineeth Sai Narajala",
+              "url": "https://vineethsai.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Vineeth Sai",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://vineethsai.com/placeholder.svg"
+              }
+            },
+            "url": "https://vineethsai.com/blog",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://vineethsai.com/blog"
+            },
+            "datePublished": "2025-04-04T12:00:00+00:00",
+            "dateModified": "2025-04-04T12:00:00+00:00"
+          })}
+        </script>
+      </Helmet>
+      
       <Navbar />
-      <main className="container mx-auto px-4 py-16">
-        <section className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            <span className="cyber-glow">Blog</span>
-          </h1>
-          <p className="text-lg text-center max-w-3xl mx-auto mb-12 text-gray-300">
-            Insights on cybersecurity, generative AI security, and cloud security from my experience and research.
-          </p>
+      <main className="pt-16 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Cybersecurity Insights</h1>
+            <div className="w-20 h-1 bg-cyber-green mx-auto"></div>
+            <p className="mt-8 text-lg text-gray-300 max-w-3xl mx-auto">
+              Expert perspectives on AI security, cloud security, and emerging cybersecurity threats from Vineeth Sai Narajala.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blogPosts.map((post) => (
-              <Card 
-                key={post.id} 
-                className="cyber-card hover:scale-105 transition-transform duration-300 cursor-pointer"
-                onClick={() => navigate(`/blog/${post.id}`)}
-              >
-                <CardHeader>
-                  <CardTitle className="text-cyber-green">{post.title}</CardTitle>
-                  <CardDescription className="text-gray-400 flex items-center gap-2">
-                    <Calendar className="h-4 w-4" />
-                    {post.date}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300">{post.excerpt}</p>
-                </CardContent>
-                <CardFooter className="flex flex-wrap gap-2">
-                  {post.tags.slice(0, 3).map((tag, index) => (
-                    <span 
-                      key={index} 
-                      className="text-xs py-1 px-2 rounded-full bg-cyber-grey-light text-cyber-green flex items-center gap-1"
-                    >
-                      <Tag className="h-3 w-3" />
-                      {tag}
-                    </span>
-                  ))}
-                </CardFooter>
-              </Card>
+              <article key={post.id} className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
+                <Link to={`/blog/${post.id}`} className="block h-full">
+                  <div className="p-6">
+                    <h2 className="text-2xl font-bold text-white mb-3 hover:text-cyber-green transition-colors">
+                      {post.title}
+                    </h2>
+                    <div className="flex items-center mb-4 text-sm text-gray-400">
+                      <span>{post.date}</span>
+                      <span className="mx-2">•</span>
+                      <span>{post.author}</span>
+                    </div>
+                    <p className="text-gray-300 mb-4">{post.excerpt}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.tags.map((tag, index) => (
+                        <span 
+                          key={index} 
+                          className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="text-cyber-green font-medium hover:underline">
+                      Read more →
+                    </div>
+                  </div>
+                </Link>
+              </article>
             ))}
           </div>
-        </section>
+        </div>
       </main>
       <Footer />
     </div>
