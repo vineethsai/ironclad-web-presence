@@ -131,3 +131,165 @@
     background-position: 0% 50%;
   }
 }
+
+/* New section reveal animation */
+.reveal-animation {
+  animation: revealSection 0.8s ease-out forwards;
+}
+
+@keyframes revealSection {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress bar animations */
+@keyframes progressFill {
+  from { width: 0; }
+  to { width: var(--value); }
+}
+
+/* Cyber grid background */
+.cyber-grid {
+  background-image: linear-gradient(rgba(51, 204, 102, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(51, 204, 102, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Enhanced cyber glow effect */
+.cyber-glow-text {
+  color: #33CC66;
+  text-shadow: 0 0 5px #33CC66, 0 0 10px rgba(51, 204, 102, 0.6);
+}
+
+.cyber-glow-box {
+  box-shadow: 0 0 5px #33CC66, 0 0 10px rgba(51, 204, 102, 0.4);
+}
+
+/* Data stream animation */
+.data-stream {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stream::after {
+  content: '';
+  position: absolute;
+  top: -75%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(51, 204, 102, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform-origin: top right;
+  animation: dataStream 3s linear infinite;
+}
+
+@keyframes dataStream {
+  0% {
+    transform: rotate(-45deg) translateY(-100%);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(100%);
+  }
+}
+
+/* Blinking cursor */
+.blinking-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cyber-glitch animation */
+.cyber-glitch {
+  position: relative;
+}
+
+.cyber-glitch::before, .cyber-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0);
+}
+
+.cyber-glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 rgba(51, 204, 102, 0.7);
+  animation: glitch-1 2s infinite linear alternate-reverse;
+}
+
+.cyber-glitch::after {
+  left: -2px;
+  text-shadow: 1px 0 rgba(51, 204, 102, 0.7);
+  animation: glitch-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-1 {
+  0%, 5%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95%, 100% { clip: rect(0, 9999px, 9999px, 0); }
+  6%, 11%, 16%, 21%, 26%, 31%, 36%, 41%, 46%, 51%, 56%, 61%, 66%, 71%, 76%, 81%, 86%, 91%, 96% { clip: rect(0, 9999px, 2px, 0); }
+}
+
+@keyframes glitch-2 {
+  0%, 5%, 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95%, 100% { clip: rect(0, 9999px, 9999px, 0); }
+  6%, 11%, 16%, 21%, 26%, 31%, 36%, 41%, 46%, 51%, 56%, 61%, 66%, 71%, 76%, 81%, 86%, 91%, 96% { clip: rect(0, 9999px, 4px, 0); top: 1px; }
+}
+
+/* Hover reveal effect */
+.hover-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-reveal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(51, 204, 102, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.hover-reveal:hover::after {
+  transform: translateY(0);
+}
+
+/* Floating animation */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}

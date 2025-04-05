@@ -1,11 +1,14 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowDown, Shield } from 'lucide-react';
 
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    setIsVisible(true);
+    
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -23,18 +26,36 @@ const HeroSection = () => {
       drops[i] = Math.floor(Math.random() * -canvas.height);
     }
 
-    const cyberCharacters = '01';
+    // Enhanced with more cybersecurity-related characters
+    const cyberCharacters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
 
     const draw = () => {
       ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#33CC66'; // Updated to cyber-green for consistency
+      ctx.fillStyle = '#33CC66'; // Cyber-green color
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
         const text = cyberCharacters.charAt(Math.floor(Math.random() * cyberCharacters.length));
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        const x = i * fontSize;
+        const y = drops[i] * fontSize;
+        
+        // Create a glowing effect for some characters
+        if (Math.random() > 0.98) {
+          ctx.shadowColor = '#33CC66';
+          ctx.shadowBlur = 10;
+          ctx.fillStyle = '#FFFFFF';
+        } else if (Math.random() > 0.9) {
+          ctx.shadowColor = '#33CC66';
+          ctx.shadowBlur = 5;
+          ctx.fillStyle = '#33CC66';
+        } else {
+          ctx.shadowBlur = 0;
+          ctx.fillStyle = '#33CC6699';
+        }
+        
+        ctx.fillText(text, x, y);
 
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
@@ -46,8 +67,10 @@ const HeroSection = () => {
     const interval = setInterval(draw, 60);
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -63,13 +86,13 @@ const HeroSection = () => {
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
       <div className="absolute inset-0 bg-cyber-dark/70 z-10"></div>
       
-      <div className="container mx-auto px-4 relative z-20">
+      <div className={`container mx-auto px-4 relative z-20 transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <div className="text-center space-y-6 max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-6">
             <Shield className="h-16 w-16 text-cyber-green animate-pulse" />
           </div>
           
-          <h2 className="text-2xl md:text-3xl font-medium text-cyber-green tracking-wider animate-fade-in">
+          <h2 className={`text-2xl md:text-3xl font-medium text-cyber-green tracking-wider transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             CYBERSECURITY ENGINEER
           </h2>
           
@@ -79,11 +102,11 @@ const HeroSection = () => {
             </h1>
           </div>
           
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in">
+          <p className={`text-lg md:text-xl text-gray-300 max-w-2xl mx-auto transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             Specialized in penetration testing, threat analysis, and implementing robust security frameworks to keep your systems impenetrable.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+          <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <a 
               href="#contact" 
               className="cyber-button hover:scale-105 transition-transform duration-300"
