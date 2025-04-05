@@ -57,6 +57,16 @@
   animation: typing 3.5s steps(40, end), blink 1s step-end infinite;
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #33CC66 }
+}
+
 .matrix-background {
   position: relative;
   overflow: hidden;
@@ -88,7 +98,7 @@
 }
 
 .cyber-card {
-  @apply bg-cyber-grey border border-cyber-green/30 rounded-lg transition-all duration-300 hover:border-cyber-green/80 hover:shadow-md hover:shadow-cyber-green/20;
+  @apply bg-cyber-grey border border-cyber-green/30 rounded-lg transition-all duration-300 hover:border-cyber-green/80 hover:shadow-md hover:shadow-cyber-green/20 transform hover:-translate-y-1;
 }
 
 .cyber-gradient {
@@ -97,6 +107,92 @@
 
 .cyber-button {
   @apply px-6 py-2 bg-cyber-dark border border-cyber-green text-cyber-green rounded transition-all duration-300 hover:bg-cyber-green hover:text-cyber-dark hover:shadow-md hover:shadow-cyber-green/50;
+}
+
+/* Interactive element animations */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-md hover:shadow-cyber-green/30;
+}
+
+.pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Add markdown/prose styling */

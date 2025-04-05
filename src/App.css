@@ -1,7 +1,8 @@
+
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -12,10 +13,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #33CC66aa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #33CC66aa);
 }
 
 @keyframes logo-spin {
@@ -35,8 +36,98 @@
 
 .card {
   padding: 2em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(51, 204, 102, 0.2);
 }
 
 .read-the-docs {
-  color: #888;
+  color: #33CC66;
+  transition: color 0.3s ease;
+}
+
+.read-the-docs:hover {
+  color: #2DB058;
+}
+
+/* Interactive link underline effect */
+.animated-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #33CC66;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s;
+}
+
+.animated-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Cyber buttons with glow effect */
+.cyber-button-glow {
+  position: relative;
+  color: #33CC66;
+  background: transparent;
+  border: 2px solid #33CC66;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.cyber-button-glow:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #33CC66;
+  z-index: -1;
+  transition: width 0.3s;
+}
+
+.cyber-button-glow:hover {
+  color: #121212;
+  box-shadow: 0 0 20px rgba(51, 204, 102, 0.4);
+}
+
+.cyber-button-glow:hover:before {
+  width: 100%;
+}
+
+/* Animated background gradient */
+.animated-bg {
+  background: linear-gradient(45deg, #121212, #222222, #1a1a1a, #222222);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
