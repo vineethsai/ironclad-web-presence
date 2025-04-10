@@ -1,10 +1,42 @@
-import React, { useEffect, useRef } from 'react';
-import { ArrowDown, Shield } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ArrowDown, Shield, Lock, Code, Key, Database, FileCode, Server, Wifi, Bug } from 'lucide-react';
+
+// Component for animated text with character-by-character fade-in
+const AnimatedText = ({ text, className }: { text: string, className?: string }) => {
+  return (
+    <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 cyber-glow ${className}`}>
+      {text.split('').map((char, index) => (
+        <span 
+          key={index} 
+          className={`text-animated-char animate-text-fade-in`}
+          style={{ animationDelay: `${index * 0.04}s` }}
+        >
+          {char}
+        </span>
+      ))}
+    </h1>
+  );
+};
 
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Generate random icons for floating animation
+  const floatingIcons = [
+    { icon: Lock, class: 'top-[15%] left-[10%] animate-float-up-down', size: 24 },
+    { icon: Code, class: 'top-[35%] right-[15%] animate-float-left-right', size: 28 },
+    { icon: Key, class: 'bottom-[25%] left-[25%] animate-float-circle', size: 20 },
+    { icon: Database, class: 'top-[50%] left-[8%] animate-float-left-right', size: 18 },
+    { icon: FileCode, class: 'top-[20%] right-[8%] animate-float-up-down', size: 20 },
+    { icon: Server, class: 'bottom-[30%] right-[20%] animate-float-circle', size: 24 },
+    { icon: Wifi, class: 'top-[30%] left-[25%] animate-float-up-down', size: 22 },
+    { icon: Bug, class: 'bottom-[20%] right-[10%] animate-float-left-right', size: 19 },
+  ];
 
   useEffect(() => {
+    setIsVisible(true);
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -62,26 +94,35 @@ const HeroSection = () => {
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
       <div className="absolute inset-0 bg-cyber-dark/70 z-10"></div>
       
+      {/* Floating security icons */}
+      {floatingIcons.map((item, index) => {
+        const IconComponent = item.icon;
+        return (
+          <div key={index} className={`floating-icon ${item.class}`} style={{ animationDelay: `${index * 0.5}s` }}>
+            <IconComponent size={item.size} />
+          </div>
+        );
+      })}
+      
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center space-y-6 max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-6">
-            <Shield className="h-16 w-16 text-cyber-green animate-pulse" />
+            <Shield className={`h-16 w-16 text-cyber-green animate-pulse ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700`} />
           </div>
           
-          <h2 className="text-2xl md:text-3xl font-medium text-cyber-green tracking-wider">
+          <h2 className={`text-2xl md:text-3xl font-medium text-cyber-green tracking-wider ${isVisible ? 'animate-text-fade-in-delay-1' : 'opacity-0'}`}>
             CYBERSECURITY ENGINEER
           </h2>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 cyber-glow">
-            Defending Digital Frontiers
-          </h1>
+          {/* Animated text with character-by-character fade-in */}
+          <AnimatedText text="Defending Digital Frontiers" />
           
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className={`text-lg md:text-xl text-gray-300 max-w-2xl mx-auto ${isVisible ? 'animate-text-fade-in-delay-3' : 'opacity-0'}`}>
             Specialized in penetration testing, threat analysis, and implementing robust security frameworks to keep your systems impenetrable.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-            <a href="#contact" className="cyber-button">
+          <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 ${isVisible ? 'animate-text-fade-in-delay-3' : 'opacity-0'}`}>
+            <a href="#contact" className="cyber-terminal-button animate-glow-pulse">
               Get In Touch
             </a>
             <a 
@@ -94,10 +135,15 @@ const HeroSection = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <a href="#about" className="text-white/70 hover:text-cyber-green transition-colors">
+      {/* Enhanced scroll indicators */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+        <div className="mb-2 animate-scroll-hint opacity-0">
+          <ArrowDown className="h-4 w-4 text-cyber-green" />
+        </div>
+        <a href="#about" className="text-white hover:text-cyber-green transition-colors animate-bounce">
           <ArrowDown className="h-8 w-8" />
         </a>
+        <div className="mt-1 text-xs text-cyber-green font-mono opacity-70">scroll down</div>
       </div>
     </section>
   );
