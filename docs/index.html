@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJJ5BYLGDH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LJJ5BYLGDH');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vineeth Sai | Cybersecurity Engineer Portfolio</title>
     <meta name="description" content="Professional portfolio of Vineeth Sai, a Cybersecurity Engineer specializing in cloud security, application security, and security automation." />
     <meta name="author" content="Vineeth Sai" />
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Vineeth Sai | Cybersecurity Engineer Portfolio" />
     <meta property="og:description" content="Professional portfolio of Vineeth Sai, a Cybersecurity Engineer specializing in cloud security, application security, and security automation." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="https://vineethsai.com" />
     
-    <!-- SPA redirect handling -->
-    <script type="text/javascript">
-      // This script checks if we're being redirected from the 404.html page
-      (function() {
-        var redirectParam = new URLSearchParams(window.location.search).get('redirect');
-        var routeParam = new URLSearchParams(window.location.search).get('route');
-        
-        if (redirectParam === 'true' && routeParam) {
-          // We're coming from a redirect, clean up the URL
-          var cleanUrl = window.location.protocol + '//' + window.location.host + '/#/' + routeParam;
-          window.history.replaceState(null, null, cleanUrl);
-        }
-      })();
-    </script>
-    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="https://vineethsai.com/assets/index-B6BpTVm4.js"></script>
-    <link rel="stylesheet" crossorigin href="https://vineethsai.com/assets/index-CsHHsf21.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vineeth Sai",
+      "url": "https://vineethsai.com",
+      "jobTitle": "Cybersecurity Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Amazon Web Services"
+      },
+      "sameAs": [
+        "https://github.com/vineethsai",
+        "https://www.linkedin.com/in/vineethsai/"
+      ]
+    }
+    </script>
+    <script type="module" crossorigin src="https://vineethsai.com/assets/index-CoZoaSrQ.js"></script>
+    <link rel="stylesheet" crossorigin href="https://vineethsai.com/assets/index-lWhGr8hO.css">
   </head>
 
   <body>

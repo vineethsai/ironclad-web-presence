@@ -36,20 +36,20 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      // Create form data to send
-      const formData = new FormData();
-      formData.append('to_email', 'abcvineeth.sai@gmail.com');
-      formData.append('from_name', data.name);
-      formData.append('from_email', data.email);
-      formData.append('subject', data.subject);
-      formData.append('message', data.message);
-      
-      // Use emailjs-like service or formspree for serverless email sending
-      const response = await fetch('https://formspree.io/f/abcvineeth.sai@gmail.com', {
+      // Use Formspree for serverless email sending
+      // You need to create a form at https://formspree.io/ and use your form ID
+      const response = await fetch('https://formspree.io/f/xvonplny', {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+          _replyto: data.email, // This ensures you can reply directly to the sender
+        }),
         headers: {
-          Accept: 'application/json',
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
         },
       });
       
@@ -76,8 +76,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-cyber-dark">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-cyber-darker relative overflow-hidden">
+      {/* Background grid lines effect */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-cyber-green mx-auto"></div>
@@ -215,6 +218,10 @@ const ContactSection = () => {
                   <Send className="h-4 w-4 mr-2" />
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
+                
+                <p className="text-xs text-gray-400 mt-4 text-center">
+                  Your message will be sent to abcvineeth.sai@gmail.com
+                </p>
               </form>
             </Form>
           </div>

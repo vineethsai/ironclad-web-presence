@@ -1,6 +1,6 @@
-
 import React from 'react';
-import { Calendar, Award, Briefcase } from 'lucide-react';
+import { Calendar, Award, Briefcase, ArrowDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ExperienceSection = () => {
   const workExperience = [
@@ -52,8 +52,11 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-cyber-darker">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="py-20 bg-cyber-darker relative overflow-hidden">
+      {/* Background grid lines effect */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Experience & Education</h2>
           <div className="w-20 h-1 bg-cyber-green mx-auto"></div>
@@ -183,6 +186,17 @@ const ExperienceSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Scroll down indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+        <div className="mb-2 animate-scroll-hint opacity-0">
+          <ArrowDown className="h-4 w-4 text-cyber-green" />
+        </div>
+        <Link to="/open-source" className="text-white hover:text-cyber-green transition-colors animate-bounce">
+          <ArrowDown className="h-8 w-8" />
+        </Link>
+        <div className="mt-1 text-xs text-cyber-green font-mono opacity-70">scroll down</div>
       </div>
     </section>
   );

@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Shield, Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Shield, Github, Linkedin, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -20,14 +19,11 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center space-x-6 mb-8">
-            <a href="https://github.com/vineethsai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-blue transition-colors">
+            <a href="https://github.com/vineethsai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://linkedin.com/in/vineethsai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-blue transition-colors">
+            <a href="https://www.linkedin.com/in/vineethsai/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
               <Linkedin className="h-6 w-6" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-blue transition-colors">
-              <Twitter className="h-6 w-6" />
             </a>
           </div>
 

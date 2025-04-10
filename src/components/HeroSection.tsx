@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ArrowDown, Shield, Lock, Code, Key, Database, FileCode, Server, Wifi, Bug } from 'lucide-react';
+import { ArrowDown, Shield, Lock, Code, Key, Database, FileCode, Server, Wifi, Bug, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useTheme } from '@/contexts/ThemeContext';
 
 // Component for animated text with character-by-character fade-in
 const AnimatedText = ({ text, className }: { text: string, className?: string }) => {
@@ -19,6 +21,8 @@ const AnimatedText = ({ text, className }: { text: string, className?: string })
 };
 
 const HeroSection = () => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -90,12 +94,12 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-      <canvas ref={canvasRef} className="absolute inset-0 z-0" />
-      <div className="absolute inset-0 bg-cyber-dark/70 z-10"></div>
+    <section id="home" className={`relative min-h-screen flex items-center justify-center ${isDark ? 'text-white' : 'text-cyber-dark'} overflow-hidden`}>
+      {isDark && <canvas ref={canvasRef} className="absolute inset-0 z-0" />}
+      <div className={`absolute inset-0 ${isDark ? 'bg-cyber-dark/70' : 'bg-white'} z-10`}></div>
       
-      {/* Floating security icons */}
-      {floatingIcons.map((item, index) => {
+      {/* Floating security icons - only show in dark mode */}
+      {isDark && floatingIcons.map((item, index) => {
         const IconComponent = item.icon;
         return (
           <div key={index} className={`floating-icon ${item.class}`} style={{ animationDelay: `${index * 0.5}s` }}>
@@ -122,15 +126,15 @@ const HeroSection = () => {
           </p>
           
           <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 ${isVisible ? 'animate-text-fade-in-delay-3' : 'opacity-0'}`}>
-            <a href="#contact" className="cyber-terminal-button animate-glow-pulse">
+            <Link to="/contact" className="cyber-terminal-button animate-glow-pulse">
               Get In Touch
-            </a>
-            <a 
-              href="#about" 
+            </Link>
+            <Link 
+              to="/about" 
               className="px-6 py-2 bg-transparent border border-white/30 text-white rounded transition-all duration-300 hover:border-white hover:bg-white/10"
             >
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -140,9 +144,9 @@ const HeroSection = () => {
         <div className="mb-2 animate-scroll-hint opacity-0">
           <ArrowDown className="h-4 w-4 text-cyber-green" />
         </div>
-        <a href="#about" className="text-white hover:text-cyber-green transition-colors animate-bounce">
+        <Link to="/about" className="text-white hover:text-cyber-green transition-colors animate-bounce">
           <ArrowDown className="h-8 w-8" />
-        </a>
+        </Link>
         <div className="mt-1 text-xs text-cyber-green font-mono opacity-70">scroll down</div>
       </div>
     </section>
