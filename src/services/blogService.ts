@@ -87,4 +87,33 @@ export async function getPostById(id: string): Promise<BlogPost | null> {
 export async function getPostsByTag(tag: string): Promise<BlogPost[]> {
   const posts = await getAllPosts();
   return posts.filter(post => post.tags.includes(tag));
+}
+
+/**
+ * Gets related posts based on shared tags
+ * @param currentPostId The ID of the current post to exclude from results
+ * @param tags Array of tags to match against
+ * @param limit Maximum number of posts to return
+ */
+export async function getRelatedPosts(currentPostId: string, tags: string[], limit: number = 2): Promise<BlogPost[]> {
+  const allPosts = await getAllPosts();
+  
+  // Filter out the current post
+  const otherPosts = allPosts.filter(post => post.id !== currentPostId);
+  
+  // Calculate relevance score based on shared tags
+  const scoredPosts = otherPosts.map(post => {
+    const sharedTags = post.tags.filter(tag => tags.includes(tag));
+    return {
+      post,
+      score: sharedTags.length
+    };
+  });
+  
+  // Sort by score (highest first) and take the specified limit
+  return scoredPosts
+    .sort((a, b) => b.score - a.score)
+    .filter(item => item.score > 0) // Only posts with at least one shared tag
+    .slice(0, limit)
+    .map(item => item.post);
 } 

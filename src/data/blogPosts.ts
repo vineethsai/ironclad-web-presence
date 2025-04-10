@@ -7,6 +7,7 @@ export interface BlogPost {
   author: string;
   tags: string[];
   image?: string;
+  views?: number;
 }
 
 // Placeholder for static data

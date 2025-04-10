@@ -1,27 +1,85 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main pages -->
   <url>
     <loc>https://vineethsai.com/</loc>
-    <lastmod>2025-04-04</lastmod>
+    <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://vineethsai.com/blog</loc>
-    <lastmod>2025-04-04</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://vineethsai.com/#/about</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vineethsai.com/blog/generative-ai-security</loc>
-    <lastmod>2025-04-04</lastmod>
+    <loc>https://vineethsai.com/#/skills</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vineethsai.com/#/experience</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vineethsai.com/#/open-source</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vineethsai.com/#/contact</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog main and tag pages -->
+  <url>
+    <loc>https://vineethsai.com/#/blog</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vineethsai.com/#/blog/tag/ai-security</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vineethsai.com/#/blog/tag/cloud-security</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vineethsai.com/#/blog/tag/cybersecurity</loc>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog posts -->
+  <url>
+    <loc>https://vineethsai.com/#/blog/generative-ai-security</loc>
+    <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vineethsai.com/blog/cloud-security-patterns</loc>
-    <lastmod>2025-04-04</lastmod>
+    <loc>https://vineethsai.com/#/blog/cloud-security-patterns</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vineethsai.com/#/blog/zero_trust</loc>
+    <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

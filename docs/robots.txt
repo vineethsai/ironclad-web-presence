@@ -1,9 +1,30 @@
-
+# Allow all web crawlers to access all content
 User-agent: *
 Allow: /
 
-# Allow crawling of all content
+# Sitemap location
 Sitemap: https://vineethsai.com/sitemap.xml
+
+# RSS feed location
+Sitemap: https://vineethsai.com/rss.xml
+
+# Set crawl rate for Google
+User-agent: Googlebot
+Crawl-delay: 1
+
+# Set crawl rate for Bing
+User-agent: Bingbot
+Crawl-delay: 1
+
+# Block certain paths that don't need to be crawled
+User-agent: *
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /public/
+Disallow: /assets/js/
+Disallow: /assets/css/
+Allow: /assets/images/
 
 # Specify the primary content areas
 Allow: /blog/
@@ -16,6 +37,3 @@ Allow: /contact/
 # Encourage indexing of important pages
 Allow: /blog/generative-ai-security
 Allow: /blog/cloud-security-patterns
-
-# Crawl delay to reduce server load
-Crawl-delay: 1

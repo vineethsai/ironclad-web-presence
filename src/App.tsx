@@ -21,6 +21,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Index />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/tag/:tag" element={<Blog />} />
         <Route path="/blog/:postId" element={<BlogPost />} />
         
         {/* Section routes */}
