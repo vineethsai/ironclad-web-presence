@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,10 +16,25 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
+    <!-- SPA redirect handling -->
+    <script type="text/javascript">
+      // This script checks if we're being redirected from the 404.html page
+      (function() {
+        var redirectParam = new URLSearchParams(window.location.search).get('redirect');
+        var routeParam = new URLSearchParams(window.location.search).get('route');
+        
+        if (redirectParam === 'true' && routeParam) {
+          // We're coming from a redirect, clean up the URL
+          var cleanUrl = window.location.protocol + '//' + window.location.host + '/#/' + routeParam;
+          window.history.replaceState(null, null, cleanUrl);
+        }
+      })();
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="https://vineethsai.com/assets/index-2r22Y_nn.js"></script>
+    <script type="module" crossorigin src="https://vineethsai.com/assets/index-B6BpTVm4.js"></script>
     <link rel="stylesheet" crossorigin href="https://vineethsai.com/assets/index-CsHHsf21.css">
   </head>
 
