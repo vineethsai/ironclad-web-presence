@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -81,32 +80,32 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-cyber-blue mx-auto"></div>
+          <div className="w-20 h-1 bg-cyber-green mx-auto"></div>
           <p className="mt-8 text-lg text-gray-300 max-w-3xl mx-auto">
             Want to get a coffee? Feel free to reach out and I'll get back to you as soon as possible.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-blue/20">
+          <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20">
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="mt-1 bg-cyber-blue/10 p-3 rounded-lg">
-                  <Mail className="h-6 w-6 text-cyber-blue" />
+                <div className="mt-1 bg-cyber-green/10 p-3 rounded-lg">
+                  <Mail className="h-6 w-6 text-cyber-green" />
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold text-white mb-2">Email</h4>
-                  <a href="mailto:abcvineeth.sai@gmail.com" className="text-gray-300 hover:text-cyber-blue transition-colors">
+                  <a href="mailto:abcvineeth.sai@gmail.com" className="text-gray-300 hover:text-cyber-green transition-colors">
                     abcvineeth.sai@gmail.com
                   </a>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="mt-1 bg-cyber-blue/10 p-3 rounded-lg">
-                  <MapPin className="h-6 w-6 text-cyber-blue" />
+                <div className="mt-1 bg-cyber-green/10 p-3 rounded-lg">
+                  <MapPin className="h-6 w-6 text-cyber-green" />
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold text-white mb-2">Location</h4>
@@ -117,18 +116,18 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="mt-10 pt-6 border-t border-cyber-blue/20">
+            <div className="mt-10 pt-6 border-t border-cyber-green/20">
               <h4 className="text-xl font-semibold text-white mb-4">Available For</h4>
               <div className="flex flex-wrap gap-3">
-                <span className="px-3 py-1 bg-cyber-blue/10 border border-cyber-blue/30 rounded text-cyber-blue">Security Consulting</span>
-                <span className="px-3 py-1 bg-cyber-blue/10 border border-cyber-blue/30 rounded text-cyber-blue">Penetration Testing</span>
-                <span className="px-3 py-1 bg-cyber-blue/10 border border-cyber-blue/30 rounded text-cyber-blue">Security Training</span>
-                <span className="px-3 py-1 bg-cyber-blue/10 border border-cyber-blue/30 rounded text-cyber-blue">Speaking Engagements</span>
+                <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green">Security Consulting</span>
+                <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green">Penetration Testing</span>
+                <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green">Security Training</span>
+                <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green">Speaking Engagements</span>
               </div>
             </div>
           </div>
 
-          <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-blue/20">
+          <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20">
             <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
             
             <Form {...form}>
@@ -143,7 +142,7 @@ const ContactSection = () => {
                         <FormControl>
                           <Input 
                             placeholder="Your Name" 
-                            className="bg-cyber-dark border-cyber-blue/30 focus:border-cyber-blue focus:ring-cyber-blue/20"
+                            className="bg-cyber-dark border-cyber-green/30 focus:border-cyber-green focus:ring-cyber-green/20"
                             {...field}
                           />
                         </FormControl>
@@ -161,7 +160,7 @@ const ContactSection = () => {
                           <Input 
                             type="email" 
                             placeholder="Your Email" 
-                            className="bg-cyber-dark border-cyber-blue/30 focus:border-cyber-blue focus:ring-cyber-blue/20"
+                            className="bg-cyber-dark border-cyber-green/30 focus:border-cyber-green focus:ring-cyber-green/20"
                             {...field}
                           />
                         </FormControl>
@@ -180,7 +179,7 @@ const ContactSection = () => {
                       <FormControl>
                         <Input 
                           placeholder="Subject" 
-                          className="bg-cyber-dark border-cyber-blue/30 focus:border-cyber-blue focus:ring-cyber-blue/20"
+                          className="bg-cyber-dark border-cyber-green/30 focus:border-cyber-green focus:ring-cyber-green/20"
                           {...field}
                         />
                       </FormControl>
@@ -199,7 +198,7 @@ const ContactSection = () => {
                         <Textarea 
                           placeholder="Your Message" 
                           rows={6} 
-                          className="bg-cyber-dark border-cyber-blue/30 focus:border-cyber-blue focus:ring-cyber-blue/20"
+                          className="bg-cyber-dark border-cyber-green/30 focus:border-cyber-green focus:ring-cyber-green/20"
                           {...field}
                         />
                       </FormControl>
