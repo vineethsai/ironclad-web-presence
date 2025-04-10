@@ -1,80 +1,8 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import React from 'react';
+import { Mail, MapPin, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/components/ui/use-toast';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  subject: z.string().min(5, { message: "Subject must be at least 5 characters." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-});
-
-type FormValues = z.infer<typeof formSchema>;
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    },
-  });
-
-  const onSubmit = async (data: FormValues) => {
-    setIsSubmitting(true);
-    
-    try {
-      // Use Formspree for serverless email sending
-      // You need to create a form at https://formspree.io/ and use your form ID
-      const response = await fetch('https://formspree.io/f/xvonplny', {
-        method: 'POST',
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          subject: data.subject,
-          message: data.message,
-          _replyto: data.email, // This ensures you can reply directly to the sender
-        }),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-      });
-      
-      if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for your message. I'll get back to you soon.",
-          duration: 5000,
-        });
-        form.reset();
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "There was a problem sending your message. Please try again later.",
-        variant: "destructive",
-        duration: 5000,
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className="py-20 bg-cyber-darker relative overflow-hidden">
       {/* Background grid lines effect */}
@@ -85,23 +13,28 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-cyber-green mx-auto"></div>
           <p className="mt-8 text-lg text-gray-300 max-w-3xl mx-auto">
-            Want to get a coffee? Feel free to reach out and I'll get back to you as soon as possible.
+            Want to get a coffee? Feel free to reach out on LinkedIn and I'll get back to you as soon as possible.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="max-w-2xl mx-auto">
           <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20">
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="mt-1 bg-cyber-green/10 p-3 rounded-lg">
-                  <Mail className="h-6 w-6 text-cyber-green" />
+                  <Linkedin className="h-6 w-6 text-cyber-green" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-semibold text-white mb-2">Email</h4>
-                  <a href="mailto:abcvineeth.sai@gmail.com" className="text-gray-300 hover:text-cyber-green transition-colors">
-                    abcvineeth.sai@gmail.com
+                  <h4 className="text-xl font-semibold text-white mb-2">LinkedIn</h4>
+                  <a 
+                    href="https://www.linkedin.com/in/vineethsai/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-cyber-green transition-colors"
+                  >
+                    Connect with me on LinkedIn
                   </a>
                 </div>
               </div>
@@ -128,102 +61,23 @@ const ContactSection = () => {
                 <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green">Speaking Engagements</span>
               </div>
             </div>
-          </div>
 
-          <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20">
-            <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
-            
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem className="space-y-2">
-                        <FormLabel className="text-white">Name</FormLabel>
-                        <FormControl>
-                          <Input 
-                            placeholder="Your Name" 
-                            className="bg-cyber-dark border-cyber-green/30 focus:border-cyber-green focus:ring-cyber-green/20"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem className="space-y-2">
-                        <FormLabel className="text-white">Email</FormLabel>
-                        <FormControl>
-                          <Input 
-                            type="email" 
-                            placeholder="Your Email" 
-                            className="bg-cyber-dark border-cyber-green/30 focus:border-cyber-green focus:ring-cyber-green/20"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem className="space-y-2">
-                      <FormLabel className="text-white">Subject</FormLabel>
-                      <FormControl>
-                        <Input 
-                          placeholder="Subject" 
-                          className="bg-cyber-dark border-cyber-green/30 focus:border-cyber-green focus:ring-cyber-green/20"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem className="space-y-2">
-                      <FormLabel className="text-white">Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Your Message" 
-                          rows={6} 
-                          className="bg-cyber-dark border-cyber-green/30 focus:border-cyber-green focus:ring-cyber-green/20"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button 
-                  type="submit" 
-                  className="w-full cyber-button flex items-center justify-center"
-                  disabled={isSubmitting}
+            <div className="mt-8 text-center">
+              <Button
+                asChild
+                className="cyber-button"
+              >
+                <a 
+                  href="https://www.linkedin.com/in/vineethsai/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
                 >
-                  <Send className="h-4 w-4 mr-2" />
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-                
-                <p className="text-xs text-gray-400 mt-4 text-center">
-                  Your message will be sent to abcvineeth.sai@gmail.com
-                </p>
-              </form>
-            </Form>
+                  <Linkedin className="h-4 w-4 mr-2" />
+                  Message Me on LinkedIn
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
