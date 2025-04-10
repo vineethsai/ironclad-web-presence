@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowDown, Shield } from 'lucide-react';
 
@@ -29,7 +28,7 @@ const HeroSection = () => {
       ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = '#0EA5E9';
+      ctx.fillStyle = '#00ff00';
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
@@ -66,10 +65,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center space-y-6 max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-6">
-            <Shield className="h-16 w-16 text-cyber-blue animate-pulse" />
+            <Shield className="h-16 w-16 text-cyber-green animate-pulse" />
           </div>
           
-          <h2 className="text-2xl md:text-3xl font-medium text-cyber-blue tracking-wider">
+          <h2 className="text-2xl md:text-3xl font-medium text-cyber-green tracking-wider">
             CYBERSECURITY ENGINEER
           </h2>
           
@@ -96,7 +95,7 @@ const HeroSection = () => {
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <a href="#about" className="text-white/70 hover:text-cyber-blue transition-colors">
+        <a href="#about" className="text-white/70 hover:text-cyber-green transition-colors">
           <ArrowDown className="h-8 w-8" />
         </a>
       </div>

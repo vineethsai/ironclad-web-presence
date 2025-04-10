@@ -32,10 +32,32 @@ export const BlogPostContent: React.FC<BlogPostContentProps> = ({ post }) => {
       try {
         if (mermaidRef.current) {
           const mermaid = await import('mermaid');
+          
+          // Configure Mermaid with more explicit options for better asset handling
           mermaid.default.initialize({
             startOnLoad: false,
             theme: 'dark',
             securityLevel: 'loose',
+            // Disable loading of external CSS files
+            themeCSS: `
+              .node rect { fill: #00ff00; stroke: #006100; }
+              .node circle { fill: #00ff00; stroke: #006100; }
+              .node polygon { fill: #00ff00; stroke: #006100; }
+              .node .label { fill: #ffffff; }
+              .edgePath .path { stroke: #00ff00; }
+              .edgePath marker { fill: #00ff00; }
+              .cluster rect { fill: #1e1e1e; stroke: #006100; }
+            `,
+            flowchart: {
+              useMaxWidth: true,
+              htmlLabels: true,
+              curve: 'linear',
+            },
+            sequence: {
+              useMaxWidth: true,
+              mirrorActors: false,
+              bottomMarginAdj: 1,
+            },
             themeVariables: {
               primaryColor: '#00ff00',
               primaryTextColor: '#fff',
@@ -49,26 +71,38 @@ export const BlogPostContent: React.FC<BlogPostContentProps> = ({ post }) => {
           // Find all Mermaid diagram containers and render them
           const diagrams = mermaidRef.current.querySelectorAll('.mermaid-diagram');
           console.log('Found Mermaid diagrams:', diagrams.length);
-          diagrams.forEach(async (diagram, index) => {
+          
+          for (let i = 0; i < diagrams.length; i++) {
+            const diagram = diagrams[i];
             try {
               const diagramText = diagram.textContent || '';
               if (diagramText.trim()) {
-                const id = `mermaid-${index}`;
-                const { svg } = await mermaid.default.render(id, diagramText);
+                const id = `mermaid-${i}`;
+                // Simplify the Mermaid spec to reduce dependencies
+                let simplifiedSpec = diagramText
+                  .replace(/\s+/g, ' ')
+                  .trim();
+                
+                const { svg } = await mermaid.default.render(id, simplifiedSpec);
                 diagram.innerHTML = svg;
               }
             } catch (err) {
               console.error('Error rendering Mermaid diagram:', err);
-              diagram.innerHTML = '<div class="text-red-500">Error rendering diagram</div>';
+              diagram.innerHTML = '<div class="text-red-500">Error rendering diagram. Please check the browser console for details.</div>';
             }
-          });
+          }
         }
       } catch (err) {
         console.error('Error initializing Mermaid:', err);
       }
     };
     
-    initMermaid();
+    // Add a small delay to ensure DOM is fully rendered
+    const timer = setTimeout(() => {
+      initMermaid();
+    }, 100);
+    
+    return () => clearTimeout(timer);
   }, [post.content]);
 
   return (
