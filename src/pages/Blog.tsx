@@ -1,12 +1,96 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { blogPosts } from '@/data/blogPosts';
+import { BlogPostContent } from '@/components/BlogPostContent';
+import { BlogPost } from '@/data/blogPosts';
+import { getAllPosts, getPostById } from '@/services/blogService';
 
 const Blog = () => {
+  const { id } = useParams();
+  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [currentPost, setCurrentPost] = useState<BlogPost | null>(null);
+
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true);
+      
+      if (id) {
+        // If we have an ID, we're viewing a single post
+        const post = await getPostById(id);
+        setCurrentPost(post);
+      } else {
+        // Otherwise, load all posts
+        const allPosts = await getAllPosts();
+        setPosts(allPosts);
+      }
+      
+      setLoading(false);
+    };
+    
+    loadData();
+  }, [id]);
+
+  // If we're loading, show a loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-cyber-dark text-white">
+        <Navbar />
+        <main className="pt-16 pb-20">
+          <div className="container mx-auto px-4">
+            <div className="animate-pulse text-center">
+              <div className="h-8 bg-cyber-grey/30 rounded w-1/2 mx-auto mb-4"></div>
+              <div className="h-4 bg-cyber-grey/30 rounded w-2/3 mx-auto"></div>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  // If we have an ID but no post, show a "not found" message
+  if (id && !currentPost) {
+    return (
+      <div className="min-h-screen bg-cyber-dark text-white">
+        <Navbar />
+        <main className="pt-16 pb-20">
+          <div className="container mx-auto px-4">
+            <h1 className="text-2xl font-bold">Post not found</h1>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  // If we have a post, show it
+  if (id && currentPost) {
+    return (
+      <div className="min-h-screen bg-cyber-dark text-white">
+        <Helmet>
+          <title>{currentPost.title} | Vineeth Sai Narajala - Cybersecurity Engineer</title>
+          <meta name="description" content={currentPost.excerpt} />
+          <meta property="og:title" content={currentPost.title} />
+          <meta property="og:description" content={currentPost.excerpt} />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={`https://vineethsai.com/blog/${currentPost.id}`} />
+          <link rel="canonical" href={`https://vineethsai.com/blog/${currentPost.id}`} />
+        </Helmet>
+        <Navbar />
+        <main className="pt-16 pb-20">
+          <div className="container mx-auto px-4">
+            <BlogPostContent post={currentPost} />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  // Otherwise, show the blog list
   return (
     <div className="min-h-screen bg-cyber-dark text-white">
       <Helmet>
@@ -62,7 +146,7 @@ const Blog = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {blogPosts.map((post) => (
+            {posts.map((post) => (
               <article key={post.id} className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
                 <Link to={`/blog/${post.id}`} className="block h-full">
                   <div className="p-6">

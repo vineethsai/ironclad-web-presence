@@ -1,24 +1,66 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import ReactMarkdown from 'react-markdown';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { blogPosts } from '@/data/blogPosts';
+import { BlogPostContent } from '@/components/BlogPostContent';
+import { BlogPost as BlogPostType } from '@/data/blogPosts';
+import { getPostById } from '@/services/blogService';
 
 const BlogPost = () => {
   const { postId } = useParams<{ postId: string }>();
-  const post = blogPosts.find((p) => p.id === postId);
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
-  if (!post) {
+  useEffect(() => {
+    const loadPost = async () => {
+      setLoading(true);
+      
+      if (postId) {
+        const loadedPost = await getPostById(postId);
+        console.log('Loaded post from markdown:', loadedPost);
+        
+        if (loadedPost) {
+          setPost(loadedPost);
+        } else {
+          setNotFound(true);
+        }
+      } else {
+        setNotFound(true);
+      }
+      
+      setLoading(false);
+    };
+    
+    loadPost();
+  }, [postId]);
+
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-cyber-dark text-white">
+        <Navbar />
+        <main className="pt-16 pb-20">
+          <div className="container mx-auto px-4">
+            <div className="animate-pulse text-center">
+              <div className="h-8 bg-cyber-grey/30 rounded w-1/2 mx-auto mb-4"></div>
+              <div className="h-4 bg-cyber-grey/30 rounded w-2/3 mx-auto"></div>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  // Redirect if post not found
+  if (notFound || !post) {
     return <Navigate to="/blog" replace />;
   }
 
   // Extract the first paragraph for meta description
-  const firstParagraph = post.content.split('\n\n')[1] || post.excerpt;
-  // Clean description of any markdown syntax
-  const cleanDescription = firstParagraph.replace(/[#*_`]/g, '');
+  const cleanDescription = post.excerpt || '';
 
   return (
     <div className="min-h-screen bg-cyber-dark text-white">
@@ -99,7 +141,7 @@ const BlogPost = () => {
             </header>
             
             <div className="prose prose-invert max-w-none prose-headings:text-white prose-a:text-cyber-green">
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+              <BlogPostContent post={post} />
             </div>
           </article>
         </div>
