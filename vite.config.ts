@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => ({
     include: ['gray-matter']
   },
   build: {
+    outDir: 'docs',
     commonjsOptions: {
       transformMixedEsModules: true,
     },
