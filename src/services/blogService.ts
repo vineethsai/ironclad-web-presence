@@ -86,7 +86,10 @@ export async function getPostById(id: string): Promise<BlogPost | null> {
  */
 export async function getPostsByTag(tag: string): Promise<BlogPost[]> {
   const posts = await getAllPosts();
-  return posts.filter(post => post.tags.includes(tag));
+  const normalizedTag = tag.toLowerCase();
+  return posts.filter(post => 
+    post.tags.some(postTag => postTag.toLowerCase() === normalizedTag)
+  );
 }
 
 /**

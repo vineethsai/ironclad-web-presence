@@ -40,12 +40,20 @@ const Blog = () => {
         setPosts(loadedPosts);
         setFilteredPosts(loadedPosts);
         
-        // Extract all unique tags
-        const tagsSet = new Set<string>();
+        // Extract all unique tags and count their frequency
+        const tagCounts = new Map<string, number>();
         loadedPosts.forEach(post => {
-          post.tags.forEach(tag => tagsSet.add(tag));
+          post.tags.forEach(tag => {
+            tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+          });
         });
-        setAllTags(Array.from(tagsSet).sort());
+        
+        // Sort tags by frequency (most common first)
+        const sortedTags = Array.from(tagCounts.entries())
+          .sort((a, b) => b[1] - a[1])
+          .map(([tag]) => tag);
+        
+        setAllTags(sortedTags);
       }
       
       setLoading(false);

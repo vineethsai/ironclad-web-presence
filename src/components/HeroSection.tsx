@@ -3,19 +3,70 @@ import { ArrowDown, Shield, Lock, Code, Key, Database, FileCode, Server, Wifi, B
 import { Link } from 'react-router-dom';
 import { useTheme } from '@/contexts/ThemeContext';
 
-// Component for animated text with character-by-character fade-in
-const AnimatedText = ({ text, className }: { text: string, className?: string }) => {
+// Component for animated text with typing and cursor effect
+const AnimatedText = ({ phrases, className }: { phrases: string[], className?: string }) => {
+  const [displayText, setDisplayText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    let currentIndex = 0;
+    let timeout: NodeJS.Timeout;
+
+    const typeText = () => {
+      if (isTyping) {
+        if (currentIndex <= phrases[currentPhraseIndex].length) {
+          setDisplayText(phrases[currentPhraseIndex].slice(0, currentIndex));
+          currentIndex++;
+          timeout = setTimeout(typeText, 100);
+        } else {
+          // Pause after typing complete
+          setIsTyping(false);
+          timeout = setTimeout(() => {
+            setIsDeleting(true);
+            currentIndex = phrases[currentPhraseIndex].length;
+            typeText();
+          }, 2000);
+        }
+      } else if (isDeleting) {
+        if (currentIndex > 0) {
+          setDisplayText(phrases[currentPhraseIndex].slice(0, currentIndex - 1));
+          currentIndex--;
+          timeout = setTimeout(typeText, 50);
+        } else {
+          // Move to next phrase
+          setIsDeleting(false);
+          setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+          setIsTyping(true);
+          currentIndex = 0;
+          timeout = setTimeout(typeText, 500);
+        }
+      }
+    };
+
+    // Start the typing animation
+    timeout = setTimeout(typeText, 100);
+
+    // Cleanup
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [currentPhraseIndex, isTyping, isDeleting, phrases]);
+
+  // Cursor blink effect
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+    return () => clearInterval(cursorInterval);
+  }, []);
+
   return (
     <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 cyber-glow ${className}`}>
-      {text.split('').map((char, index) => (
-        <span 
-          key={index} 
-          className={`text-animated-char animate-text-fade-in`}
-          style={{ animationDelay: `${index * 0.04}s` }}
-        >
-          {char}
-        </span>
-      ))}
+      {displayText}
+      <span className={`inline-block w-2 h-8 bg-cyber-green ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}></span>
     </h1>
   );
 };
@@ -25,6 +76,17 @@ const HeroSection = () => {
   const isDark = theme === 'dark';
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  const phrases = [
+    "Defending Digital Frontiers",
+    "Securing Applications",
+    "Protecting the Nation",
+    "Building Secure Systems",
+    "Empowering Developer Security",
+    "Safeguarding Digital Assets",
+    "Enhancing Cyber Resilience",
+    "Leading Security Innovation"
+  ];
 
   // Generate random icons for floating animation
   const floatingIcons = [
@@ -118,22 +180,22 @@ const HeroSection = () => {
             CYBERSECURITY ENGINEER
           </h2>
           
-          {/* Animated text with character-by-character fade-in */}
-          <AnimatedText text="Defending Digital Frontiers" />
+          {/* Animated text with rotating phrases and typing effect */}
+          <AnimatedText phrases={phrases} />
           
           <p className={`text-lg md:text-xl text-gray-300 max-w-2xl mx-auto ${isVisible ? 'animate-text-fade-in-delay-3' : 'opacity-0'}`}>
             Specialized in penetration testing, threat analysis, and implementing robust security frameworks to keep your systems impenetrable.
           </p>
           
           <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 ${isVisible ? 'animate-text-fade-in-delay-3' : 'opacity-0'}`}>
-            <Link to="/contact" className="cyber-terminal-button animate-glow-pulse">
-              Get In Touch
+            <Link to="/blog" className="cyber-terminal-button animate-glow-pulse">
+              Read my Blog
             </Link>
             <Link 
-              to="/about" 
+              to="/contact" 
               className="px-6 py-2 bg-transparent border border-white/30 text-white rounded transition-all duration-300 hover:border-white hover:bg-white/10"
             >
-              Learn More
+              Get in Touch
             </Link>
           </div>
         </div>
@@ -144,7 +206,7 @@ const HeroSection = () => {
         <div className="mb-2 animate-scroll-hint opacity-0">
           <ArrowDown className="h-4 w-4 text-cyber-green" />
         </div>
-        <Link to="/about" className="text-white hover:text-cyber-green transition-colors animate-bounce">
+        <Link to="/blog" className="text-white hover:text-cyber-green transition-colors animate-bounce">
           <ArrowDown className="h-8 w-8" />
         </Link>
         <div className="mt-1 text-xs text-cyber-green font-mono opacity-70">scroll down</div>
