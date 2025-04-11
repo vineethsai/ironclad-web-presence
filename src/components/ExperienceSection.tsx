@@ -8,19 +8,30 @@ const ExperienceSection = () => {
       title: 'Generative AI Security Engineer',
       company: 'Amazon Web Services',
       period: 'June 2024 - Present',
-      description: 'Pioneered development of security best practices for Amazon\'s flagship GenAI products (Amazon Q and Bedrock). Created efficient security-compliant Golden Paths, reducing launch timelines from 3 weeks to less than 1 week. Enhanced security for Natural Language to SQL features and led security assessments for Open-Source AI model integrations.'
+      location: 'New York, United States',
+      description: `
+        <ul>
+          <li>Pioneered the development of comprehensive GenAI security best practices and standards for Amazon's flagship products (Amazon Q and Bedrock), including guardrails, prompt-injection protections, compute isolation, and session management, and implemented mechanisms to enforce them across the organization.</li>
+          <li>Accelerated GenAI feature integration, reducing launch timelines from 3 weeks to less than 1 week by creating efficient, security-compliant Golden Paths for various integrations.</li>
+          <li>Enhanced security for key features like Amazon QuickSight's Natural Language to SQL editor, reinforcing data protection and query integrity.</li>
+          <li>Led security assessments for AI model integrations across the AWS ecosystem, ensuring strict adherence to security standards, and spearheaded developer training initiatives, improving team-wide awareness and expertise in secure AI integration.</li>
+        </ul>
+      `,
+      skills: ['AI', 'Threat Modeling', 'Security Assessment', 'Design Review']
     },
     {
       title: 'Application Security Engineer',
       company: 'Amazon Web Services',
       period: 'Nov 2021 - June 2024',
-      description: 'Conducted threat modeling, design reviews, and security testing for over 150 new feature launches for AWS Analytics and Big Data Services. Led security reviews for major AWS Spark launches including Glue 5, FGAC in Spark and Athena, and launched projects at re:Invent. Architected complex access models (RBAC, ABAC) for AWS services. Built automated vulnerability detection systems, identifying and remediating over 350 security findings.'
+      description: 'Conducted threat modeling, design reviews, and security testing for over 150 new feature launches for AWS Analytics and Big Data Services. Led security reviews for major AWS Spark launches including Glue 5, FGAC in Spark and Athena, and launched projects at re:Invent. Architected complex access models (RBAC, ABAC) for AWS services. Built automated vulnerability detection systems, identifying and remediating over 350 security findings.',
+      skills: ['Threat Modeling', 'AWS', 'Security Testing']
     },
     {
       title: 'Security Engineer',
       company: 'Nordstrom',
       period: 'Jan 2020 - Nov 2021',
-      description: 'Integrated security tools into CI/CD pipelines including static/dynamic code analysis and dependency scanning. Deployed a comprehensive Threat Intelligence platform using MISP and Cuckoo Sandbox. Implemented infrastructure-as-code solutions for data protection and loss prevention.'
+      description: 'Integrated security tools into CI/CD pipelines including static/dynamic code analysis and dependency scanning. Deployed a comprehensive Threat Intelligence platform using MISP and Cuckoo Sandbox. Implemented infrastructure-as-code solutions for data protection and loss prevention.',
+      skills: ['CI/CD Security', 'Threat Intelligence', 'Infrastructure as Code']
     }
   ];
 
@@ -84,7 +95,14 @@ const ExperienceSection = () => {
                       </span>
                     </div>
                     <h5 className="text-lg text-cyber-green mb-4">{job.company}</h5>
-                    <p className="text-gray-300">{job.description}</p>
+                    <div dangerouslySetInnerHTML={{ __html: job.description }} className="text-gray-300" />
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {job.skills.map((skill, index) => (
+                        <span key={index} className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -141,48 +159,6 @@ const ExperienceSection = () => {
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-10 bg-cyber-grey p-6 rounded-lg border border-cyber-green/20">
-              <h4 className="text-xl font-semibold text-white mb-4">Skills & Expertise</h4>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-green/20 border border-cyber-green flex items-center justify-center mr-3 mt-1">
-                    <div className="h-2 w-2 rounded-full bg-cyber-green"></div>
-                  </div>
-                  <span className="text-gray-300">Threat Modeling & Vulnerability Assessment</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-green/20 border border-cyber-green flex items-center justify-center mr-3 mt-1">
-                    <div className="h-2 w-2 rounded-full bg-cyber-green"></div>
-                  </div>
-                  <span className="text-gray-300">AI/ML & Generative AI Security</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-green/20 border border-cyber-green flex items-center justify-center mr-3 mt-1">
-                    <div className="h-2 w-2 rounded-full bg-cyber-green"></div>
-                  </div>
-                  <span className="text-gray-300">Cloud & Application Security</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-green/20 border border-cyber-green flex items-center justify-center mr-3 mt-1">
-                    <div className="h-2 w-2 rounded-full bg-cyber-green"></div>
-                  </div>
-                  <span className="text-gray-300">Python, Java, SQL, Hadoop Security</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-green/20 border border-cyber-green flex items-center justify-center mr-3 mt-1">
-                    <div className="h-2 w-2 rounded-full bg-cyber-green"></div>
-                  </div>
-                  <span className="text-gray-300">CI/CD Security Integrations</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 h-5 w-5 rounded-full bg-cyber-green/20 border border-cyber-green flex items-center justify-center mr-3 mt-1">
-                    <div className="h-2 w-2 rounded-full bg-cyber-green"></div>
-                  </div>
-                  <span className="text-gray-300">OWASP, Cryptography, Penetration Testing</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

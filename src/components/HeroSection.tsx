@@ -9,51 +9,35 @@ const AnimatedText = ({ phrases, className }: { phrases: string[], className?: s
   const [showCursor, setShowCursor] = useState(true);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     let currentIndex = 0;
     let timeout: NodeJS.Timeout;
 
-    const typeText = () => {
-      if (isTyping) {
-        if (currentIndex <= phrases[currentPhraseIndex].length) {
-          setDisplayText(phrases[currentPhraseIndex].slice(0, currentIndex));
-          currentIndex++;
-          timeout = setTimeout(typeText, 100);
-        } else {
-          // Pause after typing complete
-          setIsTyping(false);
-          timeout = setTimeout(() => {
-            setIsDeleting(true);
-            currentIndex = phrases[currentPhraseIndex].length;
-            typeText();
-          }, 2000);
-        }
-      } else if (isDeleting) {
-        if (currentIndex > 0) {
-          setDisplayText(phrases[currentPhraseIndex].slice(0, currentIndex - 1));
-          currentIndex--;
-          timeout = setTimeout(typeText, 50);
-        } else {
-          // Move to next phrase
-          setIsDeleting(false);
+    const typePhrase = () => {
+      const currentPhrase = phrases[currentPhraseIndex];
+
+      if (currentIndex <= currentPhrase.length) {
+        setDisplayText(currentPhrase.slice(0, currentIndex));
+        currentIndex++;
+        timeout = setTimeout(typePhrase, 100);
+      } else {
+        timeout = setTimeout(() => {
           setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-          setIsTyping(true);
           currentIndex = 0;
-          timeout = setTimeout(typeText, 500);
-        }
+          typePhrase();
+        }, 2000);
       }
     };
 
     // Start the typing animation
-    timeout = setTimeout(typeText, 100);
+    typePhrase();
 
     // Cleanup
     return () => {
       if (timeout) clearTimeout(timeout);
     };
-  }, [currentPhraseIndex, isTyping, isDeleting, phrases]);
+  }, [currentPhraseIndex, phrases]);
 
   // Cursor blink effect
   useEffect(() => {

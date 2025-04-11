@@ -14,74 +14,22 @@ const AboutSection = () => {
             About Me
             <div className="w-full h-1 bg-cyber-green absolute -bottom-2 left-0 right-0 transform translate-y-2"></div>
           </h2>
+          {/* Removed all images */}
           <p className="mt-8 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I'm Vineeth Sai Narajala, a Generative AI Security Engineer at Amazon Web Services, where I focus on developing security best practices for GenAI products. I specialize in AI/ML security, cloud security, and application security with a strong background in threat modeling and vulnerability assessment.
+            Vineeth Sai Narajala is a highly skilled security professional currently working as a Generative AI Security Engineer at Amazon Web Services in New York. With a Bachelor's degree in Informatics Cybersecurity from the University of Washington, Vineeth has built a strong career in cybersecurity, specializing in AI/ML security, cloud security, and application security. His experience includes pioneering GenAI security practices at AWS, conducting comprehensive security assessments for major AWS services, and developing automated vulnerability detection systems. Prior to AWS, Vineeth worked at Nordstrom, where he integrated security tools into CI/CD pipelines and developed a Threat Intelligence Platform. His diverse skill set encompasses threat modeling, vulnerability assessment, IAM, malware analysis, and various programming languages, making him a versatile and valuable professional in the rapidly evolving field of cybersecurity.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          <div className="space-y-8 bg-cyber-dark/60 p-8 rounded-lg border border-cyber-green/10 hover:border-cyber-green/30 transition-all duration-300 shadow-lg">
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-              <Zap className="h-6 w-6 text-cyber-green" />
-              My Approach
-            </h3>
-            
-            <div className="flex items-start space-x-4 group hover:bg-cyber-dark/80 p-4 rounded-lg transition-all duration-300">
-              <div className="mt-1 bg-cyber-green/10 p-3 rounded-lg group-hover:bg-cyber-green/20 transition-all duration-300">
-                <Shield className="h-6 w-6 text-cyber-green" />
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-cyber-green transition-colors duration-300">Security by Design</h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  I believe in integrating security from the beginning of the development lifecycle, focusing on proactive measures rather than reactive solutions.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4 group hover:bg-cyber-dark/80 p-4 rounded-lg transition-all duration-300">
-              <div className="mt-1 bg-cyber-green/10 p-3 rounded-lg group-hover:bg-cyber-green/20 transition-all duration-300">
-                <Database className="h-6 w-6 text-cyber-green" />
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-cyber-green transition-colors duration-300">AI Security Expertise</h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  Specialized in GenAI security, developing comprehensive standards for products like Amazon Q and Bedrock, including guardrails and prompt-injection protections.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4 group hover:bg-cyber-dark/80 p-4 rounded-lg transition-all duration-300">
-              <div className="mt-1 bg-cyber-green/10 p-3 rounded-lg group-hover:bg-cyber-green/20 transition-all duration-300">
-                <User className="h-6 w-6 text-cyber-green" />
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-cyber-green transition-colors duration-300">Continuous Learning</h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  The security landscape is constantly evolving. I'm committed to staying updated with the latest threats, techniques, and best practices in cybersecurity.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4 group hover:bg-cyber-dark/80 p-4 rounded-lg transition-all duration-300">
-              <div className="mt-1 bg-cyber-green/10 p-3 rounded-lg group-hover:bg-cyber-green/20 transition-all duration-300">
-                <BookOpen className="h-6 w-6 text-cyber-green" />
-              </div>
-              <div>
-                <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-cyber-green transition-colors duration-300">Research & Innovation</h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  I actively research emerging security challenges in AI systems and contribute to innovative solutions that address new threats in the rapidly evolving AI landscape.
-                </p>
-              </div>
-            </div>
+          <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20 shadow-[0_0_15px_rgba(0,255,170,0.1)] hover:shadow-[0_0_25px_rgba(0,255,170,0.2)] transition-all duration-500 relative overflow-hidden">
+            <img src="/docs/assets/your-image.jpg" alt="Your Name" className="w-full h-auto rounded-lg" />
           </div>
-          
           <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20 shadow-[0_0_15px_rgba(0,255,170,0.1)] hover:shadow-[0_0_25px_rgba(0,255,170,0.2)] transition-all duration-500 relative overflow-hidden">
             <div className="absolute -right-20 -top-20 w-40 h-40 bg-cyber-green/5 rounded-full blur-3xl"></div>
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
               <Award className="h-6 w-6 text-cyber-green" />
               Areas of Expertise
             </h3>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="cyber-card p-6 bg-cyber-dark/80 border border-cyber-green/10 hover:border-cyber-green/30 hover:translate-y-[-3px] transition-all duration-300">
                 <Lock className="h-10 w-10 text-cyber-green mb-4" />
@@ -90,7 +38,6 @@ const AboutSection = () => {
                   Developing security best practices for generative AI products, including guardrails, prompt-injection protections, and compute isolation.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 bg-cyber-dark/80 border border-cyber-green/10 hover:border-cyber-green/30 hover:translate-y-[-3px] transition-all duration-300">
                 <Server className="h-10 w-10 text-cyber-green mb-4" />
                 <h4 className="text-xl font-semibold text-white mb-2">Cloud Security</h4>
@@ -98,7 +45,6 @@ const AboutSection = () => {
                   Securing AWS infrastructure with expertise in IAM, access control, and vulnerability detection systems.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 bg-cyber-dark/80 border border-cyber-green/10 hover:border-cyber-green/30 hover:translate-y-[-3px] transition-all duration-300">
                 <Globe className="h-10 w-10 text-cyber-green mb-4" />
                 <h4 className="text-xl font-semibold text-white mb-2">Application Security</h4>
@@ -106,7 +52,6 @@ const AboutSection = () => {
                   Integrating security into CI/CD pipelines and conducting threat modeling and security testing for enterprise applications.
                 </p>
               </div>
-              
               <div className="cyber-card p-6 bg-cyber-dark/80 border border-cyber-green/10 hover:border-cyber-green/30 hover:translate-y-[-3px] transition-all duration-300">
                 <Shield className="h-10 w-10 text-cyber-green mb-4" />
                 <h4 className="text-xl font-semibold text-white mb-2">Threat Intelligence</h4>

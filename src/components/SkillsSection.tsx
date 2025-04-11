@@ -21,8 +21,8 @@ const SkillsSection = () => {
 
   const certifications = [
     { name: 'AWS Certified Security Specialty', icon: <Award className="h-5 w-5 text-cyber-teal" /> },
-    { name: 'Certified Ethical Hacker (CEH)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> },
-    { name: 'Offensive Security Certified Professional (OSCP)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> },
+    { name: 'GIAC Enterprise Penetration Tester (GPEN)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> },
+    { name: 'GIAC Cloud Penetration Tester (GCPN)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> },
     { name: 'AWS Certified Solutions Architect', icon: <Server className="h-5 w-5 text-cyber-teal" /> },
     { name: 'CompTIA Security+', icon: <CheckCircle className="h-5 w-5 text-cyber-teal" /> }
   ];

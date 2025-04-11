@@ -458,3 +458,11 @@ body {
 :root.light body {
   background-color: #f5f5f2;
 }
+
+body.light-theme {
+  background-color: #f0f0f0; /* Softer white */
+}
+
+#hero-section {
+  background-color: #f0f0f0; /* Softer white */
+}
