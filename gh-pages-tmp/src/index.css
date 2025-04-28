@@ -1,0 +1,468 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 145 63% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 145 63% 40%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 145 63% 40%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 145 63% 40%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 145 63% 40%;
+  }
+}
+
+.typing-container {
+  display: inline-block;
+}
+
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  animation: typing 3.5s steps(40, end), blink 1s step-end infinite;
+}
+
+.matrix-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 1;
+}
+
+.matrix-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cyber-glow {
+  text-shadow: 0 0 5px #33CC66, 0 0 10px #33CC66, 0 0 15px #33CC66;
+}
+
+.cyber-card {
+  @apply bg-cyber-grey border border-cyber-green/30 rounded-lg transition-all duration-300 hover:border-cyber-green/80 hover:shadow-md hover:shadow-cyber-green/20;
+}
+
+.cyber-gradient {
+  @apply bg-gradient-to-r from-cyber-green to-cyber-green-muted;
+}
+
+.cyber-button {
+  @apply px-6 py-2 bg-cyber-dark border border-cyber-green text-cyber-green rounded transition-all duration-300 hover:bg-cyber-green hover:text-cyber-dark hover:shadow-md hover:shadow-cyber-green/50;
+}
+
+/* Terminal-styled cyber button */
+.cyber-terminal-button {
+  @apply px-6 py-2 bg-cyber-dark relative overflow-hidden text-cyber-green font-mono font-medium rounded;
+  border: 1px solid #33CC66;
+  box-shadow: 0 0 5px #33CC66;
+  transition: all 0.3s ease;
+}
+
+.cyber-terminal-button::before {
+  content: ">";
+  position: absolute;
+  left: 12px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.cyber-terminal-button:hover {
+  @apply pl-10;
+  box-shadow: 0 0 10px #33CC66, 0 0 20px #33CC66;
+}
+
+.cyber-terminal-button:hover::before {
+  opacity: 1;
+}
+
+.cyber-terminal-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(51, 204, 102, 0.1);
+  transition: width 0.2s ease;
+}
+
+.cyber-terminal-button:hover::after {
+  width: 100%;
+}
+
+/* Floating security icons */
+.floating-icon {
+  @apply text-cyber-green/40 absolute z-30 opacity-70;
+  pointer-events: none;
+}
+
+/* Animate text intro effect */
+.text-animated-char {
+  @apply inline-block opacity-0;
+}
+
+/* Add markdown/prose styling */
+.prose {
+  @apply text-gray-300;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  @apply text-cyber-green mt-8 mb-4 font-semibold;
+}
+
+.prose h1 {
+  @apply text-3xl;
+}
+
+.prose h2 {
+  @apply text-2xl;
+}
+
+.prose h3 {
+  @apply text-xl;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul, .prose ol {
+  @apply pl-8 mb-4;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose a {
+  @apply text-cyber-green hover:underline;
+}
+
+.prose blockquote {
+  @apply pl-4 border-l-4 border-cyber-green/30 italic my-4;
+}
+
+.prose code {
+  @apply bg-cyber-grey-light px-1 py-0.5 rounded text-cyber-green;
+}
+
+.prose pre {
+  @apply bg-cyber-grey-light p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose hr {
+  @apply border-cyber-green/20 my-8;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-dark text-foreground;
+  }
+}
+
+/* Add responsive image handling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improved mobile optimization */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1, h2, h3 {
+    word-break: break-word;
+  }
+}
+
+/* Light theme variables - improved for better readability */
+:root.light {
+  --background: 0 0% 98%;
+  --foreground: 0 0% 10%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 10%;
+
+  --primary: 145 63% 32%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 220 14% 94%;
+  --secondary-foreground: 0 0% 10%;
+
+  --muted: 220 14% 94%;
+  --muted-foreground: 220 8% 46%;
+
+  --accent: 145 63% 32%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 14% 84%;
+  --input: 220 14% 84%;
+  --ring: 145 63% 32%;
+
+  --cyber-dark: #f9f9f7;
+  --cyber-darker: #f5f5f2;
+  --cyber-green: #1e8a4a;
+  --cyber-green-muted: #186f3c;
+  --cyber-grey: #f5f5f2;
+  --cyber-grey-light: #efefec;
+}
+
+/* Light theme specific overrides */
+:root.light .matrix-background canvas {
+  opacity: 0.05 !important;
+}
+
+:root.light .text-cyber-green {
+  color: var(--cyber-green, #1e8a4a) !important;
+}
+
+:root.light .text-white {
+  color: #121212 !important;
+}
+
+:root.light .text-gray-300 {
+  color: #333333 !important;
+}
+
+:root.light .text-gray-200 {
+  color: #444444 !important;
+}
+
+:root.light .text-gray-400 {
+  color: #555555 !important;
+}
+
+:root.light .bg-cyber-dark,
+:root.light .bg-cyber-darker,
+:root.light [class*="bg-cyber-dark"] {
+  background-color: transparent !important;
+}
+
+:root.light .bg-cyber-grey {
+  background-color: rgba(240, 240, 240, 0.8) !important;
+}
+
+:root.light .bg-cyber-grey-light {
+  background-color: rgba(232, 232, 232, 0.8) !important;
+}
+
+/* Fix border colors in light mode */
+:root.light [class*="border-cyber-green"],
+:root.light [class*="border-cyber-blue"] {
+  border-color: rgba(30, 138, 74, 0.3) !important;
+}
+
+/* Fix progress bars for better visibility in light mode */
+:root.light .bg-gradient-to-r.from-cyber-green {
+  background: var(--cyber-green) !important;
+}
+
+/* Fix card backgrounds in light mode */
+:root.light [class*="hover:bg-cyber-dark"] {
+  background-color: rgba(240, 240, 240, 0.5) !important;
+}
+
+:root.light [class*="hover:border-cyber-green"] {
+  border-color: rgba(30, 138, 74, 0.5) !important;
+}
+
+/* Fix navbar in light mode */
+:root.light nav {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px);
+  border-bottom-color: rgba(30, 138, 74, 0.2) !important;
+}
+
+/* Completely remove grid background in light mode */
+:root.light [class*="bg-[linear-gradient"] {
+  opacity: 0 !important;
+  display: none !important;
+}
+
+/* Improve card readability in light mode */
+:root.light .cyber-card,
+:root.light [class*="bg-cyber-darker"],
+:root.light [class*="bg-cyber-grey"] {
+  background-color: #fcfcfa !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Improve light mode text contrast */
+:root.light p, 
+:root.light li, 
+:root.light span:not(.text-cyber-green) {
+  color: #333333 !important;
+}
+
+/* Improve headings and titles in light mode */
+:root.light h1, 
+:root.light h2, 
+:root.light h3,
+:root.light h4,
+:root.light h5,
+:root.light h6 {
+  color: #121212 !important;
+}
+
+:root.light h2.text-3xl, 
+:root.light h2.text-4xl {
+  color: #1e1e1e !important;
+}
+
+/* Better light mode sections */
+:root.light section {
+  background-color: #f5f5f2 !important;
+}
+
+/* Cleaner cards in light mode */
+:root.light .bg-cyber-grey {
+  background-color: #fcfcfa !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Dark theme additional styles */
+:root.dark .bg-cyber-dark {
+  background-color: var(--cyber-dark, #121212);
+}
+
+:root.dark .bg-cyber-darker {
+  background-color: var(--cyber-darker, #0A0A0A);
+}
+
+:root.light .text-white {
+  color: #121212;
+}
+
+:root.light .bg-cyber-dark {
+  background-color: #f9f9f7 !important;
+}
+
+:root.light .bg-cyber-darker {
+  background-color: #f5f5f2 !important;
+}
+
+:root.light .bg-cyber-grey {
+  background-color: #e5e5e5;
+}
+
+:root.light .bg-cyber-grey-light {
+  background-color: #d0d0d0;
+}
+
+:root.light .text-gray-300 {
+  color: #333;
+}
+
+:root.light .text-gray-200 {
+  color: #444;
+}
+
+:root.light .border-cyber-green\/20 {
+  border-color: rgba(51, 204, 102, 0.2);
+}
+
+/* Core theme transition */
+html {
+  transition: background-color 0.3s ease;
+}
+
+body {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Improve visibility of scroll indicators in light mode */
+:root.light .text-xs.text-cyber-green.font-mono.opacity-70 {
+  color: var(--cyber-green) !important;
+  opacity: 1 !important;
+}
+
+:root.light a.text-white.hover\:text-cyber-green svg {
+  color: var(--cyber-green) !important;
+}
+
+/* Fix background color in body for light mode */
+:root.light body {
+  background-color: #f5f5f2;
+}
+
+body.light-theme {
+  background-color: #f0f0f0; /* Softer white */
+}
+
+#hero-section {
+  background-color: #f0f0f0; /* Softer white */
+}
