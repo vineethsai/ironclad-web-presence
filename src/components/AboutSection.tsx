@@ -22,7 +22,7 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20 shadow-[0_0_15px_rgba(0,255,170,0.1)] hover:shadow-[0_0_25px_rgba(0,255,170,0.2)] transition-all duration-500 relative overflow-hidden">
-            <img src="/docs/assets/your-image.jpg" alt="Your Name" className="w-full h-auto rounded-lg" />
+            <img src="/placeholder.svg" alt="Vineeth Sai Narajala" className="w-full h-auto rounded-lg" />
           </div>
           <div className="bg-cyber-grey rounded-lg p-8 border border-cyber-green/20 shadow-[0_0_15px_rgba(0,255,170,0.1)] hover:shadow-[0_0_25px_rgba(0,255,170,0.2)] transition-all duration-500 relative overflow-hidden">
             <div className="absolute -right-20 -top-20 w-40 h-40 bg-cyber-green/5 rounded-full blur-3xl"></div>
