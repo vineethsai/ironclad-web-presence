@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vineeth Sai | Cybersecurity Blog</title>
+    <link>https://vineethsai.com/#/blog</link>
+    <description>Expert insights on AI security, cloud security, and emerging cybersecurity threats from Vineeth Sai, a Cybersecurity Engineer at Amazon.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Apr 2025 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://vineethsai.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <category>Cybersecurity</category>
+    <category>AI Security</category>
+    <category>Cloud Security</category>
+    
+    <item>
+      <title>Securing Generative AI: Best Practices for Enterprise Deployment</title>
+      <link>https://vineethsai.com/#/blog/generative-ai-security</link>
+      <guid>https://vineethsai.com/#/blog/generative-ai-security</guid>
+      <pubDate>Mon, 02 Apr 2025 00:00:00 GMT</pubDate>
+      <description>Learn essential security considerations for implementing generative AI in enterprise environments, including threat models, access controls, prompt validation, and monitoring solutions.</description>
+      <category>AI Security</category>
+      <category>GenAI</category>
+      <category>Cybersecurity</category>
+      <category>Enterprise Security</category>
+      <category>Prompt Injection</category>
+    </item>
+    
+    <item>
+      <title>Modern Cloud Security Patterns for Big Data Workloads</title>
+      <link>https://vineethsai.com/#/blog/cloud-security-patterns</link>
+      <guid>https://vineethsai.com/#/blog/cloud-security-patterns</guid>
+      <pubDate>Wed, 26 Mar 2025 00:00:00 GMT</pubDate>
+      <description>Discover effective security patterns for protecting big data workloads in the cloud, with practical examples for AWS, encryption strategies, network segmentation, and continuous compliance monitoring.</description>
+      <category>Cloud Security</category>
+      <category>Big Data</category>
+      <category>AWS</category>
+      <category>Security Architecture</category>
+      <category>Data Protection</category>
+    </item>
+    
+    <item>
+      <title>Zero Trust Security Model: Implementation Guide</title>
+      <link>https://vineethsai.com/#/blog/zero_trust</link>
+      <guid>https://vineethsai.com/#/blog/zero_trust</guid>
+      <pubDate>Mon, 10 Apr 2025 00:00:00 GMT</pubDate>
+      <description>A comprehensive guide to implementing Zero Trust security architecture in modern enterprise environments.</description>
+      <category>Zero Trust</category>
+      <category>Security Architecture</category>
+      <category>Enterprise Security</category>
+    </item>
+  </channel>
+</rss> 
