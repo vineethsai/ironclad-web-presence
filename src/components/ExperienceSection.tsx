@@ -23,15 +23,28 @@ const ExperienceSection = () => {
       title: 'Application Security Engineer',
       company: 'Amazon Web Services',
       period: 'Nov 2021 - June 2024',
+      location: 'New York, United States',
       description: 'Conducted threat modeling, design reviews, and security testing for over 150 new feature launches for AWS Analytics and Big Data Services. Led security reviews for major AWS Spark launches including Glue 5, FGAC in Spark and Athena, and launched projects at re:Invent. Architected complex access models (RBAC, ABAC) for AWS services. Built automated vulnerability detection systems, identifying and remediating over 350 security findings.',
       skills: ['Threat Modeling', 'AWS', 'Security Testing']
     },
     {
-      title: 'Security Engineer',
+      title: 'DevSecOps Security Engineer',
       company: 'Nordstrom',
-      period: 'Jan 2020 - Nov 2021',
-      description: 'Integrated security tools into CI/CD pipelines including static/dynamic code analysis and dependency scanning. Deployed a comprehensive Threat Intelligence platform using MISP and Cuckoo Sandbox. Implemented infrastructure-as-code solutions for data protection and loss prevention.',
-      skills: ['CI/CD Security', 'Threat Intelligence', 'Infrastructure as Code']
+      period: 'Aug 2021 - Nov 2021',
+      location: 'Seattle, United States',
+      description: '1) Improve Business Continuity and Disaster Recovery solutions at Nordstrom by creating an infrastructure-as-code solution for data protection and data loss.\n2) Enhance protection against permanent data loss, corruption, seizure, or ransom by Isolating and reducing permissions surface area on both short-term and long-term storage.\n3) Configure and deploy object lock policies to enable WORM protection with legal and compliance requirements in mind. \n4) Implement least-privilege permissions controls to manage backups and configuration.',
+      skills: ['CI/CD Security', 'SAST', 'Infrastructure as Code']
+    },
+    {
+      title: 'Threat Intelligence/BCDR Security Engineer',
+      company: 'Nordstrom',
+      period: 'May 2020 - Aug 2021',
+      location: 'Seattle, United States',
+      description: `1. Architected and built the Threat Intelligence platform from scratch using open-source tools like MISP. 
+2. Supported and performed a deep-dive analysis of TTP's of both internal and external threats as well as performed threat modeling for applications to defend Nordstrom's infrastructure, to improve the ability to defend vulnerabilities, and make Security-in-depth a default concept during SDLC. 
+3. Reverse engineered malware, triaged threat intelligence, researched attacker infrastructure to curate previously unknown Indicators of Compromise, and created actionable results and remediation plans for internal stakeholders to proactively improve the security posture and maturity.
+4. Conduct Design Reviews, Security assessments and threat modeling for new applications as well as ad hoc automated and manual penetration testing.`,
+      skills: ['BCDR', 'Threat Intelligence', 'MISP', 'IOC', 'TTPs']
     }
   ];
 
@@ -107,32 +120,6 @@ const ExperienceSection = () => {
                 </div>
               ))}
             </div>
-
-            <div className="flex items-center mt-12 mb-8">
-              <Award className="h-6 w-6 text-cyber-green mr-3" />
-              <h3 className="text-2xl font-bold text-white">Education</h3>
-            </div>
-
-            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:w-0.5 before:bg-cyber-green/30">
-              {education.map((edu, index) => (
-                <div key={index} className="relative pl-10">
-                  <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-cyber-dark border-4 border-cyber-green flex items-center justify-center">
-                    <Calendar className="h-4 w-4 text-cyber-green" />
-                  </div>
-                  
-                  <div className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20">
-                    <div className="flex flex-wrap justify-between items-start mb-2">
-                      <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
-                      <span className="px-3 py-1 bg-cyber-green/10 text-cyber-green rounded text-sm">
-                        {edu.period}
-                      </span>
-                    </div>
-                    <h5 className="text-lg text-cyber-green mb-4">{edu.institution}</h5>
-                    <p className="text-gray-300">{edu.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div>
@@ -156,6 +143,32 @@ const ExperienceSection = () => {
                         {tech}
                       </span>
                     ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center mt-12 mb-8">
+              <Award className="h-6 w-6 text-cyber-green mr-3" />
+              <h3 className="text-2xl font-bold text-white">Education</h3>
+            </div>
+
+            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:w-0.5 before:bg-cyber-green/30">
+              {education.map((edu, index) => (
+                <div key={index} className="relative pl-10">
+                  <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-cyber-dark border-4 border-cyber-green flex items-center justify-center">
+                    <Calendar className="h-4 w-4 text-cyber-green" />
+                  </div>
+                  
+                  <div className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20">
+                    <div className="flex flex-wrap justify-between items-start mb-2">
+                      <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
+                      <span className="px-3 py-1 bg-cyber-green/10 text-cyber-green rounded text-sm">
+                        {edu.period}
+                      </span>
+                    </div>
+                    <h5 className="text-lg text-cyber-green mb-4">{edu.institution}</h5>
+                    <p className="text-gray-300">{edu.description}</p>
                   </div>
                 </div>
               ))}

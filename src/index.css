@@ -4,33 +4,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
+    /* Dark theme variables */
+    --background: 0 0% 9%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 145 63% 40%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 145 63% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 222 14% 18%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 222 14% 18%;
+    --muted-foreground: 220 8% 70%;
 
-    --accent: 145 63% 40%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 145 63% 42%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 145 63% 40%;
+    --border: 220 14% 22%;
+    --input: 220 14% 22%;
+    --ring: 145 63% 42%;
 
     --radius: 0.5rem;
 
@@ -42,6 +43,13 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 145 63% 40%;
+
+    --cyber-dark: #121212;
+    --cyber-darker: #0A0A0A;
+    --cyber-green: #33cc66;
+    --cyber-green-muted: #258d47;
+    --cyber-grey: #1e1e1e;
+    --cyber-grey-light: #2a2a2a;
   }
 }
 
@@ -242,197 +250,13 @@ img {
   }
 }
 
-/* Light theme variables - improved for better readability */
-:root.light {
-  --background: 0 0% 98%;
-  --foreground: 0 0% 10%;
-
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 10%;
-
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 10%;
-
-  --primary: 145 63% 32%;
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 220 14% 94%;
-  --secondary-foreground: 0 0% 10%;
-
-  --muted: 220 14% 94%;
-  --muted-foreground: 220 8% 46%;
-
-  --accent: 145 63% 32%;
-  --accent-foreground: 0 0% 100%;
-
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-
-  --border: 220 14% 84%;
-  --input: 220 14% 84%;
-  --ring: 145 63% 32%;
-
-  --cyber-dark: #f9f9f7;
-  --cyber-darker: #f5f5f2;
-  --cyber-green: #1e8a4a;
-  --cyber-green-muted: #186f3c;
-  --cyber-grey: #f5f5f2;
-  --cyber-grey-light: #efefec;
-}
-
-/* Light theme specific overrides */
-:root.light .matrix-background canvas {
-  opacity: 0.05 !important;
-}
-
-:root.light .text-cyber-green {
-  color: var(--cyber-green, #1e8a4a) !important;
-}
-
-:root.light .text-white {
-  color: #121212 !important;
-}
-
-:root.light .text-gray-300 {
-  color: #333333 !important;
-}
-
-:root.light .text-gray-200 {
-  color: #444444 !important;
-}
-
-:root.light .text-gray-400 {
-  color: #555555 !important;
-}
-
-:root.light .bg-cyber-dark,
-:root.light .bg-cyber-darker,
-:root.light [class*="bg-cyber-dark"] {
-  background-color: transparent !important;
-}
-
-:root.light .bg-cyber-grey {
-  background-color: rgba(240, 240, 240, 0.8) !important;
-}
-
-:root.light .bg-cyber-grey-light {
-  background-color: rgba(232, 232, 232, 0.8) !important;
-}
-
-/* Fix border colors in light mode */
-:root.light [class*="border-cyber-green"],
-:root.light [class*="border-cyber-blue"] {
-  border-color: rgba(30, 138, 74, 0.3) !important;
-}
-
-/* Fix progress bars for better visibility in light mode */
-:root.light .bg-gradient-to-r.from-cyber-green {
-  background: var(--cyber-green) !important;
-}
-
-/* Fix card backgrounds in light mode */
-:root.light [class*="hover:bg-cyber-dark"] {
-  background-color: rgba(240, 240, 240, 0.5) !important;
-}
-
-:root.light [class*="hover:border-cyber-green"] {
-  border-color: rgba(30, 138, 74, 0.5) !important;
-}
-
-/* Fix navbar in light mode */
-:root.light nav {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(8px);
-  border-bottom-color: rgba(30, 138, 74, 0.2) !important;
-}
-
-/* Completely remove grid background in light mode */
-:root.light [class*="bg-[linear-gradient"] {
-  opacity: 0 !important;
-  display: none !important;
-}
-
-/* Improve card readability in light mode */
-:root.light .cyber-card,
-:root.light [class*="bg-cyber-darker"],
-:root.light [class*="bg-cyber-grey"] {
-  background-color: #fcfcfa !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03) !important;
-}
-
-/* Improve light mode text contrast */
-:root.light p, 
-:root.light li, 
-:root.light span:not(.text-cyber-green) {
-  color: #333333 !important;
-}
-
-/* Improve headings and titles in light mode */
-:root.light h1, 
-:root.light h2, 
-:root.light h3,
-:root.light h4,
-:root.light h5,
-:root.light h6 {
-  color: #121212 !important;
-}
-
-:root.light h2.text-3xl, 
-:root.light h2.text-4xl {
-  color: #1e1e1e !important;
-}
-
-/* Better light mode sections */
-:root.light section {
-  background-color: #f5f5f2 !important;
-}
-
-/* Cleaner cards in light mode */
-:root.light .bg-cyber-grey {
-  background-color: #fcfcfa !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02) !important;
-}
-
 /* Dark theme additional styles */
-:root.dark .bg-cyber-dark {
+.bg-cyber-dark {
   background-color: var(--cyber-dark, #121212);
 }
 
-:root.dark .bg-cyber-darker {
+.bg-cyber-darker {
   background-color: var(--cyber-darker, #0A0A0A);
-}
-
-:root.light .text-white {
-  color: #121212;
-}
-
-:root.light .bg-cyber-dark {
-  background-color: #f9f9f7 !important;
-}
-
-:root.light .bg-cyber-darker {
-  background-color: #f5f5f2 !important;
-}
-
-:root.light .bg-cyber-grey {
-  background-color: #e5e5e5;
-}
-
-:root.light .bg-cyber-grey-light {
-  background-color: #d0d0d0;
-}
-
-:root.light .text-gray-300 {
-  color: #333;
-}
-
-:root.light .text-gray-200 {
-  color: #444;
-}
-
-:root.light .border-cyber-green\/20 {
-  border-color: rgba(51, 204, 102, 0.2);
 }
 
 /* Core theme transition */
@@ -444,25 +268,6 @@ body {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Improve visibility of scroll indicators in light mode */
-:root.light .text-xs.text-cyber-green.font-mono.opacity-70 {
-  color: var(--cyber-green) !important;
-  opacity: 1 !important;
-}
-
-:root.light a.text-white.hover\:text-cyber-green svg {
-  color: var(--cyber-green) !important;
-}
-
-/* Fix background color in body for light mode */
-:root.light body {
-  background-color: #f5f5f2;
-}
-
-body.light-theme {
-  background-color: #f0f0f0; /* Softer white */
-}
-
 #hero-section {
-  background-color: #f0f0f0; /* Softer white */
+  background-color: var(--cyber-darker); /* Dark background */
 }
