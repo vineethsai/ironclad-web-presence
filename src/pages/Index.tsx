@@ -36,7 +36,10 @@ const Index = () => {
               "sameAs": [
                 "https://github.com/vineethsai",
                 "https://linkedin.com/in/vineethsai",
-                "https://twitter.com/vineethsai"
+                "https://twitter.com/vineethsai",
+                "https://scholar.google.com/citations?user=hIVoKbIAAAAJ&hl=en",
+                "https://orcid.org/0009-0007-4553-9930",
+                "https://www.semanticscholar.org/author/Vineeth-Sai-Narajala/2355085670"
               ],
               "knowsAbout": [
                 "AI Security",

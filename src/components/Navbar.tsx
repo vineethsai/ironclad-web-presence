@@ -115,6 +115,15 @@ const Navbar = () => {
             <a href="https://www.linkedin.com/in/vineethsai/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5 text-white hover:text-cyber-green transition-colors" />
             </a>
+            <a href="https://scholar.google.com/citations?user=hIVoKbIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+              <svg className="h-5 w-5 text-white hover:text-cyber-green transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2C7.03 2 2.73 6.11 2.07 11h3.02c.56-3.36 3.47-6 6.91-6s6.35 2.64 6.91 6h3.02C21.27 6.11 16.97 2 12 2zm0 20c-4.97 0-9.27-4.11-9.93-9h3.02c.56 3.36 3.47 6 6.91 6s6.35-2.64 6.91-6h3.02c-.66 4.89-4.96 9-9.93 9z"/></svg>
+            </a>
+            <a href="https://orcid.org/0009-0007-4553-9930" target="_blank" rel="noopener noreferrer">
+              <svg className="h-5 w-5 text-white hover:text-cyber-green transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/><text x="12" y="16" textAnchor="middle" fontSize="10" fill="currentColor">iD</text></svg>
+            </a>
+            <a href="https://www.semanticscholar.org/author/Vineeth-Sai-Narajala/2355085670" target="_blank" rel="noopener noreferrer">
+              <svg className="h-5 w-5 text-white hover:text-cyber-green transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/><text x="12" y="16" textAnchor="middle" fontSize="8" fill="currentColor">S2</text></svg>
+            </a>
           </motion.div>
 
           {/* Mobile Menu Button */}
@@ -174,6 +183,15 @@ const Navbar = () => {
                 </a>
                 <a href="https://www.linkedin.com/in/vineethsai/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5 text-white hover:text-cyber-green transition-colors" />
+                </a>
+                <a href="https://scholar.google.com/citations?user=hIVoKbIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                  <svg className="h-5 w-5 text-white hover:text-cyber-green transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2C7.03 2 2.73 6.11 2.07 11h3.02c.56-3.36 3.47-6 6.91-6s6.35 2.64 6.91 6h3.02C21.27 6.11 16.97 2 12 2zm0 20c-4.97 0-9.27-4.11-9.93-9h3.02c.56 3.36 3.47 6 6.91 6s6.35-2.64 6.91-6h3.02c-.66 4.89-4.96 9-9.93 9z"/></svg>
+                </a>
+                <a href="https://orcid.org/0009-0007-4553-9930" target="_blank" rel="noopener noreferrer">
+                  <svg className="h-5 w-5 text-white hover:text-cyber-green transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/><text x="12" y="16" textAnchor="middle" fontSize="10" fill="currentColor">iD</text></svg>
+                </a>
+                <a href="https://www.semanticscholar.org/author/Vineeth-Sai-Narajala/2355085670" target="_blank" rel="noopener noreferrer">
+                  <svg className="h-5 w-5 text-white hover:text-cyber-green transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/><text x="12" y="16" textAnchor="middle" fontSize="8" fill="currentColor">S2</text></svg>
                 </a>
               </motion.div>
             </div>
