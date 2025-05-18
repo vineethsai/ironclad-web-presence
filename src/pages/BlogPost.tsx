@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { BlogPostContent } from '@/components/BlogPostContent';
-import ViewCounter from '@/components/ViewCounter';
-import { BlogPost as BlogPostType } from '@/data/blogPosts';
-import { getPostById, getRelatedPosts } from '@/services/blogService';
-import { extractKeywords, extractFAQSchema } from '@/services/seoHelpers';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { BlogPostContent } from '../components/BlogPostContent';
+import ViewCounter from '../components/ViewCounter';
+import { BlogPost as BlogPostType } from '../data/blogPosts';
+import { getPostById, getRelatedPosts } from '../services/blogService';
+import { extractKeywords, extractFAQSchema } from '../services/seoHelpers';
 
 const BlogPost = () => {
   const { postId } = useParams<{ postId: string }>();
