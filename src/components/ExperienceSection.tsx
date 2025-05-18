@@ -68,8 +68,8 @@ const ExperienceSection = () => {
   const projects = [
     {
       title: 'The Vulnerable MCP Project',
-      description: 'Created and maintained a comprehensive database of known vulnerabilities, limitations, and security concerns with the Model Context Protocol (MCP). Documented high-severity issues including tool poisoning attacks, data exfiltration methods, and session security vulnerabilities to improve security awareness in the AI/ML ecosystem.',
-      technologies: ['AI Security', 'Protocol Analysis', 'Vulnerability Research', 'Security Documentation'],
+      description: 'A community-maintained database of known vulnerabilities, limitations, and security concerns with the Model Context Protocol (MCP). Contributes to the knowledge base of security researchers and developers working with AI assistant tools.',
+      technologies: ['AI Security', 'MCP', 'Security Research', 'Vulnerability Database'],
       link: 'https://vulnerablemcp.info/'
     },
     {
@@ -145,19 +145,15 @@ const ExperienceSection = () => {
             <div className="space-y-6">
               {projects.map((project, index) => (
                 <div key={index} className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
-                  <div className="flex justify-between items-start mb-3">
-                    <h4 className="text-xl font-semibold text-white">{project.title}</h4>
-                    {project.link && (
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-cyber-teal hover:text-cyber-green text-sm px-3 py-1 bg-cyber-dark/40 rounded-full transition-colors"
-                      >
-                        Visit Project
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-cyber-green transition-colors">
+                        {project.title} ↗
                       </a>
+                    ) : (
+                      project.title
                     )}
-                  </div>
+                  </h4>
                   <p className="text-gray-300 mb-4">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2">
