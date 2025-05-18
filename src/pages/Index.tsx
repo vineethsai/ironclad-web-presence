@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import SkillsSection from '@/components/SkillsSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import OpenSourceSection from '@/components/OpenSourceSection';
 import ContactSection from '@/components/ContactSection';
@@ -60,7 +59,6 @@ const Index = () => {
         <main>
           <HeroSection />
           <AboutSection />
-          <SkillsSection />
           <ExperienceSection />
           <OpenSourceSection />
           <ContactSection />

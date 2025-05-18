@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Award, Briefcase, ArrowDown } from 'lucide-react';
+import { Calendar, Award, Briefcase, ArrowDown, CheckCircle, Shield, Server } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ExperienceSection = () => {
@@ -57,7 +57,21 @@ const ExperienceSection = () => {
     }
   ];
 
+  const certifications = [
+    { name: 'AWS Certified Security Specialty', icon: <Award className="h-5 w-5 text-cyber-teal" /> },
+    { name: 'GIAC Enterprise Penetration Tester (GPEN)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> },
+    { name: 'GIAC Cloud Penetration Tester (GCPN)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> },
+    { name: 'AWS Certified Solutions Architect', icon: <Server className="h-5 w-5 text-cyber-teal" /> },
+    { name: 'CompTIA Security+', icon: <CheckCircle className="h-5 w-5 text-cyber-teal" /> }
+  ];
+
   const projects = [
+    {
+      title: 'The Vulnerable MCP Project',
+      description: 'Created and maintained a comprehensive database of known vulnerabilities, limitations, and security concerns with the Model Context Protocol (MCP). Documented high-severity issues including tool poisoning attacks, data exfiltration methods, and session security vulnerabilities to improve security awareness in the AI/ML ecosystem.',
+      technologies: ['AI Security', 'Protocol Analysis', 'Vulnerability Research', 'Security Documentation'],
+      link: 'https://vulnerablemcp.info/'
+    },
     {
       title: 'GenAI Security Framework',
       description: 'Developed comprehensive security standards for Amazon\'s GenAI products including guardrails, prompt-injection protections, compute isolation, and session management.',
@@ -131,7 +145,19 @@ const ExperienceSection = () => {
             <div className="space-y-6">
               {projects.map((project, index) => (
                 <div key={index} className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
-                  <h4 className="text-xl font-semibold text-white mb-3">{project.title}</h4>
+                  <div className="flex justify-between items-start mb-3">
+                    <h4 className="text-xl font-semibold text-white">{project.title}</h4>
+                    {project.link && (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-cyber-teal hover:text-cyber-green text-sm px-3 py-1 bg-cyber-dark/40 rounded-full transition-colors"
+                      >
+                        Visit Project
+                      </a>
+                    )}
+                  </div>
                   <p className="text-gray-300 mb-4">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2">
@@ -172,6 +198,24 @@ const ExperienceSection = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            
+            <div className="flex items-center mt-12 mb-8">
+              <Award className="h-6 w-6 text-cyber-teal mr-3" />
+              <h3 className="text-2xl font-bold text-white">Certifications</h3>
+            </div>
+            
+            <div className="bg-cyber-darker/80 backdrop-blur-sm rounded-lg p-6 border border-teal-500/20 shadow-lg hover:shadow-teal-500/5 transition-all duration-300">
+              <ul className="space-y-4">
+                {certifications.map((cert, index) => (
+                  <li key={index} className="flex items-start p-2 hover:bg-cyber-dark/40 rounded-md transition-all duration-300">
+                    <div className="flex-shrink-0 mr-3 mt-1">
+                      {cert.icon}
+                    </div>
+                    <span className="text-gray-200">{cert.name}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

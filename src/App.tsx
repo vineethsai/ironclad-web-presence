@@ -26,7 +26,6 @@ const AnimatedRoutes = () => {
         
         {/* Section routes */}
         <Route path="/about" element={<SectionRoute sectionId="about" />} />
-        <Route path="/skills" element={<SectionRoute sectionId="skills" />} />
         <Route path="/experience" element={<SectionRoute sectionId="experience" />} />
         <Route path="/open-source" element={<SectionRoute sectionId="open-source" />} />
         <Route path="/contact" element={<SectionRoute sectionId="contact" />} />
