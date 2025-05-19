@@ -1,8 +1,30 @@
-import React from 'react';
-import { Calendar, Award, Briefcase, ArrowDown, CheckCircle, Shield, Server } from 'lucide-react';
+import React, { useState } from 'react';
+import { Calendar, Award, Briefcase, ArrowDown, CheckCircle, Shield, Server, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ExperienceSection = () => {
+  const [expandedJobs, setExpandedJobs] = useState({
+    0: true, // First job expanded by default
+  });
+
+  const [expandedEducation, setExpandedEducation] = useState({
+    0: false, // Education collapsed by default
+  });
+
+  const toggleJob = (index) => {
+    setExpandedJobs(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
+  const toggleEducation = (index) => {
+    setExpandedEducation(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const workExperience = [
     {
       title: 'Generative AI Security Engineer',
@@ -53,7 +75,8 @@ const ExperienceSection = () => {
       institution: 'University of Washington',
       degree: 'Bachelor of Science - Informatics Cybersecurity',
       period: '2016 - 2020',
-      description: 'Focused on cybersecurity principles, network security, and secure system design.'
+      description: 'Focused on cybersecurity principles, network security, and secure system design.',
+      tags: ['Cybersecurity', 'Network Security', 'System Design', 'Information Security']
     }
   ];
 
@@ -122,14 +145,36 @@ const ExperienceSection = () => {
                       </span>
                     </div>
                     <h5 className="text-lg text-cyber-green mb-4">{job.company}</h5>
-                    <div dangerouslySetInnerHTML={{ __html: job.description }} className="text-gray-300" />
-                    <div className="flex flex-wrap gap-2 mt-4">
-                      {job.skills.map((skill, index) => (
-                        <span key={index} className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
+                    
+                    <button 
+                      onClick={() => toggleJob(index)}
+                      className="flex items-center text-cyber-green hover:text-cyber-green-light mb-2 transition-colors"
+                    >
+                      {expandedJobs[index] ? (
+                        <>
+                          <span>Hide Details</span>
+                          <ChevronUp className="ml-1 h-4 w-4" />
+                        </>
+                      ) : (
+                        <>
+                          <span>Show Details</span>
+                          <ChevronDown className="ml-1 h-4 w-4" />
+                        </>
+                      )}
+                    </button>
+
+                    {expandedJobs[index] && (
+                      <>
+                        <div dangerouslySetInnerHTML={{ __html: job.description }} className="text-gray-300 mt-4" />
+                        <div className="flex flex-wrap gap-2 mt-4">
+                          {job.skills.map((skill, skillIndex) => (
+                            <span key={skillIndex} className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               ))}
@@ -190,7 +235,41 @@ const ExperienceSection = () => {
                       </span>
                     </div>
                     <h5 className="text-lg text-cyber-green mb-4">{edu.institution}</h5>
-                    <p className="text-gray-300">{edu.description}</p>
+                    
+                    <button 
+                      onClick={() => toggleEducation(index)}
+                      className="flex items-center text-cyber-green hover:text-cyber-green-light mb-2 transition-colors"
+                    >
+                      {expandedEducation[index] ? (
+                        <>
+                          <span>Hide Details</span>
+                          <ChevronUp className="ml-1 h-4 w-4" />
+                        </>
+                      ) : (
+                        <>
+                          <span>Show Details</span>
+                          <ChevronDown className="ml-1 h-4 w-4" />
+                        </>
+                      )}
+                    </button>
+
+                    {expandedEducation[index] ? (
+                      <p className="text-gray-300 mt-4">{edu.description}</p>
+                    ) : (
+                      <div className="mt-4">
+                        <div className="flex flex-wrap gap-2">
+                          {edu.tags.map((tag, tagIndex) => (
+                            <span key={tagIndex} className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="flex items-center mt-4 bg-cyber-darker/80 p-2 rounded">
+                          <BookOpen className="h-4 w-4 text-cyber-green mr-2" />
+                          <span className="text-gray-300 text-sm">Focus areas: {edu.description.split('.')[0]}</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
