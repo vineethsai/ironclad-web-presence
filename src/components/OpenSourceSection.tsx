@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Globe, Shield, Award, ArrowDown, ChevronDown, ChevronUp, FileText, BookOpen, Bookmark, Zap } from 'lucide-react';
+import { Globe, Shield, Award, ArrowDown, ChevronDown, ChevronUp, FileText, BookOpen, Bookmark, Zap, Mic } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from './ui/dialog';
 
@@ -541,6 +541,177 @@ const OpenSourceSection = () => {
                 </div>
               </div>
             )}
+          </div>
+
+          {/* Media Appearances */}
+          <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 mt-6">
+            <div className="flex flex-col">
+              <div className="p-8">
+                <div className="flex items-center mb-6">
+                  <Globe className="h-6 w-6 text-cyber-green mr-3" />
+                  <h3 className="text-2xl font-bold text-white">Media Appearances</h3>
+                </div>
+                
+                <p className="text-gray-300 mb-6">
+                  Research and work featured across cybersecurity publications, industry blogs, and media outlets.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="border-l-2 border-cyber-green/30 pl-4">
+                    <h4 className="text-lg font-semibold text-white mb-2">Agent Name Service (ANS) Coverage</h4>
+                    <div className="space-y-2">
+                      <a href="https://www.blogsec.info/agent-name-service-ans-a-secure-pathway-for-ai-agent-discovery-in-decentralised-ecosystems/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        BlogSec - Agent Name Service: A Secure Pathway for AI Agent Discovery ↗
+                      </a>
+                      <a href="https://genai.owasp.org/resource/agent-name-service-ans-for-secure-ai-agent-discovery-v1-0/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        OWASP GenAI - Agent Name Service Resource ↗
+                      </a>
+                      <a href="https://www.theregister.com/2025/05/20/agent_name_service_proposal/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        The Register - Agent Name Service Proposal ↗
+                      </a>
+                      <a href="https://www.aigl.blog/agent-name-service-ans-for-secure-ai-agent-discovery/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        AIGL Blog - Agent Name Service for Secure AI Agent Discovery ↗
+                      </a>
+                      <a href="https://app.daily.dev/posts/the-agent-name-service-it-s-like-dns-but-for-ai-agents-hbb4keyl" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        Daily.dev - The Agent Name Service: It's Like DNS But for AI Agents ↗
+                      </a>
+                      <a href="https://www.infoworld.com/article/3991376/owasp-proposes-a-way-for-enterprises-to-automatically-identify-ai-agents.html" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        InfoWorld - OWASP Proposes a Way for Enterprises to Automatically Identify AI Agents ↗
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="border-l-2 border-cyber-green/30 pl-4">
+                    <h4 className="text-lg font-semibold text-white mb-2">MCP Security Research Coverage</h4>
+                    <div className="space-y-2">
+                      <a href="https://cloudwars.com/ai/ai-agent-interoperability-community-project-details-mcp-vulnerabilities-enterprise-security-measures/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        Cloud Wars - AI Agent Interoperability: Community Project Details MCP Vulnerabilities, Enterprise Security Measures ↗
+                      </a>
+                      <a href="https://hiddenlayer.com/innovation-hub/exploiting-mcp-tool-parameters/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        HiddenLayer - Exploiting MCP Tool Parameters Research ↗
+                      </a>
+                      <a href="https://www.openexploit.in/securing-mcp-servers-key-lessons-from-a-vulnerable-project/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        OpenExploit - Securing MCP Servers: Key Lessons from a Vulnerable Project ↗
+                      </a>
+                      <a href="https://www.joinformal.com/blog/the-permission-pitfall-securing-mcp-servers-without-limiting-value/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        Formal - The Permission Pitfall: Securing MCP Servers Without Limiting Value ↗
+                      </a>
+                      <a href="https://www.wiz.io/blog/mcp-security-research-briefing" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        Wiz - MCP Security Research Briefing ↗
+                      </a>
+                      <a href="https://genai.owasp.org/resource/2504/17/setting-the-new-frontier-the-power-of-open-collaboration-on-mcp-security/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        OWASP GenAI - Setting the New Frontier: The Power of Open Collaboration on MCP Security ↗
+                      </a>
+                      <a href="https://marketresearch.com/2025/04/17/researchers-from-aws-and-intuit-propose-a-zero-trust-security-framework-to-protect-the-model-context-protocol-mcp-from-tool-poisoning-and-unauthorized-access/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        Market Research - AWS and Intuit Researchers Propose Zero Trust Security Framework for MCP ↗
+                      </a>
+                      <a href="https://cy3ersec.uk/blog/mcp-security-research-briefing-a-safety-analysis-tutorial" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        Cy3erSec - MCP Security Research Briefing: A Safety Analysis Tutorial ↗
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="border-l-2 border-cyber-green/30 pl-4">
+                    <h4 className="text-lg font-semibold text-white mb-2">Industry Integration & Tools</h4>
+                    <div className="space-y-2">
+                      <a href="https://lumeau.ai/" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        Lumeau.ai - AI Security Integration ↗
+                      </a>
+                      <a href="https://www.dhanu.one/blog/mcp-audit-trails" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        Dhanu.one - MCP Audit Trails Implementation ↗
+                      </a>
+                      <a href="https://www.youtube.com/watch?v=h_6unOXfv4&ab_channel=DiscoverAI" target="_blank" rel="noopener noreferrer" className="block text-cyber-green hover:text-cyber-green-light transition-colors text-sm">
+                        YouTube - DiscoverAI Channel Feature ↗
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Podcast Appearances */}
+          <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 mt-6">
+            <div className="flex flex-col">
+              <div className="p-8">
+                <div className="flex items-center mb-6">
+                  <Mic className="h-6 w-6 text-cyber-green mr-3" />
+                  <h3 className="text-2xl font-bold text-white">Podcast Appearances</h3>
+                </div>
+                
+                <p className="text-gray-300 mb-6">
+                  Speaking engagements on cybersecurity podcasts and video interviews discussing AI security, MCP vulnerabilities, and agentic AI systems.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="cyber-card p-6">
+                    <h4 className="text-xl font-semibold text-white mb-3">
+                      <a href="https://www.resilientcyber.io/p/resilient-cyber-w-vineeth-sai-narajala" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-green transition-colors">
+                        Resilient Cyber Podcast ↗
+                      </a>
+                    </h4>
+                    <p className="text-gray-300 mb-4">
+                      Discussion with Chris Hughes on Model Context Protocol (MCP) - Potential & Pitfalls, covering MCP's role in the emerging Agentic AI ecosystem and security considerations for practitioners.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        MCP Security
+                      </span>
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        Agentic AI
+                      </span>
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        Podcast Interview
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="cyber-card p-6">
+                    <h4 className="text-xl font-semibold text-white mb-3">
+                      <a href="https://www.youtube.com/watch?v=IHGfv-7I2gI&pp=ygUYdmluZWV0aCBzYWkgbmFyYWphbGEgbWNw" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-green transition-colors">
+                        YouTube Security Interview ↗
+                      </a>
+                    </h4>
+                    <p className="text-gray-300 mb-4">
+                      Video interview discussing MCP security research, vulnerability assessments, and enterprise security considerations for AI agent deployments.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        Video Interview
+                      </span>
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        MCP Research
+                      </span>
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        YouTube
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="cyber-card p-6">
+                    <h4 className="text-xl font-semibold text-white mb-3">
+                      <a href="https://www.youtube.com/watch?v=ESxdT2dWMtc&list=PLbIIzrns6QE_SV0_N2Nkkuo_CWgZuHjUN&index=3" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-green transition-colors">
+                        Technical Deep Dive Series ↗
+                      </a>
+                    </h4>
+                    <p className="text-gray-300 mb-4">
+                      Part of a technical series discussing advanced AI security topics, threat modeling for LLM applications, and practical implementation of security frameworks.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        Technical Series
+                      </span>
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        AI Security
+                      </span>
+                      <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                        Deep Dive
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
