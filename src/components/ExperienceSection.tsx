@@ -96,19 +96,16 @@ const ExperienceSection = () => {
       link: 'https://vulnerablemcp.info/'
     },
     {
-      title: 'GenAI Security Framework',
+      title: 'MCP Enhanced Tool Definition Interface',
+      description: 'A comprehensive security framework for protecting Large Language Model applications from tool poisoning and rug pull attacks through cryptographic verification, OAuth integration, and policy-based access control in Model Context Protocol environments.',
+      technologies: ['MCP Security', 'Cryptographic Verification', 'OAuth 2.0', 'Policy-Based Access Control'],
+      link: 'https://vulnerablemcp.info/etdi-security.html'
+    },
+    {
+      title: 'Agentic Security Hub',
       description: 'Developed comprehensive security standards for Amazon\'s GenAI products including guardrails, prompt-injection protections, compute isolation, and session management.',
-      technologies: ['AI/ML Security', 'Python', 'Prompt Engineering', 'Security Analysis']
-    },
-    {
-      title: 'AWS Analytics Security',
-      description: 'Led security reviews for major AWS Spark features, implementing complex access models (RBAC, ABAC) for AWS Analytics and Big Data Services. These systems are used by DOD and US Government as part of the $10 billion NSA contract award.',
-      technologies: ['Hadoop Security', 'Spark', 'IAM', 'Lake Formation']
-    },
-    {
-      title: 'Vulnerability Detection System',
-      description: 'Built automated systems to detect vulnerabilities such as overly permissive security groups, insecure IAM policies, and internet-facing applications.',
-      technologies: ['Python', 'Cloud Security', 'AWS', 'Automation']
+      technologies: ['AI/ML Security', 'Python', 'Prompt Engineering', 'Security Analysis'],
+      link: 'http://agenticsecurity.info/'
     }
   ];
 
@@ -179,41 +176,6 @@ const ExperienceSection = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div>
-            <div className="flex items-center mb-8">
-              <Award className="h-6 w-6 text-cyber-green mr-3" />
-              <h3 className="text-2xl font-bold text-white">Notable Projects</h3>
-            </div>
-
-            <div className="space-y-6">
-              {projects.map((project, index) => (
-                <div key={index} className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
-                  <h4 className="text-xl font-semibold text-white mb-3">
-                    {project.link ? (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-cyber-green transition-colors">
-                        {project.title} ↗
-                      </a>
-                    ) : (
-                      project.title
-                    )}
-                  </h4>
-                  <p className="text-gray-300 mb-4">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span 
-                        key={techIndex}
-                        className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
 
             <div className="flex items-center mt-12 mb-8">
               <Award className="h-6 w-6 text-cyber-green mr-3" />
@@ -270,6 +232,104 @@ const ExperienceSection = () => {
                         </div>
                       </div>
                     )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="flex items-center mb-8">
+              <Shield className="h-6 w-6 text-cyber-green mr-3" />
+              <h3 className="text-2xl font-bold text-white">Leadership</h3>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <div className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
+                <div className="flex flex-wrap justify-between items-start mb-2">
+                  <h4 className="text-xl font-semibold text-white">Co Leader and Founding Member of AIVSS</h4>
+                  <span className="px-3 py-1 bg-cyber-green/10 text-cyber-green rounded text-sm">
+                    Jun 2025 - Present
+                  </span>
+                </div>
+                <h5 className="text-lg text-cyber-green mb-3">
+                  <a href="https://aivss.owasp.org/" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-green-light transition-colors">
+                    OWASP AIVSS Project ↗
+                  </a>
+                </h5>
+                <p className="text-gray-300 mb-4">
+                  AI Vulnerability Scoring System and Agentic AI Top 10 - Leading the development of comprehensive vulnerability scoring methodologies specifically designed for AI systems, including agentic AI applications.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                    AI Security
+                  </span>
+                  <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                    Vulnerability Assessment
+                  </span>
+                  <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                    Open Source Leadership
+                  </span>
+                </div>
+              </div>
+
+              <div className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
+                <div className="flex flex-wrap justify-between items-start mb-2">
+                  <h4 className="text-xl font-semibold text-white">Co Lead for Agentic Application Security</h4>
+                  <span className="px-3 py-1 bg-cyber-green/10 text-cyber-green rounded text-sm">
+                    Mar 2025 - Present
+                  </span>
+                </div>
+                <h5 className="text-lg text-cyber-green mb-3">
+                  <a href="http://genai.owasp.org/" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-green-light transition-colors">
+                    OWASP GenAI Project - Agentic Security Initiative (ASI) ↗
+                  </a>
+                </h5>
+                <p className="text-gray-300 mb-4">
+                  Working with the open source community to advance the security of Agentic AI and GenAI generally by contributing and authoring white papers, security frameworks, and best practices for the industry.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                    Agentic AI Security
+                  </span>
+                  <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                    GenAI Security
+                  </span>
+                  <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                    Community Leadership
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center mb-8">
+              <Award className="h-6 w-6 text-cyber-green mr-3" />
+              <h3 className="text-2xl font-bold text-white">Notable Projects</h3>
+            </div>
+
+            <div className="space-y-6">
+              {projects.map((project, index) => (
+                <div key={index} className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-cyber-green transition-colors">
+                        {project.title} ↗
+                      </a>
+                    ) : (
+                      project.title
+                    )}
+                  </h4>
+                  <p className="text-gray-300 mb-4">{project.description}</p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span 
+                        key={techIndex}
+                        className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               ))}
