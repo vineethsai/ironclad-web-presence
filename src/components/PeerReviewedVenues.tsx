@@ -154,6 +154,23 @@ function getTierIcon(tier: 'tier1' | 'tier2' | 'other' | 'preprint') {
   }
 }
 
+// Keywords to highlight in venue names
+const HIGHLIGHT_KEYWORDS = [
+  'IEEE', 'ACM', 'USENIX', 'ICML', 'ICLR', 'NeurIPS', 'CVPR', 'AAAI', 
+  'Springer', 'Elsevier', 'NDSS', 'CCS', 'S&P'
+];
+
+function getVenueKeywords(venueName: string): string[] {
+  const found: string[] = [];
+  HIGHLIGHT_KEYWORDS.forEach(keyword => {
+    const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
+    if (regex.test(venueName)) {
+      found.push(keyword.toUpperCase());
+    }
+  });
+  return [...new Set(found)]; // Remove duplicates
+}
+
 const PeerReviewedVenues: React.FC<PeerReviewedVenuesProps> = ({ papers }) => {
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const [showAllInstitutions, setShowAllInstitutions] = useState(false);
@@ -325,31 +342,41 @@ const PeerReviewedVenues: React.FC<PeerReviewedVenuesProps> = ({ papers }) => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-          {displayVenues.map((venue, index) => (
-            <div
-              key={index}
-              className="bg-cyber-dark rounded-lg border border-cyber-green/20 hover:border-cyber-green/40 transition-all p-4"
-            >
-              <div className="flex items-start justify-between gap-2">
-                <span className="text-white text-sm font-medium line-clamp-2 flex-1">
-                  {venue.name === 'Unknown' ? 'Unknown Venue' : venue.name}
-                </span>
-                <Badge className={`shrink-0 ${getTierColor(tier)}`}>
-                  {venue.count}
-                </Badge>
+          {displayVenues.map((venue, index) => {
+            const keywords = getVenueKeywords(venue.name);
+            return (
+              <div
+                key={index}
+                className="bg-cyber-dark rounded-lg border border-cyber-green/20 hover:border-cyber-green/40 transition-all p-4"
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <span className="text-white text-sm font-medium line-clamp-2 flex-1">
+                    {venue.name === 'Unknown' ? 'Unknown Venue' : venue.name}
+                  </span>
+                  <Badge className={`shrink-0 ${getTierColor(tier)}`}>
+                    {venue.count}
+                  </Badge>
+                </div>
+                <div className="flex items-center gap-2 mt-2 flex-wrap">
+                  {keywords.map((kw, i) => (
+                    <span key={i} className="bg-cyber-green/20 text-cyber-green text-xs font-bold px-2 py-0.5 rounded">
+                      {kw}
+                    </span>
+                  ))}
+                  {venue.papers.length > 0 && venue.papers[0].link && (
+                    <a
+                      href={venue.papers[0].link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-cyber-green hover:underline inline-flex items-center gap-1"
+                    >
+                      View paper <ExternalLink className="h-3 w-3" />
+                    </a>
+                  )}
+                </div>
               </div>
-              {venue.papers.length > 0 && venue.papers[0].link && (
-                <a
-                  href={venue.papers[0].link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-cyber-green hover:underline mt-2 inline-flex items-center gap-1"
-                >
-                  View paper <ExternalLink className="h-3 w-3" />
-                </a>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
         
         {hasMore && (

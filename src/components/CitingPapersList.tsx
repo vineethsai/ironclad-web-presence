@@ -19,12 +19,22 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
   const [countryFilter, setCountryFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Get unique countries for filter dropdown
+  // Get unique countries for filter dropdown (exclude noisy geocoding results)
+  const EXCLUDED_COUNTRIES = ['Papua New Guinea', 'Mali'];
+  
+  // Normalize country names
+  const normalizeCountry = (country: string): string => {
+    const normalized = country.trim();
+    if (normalized === 'USA' || normalized === 'US') return 'United States';
+    if (normalized === 'UK') return 'United Kingdom';
+    return normalized;
+  };
+  
   const uniqueCountries = useMemo(() => {
     const countries = new Set<string>();
     papers.forEach(paper => {
-      if (paper.country && paper.country !== 'Unknown') {
-        countries.add(paper.country);
+      if (paper.country && paper.country !== 'Unknown' && !EXCLUDED_COUNTRIES.includes(paper.country)) {
+        countries.add(normalizeCountry(paper.country));
       }
     });
     return Array.from(countries).sort();
@@ -46,9 +56,11 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
       );
     }
 
-    // Apply country filter
+    // Apply country filter (with normalization)
     if (countryFilter !== 'all') {
-      filtered = filtered.filter(paper => paper.country === countryFilter);
+      filtered = filtered.filter(paper => 
+        paper.country && normalizeCountry(paper.country) === countryFilter
+      );
     }
 
     // Apply influence filter
@@ -199,10 +211,10 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
                     </div>
                   )}
                   
-                  {paper.country && paper.country !== 'Unknown' && (
+                  {paper.country && paper.country !== 'Unknown' && !EXCLUDED_COUNTRIES.includes(paper.country) && (
                     <div className="flex items-center gap-1">
                       <Globe className="h-4 w-4" />
-                      <span>{paper.country}</span>
+                      <span>{normalizeCountry(paper.country)}</span>
                     </div>
                   )}
                   

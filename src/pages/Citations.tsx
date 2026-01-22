@@ -57,12 +57,27 @@ const Citations = () => {
     };
   }, [citingPapers, allCitingPapers, stats]);
 
-  // Geographic breakdown by country
+  // Geographic breakdown by country (filter out noisy geocoding results)
+  const EXCLUDED_COUNTRIES = ['Papua New Guinea', 'Mali'];
+  
+  // Normalize country names
+  const normalizeCountry = (country: string): string => {
+    const normalized = country.trim();
+    if (normalized === 'USA' || normalized === 'US') return 'United States';
+    if (normalized === 'UK') return 'United Kingdom';
+    return normalized;
+  };
+  
   const countryStats = useMemo(() => {
     const countryMap = new Map<string, { count: number; cities: Set<string>; affiliations: Set<string> }>();
     
     locations.forEach(loc => {
-      const country = loc.country || 'Unknown';
+      const rawCountry = loc.country || 'Unknown';
+      // Skip excluded countries (geocoding noise)
+      if (EXCLUDED_COUNTRIES.includes(rawCountry)) return;
+      
+      const country = normalizeCountry(rawCountry);
+      
       if (!countryMap.has(country)) {
         countryMap.set(country, { count: 0, cities: new Set(), affiliations: new Set() });
       }
@@ -319,6 +334,15 @@ const Citations = () => {
                     <p className="text-sm text-gray-300">
                       Geographic distribution of citations by country, showing the global reach of your research impact.
                     </p>
+                  </div>
+                </div>
+
+                {/* Total countries counter */}
+                <div className="bg-cyber-grey rounded-lg border border-cyber-green/30 p-6 text-center">
+                  <div className="text-4xl font-bold text-cyber-green mb-2">{countryStats.length}</div>
+                  <div className="text-gray-400">Countries with Citations</div>
+                  <div className="text-sm text-gray-500 mt-1">
+                    {countryStats.reduce((sum, c) => sum + c.count, 0)} total citations worldwide
                   </div>
                 </div>
                 
