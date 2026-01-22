@@ -434,22 +434,53 @@ const PeerReviewedVenues: React.FC<PeerReviewedVenuesProps> = ({ papers }) => {
             Prestigious Institutions Citing Your Work
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {(showAllInstitutions ? prestigiousInstitutions : prestigiousInstitutions.slice(0, 9)).map(([name, data]) => (
-              <div
-                key={name}
-                className="bg-cyber-dark rounded-lg border border-cyber-green/30 hover:border-cyber-green/60 transition-all p-4"
-              >
-                <div className="flex items-start justify-between gap-2">
-                  <span className="text-white text-sm font-medium flex-1">{name}</span>
-                  <Badge className="bg-cyber-green text-cyber-dark shrink-0">
-                    {data.count}
-                  </Badge>
+            {(showAllInstitutions ? prestigiousInstitutions : prestigiousInstitutions.slice(0, 9)).map(([name, data]) => {
+              const isExpanded = expandedSections[`inst-${name}`];
+              return (
+                <div
+                  key={name}
+                  className="bg-cyber-dark rounded-lg border border-cyber-green/30 hover:border-cyber-green/60 transition-all p-4"
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <span className="text-white text-sm font-medium flex-1">{name}</span>
+                    <Badge className="bg-cyber-green text-cyber-dark shrink-0">
+                      {data.count}
+                    </Badge>
+                  </div>
+                  <div className="flex items-center justify-between mt-2">
+                    <p className="text-xs text-gray-500">
+                      {data.count} citation{data.count !== 1 ? 's' : ''}
+                    </p>
+                    <button
+                      onClick={() => toggleSection(`inst-${name}`)}
+                      className="text-xs text-cyber-green hover:underline flex items-center gap-1"
+                    >
+                      {isExpanded ? 'Hide' : 'View'} papers
+                      {isExpanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
+                    </button>
+                  </div>
+                  {isExpanded && (
+                    <div className="mt-3 pt-3 border-t border-cyber-green/20 space-y-2">
+                      {data.papers.slice(0, 5).map((paper, i) => (
+                        <div key={i} className="text-xs">
+                          <a
+                            href={paper.link || '#'}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-300 hover:text-cyber-green hover:underline line-clamp-2"
+                          >
+                            {paper.title}
+                          </a>
+                        </div>
+                      ))}
+                      {data.papers.length > 5 && (
+                        <p className="text-xs text-gray-500">+{data.papers.length - 5} more</p>
+                      )}
+                    </div>
+                  )}
                 </div>
-                <p className="text-xs text-gray-500 mt-2">
-                  {data.count} citation{data.count !== 1 ? 's' : ''}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
           {prestigiousInstitutions.length > 9 && (
             <Button
