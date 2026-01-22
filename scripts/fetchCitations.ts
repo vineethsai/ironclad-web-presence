@@ -2,7 +2,10 @@ import { writeFileSync } from 'fs';
 import { join } from 'path';
 import type { CitationData, Publication, CitingPaper, CitationLocation, CitationStats } from '../src/types/citations.ts';
 
-const SERPAPI_KEY = process.env.SERPAPI_KEY || '9700e269dc8f9bc9e8eae7a887304555e8f922f584b62f71ff19fafb26575307';
+const SERPAPI_KEY = process.env.SERPAPI_KEY;
+if (!SERPAPI_KEY) {
+  throw new Error('SERPAPI_KEY environment variable not set. Set it with: export SERPAPI_KEY="your_key"');
+}
 const SCHOLAR_ID = 'hIVoKbIAAAAJ';
 const OUTPUT_PATH = join(process.cwd(), 'src/data/citations.json');
 

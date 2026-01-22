@@ -14,7 +14,9 @@ import urllib.request
 import urllib.parse
 from pathlib import Path
 
-SERPAPI_KEY = '9700e269dc8f9bc9e8eae7a887304555e8f922f584b62f71ff19fafb26575307'
+SERPAPI_KEY = os.environ.get('SERPAPI_KEY')
+if not SERPAPI_KEY:
+    raise ValueError("SERPAPI_KEY environment variable not set. Set it with: export SERPAPI_KEY='your_key'")
 SCHOLAR_ID = 'hIVoKbIAAAAJ'
 
 # Self-citation patterns
