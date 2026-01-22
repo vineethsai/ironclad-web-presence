@@ -143,6 +143,17 @@ def main():
     publications_set = set()
     self_citations_filtered = 0
     
+    # First pass: collect country info for each paper title
+    paper_countries = {}
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            citing_title = row.get('citing paper title', '')
+            country = row.get('country', '')
+            if citing_title and country and citing_title not in paper_countries:
+                paper_countries[citing_title] = country
+    
+    # Second pass: process papers
     with open(csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -174,6 +185,9 @@ def main():
             # Clean affiliation
             clean_aff = affiliation if affiliation and affiliation not in ['AI_ML', 'GENAI', 'Security', 'No_author_info'] else ''
             
+            # Get country for this paper
+            paper_country = paper_countries.get(citing_title, country) or 'Unknown'
+            
             if citing_title not in papers_by_title:
                 papers_by_title[citing_title] = {
                     'title': citing_title,
@@ -185,7 +199,8 @@ def main():
                     'venueScore': score,
                     'citationScore': 0,
                     'citedPublication': cited_title,
-                    'affiliation': clean_aff or 'Unknown'
+                    'affiliation': clean_aff or 'Unknown',
+                    'country': paper_country
                 }
             else:
                 if author and author not in papers_by_title[citing_title]['authors']:
@@ -193,6 +208,9 @@ def main():
                 # Update affiliation if better
                 if clean_aff and papers_by_title[citing_title]['affiliation'] == 'Unknown':
                     papers_by_title[citing_title]['affiliation'] = clean_aff
+                # Update country if better
+                if paper_country and paper_country != 'Unknown' and papers_by_title[citing_title].get('country') == 'Unknown':
+                    papers_by_title[citing_title]['country'] = paper_country
             
             # Aggregate locations
             try:

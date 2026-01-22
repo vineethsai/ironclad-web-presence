@@ -4,7 +4,7 @@ import InfluenceScore from './InfluenceScore';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
-import { ExternalLink, Search, TrendingUp, Calendar, Users, Building2 } from 'lucide-react';
+import { ExternalLink, Search, TrendingUp, Calendar, Users, Building2, Globe } from 'lucide-react';
 
 interface CitingPapersListProps {
   papers: CitingPaper[];
@@ -16,7 +16,19 @@ type FilterOption = 'all' | 'high' | 'medium' | 'low';
 const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
   const [sortBy, setSortBy] = useState<SortOption>('influence-desc');
   const [filterBy, setFilterBy] = useState<FilterOption>('all');
+  const [countryFilter, setCountryFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Get unique countries for filter dropdown
+  const uniqueCountries = useMemo(() => {
+    const countries = new Set<string>();
+    papers.forEach(paper => {
+      if (paper.country && paper.country !== 'Unknown') {
+        countries.add(paper.country);
+      }
+    });
+    return Array.from(countries).sort();
+  }, [papers]);
 
   const filteredAndSortedPapers = useMemo(() => {
     let filtered = [...papers];
@@ -29,8 +41,14 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
         paper.authors.some(author => author.toLowerCase().includes(query)) ||
         paper.venue.toLowerCase().includes(query) ||
         paper.citedPublication.toLowerCase().includes(query) ||
-        (paper.affiliation && paper.affiliation.toLowerCase().includes(query))
+        (paper.affiliation && paper.affiliation.toLowerCase().includes(query)) ||
+        (paper.country && paper.country.toLowerCase().includes(query))
       );
+    }
+
+    // Apply country filter
+    if (countryFilter !== 'all') {
+      filtered = filtered.filter(paper => paper.country === countryFilter);
     }
 
     // Apply influence filter
@@ -64,7 +82,7 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
     });
 
     return filtered;
-  }, [papers, sortBy, filterBy, searchQuery]);
+  }, [papers, sortBy, filterBy, countryFilter, searchQuery]);
 
   if (papers.length === 0) {
     return (
@@ -101,6 +119,23 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
             <SelectItem value="low" className="text-white">Low Influence</SelectItem>
           </SelectContent>
         </Select>
+
+        {uniqueCountries.length > 0 && (
+          <Select value={countryFilter} onValueChange={setCountryFilter}>
+            <SelectTrigger className="w-full md:w-48 bg-cyber-grey border-cyber-green/30 text-white">
+              <Globe className="h-4 w-4 mr-2" />
+              <SelectValue placeholder="Filter by country" />
+            </SelectTrigger>
+            <SelectContent className="bg-cyber-grey border-cyber-green/30 max-h-60">
+              <SelectItem value="all" className="text-white">All Countries</SelectItem>
+              {uniqueCountries.map(country => (
+                <SelectItem key={country} value={country} className="text-white">
+                  {country}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        )}
 
         <Select value={sortBy} onValueChange={(value) => setSortBy(value as SortOption)}>
           <SelectTrigger className="w-full md:w-48 bg-cyber-grey border-cyber-green/30 text-white">
@@ -164,6 +199,13 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
                     </div>
                   )}
                   
+                  {paper.country && paper.country !== 'Unknown' && (
+                    <div className="flex items-center gap-1">
+                      <Globe className="h-4 w-4" />
+                      <span>{paper.country}</span>
+                    </div>
+                  )}
+                  
                   {paper.year && (
                     <div className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
@@ -224,6 +266,7 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
             onClick={() => {
               setSearchQuery('');
               setFilterBy('all');
+              setCountryFilter('all');
             }}
             className="mt-4 text-cyber-green hover:text-cyber-green/80"
           >

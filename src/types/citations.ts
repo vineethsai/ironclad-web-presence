@@ -25,6 +25,7 @@ export interface CitingPaper {
   citationScore: number;
   citedPublication: string; // Title of the publication it cites
   affiliation?: string; // Institution/affiliation of the citing author
+  country?: string; // Country of the citing institution
 }
 
 export interface CitationLocation {

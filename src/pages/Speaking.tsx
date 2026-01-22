@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Globe, Shield, Award, ChevronDown, ChevronUp, FileText, Zap, Github, Building2, ExternalLink } from 'lucide-react';
+import { Globe, Shield, Award, ChevronDown, ChevronUp, FileText, Zap, Github, Building2, ExternalLink, Youtube, BookOpen } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 
-const ConferenceTalk = ({ title, event, year, description, link, abstract }: {
+const ConferenceTalk = ({ title, event, year, description, link, abstract, videoLink }: {
   title: string;
   event: string;
   year: string;
   description: string;
   link: string;
   abstract: string;
+  videoLink?: string;
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -34,10 +35,21 @@ const ConferenceTalk = ({ title, event, year, description, link, abstract }: {
           </span>
         </div>
         <p className="text-gray-300 text-sm">{description}</p>
-        <div className="flex gap-4 mt-2">
+        <div className="flex flex-wrap gap-4 mt-2">
           <a href={link} target="_blank" rel="noopener noreferrer" className="text-cyber-green underline text-sm">
             View conference details
           </a>
+          {videoLink && (
+            <a 
+              href={videoLink} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-red-400 underline text-sm flex items-center hover:text-red-300"
+            >
+              <Youtube className="h-4 w-4 mr-1" />
+              Watch Recording
+            </a>
+          )}
           <button 
             onClick={openAbstractModal} 
             className="text-cyber-green underline text-sm flex items-center cursor-pointer hover:text-cyber-green-light"
@@ -81,6 +93,7 @@ const ConferenceTalk = ({ title, event, year, description, link, abstract }: {
 const Speaking = () => {
   const [expandedSections, setExpandedSections] = useState({
     conferences: true,
+    thoughtLeadership: true,
     launches: true,
     openSource: true,
     adoption: true
@@ -182,7 +195,8 @@ const Speaking = () => {
       year: "2025",
       description: "Presented a framework for applying Zero Trust principles to AI agent deployments in enterprise environments.",
       link: "https://owaspbasc2025.sched.com/event/1xqja/analyzing-zero-trust-architecture-in-the-age-of-agentic-genai-a-practical-approach",
-      abstract: "The proliferation of generative artificial intelligence (GenAI) agents introduces unprecedented security challenges to modern organizations. As these autonomous systems increasingly generate content, make decisions, and execute actions with minimal human oversight, traditional perimeter-based security approaches prove inadequate. This paper examines the critical intersection of Zero Trust Architecture (ZTA) and GenAI agent deployment, proposing a framework for secure AI integration in enterprise environments."
+      abstract: "The proliferation of generative artificial intelligence (GenAI) agents introduces unprecedented security challenges to modern organizations. As these autonomous systems increasingly generate content, make decisions, and execute actions with minimal human oversight, traditional perimeter-based security approaches prove inadequate. This paper examines the critical intersection of Zero Trust Architecture (ZTA) and GenAI agent deployment, proposing a framework for secure AI integration in enterprise environments.",
+      videoLink: "https://www.youtube.com/watch?v=-o52PXD3Xu4"
     },
     {
       id: 10,
@@ -190,8 +204,9 @@ const Speaking = () => {
       event: "BSides Baltimore",
       year: "2024",
       description: "Shared methodologies for identifying and mitigating security risks in applications using large language models.",
-      link: "https://www.youtube.com/watch?v=lZYATxO0rMA",
-      abstract: "This talk explores the urgent need for a paradigm shift in threat modeling to address the complexities of large-scale systems. Adding more security bottlenecks to the development process is not only expensive but also risks losing developers' trust. However, identifying security issues later in the Software Development Life Cycle (SDLC) or after launch proves to be even more expensive. Threat modeling provides an ideal and cost-effective approach to incorporating security into the development process."
+      link: "https://bsidesbaltimore.org/",
+      abstract: "This talk explores the urgent need for a paradigm shift in threat modeling to address the complexities of large-scale systems. Adding more security bottlenecks to the development process is not only expensive but also risks losing developers' trust. However, identifying security issues later in the Software Development Life Cycle (SDLC) or after launch proves to be even more expensive. Threat modeling provides an ideal and cost-effective approach to incorporating security into the development process.",
+      videoLink: "https://www.youtube.com/watch?v=lZYATxO0rMA"
     },
     {
       id: 11,
@@ -329,6 +344,54 @@ const Speaking = () => {
     }
   ];
 
+  const thoughtLeadership = [
+    {
+      title: "Securing AI's New Frontier: The Power of Open Collaboration on MCP Security",
+      organization: "OWASP GenAI Security Project",
+      date: "April 2025",
+      type: "blog",
+      link: "https://genai.owasp.org/2025/04/22/securing-ais-new-frontier-the-power-of-open-collaboration-on-mcp-security/",
+      description: "Co-authored blog post introducing a comprehensive defense-in-depth security framework for the Model Context Protocol (MCP). Covers tool poisoning threats, Zero Trust implementation, and practical deployment patterns for enterprise MCP security.",
+      coAuthors: ["Idan Habler", "Ron F. Del Rosario", "John Sotiropoulos"],
+      topics: ["MCP Security", "Zero Trust", "Tool Poisoning", "Defense-in-Depth", "Agentic AI"]
+    },
+    {
+      title: "Agentic AI Identity and Access Management: A New Approach",
+      organization: "Cloud Security Alliance (CSA)",
+      date: "August 2025",
+      type: "publication",
+      link: "https://cloudsecurityalliance.org/artifacts/agentic-ai-identity-and-access-management-a-new-approach",
+      description: "Co-authored CSA publication introducing a purpose-built Agentic AI IAM framework that accounts for autonomy, ephemerality, and delegation patterns of AI agents in Multi-Agent Systems (MAS). Provides a blueprint for managing agent identities using Decentralized Identifiers (DIDs), Verifiable Credentials (VCs), and Zero Trust principles.",
+      coAuthors: ["Ken Huang", "CSA AI Safety Working Group"],
+      topics: ["Agentic AI IAM", "Decentralized Identifiers", "Verifiable Credentials", "Zero Trust", "MAESTRO"]
+    },
+    {
+      title: "AAGATE: A NIST AI RMF-Aligned Governance Platform for Agentic AI",
+      organization: "Cloud Security Alliance (CSA)",
+      date: "December 2025",
+      type: "blog",
+      link: "https://cloudsecurityalliance.org/blog/2025/12/22/aagate-a-nist-ai-rmf-aligned-governance-platform-for-agentic-ai",
+      description: "Co-authored technical article on AAGATE (Agentic AI Governance Assurance & Trust Engine), a Kubernetes-native architecture that operationalizes the NIST AI RMF functions aligned with CSA frameworks including MAESTRO, AIVSS, and the Agentic AI Red Teaming Guide.",
+      coAuthors: ["Ken Huang", "Kyriakos Lambros", "Jerry Huang", "Yasir Mehmood", "Hammad Atta", "Joshua Beck", "Muhammad Zeeshan Baig", "Muhammad Aziz Ul Haq", "Nadeem Shahzad", "Bhavya Gupta"],
+      topics: ["NIST AI RMF", "Agentic AI Governance", "Zero Trust", "MAESTRO", "AIVSS"]
+    }
+  ];
+
+  const videoRecordings = [
+    {
+      title: "Threat Modeling for LLM Applications",
+      event: "BSides Baltimore 2024",
+      link: "https://www.youtube.com/watch?v=lZYATxO0rMA",
+      description: "Full recording of the BSides Baltimore presentation on threat modeling methodologies for LLM applications."
+    },
+    {
+      title: "AI Security and Agentic Systems",
+      event: "Security Conference",
+      link: "https://www.youtube.com/watch?v=yVgy5VqgvxE",
+      description: "Discussion on securing AI systems and agentic architectures in enterprise environments."
+    }
+  ];
+
   return (
     <PageTransition>
       <div className="min-h-screen bg-cyber-dark text-white">
@@ -381,6 +444,127 @@ const Speaking = () => {
                             <ConferenceTalk {...talk} />
                           </div>
                         ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Thought Leadership */}
+                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20">
+                  <button 
+                    onClick={() => toggleSection('thoughtLeadership')}
+                    className="w-full p-8 flex justify-between items-center cursor-pointer hover:bg-cyber-grey-light transition-colors duration-200"
+                  >
+                    <div className="flex items-center">
+                      <BookOpen className="h-6 w-6 text-cyber-green mr-3" />
+                      <h3 className="text-2xl font-bold text-white">Thought Leadership</h3>
+                      <span className="ml-3 px-3 py-1 bg-cyber-green/20 rounded-full text-cyber-green text-sm">
+                        Industry Articles
+                      </span>
+                    </div>
+                    <div className="bg-cyber-darker rounded-full p-2 border border-cyber-green/20">
+                      {expandedSections.thoughtLeadership ? 
+                        <ChevronUp className="h-5 w-5 text-cyber-green" /> : 
+                        <ChevronDown className="h-5 w-5 text-cyber-green" />
+                      }
+                    </div>
+                  </button>
+                  
+                  {expandedSections.thoughtLeadership && (
+                    <div className="p-8 pt-0">
+                      <p className="text-gray-300 mb-6">
+                        Co-authored articles and technical content published by leading industry organizations.
+                      </p>
+                      <div className="space-y-6">
+                        {thoughtLeadership.map((article, index) => (
+                          <div key={index} className="cyber-card p-6">
+                            <div className="flex items-start gap-4">
+                              <div className="bg-cyan-500/20 rounded-full p-3 flex-shrink-0">
+                                <BookOpen className="h-6 w-6 text-cyan-400" />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
+                                  <div className="min-w-0">
+                                    <h4 className="text-xl font-semibold text-white">{article.title}</h4>
+                                    <p className="text-cyber-green font-medium">{article.organization}</p>
+                                    <p className="text-gray-500 text-sm">{article.date}</p>
+                                  </div>
+                                  <a 
+                                    href={article.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 rounded text-sm hover:bg-cyan-500/30 transition-colors flex items-center whitespace-nowrap"
+                                  >
+                                    Read Article
+                                    <ExternalLink className="h-3 w-3 ml-2" />
+                                  </a>
+                                </div>
+                                <p className="text-gray-300 text-sm mb-4">{article.description}</p>
+                                
+                                {article.coAuthors && (
+                                  <div className="mb-4">
+                                    <p className="text-gray-500 text-xs mb-2">Co-authored with:</p>
+                                    <div className="flex flex-wrap gap-1">
+                                      {article.coAuthors.slice(0, 5).map((author, i) => (
+                                        <span key={i} className="px-2 py-0.5 bg-gray-700/50 rounded text-gray-400 text-xs">
+                                          {author}
+                                        </span>
+                                      ))}
+                                      {article.coAuthors.length > 5 && (
+                                        <span className="px-2 py-0.5 bg-gray-700/50 rounded text-gray-400 text-xs">
+                                          +{article.coAuthors.length - 5} more
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                )}
+                                
+                                <div className="flex flex-wrap gap-2">
+                                  {article.topics.map((topic, topicIndex) => (
+                                    <span 
+                                      key={topicIndex}
+                                      className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm"
+                                    >
+                                      {topic}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Video Recordings */}
+                      <div className="mt-8">
+                        <h4 className="text-xl font-semibold text-white mb-4 flex items-center">
+                          <Youtube className="h-5 w-5 text-red-400 mr-2" />
+                          Additional Video Content
+                        </h4>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          {videoRecordings.map((video, index) => (
+                            <a 
+                              key={index}
+                              href={video.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="cyber-card p-4 hover:border-red-500/50 transition-colors group"
+                            >
+                              <div className="flex items-start gap-3">
+                                <div className="bg-red-500/20 rounded-full p-2 flex-shrink-0">
+                                  <Youtube className="h-4 w-4 text-red-400" />
+                                </div>
+                                <div>
+                                  <h5 className="text-white font-medium text-sm group-hover:text-red-400 transition-colors">
+                                    {video.title}
+                                  </h5>
+                                  <p className="text-gray-500 text-xs mt-1">{video.event}</p>
+                                  <p className="text-gray-400 text-xs mt-2">{video.description}</p>
+                                </div>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   )}
