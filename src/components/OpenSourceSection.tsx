@@ -88,140 +88,212 @@ const OpenSourceSection = () => {
     }));
   };
 
-  const publications = [
+  // Preprints (arXiv)
+  const preprints = [
     {
-      title: "Agent Capability Negotiation and Binding Protocol (ACNBP)",
-      organization: "arXiv",
-      link: "https://arxiv.org/abs/2506.13590",
-      description: "A protocol framework for autonomous agents to discover, negotiate, and bind to capabilities in multi-agent systems environments.",
-      abstract: "This paper presents the Agent Capability Negotiation and Binding Protocol (ACNBP), a comprehensive framework designed to enable autonomous agents to discover, negotiate, and securely bind to capabilities within multi-agent systems. As AI agents become more sophisticated and autonomous, the need for standardized protocols that facilitate secure capability exchange becomes critical. ACNBP addresses the challenges of capability discovery, negotiation semantics, binding mechanisms, and security considerations in distributed agent environments. The protocol defines a structured approach for agents to advertise their capabilities, negotiate terms of engagement, and establish secure binding contracts that govern capability utilization. Through formal protocol specification and security analysis, we demonstrate how ACNBP enables secure and efficient capability sharing while maintaining agent autonomy and system integrity. The framework includes provisions for capability verification, access control, and audit trails, making it suitable for enterprise deployments where security and accountability are paramount."
+      title: "A2AS: Agentic AI Runtime Security and Self-Defense",
+      organization: "arXiv Preprint",
+      year: "2025",
+      link: "https://arxiv.org/abs/2507.00000", // Placeholder - update with actual link
+      description: "Research on runtime security mechanisms and self-defense capabilities for autonomous AI agents.",
+      abstract: "This paper presents A2AS (Agentic AI Runtime Security and Self-Defense), a comprehensive framework for protecting autonomous AI agents during runtime execution. As agentic AI systems become more prevalent in enterprise environments, the need for robust runtime security mechanisms becomes critical. A2AS introduces novel approaches to real-time threat detection, autonomous defensive responses, and self-healing capabilities for AI agents operating in adversarial environments."
     },
     {
-      title: "COALESCE: Economic and Security Dynamics of Skill-Based Task Outsourcing Among Team of Autonomous LLM Agents",
-      organization: "arXiv",
-      link: "https://arxiv.org/abs/2506.01900",
-      description: "Examining the economic and security implications of task outsourcing in multi-agent LLM systems with skill-based specialization.",
-      abstract: "The emergence of specialized autonomous LLM agents working in teams presents novel challenges in task allocation, economic incentives, and security considerations. This paper introduces COALESCE (Collaborative Outsourcing Architecture for Large-scale Efficient Skill-Coordinated Execution), a framework that examines the economic and security dynamics when autonomous agents outsource tasks based on specialized skills. We analyze how agents can efficiently discover, evaluate, and contract with other agents for specialized capabilities while maintaining security and economic viability. The research explores market mechanisms for skill-based task allocation, reputation systems for agent trustworthiness, and security measures to prevent malicious behavior in outsourcing relationships. Through simulation and analysis, we demonstrate how COALESCE enables efficient task distribution while addressing key challenges such as agent incentive alignment, quality assurance, and protection against adversarial agents. The framework provides insights into building resilient multi-agent systems that can leverage specialized skills while maintaining economic sustainability and security."
-    },
-    {
-      title: "ETDI: Mitigating Tool Squatting and Rug Pull Attacks in Model Context Protocol (MCP) by using OAuth-Enhanced Tool Definitions and Policy-Based Access Control",
-      organization: "arXiv",
-      link: "https://arxiv.org/abs/2506.01333",
-      description: "A security framework using OAuth and policy-based controls to prevent tool squatting and rug pull attacks in MCP environments.",
-      abstract: "The Model Context Protocol (MCP) enables AI systems to interact with external tools, but this flexibility introduces security vulnerabilities, particularly tool squatting and rug pull attacks where malicious actors register deceptive tools or suddenly withdraw legitimate ones. This paper presents ETDI (Enhanced Tool Definition Infrastructure), a comprehensive security framework that leverages OAuth-enhanced tool definitions and policy-based access control to mitigate these threats. ETDI introduces a trusted tool registry with cryptographic verification, OAuth-based authentication for tool interactions, and dynamic policy enforcement that adapts to changing threat landscapes. The framework includes reputation scoring for tools, behavioral analysis to detect suspicious activities, and automated response mechanisms for identified threats. Through detailed security analysis and implementation guidelines, we demonstrate how ETDI significantly reduces the attack surface for tool-based vulnerabilities in MCP deployments. The framework is designed to be backward-compatible with existing MCP implementations while providing enhanced security guarantees for enterprise environments."
-    },
-    {
-      title: "A Novel Zero-Trust Identity Framework for Agentic AI: Decentralized Authentication and Fine-Grained Access Control",
-      organization: "arXiv",
-      link: "https://arxiv.org/abs/2505.19301",
-      description: "A decentralized zero-trust identity framework specifically designed for autonomous AI agents with fine-grained access controls.",
-      abstract: "As AI agents become more autonomous and operate across distributed environments, traditional identity and access management systems prove inadequate for securing agent interactions. This paper introduces a novel zero-trust identity framework specifically designed for agentic AI systems, featuring decentralized authentication mechanisms and fine-grained access control policies. The framework addresses unique challenges in agent identity management, including agent lifecycle management, capability-based permissions, cross-domain authentication, and dynamic trust assessment. We present a decentralized architecture that eliminates single points of failure while maintaining strong security guarantees through cryptographic protocols and consensus mechanisms. The framework includes novel approaches to agent identity verification, behavioral analysis for anomaly detection, and adaptive access policies that respond to changing agent behaviors and environmental conditions. Through formal security analysis and practical implementation examples, we demonstrate how this framework enables secure agent interactions while preserving agent autonomy and system scalability. The proposed solution is designed to support enterprise deployments where multiple AI agents must interact securely across organizational boundaries."
-    },
-    {
-      title: "Agent Name Service (ANS): A Universal Directory for Secure AI Agent Discovery and Interoperability",
-      organization: "arXiv",
-      link: "https://arxiv.org/abs/2505.10609",
-      description: "A universal directory service enabling secure discovery and interoperability of AI agents across different platforms and organizations.",
-      abstract: "The proliferation of AI agents across diverse platforms and organizations creates a critical need for standardized discovery and interoperability mechanisms. This paper presents the Agent Name Service (ANS), a universal directory system that enables secure AI agent discovery while maintaining privacy and security requirements. ANS provides a decentralized, hierarchical naming system specifically designed for AI agents, incorporating cryptographic verification, capability advertisement, and secure communication establishment. The system supports both public and private agent registries, enabling organizations to maintain control over their agent ecosystems while participating in broader inter-organizational agent networks. We address key challenges including agent identity verification, capability matching, secure communication bootstrapping, and privacy-preserving discovery mechanisms. The ANS architecture includes provisions for agent reputation management, service level agreements, and audit trails to support enterprise requirements. Through detailed protocol specifications and security analysis, we demonstrate how ANS enables seamless agent interoperability while maintaining strong security and privacy guarantees. The system is endorsed by the OWASP GenAI ASI Project and designed to support the growing ecosystem of autonomous AI agents."
-    },
-    {
-      title: "Enterprise-Grade Security for the Model Context Protocol (MCP): Frameworks and Mitigation Strategies",
-      organization: "arXiv",
-      link: "https://arxiv.org/abs/2504.08623",
-      description: "The Model Context Protocol (MCP), introduced by Anthropic, provides a standardized framework for artificial intelligence (AI) systems to interact with external data sources and tools in real-time.",
-      abstract: "The Model Context Protocol (MCP), introduced by Anthropic, provides a standardized framework for artificial intelligence (AI) systems to interact with external data sources and tools in real-time. While MCP offers significant advantages for AI integration and capability extension, it introduces novel security challenges that demand rigorous analysis and mitigation. This paper builds upon foundational research into MCP architecture and preliminary security assessments to deliver enterprise-grade mitigation frameworks and detailed technical implementation strategies. Through systematic threat modeling and analysis of MCP implementations and analysis of potential attack vectors, including sophisticated threats like tool poisoning, we present actionable security patterns tailored for MCP implementers and adopters. The primary contribution of this research lies in translating theoretical security concerns into a practical, implementable framework with actionable controls, thereby providing essential guidance for the secure enterprise adoption and governance of integrated AI systems."
-    },
+      title: "MAIF: Enforcing AI Trust and Provenance with an Artifact-Centric Agentic Paradigm",
+      organization: "arXiv Preprint",
+      year: "2025",
+      link: "https://arxiv.org/abs/2507.00001", // Placeholder - update with actual link
+      description: "A framework for establishing trust and provenance tracking in multi-agent AI systems through artifact-centric approaches.",
+      abstract: "MAIF (Multi-Agent Integrity Framework) presents a novel approach to establishing and maintaining trust in multi-agent AI systems through artifact-centric provenance tracking. The framework addresses critical challenges in verifying the authenticity and integrity of agent actions, outputs, and communications across distributed agentic systems."
+    }
+  ];
+
+  // Peer-Reviewed Conference Papers
+  const peerReviewedPapers = [
     {
       title: "Securing Agentic AI: A Comprehensive Threat Model and Mitigation Framework for Generative AI Agents",
-      organization: "arXiv",
+      authors: "Narajala, V. S., & Narayan, O.",
+      venue: "IEEE ACAI 2025",
+      organization: "IEEE",
       link: "https://arxiv.org/abs/2504.19956",
-      description: "As generative AI (GenAI) agents become more common in enterprise settings, they introduce security challenges that differ significantly from those posed by traditional systems.",
-      abstract: "As generative AI (GenAI) agents become more common in enterprise settings, they introduce security challenges that differ significantly from those posed by traditional systems. These agents are not just LLMs; they reason, remember, and act, often with minimal human oversight. This paper introduces a comprehensive threat model tailored specifically for GenAI agents, focusing on how their autonomy, persistent memory access, complex reasoning, and tool integration create novel risks. This research work identifies 9 primary threats and organizes them across five key domains: cognitive architecture vulnerabilities, temporal persistence threats, operational execution vulnerabilities, trust boundary violations, and governance circumvention. These threats are not just theoretical they bring practical challenges such as delayed exploitability, cross-system propagation, cross system lateral movement, and subtle goal misalignments that are hard to detect with existing frameworks and standard approaches. To help address this, the research work present two complementary frameworks: ATFAA - Advanced Threat Framework for Autonomous AI Agents, which organizes agent-specific risks, and SHIELD, a framework proposing practical mitigation strategies designed to reduce enterprise exposure. While this work builds on existing work in LLM and AI security, the focus is squarely on what makes agents different and why those differences matter. Ultimately, this research argues that GenAI agents require a new lens for security. If we fail to adapt our threat models and defenses to account for their unique architecture and behavior, we risk turning a powerful new tool into a serious enterprise liability."
+      description: "A comprehensive threat model tailored specifically for GenAI agents, identifying 9 primary threats across five key domains.",
+      abstract: "As generative AI (GenAI) agents become more common in enterprise settings, they introduce security challenges that differ significantly from those posed by traditional systems. These agents are not just LLMs; they reason, remember, and act, often with minimal human oversight. This paper introduces a comprehensive threat model tailored specifically for GenAI agents, focusing on how their autonomy, persistent memory access, complex reasoning, and tool integration create novel risks. This research work identifies 9 primary threats and organizes them across five key domains: cognitive architecture vulnerabilities, temporal persistence threats, operational execution vulnerabilities, trust boundary violations, and governance circumvention."
     },
     {
-      title: "Securing GenAI Multi-Agent Systems Against Tool Squatting: A Zero Trust Registry-Based Approach",
-      organization: "arXiv",
-      link: "https://arxiv.org/abs/2504.19951",
-      description: "The rise of generative AI (GenAI) multi-agent systems (MAS) necessitates standardized protocols enabling agents to discover and interact with external tools.",
-      abstract: "The rise of generative AI (GenAI) multi-agent systems (MAS) necessitates standardized protocols enabling agents to discover and interact with external tools. However, these protocols introduce new security challenges, particularly; tool squatting; the deceptive registration or representation of tools. This paper analyzes tool squatting threats within the context of emerging interoperability standards, such as Model Context Protocol (MCP) or seamless communication between agents protocols. It introduces a comprehensive Tool Registry system designed to mitigate these risks. We propose a security-focused architecture featuring admin-controlled registration, centralized tool discovery, fine grained access policies enforced via dedicated Agent and Tool Registry services, a dynamic trust scoring mechanism based on tool versioning and known vulnerabilities, and just in time credential provisioning. Based on its design principles, the proposed registry framework aims to effectively prevent common tool squatting vectors while preserving the flexibility and power of multi-agent systems. This work addresses a critical security gap in the rapidly evolving GenAI ecosystem and provides a foundation for secure tool integration in production environments."
+      title: "Coalesce: Economic and Security Dynamics of Skill-Based Task Outsourcing Among Team of Autonomous LLM Agents",
+      authors: "Bhatt, M., Narajala, V. S., & Habler, I.",
+      venue: "IEEE CARS 2025",
+      organization: "IEEE",
+      link: "https://arxiv.org/abs/2506.01900",
+      description: "Examining the economic and security implications of task outsourcing in multi-agent LLM systems with skill-based specialization.",
+      abstract: "The emergence of specialized autonomous LLM agents working in teams presents novel challenges in task allocation, economic incentives, and security considerations. This paper introduces COALESCE, a framework that examines the economic and security dynamics when autonomous agents outsource tasks based on specialized skills."
+    },
+    {
+      title: "ETDI: Mitigating Tool Squatting and Rug Pull Attacks in Model Context Protocol (MCP)",
+      authors: "Bhatt, M., Del Rosario, R. F., Narajala, V. S., & Habler, I.",
+      venue: "IEEE CARS 2025",
+      organization: "IEEE",
+      link: "https://arxiv.org/abs/2506.01333",
+      description: "A security framework using OAuth and policy-based controls to prevent tool squatting and rug pull attacks in MCP environments.",
+      abstract: "The Model Context Protocol (MCP) enables AI systems to interact with external tools, but this flexibility introduces security vulnerabilities, particularly tool squatting and rug pull attacks. This paper presents ETDI (Enhanced Tool Definition Infrastructure), a comprehensive security framework that leverages OAuth-enhanced tool definitions and policy-based access control to mitigate these threats."
     },
     {
       title: "Building A Secure Agentic AI Application Leveraging A2A Protocol",
-      organization: "arXiv",
+      authors: "Narajala, V. S., Habler, I., Huang, K., & Kulkarni, P.",
+      venue: "IEEE WAITI 2025",
+      organization: "IEEE",
       link: "https://arxiv.org/abs/2504.16902",
-      description: "As Agentic AI systems evolve from basic workflows to complex multi agent collaboration, robust protocols such as Google's Agent2Agent (A2A) become essential enablers.",
-      abstract: "As Agentic AI systems evolve from basic workflows to complex multi agent collaboration, robust protocols such as Google's Agent2Agent (A2A) become essential enablers. To foster secure adoption and ensure the reliability of these complex interactions, understanding the secure implementation of A2A is essential. This paper addresses this goal by providing a comprehensive security analysis centered on the A2A protocol. We examine its fundamental elements and operational dynamics, situating it within the framework of agent communication development. Utilizing the MAESTRO framework, specifically designed for AI risks, we apply proactive threat modeling to assess potential security issues in A2A deployments, focusing on aspects such as Agent Card management, task execution integrity, and authentication methodologies. Based on these insights, we recommend practical secure development methodologies and architectural best practices designed to build resilient and effective A2A systems. Our analysis also explores how the synergy between A2A and the Model Context Protocol (MCP) can further enhance secure interoperability. This paper equips developers and architects with the knowledge and practical guidance needed to confidently leverage the A2A protocol for building robust and secure next generation agentic applications."
+      description: "Comprehensive security analysis of Google's Agent2Agent (A2A) protocol for multi-agent collaboration.",
+      abstract: "As Agentic AI systems evolve from basic workflows to complex multi agent collaboration, robust protocols such as Google's Agent2Agent (A2A) become essential enablers. This paper provides a comprehensive security analysis centered on the A2A protocol, examining its fundamental elements and operational dynamics."
     },
     {
-      title: "Multi-Agentic system Threat Modeling Guide v1.0",
+      title: "Securing GenAI Multi-Agent Systems Against Tool Squatting: A Zero Trust Registry-Based Approach",
+      authors: "Narajala, V. S., Huang, K., & Habler, I.",
+      venue: "IEEE AIKE 2026",
+      organization: "IEEE",
+      link: "https://arxiv.org/abs/2504.19951",
+      description: "A Zero Trust Registry-based approach to mitigate tool squatting threats in multi-agent GenAI systems.",
+      abstract: "The rise of generative AI (GenAI) multi-agent systems necessitates standardized protocols enabling agents to discover and interact with external tools. This paper analyzes tool squatting threats and introduces a comprehensive Tool Registry system designed to mitigate these risks."
+    },
+    {
+      title: "A Novel Zero-Trust Identity Framework for Agentic AI",
+      authors: "Huang, K., Narajala, V. S., Yeoh, J., Ross, J., Raskar, R., et al.",
+      venue: "IEEE AIKE 2026",
+      organization: "IEEE",
+      link: "https://arxiv.org/abs/2505.19301",
+      description: "A decentralized zero-trust identity framework specifically designed for autonomous AI agents with fine-grained access controls.",
+      abstract: "As AI agents become more autonomous and operate across distributed environments, traditional identity and access management systems prove inadequate. This paper introduces a novel zero-trust identity framework specifically designed for agentic AI systems, featuring decentralized authentication mechanisms and fine-grained access control policies."
+    },
+    {
+      title: "Agent Capability Negotiation and Binding Protocol (ACNBP)",
+      authors: "Huang, K., Sheriff, A., Narajala, V. S., & Habler, I.",
+      venue: "IEEE AIKE 2026",
+      organization: "IEEE",
+      link: "https://arxiv.org/abs/2506.13590",
+      description: "A protocol framework for autonomous agents to discover, negotiate, and bind to capabilities in multi-agent systems.",
+      abstract: "This paper presents the Agent Capability Negotiation and Binding Protocol (ACNBP), a comprehensive framework designed to enable autonomous agents to discover, negotiate, and securely bind to capabilities within multi-agent systems."
+    },
+    {
+      title: "Agent Name Service (ANS): A Universal Directory for Secure AI Agent Discovery and Interoperability",
+      authors: "Huang, K., Narajala, V. S., Habler, I., & Sheriff, A.",
+      venue: "5th IEEE ICAIC 2026",
+      organization: "IEEE",
+      link: "https://arxiv.org/abs/2505.10609",
+      description: "A universal directory service enabling secure discovery and interoperability of AI agents across platforms.",
+      abstract: "The proliferation of AI agents across diverse platforms creates a critical need for standardized discovery and interoperability mechanisms. This paper presents the Agent Name Service (ANS), a universal directory system that enables secure AI agent discovery while maintaining privacy and security requirements."
+    },
+    {
+      title: "Enterprise-Grade Security for the Model Context Protocol (MCP): Frameworks and Mitigation Strategies",
+      authors: "Narajala, V. S., & Habler, I.",
+      venue: "5th IEEE ICAIC 2026",
+      organization: "IEEE",
+      link: "https://arxiv.org/abs/2504.08623",
+      description: "Enterprise-grade mitigation frameworks and implementation strategies for secure MCP adoption.",
+      abstract: "The Model Context Protocol (MCP) provides a standardized framework for AI systems to interact with external data sources and tools. This paper delivers enterprise-grade mitigation frameworks and detailed technical implementation strategies for secure MCP adoption."
+    }
+  ];
+
+  // OWASP White Papers and Guidelines
+  const owaspPublications = [
+    {
+      title: "State of Agentic AI Security and Governance",
+      role: "Contributing Author",
+      year: "2025",
+      organization: "OWASP",
+      link: "https://genai.owasp.org/",
+      description: "Comprehensive analysis of the current state of security and governance practices for agentic AI systems."
+    },
+    {
+      title: "Securing Agentic Applications Guide",
+      role: "Lead Author",
+      year: "2025",
+      organization: "OWASP",
+      link: "https://genai.owasp.org/",
+      description: "Comprehensive guide for securing agentic AI applications in enterprise environments."
+    },
+    {
+      title: "Multi-Agentic System Threat Modeling Guide v1.0",
+      role: "Contributing Author",
+      year: "2025",
       organization: "OWASP",
       link: "https://genai.owasp.org/resource/multi-agentic-system-threat-modeling-guide-v1-0/",
-      description: "A guide that applies OWASP's Agentic AI threat taxonomy to real-world multi-agent systems.",
-      abstract: "A guide that applies OWASP's Agentic AI threat taxonomy to real-world multi-agent systems, addressing the additional complexity and new attack surfaces these systems introduce."
+      description: "A guide that applies OWASP's Agentic AI threat taxonomy to real-world multi-agent systems."
     },
     {
       title: "LLM and GenAI Data Security Best Practices",
+      role: "Lead Author",
+      year: "2025",
       organization: "OWASP",
       link: "https://genai.owasp.org/resource/llm-and-gen-ai-data-security-best-practices/",
-      description: "Published a comprehensive guide on data security best practices for LLM and Generative AI systems.",
-      abstract: "Published a comprehensive guide on data security best practices for LLM and Generative AI systems, contributing to industry standards for secure AI implementation."
+      description: "Comprehensive guide on data security best practices for LLM and Generative AI systems."
+    },
+    {
+      title: "AIVSS Scoring System and Agentic AI Core Security Risks",
+      role: "Lead Author",
+      year: "2025",
+      organization: "OWASP",
+      link: "https://aivss.owasp.org/",
+      description: "AI Vulnerability Scoring System methodology and core security risks identification for agentic AI."
     }
   ];
+
+  // Combined publications for backward compatibility
+  const publications = [...preprints, ...peerReviewedPapers, ...owaspPublications];
   
   const conferenceTalks = [
     {
       id: 0,
-      title: "Agile Threat Modeling for Complex Systems using AI",
-      event: "BSides Austin",
-      year: "2024",
-      description: "Exploring innovative approaches to threat modeling for increasingly complex systems with AI assistance.",
-      link: "https://bsidesaustin.com/schedule/",
-      abstract: "This talk explores the urgent need for a paradigm shift in threat modeling to address the complexities of large-scale systems. Adding more security bottlenecks to the development process is not only expensive but also risks losing developers' trust. However, identifying security issues later in the Software Development Life Cycle (SDLC) or after launch proves to be even more expensive. Threat modeling provides an ideal and cost-effective approach to incorporating security into the development process, ensuring it does not impede the rate of progress. The first part of the presentation delves into the challenges presented by cloud architectures, microservices, and rapid development practices, highlighting the shortcomings of traditional threat modeling approaches like STRIDE and DREAD. It also presents ways to integrate a fast and scalable threat modeling stage into the SDLC.\nFollowing that, the talk unveils strategies for effective threat modeling at scale, emphasizing the importance of automation, secure design principles, and the integration of builder-focused security tools into agile and DevOps practices. It includes dissection of real-world case studies that offer concrete insights into organizations that have successfully implemented threat modeling at scale. Furthermore, this talk examines the overcoming of challenges, the fostering of a cultural shift towards security, and the assurance of efficient resource allocation. Attendees will leave with a clear understanding of the critical need for threat modeling at scale and practical insights to enhance security in their large-scale systems."
+      title: "Securing Generative AI in Enterprise Environments",
+      event: "BSides Harrisburg",
+      year: "2025",
+      description: "Presented techniques for implementing robust security controls for enterprise GenAI deployments.",
+      link: "https://bsidesharrisburg.com/",
+      abstract: "The rapid adoption of Generative AI (GenAI) presents unique security challenges that organizations must address while maintaining development velocity. This presentation provides practical strategies for building secure GenAI applications, addressing threat modeling for GenAI systems, secure integration patterns, and robust output validation mechanisms."
     },
     {
       id: 1,
-      title: "Scaling the Security Wall: Agile Threat Modeling for Complex Systems",
-      event: "BSides Baltimore",
-      year: "2024",
-      description: "Demonstrating how to implement agile security practices for rapidly evolving complex systems.",
-      link: "https://www.youtube.com/watch?v=lZYATxO0rMA",
-      abstract: "This talk explores the urgent need for a paradigm shift in threat modeling to address the complexities of large-scale systems. Adding more security bottlenecks to the development process is not only expensive but also risks losing developers' trust. However, identifying security issues later in the Software Development Life Cycle (SDLC) or after launch proves to be even more expensive. Threat modeling provides an ideal and cost-effective approach to incorporating security into the development process, ensuring it does not impede the rate of progress. The first part of the presentation delves into the challenges presented by cloud architectures, microservices, and rapid development practices, highlighting the shortcomings of traditional threat modeling approaches like STRIDE and DREAD. It also presents ways to integrate a fast and scalable threat modeling stage into the SDLC.\nFollowing that, the talk unveils strategies for effective threat modeling at scale, emphasizing the importance of automation, secure design principles, and the integration of builder-focused security tools into agile and DevOps practices. It includes dissection of real-world case studies that offer concrete insights into organizations that have successfully implemented threat modeling at scale. Furthermore, this talk examines the overcoming of challenges, the fostering of a cultural shift towards security, and the assurance of efficient resource allocation. Attendees will leave with a clear understanding of the critical need for threat modeling at scale and practical insights to enhance security in their large-scale systems."
-    },
-    {
-      id: 2,
       title: "Securing Generative AI in Enterprise Environments",
-      event: "CypherCon",
+      event: "CypherCon Milwaukee",
       year: "2025",
       description: "Presented techniques for implementing robust security controls for enterprise GenAI deployments.",
       link: "https://cyphercon.com/portfolio/safegen-accelerating-secure-generative-ai-implementation/",
-      abstract: "The rapid adoption of Generative AI (GenAI) presents unique security challenges that organizations must address while maintaining development velocity. This presentation provides practical strategies for building secure GenAI applications, with a focus on AWS services like Bedrock and Amazon Q. We introduce a comprehensive security framework that addresses three critical areas: threat modeling for GenAI systems, secure integration patterns, and robust output validation mechanisms. Through real-world case studies, we'll demonstrate how to identify and mitigate GenAI-specific vulnerabilities, including prompt injection attacks and data leakage risks. Attendees will learn concrete techniques for securing their entire GenAI pipeline, from input validation to output verification, with an emphasis on protecting sensitive information and preventing model hallucinations with an emphasis on speed and efficiency of the SDLC. The presentation includes hands-on examples of implementing security controls in GenAI applications, featuring code samples and architecture patterns that can be immediately applied. Security professionals and developers will gain practical knowledge about automated security testing for GenAI systems, session isolation techniques, and effective output validation strategies. By the end of this session, attendees will have actionable insights for accelerating their GenAI initiatives while maintaining enterprise-grade security standards.\nPresentation Importance: There is a top down push for organizations to implement GenAI and quickly. As organizations rush to adopt GenAI technologies, they face unique security challenges that traditional cybersecurity approaches may not adequately address. This presentation offers critical, actionable insights for implementing robust security measures in GenAI systems, with a specific focus on AWS services like Bedrock and Amazon Q. By providing practical strategies, real-world case studies, and hands-on examples, this presentation equips security peeps and developers with the knowledge needed to balance innovation with security and quick deployments."
+      abstract: "The rapid adoption of Generative AI (GenAI) presents unique security challenges that organizations must address while maintaining development velocity. This presentation provides practical strategies for building secure GenAI applications, with a focus on AWS services like Bedrock and Amazon Q. We introduce a comprehensive security framework that addresses three critical areas: threat modeling for GenAI systems, secure integration patterns, and robust output validation mechanisms. Through real-world case studies, we'll demonstrate how to identify and mitigate GenAI-specific vulnerabilities, including prompt injection attacks and data leakage risks. Attendees will learn concrete techniques for securing their entire GenAI pipeline, from input validation to output verification, with an emphasis on protecting sensitive information and preventing model hallucinations with an emphasis on speed and efficiency of the SDLC."
     },
     {
-      id: 3,
-      title: "Threat Modeling for LLM Applications",
-      event: "BSides Seattle",
-      year: "2025",
-      description: "Shared methodologies for identifying and mitigating risks specific to large language model applications.",
-      link: "https://www.bsidesseattle.com/2025-schedule.html",
-      abstract: "The rapid adoption of Generative AI (GenAI) presents unique security challenges that organizations must address while maintaining development velocity. This presentation provides practical strategies for building secure GenAI applications, with a focus on AWS services like Bedrock and Amazon Q. We introduce a comprehensive security framework that addresses three critical areas: threat modeling for GenAI systems, secure integration patterns, and robust output validation mechanisms. Through real-world case studies, we'll demonstrate how to identify and mitigate GenAI-specific vulnerabilities, including prompt injection attacks and data leakage risks. Attendees will learn concrete techniques for securing their entire GenAI pipeline, from input validation to output verification, with an emphasis on protecting sensitive information and preventing model hallucinations with an emphasis on speed and efficiency of the SDLC. The presentation includes hands-on examples of implementing security controls in GenAI applications, featuring code samples and architecture patterns that can be immediately applied. Security professionals and developers will gain practical knowledge about automated security testing for GenAI systems, session isolation techniques, and effective output validation strategies. By the end of this session, attendees will have actionable insights for accelerating their GenAI initiatives while maintaining enterprise-grade security standards.\nPresentation Importance: There is a top down push for organizations to implement GenAI and quickly. As organizations rush to adopt GenAI technologies, they face unique security challenges that traditional cybersecurity approaches may not adequately address. This presentation offers critical, actionable insights for implementing robust security measures in GenAI systems, with a specific focus on AWS services like Bedrock and Amazon Q. By providing practical strategies, real-world case studies, and hands-on examples, this presentation equips security peeps and developers with the knowledge needed to balance innovation with security and quick deployments."    
-    },
-    {
-      id: 4,
+      id: 2,
       title: "Building a secure Agentic AI application",
-      event: "RSA ConferenceSan Francisco",
+      event: "RSA Conference San Francisco",
       year: "2025",
       description: "Workshop on practical techniques for developing secure AI agents with appropriate controls and safeguards.",
       link: "https://genai.owasp.org/event/rsa-conference-2025/",
-      abstract: "Ran a workshop on building a secure Agentic AI application."
+      abstract: "Ran a workshop on building a secure Agentic AI application, covering security frameworks, threat modeling, and implementation best practices for autonomous AI systems."
     },
     {
-      id: 5,
+      id: 3,
       title: "Analyzing Zero Trust Architecture in the Age of Agentic GenAI: A practical approach",
-      event: "OWASP AppSec Conference, Boston",
+      event: "OWASP Global AppSec Boston",
       year: "2025",
       description: "Presented a framework for applying Zero Trust principles to AI agent deployments in enterprise environments.",
       link: "https://owaspbasc2025.sched.com/event/1xqja/analyzing-zero-trust-architecture-in-the-age-of-agentic-genai-a-practical-approach?iframe=yes&w=100%&sidebar=no&bg=no",
-      abstract: "The proliferation of generative artificial intelligence (GenAI) agents introduces unprecedented security challenges to modern organizations. As these autonomous systems increasingly generate content, make decisions, and execute actions with minimal human oversight, traditional perimeter-based security approaches prove inadequate. This paper examines the critical intersection of Zero Trust Architecture (ZTA) and GenAI agent deployment, proposing a framework for secure AI integration in enterprise environments. The rapid adoption of Generative AI (GenAI) presents unique security challenges that organizations must address while maintaining development velocity. This presentation provides practical strategies for building secure GenAI applications, with a focus on AWS services like Bedrock and Amazon Q. We introduce a comprehensive security framework that addresses three critical areas: threat modeling for GenAI systems, secure integration patterns, and robust output validation mechanisms. Through real-world case studies, we'll demonstrate how to identify and mitigate GenAI-specific vulnerabilities, including prompt injection attacks and data leakage risks. Attendees will learn concrete techniques for securing their entire GenAI pipeline, from input validation to output verification, with an emphasis on protecting sensitive information and preventing model hallucinations with an emphasis on speed and efficiency of the SDLC. The presentation includes hands-on examples of implementing security controls in GenAI applications, featuring code samples and architecture patterns that can be immediately applied. Security professionals and developers will gain practical knowledge about automated security testing for GenAI systems, session isolation techniques, and effective output validation strategies. By the end of this session, attendees will have actionable insights for accelerating their GenAI initiatives while maintaining enterprise-grade security standards. Presentation Importance: There is a top down push for organizations to implement GenAI and quickly. As organizations rush to adopt GenAI technologies, they face unique security challenges that traditional cybersecurity approaches may not adequately address. This presentation offers critical, actionable insights for implementing robust security measures in GenAI systems, with a specific focus on AWS services like Bedrock and Amazon Q. By providing practical strategies, real-world case studies, and hands-on examples, this presentation equips security peeps and developers with the knowledge needed to balance innovation with security and quick deployments."
+      abstract: "The proliferation of generative artificial intelligence (GenAI) agents introduces unprecedented security challenges to modern organizations. As these autonomous systems increasingly generate content, make decisions, and execute actions with minimal human oversight, traditional perimeter-based security approaches prove inadequate. This paper examines the critical intersection of Zero Trust Architecture (ZTA) and GenAI agent deployment, proposing a framework for secure AI integration in enterprise environments."
+    },
+    {
+      id: 4,
+      title: "Threat Modeling for LLM Applications",
+      event: "BSides Baltimore",
+      year: "2024",
+      description: "Shared methodologies for identifying and mitigating security risks in applications using large language models.",
+      link: "https://www.youtube.com/watch?v=lZYATxO0rMA",
+      abstract: "This talk explores the urgent need for a paradigm shift in threat modeling to address the complexities of large-scale systems. Adding more security bottlenecks to the development process is not only expensive but also risks losing developers' trust. However, identifying security issues later in the Software Development Life Cycle (SDLC) or after launch proves to be even more expensive. Threat modeling provides an ideal and cost-effective approach to incorporating security into the development process, ensuring it does not impede the rate of progress."
+    },
+    {
+      id: 5,
+      title: "Threat Modeling for LLM Applications",
+      event: "BSides Austin",
+      year: "2024",
+      description: "Shared methodologies for identifying and mitigating security risks in applications using large language models.",
+      link: "https://bsidesaustin.com/schedule/",
+      abstract: "This talk explores the urgent need for a paradigm shift in threat modeling to address the complexities of large-scale systems. The presentation delves into the challenges presented by cloud architectures, microservices, and rapid development practices, highlighting the shortcomings of traditional threat modeling approaches like STRIDE and DREAD. It also presents ways to integrate a fast and scalable threat modeling stage into the SDLC."
     }
   ];
 
@@ -371,62 +443,118 @@ const OpenSourceSection = () => {
                 <div className="px-8 pb-6 flex flex-wrap gap-3">
                   <div className="flex items-center bg-cyber-darker px-3 py-1.5 rounded-full border border-cyber-green/10">
                     <BookOpen className="h-3.5 w-3.5 text-cyber-green mr-1.5" />
-                    <span className="text-sm text-gray-300">{publications.length} Publications</span>
+                    <span className="text-sm text-gray-300">{preprints.length + peerReviewedPapers.length + owaspPublications.length} Publications</span>
                   </div>
                   <div className="flex items-center bg-cyber-darker px-3 py-1.5 rounded-full border border-cyber-green/10">
                     <Bookmark className="h-3.5 w-3.5 text-cyber-green mr-1.5" />
-                    <span className="text-sm text-gray-300">arXiv, OWASP</span>
+                    <span className="text-sm text-gray-300">IEEE, arXiv, OWASP</span>
                   </div>
                   <div className="flex-1 text-sm text-gray-300 ml-2">
-                    Research papers on AI/ML security, including GenAI systems, MCP, and Zero Trust Architecture.
+                    8+ peer-reviewed IEEE papers on agentic AI security, MCP, Zero Trust, and multi-agent systems.
                   </div>
                 </div>
               )}
             </div>
             
             {expandedSections.publications && (
-              <div className="p-8 pt-0 space-y-6 transition-all duration-300">
-                {publications.map((publication, index) => (
-                  <div key={index} className="cyber-card p-6">
-                    <h4 className="text-xl font-semibold text-white mb-3">{publication.title}</h4>
-                    <p className="text-gray-300 mb-4">{publication.description}</p>
-                    
-                    <button 
-                      onClick={() => toggleAbstract(index)}
-                      className="flex items-center text-cyber-green hover:text-cyber-green-light mb-2 transition-colors"
-                    >
-                      {expandedAbstracts[index] ? (
-                        <>
-                          <span>Hide Abstract</span>
-                          <ChevronUp className="ml-1 h-4 w-4" />
-                        </>
-                      ) : (
-                        <>
-                          <span>Show Abstract</span>
-                          <ChevronDown className="ml-1 h-4 w-4" />
-                        </>
-                      )}
-                    </button>
-                    
-                    {expandedAbstracts[index] && (
-                      <div className="mt-2 mb-4 text-gray-300 p-4 bg-cyber-darker/50 rounded border border-cyber-green/10 transition-all duration-200">
-                        {publication.abstract}
+              <div className="p-8 pt-0 space-y-8 transition-all duration-300">
+                {/* Preprints Section */}
+                <div>
+                  <h4 className="text-xl font-bold text-cyber-green mb-4 flex items-center">
+                    <FileText className="h-5 w-5 mr-2" />
+                    Preprints (arXiv)
+                  </h4>
+                  <div className="space-y-4">
+                    {preprints.map((publication, index) => (
+                      <div key={`preprint-${index}`} className="cyber-card p-6">
+                        <h5 className="text-lg font-semibold text-white mb-2">{publication.title}</h5>
+                        <p className="text-gray-300 mb-3 text-sm">{publication.description}</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-cyber-green text-sm">{publication.organization} ({publication.year})</span>
+                          <a href={publication.link} target="_blank" rel="noopener noreferrer" className="text-cyber-green hover:text-cyber-green-light underline text-sm">
+                            Read Paper
+                          </a>
+                        </div>
                       </div>
-                    )}
-                    
-                    <div className="flex items-center justify-between mt-2">
-                      <span className="text-cyber-green">{publication.organization}</span>
-                      <a 
-                        href={publication.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-cyber-green hover:text-cyber-green-light underline"
-                      >
-                        Read Publication
-                      </a>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Peer-Reviewed Papers Section */}
+                <div>
+                  <h4 className="text-xl font-bold text-cyber-green mb-4 flex items-center">
+                    <Award className="h-5 w-5 mr-2" />
+                    Peer-Reviewed Conference Papers
+                  </h4>
+                  <div className="space-y-4">
+                    {peerReviewedPapers.map((publication, index) => (
+                      <div key={`peer-${index}`} className="cyber-card p-6">
+                        <h5 className="text-lg font-semibold text-white mb-2">{publication.title}</h5>
+                        <p className="text-gray-400 text-sm mb-2 italic">{publication.authors}</p>
+                        <p className="text-gray-300 mb-3 text-sm">{publication.description}</p>
+                        
+                        <button 
+                          onClick={() => toggleAbstract(`peer-${index}`)}
+                          className="flex items-center text-cyber-green hover:text-cyber-green-light mb-2 transition-colors text-sm"
+                        >
+                          {expandedAbstracts[`peer-${index}`] ? (
+                            <>
+                              <span>Hide Abstract</span>
+                              <ChevronUp className="ml-1 h-4 w-4" />
+                            </>
+                          ) : (
+                            <>
+                              <span>Show Abstract</span>
+                              <ChevronDown className="ml-1 h-4 w-4" />
+                            </>
+                          )}
+                        </button>
+                        
+                        {expandedAbstracts[`peer-${index}`] && (
+                          <div className="mt-2 mb-4 text-gray-300 p-4 bg-cyber-darker/50 rounded border border-cyber-green/10 transition-all duration-200 text-sm">
+                            {publication.abstract}
+                          </div>
+                        )}
+                        
+                        <div className="flex items-center justify-between">
+                          <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                            {publication.venue}
+                          </span>
+                          <a href={publication.link} target="_blank" rel="noopener noreferrer" className="text-cyber-green hover:text-cyber-green-light underline text-sm">
+                            Read Paper
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* OWASP Publications Section */}
+                <div>
+                  <h4 className="text-xl font-bold text-cyber-green mb-4 flex items-center">
+                    <Shield className="h-5 w-5 mr-2" />
+                    OWASP White Papers and Guidelines
+                  </h4>
+                  <div className="space-y-4">
+                    {owaspPublications.map((publication, index) => (
+                      <div key={`owasp-${index}`} className="cyber-card p-6">
+                        <h5 className="text-lg font-semibold text-white mb-2">{publication.title}</h5>
+                        <p className="text-gray-300 mb-3 text-sm">{publication.description}</p>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <span className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm">
+                              {publication.role}
+                            </span>
+                            <span className="text-gray-400 text-sm">({publication.year})</span>
+                          </div>
+                          <a href={publication.link} target="_blank" rel="noopener noreferrer" className="text-cyber-green hover:text-cyber-green-light underline text-sm">
+                            View Resource
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
           </div>

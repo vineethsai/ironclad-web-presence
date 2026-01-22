@@ -7,7 +7,12 @@ import { AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Citations from "./pages/Citations";
 import NotFound from "./pages/NotFound";
+import Publications from "./pages/Publications";
+import Speaking from "./pages/Speaking";
+import Media from "./pages/Media";
+import ExperienceFull from "./pages/ExperienceFull";
 import SectionRoute from "./components/SectionRoute";
 
 const queryClient = new QueryClient();
@@ -23,10 +28,14 @@ const AnimatedRoutes = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/tag/:tag" element={<Blog />} />
         <Route path="/blog/:postId" element={<BlogPost />} />
+        <Route path="/citations" element={<Citations />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/speaking" element={<Speaking />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/experience" element={<ExperienceFull />} />
         
         {/* Section routes */}
         <Route path="/about" element={<SectionRoute sectionId="about" />} />
-        <Route path="/experience" element={<SectionRoute sectionId="experience" />} />
         <Route path="/open-source" element={<SectionRoute sectionId="open-source" />} />
         <Route path="/contact" element={<SectionRoute sectionId="contact" />} />
         

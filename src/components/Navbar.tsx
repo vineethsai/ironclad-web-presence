@@ -28,8 +28,11 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Experience', path: '/experience' },
-    { name: 'Open Source', path: '/open-source' },
+    { name: 'Publications', path: '/publications' },
+    { name: 'Speaking', path: '/speaking' },
+    { name: 'Media', path: '/media' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Citations', path: '/citations' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -39,8 +42,8 @@ const Navbar = () => {
       return location.pathname === '/' && !location.hash;
     }
     
-    // For section links (which use hash routing internally)
-    if (path !== '/blog' && path.startsWith('/')) {
+    // For section links (which use hash routing internally) - only for /about and /contact
+    if ((path === '/about' || path === '/contact') && path.startsWith('/')) {
       return location.hash === `#${path.substring(1)}`;
     }
     
