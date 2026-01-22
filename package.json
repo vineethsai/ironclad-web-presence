@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "fetch-citations": "npx tsx scripts/fetchCitations.ts",
-    "build": "npm run fetch-citations && vite build",
-    "build:dev": "npm run fetch-citations && vite build --mode development",
+    "build": "vite build && cp CNAME docs/CNAME",
+    "build:fresh": "npm run fetch-citations && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
