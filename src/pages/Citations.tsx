@@ -30,6 +30,55 @@ const isSelfCitation = (authors: string[]): boolean => {
   });
 };
 
+// Prestigious institutions for high-influence scoring
+const PRESTIGIOUS_INSTITUTIONS = [
+  'stanford', 'mit ', 'massachusetts institute', 'berkeley', 'uc berkeley',
+  'carnegie mellon', 'cmu', 'harvard', 'princeton', 'cornell', 'georgia tech',
+  'georgia institute', 'purdue', 'oxford', 'cambridge', 'eth zurich', 'eth zürich',
+  'tsinghua', 'peking', 'zhejiang', 'national university of singapore', 'nus',
+  'kaist', 'google', 'microsoft', 'meta', 'facebook', 'cern', 'deepmind',
+  'amazon', 'aws', 'ibm research', 'nvidia', 'intel', 'openai', 'anthropic',
+  'yale', 'columbia', 'ucla', 'caltech', 'nyu', 'usc', 'university of washington',
+  'university of michigan', 'uiuc', 'university of illinois', 'ut austin',
+  'university of texas', 'umass', 'johns hopkins', 'duke', 'northwestern',
+  'university of toronto', 'waterloo', 'mcgill', 'epfl', 'imperial college',
+  'ucl', 'university college london', 'king\'s college', 'tu munich', 'max planck',
+  'inria', 'cnrs', 'national institute', 'darpa', 'nist', 'sandia'
+];
+
+// Top-tier venue patterns
+const TOP_TIER_VENUES = [
+  'ieee', 'acm', 'usenix', 'ndss', 'ccs', 's&p', 'sp ', 'infocom',
+  'security', 'oakland', 'crypto', 'eurocrypt', 'asiacrypt',
+  'acsac', 'esorics', 'wisec', 'isca', 'micro', 'hpca', 'sigcomm',
+  'mobicom', 'nsdi', 'sosp', 'osdi', 'eurosys', 'pldi', 'popl', 'icse',
+  'fse', 'ase', 'issta', 'sigmod', 'vldb', 'neurips', 'nips', 'icml',
+  'iclr', 'cvpr', 'iccv', 'eccv', 'aaai', 'ijcai'
+];
+
+// Peer-reviewed venue patterns
+const PEER_REVIEWED_VENUES = [
+  'springer', 'elsevier', 'nature', 'science', 'plos', 'wiley',
+  'taylor & francis', 'mdpi', 'journal of', 'transactions on',
+  'international journal', 'conference on', 'symposium on'
+];
+
+// Check if a paper is high influence (from prestigious institution or top venue)
+const isHighInfluence = (paper: typeof allCitingPapers[0]): boolean => {
+  // Check venue
+  const venueLower = (paper.venue || '').toLowerCase();
+  const isTopVenue = TOP_TIER_VENUES.some(p => venueLower.includes(p));
+  const isPeerReviewed = PEER_REVIEWED_VENUES.some(p => venueLower.includes(p));
+  
+  // Check affiliations
+  const affiliationsLower = paper.affiliations?.map(a => a.toLowerCase()).join(' ') || '';
+  const authorsLower = paper.authors.join(' ').toLowerCase();
+  const combinedText = `${affiliationsLower} ${authorsLower}`;
+  const isPrestigiousInstitution = PRESTIGIOUS_INSTITUTIONS.some(p => combinedText.includes(p));
+  
+  return isTopVenue || isPeerReviewed || isPrestigiousInstitution;
+};
+
 const Citations = () => {
   const citationData = getCitationData();
   const { publications, citingPapers: allCitingPapers, locations, stats, lastUpdated } = citationData;
@@ -43,16 +92,18 @@ const Citations = () => {
   // Recalculate stats without self-citations
   const filteredStats = useMemo(() => {
     const selfCitationCount = allCitingPapers.length - citingPapers.length;
+    const highInfluenceCount = citingPapers.filter(p => isHighInfluence(p)).length;
     
     return {
       totalCitations: citingPapers.length,
       selfCitationsFiltered: selfCitationCount,
       uniqueLocations: stats.uniqueLocations,
       topVenues: stats.topVenues,
+      highInfluenceCount,
       influenceDistribution: {
-        high: citingPapers.filter(p => p.influenceScore >= 70).length,
-        medium: citingPapers.filter(p => p.influenceScore >= 40 && p.influenceScore < 70).length,
-        low: citingPapers.filter(p => p.influenceScore < 40).length
+        high: highInfluenceCount,
+        medium: citingPapers.filter(p => !isHighInfluence(p) && p.influenceScore >= 20).length,
+        low: citingPapers.filter(p => !isHighInfluence(p) && p.influenceScore < 20).length
       }
     };
   }, [citingPapers, allCitingPapers, stats]);
@@ -212,10 +263,10 @@ const Citations = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-cyber-green">
-                    {filteredStats.influenceDistribution.high}
+                    {filteredStats.highInfluenceCount}
                   </div>
                   <p className="text-xs text-gray-500 mt-1">
-                    From top-tier venues
+                    Top venues & institutions
                   </p>
                 </CardContent>
               </Card>
