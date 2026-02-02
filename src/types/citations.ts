@@ -47,6 +47,7 @@ export interface CitationStats {
     medium: number; // 40-69
     low: number; // 0-39
   };
+  totalAuthorCitations?: number; // Authors × citations per paper
 }
 
 export interface CitationData {

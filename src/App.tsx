@@ -13,6 +13,7 @@ import Publications from "./pages/Publications";
 import Speaking from "./pages/Speaking";
 import Media from "./pages/Media";
 import ExperienceFull from "./pages/ExperienceFull";
+import ResearchImpact from "./pages/ResearchImpact";
 import SectionRoute from "./components/SectionRoute";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const AnimatedRoutes = () => {
         <Route path="/speaking" element={<Speaking />} />
         <Route path="/media" element={<Media />} />
         <Route path="/experience" element={<ExperienceFull />} />
+        <Route path="/research-impact" element={<ResearchImpact />} />
         
         {/* Section routes */}
         <Route path="/about" element={<SectionRoute sectionId="about" />} />

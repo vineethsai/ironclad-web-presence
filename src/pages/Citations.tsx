@@ -280,10 +280,10 @@ const Citations = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-cyber-green">
-                    {citingPapers.reduce((acc, p) => acc + p.authors.length, 0)}
+                    {stats?.totalAuthorCitations || citingPapers.reduce((acc, p) => acc + p.authors.length, 0)}
                   </div>
                   <p className="text-xs text-gray-500 mt-1">
-                    Unique researchers
+                    Researchers citing
                   </p>
                 </CardContent>
               </Card>
