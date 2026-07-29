@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Shield, Github, Linkedin, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
+import ScrollProgress from '@/components/motion/ScrollProgress';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,23 +38,14 @@ const Navbar = () => {
   ];
 
   // Helper function to check if a path is active
-  const isActive = (path) => {
-    if (path === '/') {
-      return location.pathname === '/' && !location.hash;
-    }
-    
-    // For section links (which use hash routing internally) - only for /about and /contact
-    if ((path === '/about' || path === '/contact') && path.startsWith('/')) {
-      return location.hash === `#${path.substring(1)}`;
-    }
-    
-    return location.pathname === path;
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
-    <motion.nav 
-      className={`sticky top-0 z-50 backdrop-blur-md border-b py-4
-        ${scrollY > 50 ? 'bg-cyber-dark/95 border-cyber-blue/20' : 'bg-cyber-dark/80 border-transparent'}`}
+    <>
+      <ScrollProgress />
+      <motion.nav
+        className={`sticky top-0 z-50 backdrop-blur-xl border-b py-4 transition-colors duration-300
+        ${scrollY > 50 ? 'bg-cyber-darker/90 border-cyber-green/20 shadow-[0_8px_30px_rgba(0,0,0,0.35)]' : 'bg-cyber-dark/60 border-transparent'}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ 
@@ -70,12 +62,12 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <Shield className="h-8 w-8 text-cyber-blue mr-2" />
+            <Shield className="h-8 w-8 text-cyber-green mr-2" />
             <Link to="/" className="text-xl font-bold text-white">Vineeth Sai</Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center gap-5">
             {navLinks.map((item, index) => (
               <motion.div
                 key={item.path}
@@ -89,12 +81,12 @@ const Navbar = () => {
               >
                 <Link 
                   to={item.path} 
-                  className="text-white hover:text-cyber-blue transition-colors py-1"
+                  className="text-white hover:text-cyber-green transition-colors py-1"
                 >
                   {item.name}
                   {isActive(item.path) && (
                     <motion.div
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyber-blue"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-cyber-green"
                       layoutId="navbar-indicator"
                       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                     />
@@ -105,11 +97,19 @@ const Navbar = () => {
           </div>
 
           <motion.div 
-            className="hidden md:flex items-center space-x-4"
+            className="hidden xl:flex items-center space-x-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-command-palette'))}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-md border border-cyber-green/25 bg-cyber-green/5 text-gray-400 hover:text-cyber-green hover:border-cyber-green/50 transition-colors"
+              aria-label="Open command palette"
+            >
+              <Search className="h-4 w-4" />
+              <kbd className="text-[10px] font-mono text-cyber-green/70">⌘K</kbd>
+            </button>
             <ThemeToggle />
             <a href="https://github.com/vineethsai" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5 text-white hover:text-cyber-green transition-colors" />
@@ -136,7 +136,7 @@ const Navbar = () => {
           >
             <Button
               variant="ghost"
-              className="md:hidden text-white"
+              className="xl:hidden text-white"
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
@@ -150,7 +150,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="md:hidden bg-cyber-grey-light border-t border-cyber-blue/20 mt-2"
+            className="xl:hidden bg-cyber-grey-light border-t border-cyber-green/20 mt-2"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -166,7 +166,7 @@ const Navbar = () => {
                 >
                   <Link 
                     to={item.path} 
-                    className="block text-white hover:text-cyber-blue py-2"
+                    className="block text-white hover:text-cyber-green py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -201,6 +201,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </motion.nav>
+    </>
   );
 };
 

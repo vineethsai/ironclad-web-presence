@@ -2,12 +2,18 @@ import { writeFileSync } from 'fs';
 import { join } from 'path';
 import type { CitationData, Publication, CitingPaper, CitationLocation, CitationStats } from '../src/types/citations.ts';
 
+type CitingPaperWithAuthorAffiliation = CitingPaper & {
+  _authorAffiliation?: string;
+};
+
 const SERPAPI_KEY = process.env.SERPAPI_KEY;
 if (!SERPAPI_KEY) {
   throw new Error('SERPAPI_KEY environment variable not set. Set it with: export SERPAPI_KEY="your_key"');
 }
 const SCHOLAR_ID = 'hIVoKbIAAAAJ';
+const SCHOLAR_PROFILE_URL = `https://scholar.google.com/citations?user=${SCHOLAR_ID}&hl=en`;
 const OUTPUT_PATH = join(process.cwd(), 'src/data/citations.json');
+const SCHOLAR_METRICS_OUTPUT_PATH = join(process.cwd(), 'src/data/scholarMetrics.json');
 
 interface SerpApiAuthorResult {
   author: {
@@ -216,8 +222,8 @@ async function fetchAuthorAffiliation(authorLink: string): Promise<string | null
   }
 }
 
-async function fetchCitingPapers(citesId: string, publicationTitle: string): Promise<CitingPaper[]> {
-  const citingPapers: CitingPaper[] = [];
+async function fetchCitingPapers(citesId: string, publicationTitle: string): Promise<CitingPaperWithAuthorAffiliation[]> {
+  const citingPapers: CitingPaperWithAuthorAffiliation[] = [];
   let start = 0;
   let hasMore = true;
   // Get ALL citations like CitationMap does (no limit, just safety check)
@@ -285,7 +291,7 @@ async function fetchCitingPapers(citesId: string, publicationTitle: string): Pro
           citedPublication: publicationTitle,
           // Store affiliation for geocoding (like CitationMap does)
           _authorAffiliation: authorAffiliation || undefined
-        } as CitingPaper & { _authorAffiliation?: string });
+        });
       }
       
       // Check if there's a next page
@@ -303,13 +309,13 @@ async function fetchCitingPapers(citesId: string, publicationTitle: string): Pro
   return citingPapers;
 }
 
-async function aggregateLocations(citingPapers: CitingPaper[]): Promise<CitationLocation[]> {
+async function aggregateLocations(citingPapers: CitingPaperWithAuthorAffiliation[]): Promise<CitationLocation[]> {
   const locationMap = new Map<string, CitationLocation>();
   
   // For each citing paper, extract affiliation (like CitationMap does)
   for (const paper of citingPapers) {
     // First try to use author affiliation if we fetched it
-    let affiliation = (paper as any)._authorAffiliation;
+    let affiliation = paper._authorAffiliation;
     
     // If no author affiliation, try to extract from venue/snippet (like CitationMap's fallback)
     if (!affiliation) {
@@ -393,6 +399,12 @@ async function main() {
     const emptyData: CitationData = {
       lastUpdated: new Date().toISOString(),
       scholarId: SCHOLAR_ID,
+      scholar: {
+        totalCitations: 0,
+        publicationCount: 0,
+        lastUpdated: new Date().toISOString(),
+        profileUrl: SCHOLAR_PROFILE_URL
+      },
       publications: [],
       citingPapers: [],
       locations: [],
@@ -404,13 +416,14 @@ async function main() {
       }
     };
     
-    writeFileSync(OUTPUT_PATH, JSON.stringify(emptyData, null, 2));
+    writeFileSync(OUTPUT_PATH, `${JSON.stringify(emptyData, null, 2)}\n`);
+    writeFileSync(SCHOLAR_METRICS_OUTPUT_PATH, `${JSON.stringify(emptyData.scholar, null, 2)}\n`);
     console.log(`Empty citation data written to ${OUTPUT_PATH}`);
     return;
   }
   
   // Fetch citing papers for each publication
-  const allCitingPapers: CitingPaper[] = [];
+  const allCitingPapers: CitingPaperWithAuthorAffiliation[] = [];
   for (let i = 0; i < publications.length; i++) {
     const pub = publications[i];
     if (pub.citesId) {
@@ -458,6 +471,12 @@ async function main() {
   const citationData: CitationData = {
     lastUpdated: new Date().toISOString(),
     scholarId: SCHOLAR_ID,
+    scholar: {
+      totalCitations: publications.reduce((total, publication) => total + publication.citationCount, 0),
+      publicationCount: publications.length,
+      lastUpdated: new Date().toISOString(),
+      profileUrl: SCHOLAR_PROFILE_URL
+    },
     publications,
     citingPapers: allCitingPapers,
     locations,
@@ -465,7 +484,8 @@ async function main() {
   };
   
   // Write to file
-  writeFileSync(OUTPUT_PATH, JSON.stringify(citationData, null, 2));
+  writeFileSync(OUTPUT_PATH, `${JSON.stringify(citationData, null, 2)}\n`);
+  writeFileSync(SCHOLAR_METRICS_OUTPUT_PATH, `${JSON.stringify(citationData.scholar, null, 2)}\n`);
   console.log(`\nCitation data written to ${OUTPUT_PATH}`);
   console.log(`\nSummary:`);
   console.log(`  Publications: ${publications.length}`);

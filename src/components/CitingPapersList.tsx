@@ -13,6 +13,15 @@ interface CitingPapersListProps {
 type SortOption = 'influence-desc' | 'influence-asc' | 'citations-desc' | 'citations-asc' | 'year-desc' | 'year-asc';
 type FilterOption = 'all' | 'high' | 'medium' | 'low';
 
+const EXCLUDED_COUNTRIES = ['Papua New Guinea', 'Mali'];
+
+const normalizeCountry = (country: string): string => {
+  const normalized = country.trim();
+  if (normalized === 'USA' || normalized === 'US') return 'United States';
+  if (normalized === 'UK') return 'United Kingdom';
+  return normalized;
+};
+
 const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
   const [sortBy, setSortBy] = useState<SortOption>('influence-desc');
   const [filterBy, setFilterBy] = useState<FilterOption>('all');
@@ -20,16 +29,6 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Get unique countries for filter dropdown (exclude noisy geocoding results)
-  const EXCLUDED_COUNTRIES = ['Papua New Guinea', 'Mali'];
-  
-  // Normalize country names
-  const normalizeCountry = (country: string): string => {
-    const normalized = country.trim();
-    if (normalized === 'USA' || normalized === 'US') return 'United States';
-    if (normalized === 'UK') return 'United Kingdom';
-    return normalized;
-  };
-  
   const uniqueCountries = useMemo(() => {
     const countries = new Set<string>();
     papers.forEach(paper => {

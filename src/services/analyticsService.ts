@@ -104,8 +104,8 @@ declare global {
       params?: {
         page_path?: string;
         send_to?: string;
-        [key: string]: any;
+        [key: string]: unknown;
       }
     ) => void;
   }
-} 
+}

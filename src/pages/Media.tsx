@@ -4,6 +4,7 @@ import { Globe, Mic, ExternalLink, Newspaper, Youtube, Radio, ChevronDown, Chevr
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
+import { PageHeader, CountUp } from '@/components/motion';
 
 const Media = () => {
   const [expandedSections, setExpandedSections] = useState({
@@ -353,28 +354,31 @@ const Media = () => {
         
         <Navbar />
         <main>
-          <section className="py-20 bg-cyber-darker relative overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
-            
-            <div className="container mx-auto px-4 relative z-10">
-              <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Media</h1>
-                <div className="w-20 h-1 bg-cyber-green mx-auto mb-4"></div>
-                <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                  Press coverage, media appearances, and podcast interviews on AI security research and frameworks.
-                </p>
-                {/* Stats Summary */}
-                <div className="flex justify-center gap-6 mt-6">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-cyber-green">{totalCoverage}+</div>
-                    <div className="text-sm text-gray-400">Press Mentions</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-cyber-green">{podcastAppearances.length}</div>
-                    <div className="text-sm text-gray-400">Podcasts & Videos</div>
-                  </div>
+          <PageHeader
+            kicker="In the News"
+            title="Media"
+            subtitle="Press coverage, media appearances, and podcast interviews on AI security research and frameworks."
+          >
+            {/* Stats Summary */}
+            <div className="flex justify-center gap-10 mt-7">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyber-green">
+                  <CountUp to={totalCoverage} suffix="+" />
                 </div>
+                <div className="text-sm text-gray-400 mt-1">Press Mentions</div>
               </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyber-green">
+                  <CountUp to={podcastAppearances.length} />
+                </div>
+                <div className="text-sm text-gray-400 mt-1">Podcasts & Videos</div>
+              </div>
+            </div>
+          </PageHeader>
+          <section className="py-20 bg-cyber-darker relative overflow-hidden">
+            <div className="absolute inset-0 bg-grid"></div>
+
+            <div className="container mx-auto px-4 relative z-10">
 
               <div className="grid grid-cols-1 gap-6">
                 {/* Featured Coverage */}
@@ -399,7 +403,7 @@ const Media = () => {
                   </button>
                   
                   {expandedSections.featured && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {featuredCoverage.map((item, index) => (
                           <a 
@@ -457,7 +461,7 @@ const Media = () => {
                   </button>
                   
                   {expandedSections.ans && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {mediaAppearances.ans.map((item, index) => (
                           <a 
@@ -510,7 +514,7 @@ const Media = () => {
                   </button>
                   
                   {expandedSections.mcp && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {mediaAppearances.mcp.map((item, index) => (
                           <a 
@@ -563,7 +567,7 @@ const Media = () => {
                   </button>
                   
                   {expandedSections.aivss && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <p className="text-gray-300 mb-4 text-sm">
                         Coverage of the AI Vulnerability Scoring System (AIVSS), a framework designed to address gaps in CVSS for scoring vulnerabilities in non-deterministic AI systems.
                       </p>
@@ -619,7 +623,7 @@ const Media = () => {
                   </button>
                   
                   {expandedSections.tools && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {mediaAppearances.tools.map((item, index) => (
                           <a 
@@ -672,7 +676,7 @@ const Media = () => {
                   </button>
                   
                   {expandedSections.podcasts && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <p className="text-gray-300 mb-6">
                         Speaking engagements on cybersecurity podcasts and video interviews discussing AI security, MCP vulnerabilities, and agentic AI systems.
                       </p>

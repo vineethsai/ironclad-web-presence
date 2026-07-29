@@ -4,6 +4,7 @@ import { Shield, Award, ChevronDown, ChevronUp, FileText, BookOpen, Users, Star 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
+import { PageHeader } from '@/components/motion';
 
 const Publications = () => {
   const [expandedAbstracts, setExpandedAbstracts] = useState<Record<string, boolean>>({});
@@ -14,6 +15,20 @@ const Publications = () => {
     peerReview: true,
     awards: true
   });
+  const [activeFilter, setActiveFilter] = useState<'all' | 'peerReviewed' | 'preprints' | 'owasp' | 'peerReview' | 'awards'>('all');
+
+  const filterChips = [
+    { key: 'all', label: 'All' },
+    { key: 'peerReviewed', label: 'IEEE Papers' },
+    { key: 'preprints', label: 'Preprints' },
+    { key: 'owasp', label: 'OWASP Guides' },
+    { key: 'peerReview', label: 'Peer Review' },
+    { key: 'awards', label: 'Awards' },
+  ] as const;
+
+  const showSection = (key: string) => activeFilter === 'all' || activeFilter === key;
+  const isExpanded = (key: keyof typeof expandedSections) =>
+    activeFilter === 'all' ? expandedSections[key] : activeFilter === key;
   
   const toggleAbstract = (index: string) => {
     setExpandedAbstracts(prev => ({
@@ -35,7 +50,7 @@ const Publications = () => {
       title: "A2AS: Agentic AI Runtime Security and Self-Defense",
       organization: "arXiv Preprint",
       year: "2025",
-      link: "https://arxiv.org/abs/2507.00000",
+      link: "https://arxiv.org/abs/2510.13825",
       description: "Research on runtime security mechanisms and self-defense capabilities for autonomous AI agents.",
       abstract: "This paper presents A2AS (Agentic AI Runtime Security and Self-Defense), a comprehensive framework for protecting autonomous AI agents during runtime execution. As agentic AI systems become more prevalent in enterprise environments, the need for robust runtime security mechanisms becomes critical. A2AS introduces novel approaches to real-time threat detection, autonomous defensive responses, and self-healing capabilities for AI agents operating in adversarial environments."
     },
@@ -43,7 +58,7 @@ const Publications = () => {
       title: "MAIF: Enforcing AI Trust and Provenance with an Artifact-Centric Agentic Paradigm",
       organization: "arXiv Preprint",
       year: "2025",
-      link: "https://arxiv.org/abs/2507.00001",
+      link: "https://arxiv.org/abs/2511.15097",
       description: "A framework for establishing trust and provenance tracking in multi-agent AI systems through artifact-centric approaches.",
       abstract: "MAIF (Multi-Agent Integrity Framework) presents a novel approach to establishing and maintaining trust in multi-agent AI systems through artifact-centric provenance tracking. The framework addresses critical challenges in verifying the authenticity and integrity of agent actions, outputs, and communications across distributed agentic systems."
     }
@@ -209,21 +224,37 @@ const Publications = () => {
         
         <Navbar />
         <main>
+          <PageHeader
+            kicker="Research"
+            title="Publications"
+            subtitle="Peer-reviewed research, technical reports, and contributions to AI security standards."
+          />
           <section className="py-20 bg-cyber-darker relative overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
-            
+            <div className="absolute inset-0 bg-grid"></div>
+
             <div className="container mx-auto px-4 relative z-10">
-              <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Publications</h1>
-                <div className="w-20 h-1 bg-cyber-green mx-auto mb-4"></div>
-                <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                  Peer-reviewed research, technical reports, and contributions to AI security standards.
-                </p>
+
+              {/* Filter chips */}
+              <div className="flex flex-wrap justify-center gap-2 mb-10">
+                {filterChips.map((chip) => (
+                  <button
+                    key={chip.key}
+                    onClick={() => setActiveFilter(chip.key)}
+                    className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-all duration-300 ${
+                      activeFilter === chip.key
+                        ? 'bg-cyber-green text-cyber-dark border-cyber-green shadow-glow-sm'
+                        : 'bg-cyber-green/5 text-cyber-green border-cyber-green/25 hover:bg-cyber-green/15 hover:border-cyber-green/50'
+                    }`}
+                  >
+                    {chip.label}
+                  </button>
+                ))}
               </div>
 
               <div className="grid grid-cols-1 gap-6">
                 {/* Peer-Reviewed Papers */}
-                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20">
+                {showSection('peerReviewed') && (
+                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 animate-in fade-in slide-in-from-top-2 duration-300">
                   <button 
                     onClick={() => toggleSection('peerReviewed')}
                     className="w-full p-8 flex justify-between items-center cursor-pointer hover:bg-cyber-grey-light transition-colors duration-200"
@@ -236,15 +267,15 @@ const Publications = () => {
                       </span>
                     </div>
                     <div className="bg-cyber-darker rounded-full p-2 border border-cyber-green/20">
-                      {expandedSections.peerReviewed ? 
+                      {isExpanded('peerReviewed') ?
                         <ChevronUp className="h-5 w-5 text-cyber-green" /> : 
                         <ChevronDown className="h-5 w-5 text-cyber-green" />
                       }
                     </div>
                   </button>
                   
-                  {expandedSections.peerReviewed && (
-                    <div className="p-8 pt-0 space-y-4">
+                  {isExpanded('peerReviewed') && (
+                    <div className="p-8 pt-0 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
                       {peerReviewedPapers.map((publication, index) => (
                         <div key={`peer-${index}`} className="cyber-card p-6">
                           <h5 className="text-lg font-semibold text-white mb-2">{publication.title}</h5>
@@ -269,7 +300,7 @@ const Publications = () => {
                           </button>
                           
                           {expandedAbstracts[`peer-${index}`] && (
-                            <div className="mt-2 mb-4 text-gray-300 p-4 bg-cyber-darker/50 rounded border border-cyber-green/10 transition-all duration-200 text-sm">
+                            <div className="mt-2 mb-4 text-gray-300 p-4 bg-cyber-darker/50 rounded border border-cyber-green/10 text-sm animate-in fade-in slide-in-from-top-1 duration-200">
                               {publication.abstract}
                             </div>
                           )}
@@ -287,9 +318,11 @@ const Publications = () => {
                     </div>
                   )}
                 </div>
+                )}
 
                 {/* Preprints Section */}
-                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20">
+                {showSection('preprints') && (
+                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 animate-in fade-in slide-in-from-top-2 duration-300">
                   <button 
                     onClick={() => toggleSection('preprints')}
                     className="w-full p-8 flex justify-between items-center cursor-pointer hover:bg-cyber-grey-light transition-colors duration-200"
@@ -302,15 +335,15 @@ const Publications = () => {
                       </span>
                     </div>
                     <div className="bg-cyber-darker rounded-full p-2 border border-cyber-green/20">
-                      {expandedSections.preprints ? 
+                      {isExpanded('preprints') ?
                         <ChevronUp className="h-5 w-5 text-cyber-green" /> : 
                         <ChevronDown className="h-5 w-5 text-cyber-green" />
                       }
                     </div>
                   </button>
                   
-                  {expandedSections.preprints && (
-                    <div className="p-8 pt-0 space-y-4">
+                  {isExpanded('preprints') && (
+                    <div className="p-8 pt-0 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
                       {preprints.map((publication, index) => (
                         <div key={`preprint-${index}`} className="cyber-card p-6">
                           <h5 className="text-lg font-semibold text-white mb-2">{publication.title}</h5>
@@ -326,9 +359,11 @@ const Publications = () => {
                     </div>
                   )}
                 </div>
+                )}
 
                 {/* OWASP Publications Section */}
-                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20">
+                {showSection('owasp') && (
+                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 animate-in fade-in slide-in-from-top-2 duration-300">
                   <button 
                     onClick={() => toggleSection('owasp')}
                     className="w-full p-8 flex justify-between items-center cursor-pointer hover:bg-cyber-grey-light transition-colors duration-200"
@@ -341,15 +376,15 @@ const Publications = () => {
                       </span>
                     </div>
                     <div className="bg-cyber-darker rounded-full p-2 border border-cyber-green/20">
-                      {expandedSections.owasp ? 
+                      {isExpanded('owasp') ?
                         <ChevronUp className="h-5 w-5 text-cyber-green" /> : 
                         <ChevronDown className="h-5 w-5 text-cyber-green" />
                       }
                     </div>
                   </button>
                   
-                  {expandedSections.owasp && (
-                    <div className="p-8 pt-0 space-y-4">
+                  {isExpanded('owasp') && (
+                    <div className="p-8 pt-0 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
                       {owaspPublications.map((publication, index) => (
                         <div key={`owasp-${index}`} className="cyber-card p-6">
                           <h5 className="text-lg font-semibold text-white mb-2">{publication.title}</h5>
@@ -370,9 +405,11 @@ const Publications = () => {
                     </div>
                   )}
                 </div>
+                )}
 
                 {/* Peer Review Experience */}
-                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20">
+                {showSection('peerReview') && (
+                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 animate-in fade-in slide-in-from-top-2 duration-300">
                   <button 
                     onClick={() => toggleSection('peerReview')}
                     className="w-full p-8 flex justify-between items-center cursor-pointer hover:bg-cyber-grey-light transition-colors duration-200"
@@ -385,15 +422,15 @@ const Publications = () => {
                       </span>
                     </div>
                     <div className="bg-cyber-darker rounded-full p-2 border border-cyber-green/20">
-                      {expandedSections.peerReview ? 
+                      {isExpanded('peerReview') ?
                         <ChevronUp className="h-5 w-5 text-cyber-green" /> : 
                         <ChevronDown className="h-5 w-5 text-cyber-green" />
                       }
                     </div>
                   </button>
                   
-                  {expandedSections.peerReview && (
-                    <div className="p-8 pt-0">
+                  {isExpanded('peerReview') && (
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <p className="text-gray-300 mb-6">
                         Served as a peer reviewer for leading IEEE and ACM conferences and journals, evaluating cutting-edge research in AI security, cybersecurity, and communications.
                       </p>
@@ -410,9 +447,11 @@ const Publications = () => {
                     </div>
                   )}
                 </div>
+                )}
 
                 {/* Awards */}
-                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20">
+                {showSection('awards') && (
+                <div className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 animate-in fade-in slide-in-from-top-2 duration-300">
                   <button 
                     onClick={() => toggleSection('awards')}
                     className="w-full p-8 flex justify-between items-center cursor-pointer hover:bg-cyber-grey-light transition-colors duration-200"
@@ -422,15 +461,15 @@ const Publications = () => {
                       <h3 className="text-2xl font-bold text-white">Awards & Recognition</h3>
                     </div>
                     <div className="bg-cyber-darker rounded-full p-2 border border-cyber-green/20">
-                      {expandedSections.awards ? 
+                      {isExpanded('awards') ?
                         <ChevronUp className="h-5 w-5 text-cyber-green" /> : 
                         <ChevronDown className="h-5 w-5 text-cyber-green" />
                       }
                     </div>
                   </button>
                   
-                  {expandedSections.awards && (
-                    <div className="p-8 pt-0 space-y-4">
+                  {isExpanded('awards') && (
+                    <div className="p-8 pt-0 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
                       {awards.map((award, index) => (
                         <div key={index} className="cyber-card p-6">
                           <div className="flex items-start justify-between mb-3">
@@ -448,6 +487,7 @@ const Publications = () => {
                     </div>
                   )}
                 </div>
+                )}
               </div>
             </div>
           </section>

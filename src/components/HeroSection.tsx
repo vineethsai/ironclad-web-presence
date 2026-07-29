@@ -1,200 +1,187 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ArrowDown, Shield, Lock, Code, Key, Database, FileCode, Server, Wifi, Bug, Zap } from 'lucide-react';
+import React, { useEffect, useRef, useState, Suspense, lazy } from 'react';
+import { ArrowDown, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useTheme } from '@/contexts/ThemeContext';
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
+import { MagneticButton } from '@/components/motion';
+import { EASE } from '@/components/motion/easing';
+
+const HeroScene = lazy(() => import('@/components/three/HeroScene'));
+
+const HERO_PHRASES = [
+  'Defending Digital Frontiers',
+  'Securing Applications',
+  'Protecting the Nation',
+  'Building Secure Systems',
+  'Empowering Developer Security',
+  'Safeguarding Digital Assets',
+  'Enhancing Cyber Resilience',
+  'Leading Security Innovation',
+];
 
 // Component for animated text with typing and cursor effect
 const AnimatedText = ({ phrases, className }: { phrases: string[], className?: string }) => {
   const [displayText, setDisplayText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
+  const reduceMotion = useReducedMotion();
 
   useEffect(() => {
+    if (reduceMotion) {
+      setDisplayText(phrases[0] ?? '');
+      return;
+    }
+
     let currentIndex = 0;
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout>;
+    const currentPhrase = phrases[currentPhraseIndex] ?? '';
 
     const typePhrase = () => {
-      const currentPhrase = phrases[currentPhraseIndex];
-
       if (currentIndex <= currentPhrase.length) {
         setDisplayText(currentPhrase.slice(0, currentIndex));
         currentIndex++;
-        timeout = setTimeout(typePhrase, 100);
+        timeout = setTimeout(typePhrase, 90);
       } else {
-        timeout = setTimeout(() => {
-          setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-          currentIndex = 0;
-          typePhrase();
-        }, 2000);
+        timeout = setTimeout(
+          () => setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length),
+          2100
+        );
       }
     };
 
-    // Start the typing animation
     typePhrase();
 
-    // Cleanup
-    return () => {
-      if (timeout) clearTimeout(timeout);
-    };
-  }, [currentPhraseIndex, phrases]);
+    return () => clearTimeout(timeout);
+  }, [currentPhraseIndex, phrases, reduceMotion]);
 
   // Cursor blink effect
   useEffect(() => {
+    if (reduceMotion) {
+      setShowCursor(true);
+      return;
+    }
     const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
-    }, 500);
+    }, 530);
     return () => clearInterval(cursorInterval);
-  }, []);
+  }, [reduceMotion]);
 
   return (
-    <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 cyber-glow ${className}`}>
-      {displayText}
-      <span className={`inline-block w-2 h-8 bg-cyber-green ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}></span>
+    <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 min-h-[1.2em] ${className}`}>
+      <span className="text-gradient cyber-glow-soft">{displayText}</span>
+      <span
+        className={`inline-block w-[3px] h-[0.9em] align-[-0.08em] bg-cyber-green-light ml-2 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+      />
     </h1>
   );
 };
 
 const HeroSection = () => {
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const reduceMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.65], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 110]);
+  const sceneOpacity = useTransform(scrollYProgress, [0, 0.9], [1, 0.15]);
 
-  const phrases = [
-    "Defending Digital Frontiers",
-    "Securing Applications",
-    "Protecting the Nation",
-    "Building Secure Systems",
-    "Empowering Developer Security",
-    "Safeguarding Digital Assets",
-    "Enhancing Cyber Resilience",
-    "Leading Security Innovation"
-  ];
-
-  // Generate random icons for floating animation
-  const floatingIcons = [
-    { icon: Lock, class: 'top-[15%] left-[10%] animate-float-up-down', size: 24 },
-    { icon: Code, class: 'top-[35%] right-[15%] animate-float-left-right', size: 28 },
-    { icon: Key, class: 'bottom-[25%] left-[25%] animate-float-circle', size: 20 },
-    { icon: Database, class: 'top-[50%] left-[8%] animate-float-left-right', size: 18 },
-    { icon: FileCode, class: 'top-[20%] right-[8%] animate-float-up-down', size: 20 },
-    { icon: Server, class: 'bottom-[30%] right-[20%] animate-float-circle', size: 24 },
-    { icon: Wifi, class: 'top-[30%] left-[25%] animate-float-up-down', size: 22 },
-    { icon: Bug, class: 'bottom-[20%] right-[10%] animate-float-left-right', size: 19 },
-  ];
-
-  useEffect(() => {
-    setIsVisible(true);
-
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const fontSize = 14;
-    const columns = Math.floor(canvas.width / fontSize);
-    const drops: number[] = [];
-
-    for (let i = 0; i < columns; i++) {
-      drops[i] = Math.floor(Math.random() * -canvas.height);
-    }
-
-    const cyberCharacters = '01';
-
-    const draw = () => {
-      ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      ctx.fillStyle = '#00ff00';
-      ctx.font = `${fontSize}px monospace`;
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = cyberCharacters.charAt(Math.floor(Math.random() * cyberCharacters.length));
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
-      }
-    };
-
-    const interval = setInterval(draw, 60);
-
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const entrance = (delay: number) =>
+    reduceMotion
+      ? {}
+      : {
+          initial: { opacity: 0, y: 24 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.7, ease: EASE, delay },
+        };
 
   return (
-    <section id="home" className={`relative min-h-screen flex items-center justify-center ${isDark ? 'text-white' : 'text-cyber-dark'} overflow-hidden`}>
-      {isDark && <canvas ref={canvasRef} className="absolute inset-0 z-0" />}
-      <div className={`absolute inset-0 ${isDark ? 'bg-cyber-dark/70' : 'bg-white'} z-10`}></div>
-      
-      {/* Floating security icons - only show in dark mode */}
-      {isDark && floatingIcons.map((item, index) => {
-        const IconComponent = item.icon;
-        return (
-          <div key={index} className={`floating-icon ${item.class}`} style={{ animationDelay: `${index * 0.5}s` }}>
-            <IconComponent size={item.size} />
-          </div>
-        );
-      })}
-      
-      <div className="container mx-auto px-4 relative z-20">
+    <section
+      id="home"
+      ref={sectionRef}
+      className="relative min-h-screen flex items-center justify-center text-white overflow-hidden bg-cyber-darker"
+    >
+      {/* 3D particle-network backdrop (lazy) with static fallback */}
+      <motion.div className="absolute inset-0 z-0" style={reduceMotion ? undefined : { opacity: sceneOpacity }}>
+        <Suspense fallback={<div className="absolute inset-0 bg-grid opacity-60" />}>
+          <HeroScene />
+        </Suspense>
+      </motion.div>
+
+      {/* Content with scroll parallax */}
+      <motion.div
+        className="container mx-auto px-4 relative z-20"
+        style={reduceMotion ? undefined : { opacity: contentOpacity, y: contentY }}
+      >
         <div className="text-center space-y-6 max-w-4xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <Shield className={`h-16 w-16 text-cyber-green animate-pulse ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700`} />
-          </div>
-          
-          <h2 className={`text-2xl md:text-3xl font-medium text-cyber-green tracking-wider ${isVisible ? 'animate-text-fade-in-delay-1' : 'opacity-0'}`}>
-            CYBERSECURITY ENGINEER
-          </h2>
-          
+          <motion.div className="flex items-center justify-center mb-2" {...entrance(0)}>
+            <div className="relative">
+              <Shield className="h-16 w-16 text-cyber-green" />
+              <div className="absolute inset-0 blur-xl bg-cyber-green/40 rounded-full animate-pulse-soft" />
+            </div>
+          </motion.div>
+
+          {/* Availability badge */}
+          <motion.div className="flex justify-center" {...entrance(0.1)}>
+            <span className="inline-flex items-center gap-2 rounded-full border border-cyber-green/30 bg-cyber-green/10 px-4 py-1.5 text-xs font-mono tracking-wider text-cyber-green-light backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-cyber-green opacity-75 animate-ping" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-cyber-green-light" />
+              </span>
+              CYBERSECURITY ENGINEER
+            </span>
+          </motion.div>
+
           {/* Animated text with rotating phrases and typing effect */}
-          <AnimatedText phrases={phrases} />
-          
-          <p className={`text-lg md:text-xl text-gray-300 max-w-2xl mx-auto ${isVisible ? 'animate-text-fade-in-delay-3' : 'opacity-0'}`}>
+          <motion.div {...entrance(0.2)}>
+            <AnimatedText phrases={HERO_PHRASES} />
+          </motion.div>
+
+          <motion.p
+            className="text-lg md:text-xl text-gray-300/90 max-w-2xl mx-auto leading-relaxed"
+            {...entrance(0.35)}
+          >
             Specialized in penetration testing, threat analysis, and implementing robust security frameworks to keep your systems impenetrable.
-          </p>
-          
-          <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 ${isVisible ? 'animate-text-fade-in-delay-3' : 'opacity-0'}`}>
-            <Link to="/blog" className="cyber-terminal-button animate-glow-pulse">
-              Read my Blog
-            </Link>
-            <Link 
-              to="/contact" 
-              className="px-6 py-2 bg-transparent border border-white/30 text-white rounded transition-all duration-300 hover:border-white hover:bg-white/10"
-            >
-              Get in Touch
-            </Link>
-          </div>
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+            {...entrance(0.5)}
+          >
+            <MagneticButton>
+              <Link to="/blog" className="cyber-terminal-button animate-glow-pulse inline-block">
+                Read my Blog
+              </Link>
+            </MagneticButton>
+            <MagneticButton>
+              <Link
+                to="/contact"
+                className="inline-block px-6 py-2 bg-white/[0.03] backdrop-blur-sm border border-white/20 text-white rounded transition-all duration-300 hover:border-cyber-green/60 hover:text-cyber-green-light hover:shadow-glow"
+              >
+                Get in Touch
+              </Link>
+            </MagneticButton>
+          </motion.div>
         </div>
-      </div>
-      
-      {/* Enhanced scroll indicators */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
-        <div className="mb-2 animate-scroll-hint opacity-0">
-          <ArrowDown className="h-4 w-4 text-cyber-green" />
+      </motion.div>
+
+      {/* Scroll cue */}
+      <motion.div
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+        initial={reduceMotion ? false : { opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+      >
+        <span className="text-[11px] font-mono tracking-[0.25em] uppercase text-cyber-green/60">scroll</span>
+        <div className="w-6 h-10 rounded-full border-2 border-cyber-green/40 flex items-start justify-center p-1.5">
+          <motion.div
+            className="w-1 h-2 rounded-full bg-cyber-green-light"
+            animate={reduceMotion ? undefined : { y: [0, 14, 0], opacity: [1, 0.2, 1] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+          />
         </div>
-        <Link to="/blog" className="text-white hover:text-cyber-green transition-colors animate-bounce">
-          <ArrowDown className="h-8 w-8" />
-        </Link>
-        <div className="mt-1 text-xs text-cyber-green font-mono opacity-70">scroll down</div>
-      </div>
+        <ArrowDown className="h-4 w-4 text-cyber-green/60 animate-scroll-hint" />
+      </motion.div>
     </section>
   );
 };

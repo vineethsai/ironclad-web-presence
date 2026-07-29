@@ -1,18 +1,20 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 interface PageTransitionProps {
   children: React.ReactNode;
 }
 
 const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
+  const reduceMotion = useReducedMotion();
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 15 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -15 }}
+      initial={reduceMotion ? false : { opacity: 0, y: 14, scale: 0.995 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={reduceMotion ? undefined : { opacity: 0, y: -14, scale: 0.995 }}
       transition={{ 
-        duration: 0.4, 
+        duration: reduceMotion ? 0 : 0.4,
         ease: [0.22, 1, 0.36, 1],
       }}
     >
@@ -21,4 +23,4 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   );
 };
 
-export default PageTransition; 
+export default PageTransition;

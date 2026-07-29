@@ -94,7 +94,7 @@ const OpenSourceSection = () => {
       title: "A2AS: Agentic AI Runtime Security and Self-Defense",
       organization: "arXiv Preprint",
       year: "2025",
-      link: "https://arxiv.org/abs/2507.00000", // Placeholder - update with actual link
+      link: "https://arxiv.org/abs/2510.13825",
       description: "Research on runtime security mechanisms and self-defense capabilities for autonomous AI agents.",
       abstract: "This paper presents A2AS (Agentic AI Runtime Security and Self-Defense), a comprehensive framework for protecting autonomous AI agents during runtime execution. As agentic AI systems become more prevalent in enterprise environments, the need for robust runtime security mechanisms becomes critical. A2AS introduces novel approaches to real-time threat detection, autonomous defensive responses, and self-healing capabilities for AI agents operating in adversarial environments."
     },
@@ -102,7 +102,7 @@ const OpenSourceSection = () => {
       title: "MAIF: Enforcing AI Trust and Provenance with an Artifact-Centric Agentic Paradigm",
       organization: "arXiv Preprint",
       year: "2025",
-      link: "https://arxiv.org/abs/2507.00001", // Placeholder - update with actual link
+      link: "https://arxiv.org/abs/2511.15097",
       description: "A framework for establishing trust and provenance tracking in multi-agent AI systems through artifact-centric approaches.",
       abstract: "MAIF (Multi-Agent Integrity Framework) presents a novel approach to establishing and maintaining trust in multi-agent AI systems through artifact-centric provenance tracking. The framework addresses critical challenges in verifying the authenticity and integrity of agent actions, outputs, and communications across distributed agentic systems."
     }

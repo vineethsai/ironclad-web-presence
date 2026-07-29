@@ -223,7 +223,7 @@ const PeerReviewedVenues: React.FC<PeerReviewedVenuesProps> = ({ papers }) => {
       }
       
       // Track institutions from affiliations
-      const affiliation = (paper as any).affiliation;
+      const affiliation = paper.affiliation;
       if (affiliation && affiliation !== 'Unknown' && !affiliation.startsWith('No_author')) {
         const affiliationLower = affiliation.toLowerCase();
         

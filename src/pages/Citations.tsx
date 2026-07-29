@@ -1,5 +1,6 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
@@ -7,82 +8,31 @@ import CitationMap from '@/components/CitationMap';
 import CitingPapersList from '@/components/CitingPapersList';
 import PeerReviewedVenues from '@/components/PeerReviewedVenues';
 import { getCitationData } from '@/services/citationService';
-import { Globe, FileText, MapPin, TrendingUp, Info, Award, Users, AlertCircle, Network, BarChart3 } from 'lucide-react';
+import { Globe, FileText, MapPin, TrendingUp, Info, Award, Users, AlertCircle, Network, BarChart3, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { PageHeader, CountUp, StaggerGroup, StaggerItem } from '@/components/motion';
+import { isSelfCitation, isHighInfluence } from '@/utils/citationFilters';
+import type { CitationLocation } from '@/types/citations';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, Building2 } from 'lucide-react';
 
-// Self-citation patterns to filter out
-const SELF_NAME_PATTERNS = [
-  'vineeth sai',
-  'vs narajala',
-  'vineeth sai narajala',
-  'v. s. narajala',
-  'narajala, v',
-  'narajala, vineeth',
-  'v s narajala',
-  'vineeth narajala'
-];
+const CitationGlobe = lazy(() => import('@/components/three/CitationGlobe'));
 
-const isSelfCitation = (authors: string[]): boolean => {
-  return authors.some(author => {
-    const authorLower = author.toLowerCase();
-    return SELF_NAME_PATTERNS.some(pattern => authorLower.includes(pattern));
-  });
-};
+const EXCLUDED_COUNTRIES = ['Papua New Guinea', 'Mali'];
 
-// Prestigious institutions for high-influence scoring
-const PRESTIGIOUS_INSTITUTIONS = [
-  'stanford', 'mit ', 'massachusetts institute', 'berkeley', 'uc berkeley',
-  'carnegie mellon', 'cmu', 'harvard', 'princeton', 'cornell', 'georgia tech',
-  'georgia institute', 'purdue', 'oxford', 'cambridge', 'eth zurich', 'eth zürich',
-  'tsinghua', 'peking', 'zhejiang', 'national university of singapore', 'nus',
-  'kaist', 'google', 'microsoft', 'meta', 'facebook', 'cern', 'deepmind',
-  'amazon', 'aws', 'ibm research', 'nvidia', 'intel', 'openai', 'anthropic',
-  'yale', 'columbia', 'ucla', 'caltech', 'nyu', 'usc', 'university of washington',
-  'university of michigan', 'uiuc', 'university of illinois', 'ut austin',
-  'university of texas', 'umass', 'johns hopkins', 'duke', 'northwestern',
-  'university of toronto', 'waterloo', 'mcgill', 'epfl', 'imperial college',
-  'ucl', 'university college london', 'king\'s college', 'tu munich', 'max planck',
-  'inria', 'cnrs', 'national institute', 'darpa', 'nist', 'sandia'
-];
-
-// Top-tier venue patterns
-const TOP_TIER_VENUES = [
-  'ieee', 'acm', 'usenix', 'ndss', 'ccs', 's&p', 'sp ', 'infocom',
-  'security', 'oakland', 'crypto', 'eurocrypt', 'asiacrypt',
-  'acsac', 'esorics', 'wisec', 'isca', 'micro', 'hpca', 'sigcomm',
-  'mobicom', 'nsdi', 'sosp', 'osdi', 'eurosys', 'pldi', 'popl', 'icse',
-  'fse', 'ase', 'issta', 'sigmod', 'vldb', 'neurips', 'nips', 'icml',
-  'iclr', 'cvpr', 'iccv', 'eccv', 'aaai', 'ijcai'
-];
-
-// Peer-reviewed venue patterns
-const PEER_REVIEWED_VENUES = [
-  'springer', 'elsevier', 'nature', 'science', 'plos', 'wiley',
-  'taylor & francis', 'mdpi', 'journal of', 'transactions on',
-  'international journal', 'conference on', 'symposium on'
-];
-
-// Check if a paper is high influence (from prestigious institution or top venue)
-const isHighInfluence = (paper: typeof allCitingPapers[0]): boolean => {
-  // Check venue
-  const venueLower = (paper.venue || '').toLowerCase();
-  const isTopVenue = TOP_TIER_VENUES.some(p => venueLower.includes(p));
-  const isPeerReviewed = PEER_REVIEWED_VENUES.some(p => venueLower.includes(p));
-  
-  // Check affiliations
-  const affiliationsLower = paper.affiliations?.map(a => a.toLowerCase()).join(' ') || '';
-  const authorsLower = paper.authors.join(' ').toLowerCase();
-  const combinedText = `${affiliationsLower} ${authorsLower}`;
-  const isPrestigiousInstitution = PRESTIGIOUS_INSTITUTIONS.some(p => combinedText.includes(p));
-  
-  return isTopVenue || isPeerReviewed || isPrestigiousInstitution;
+const normalizeCountry = (country: string): string => {
+  const normalized = country.trim();
+  if (normalized === 'USA' || normalized === 'US') return 'United States';
+  if (normalized === 'UK') return 'United Kingdom';
+  return normalized;
 };
 
 const Citations = () => {
   const citationData = getCitationData();
-  const { publications, citingPapers: allCitingPapers, locations, stats, lastUpdated } = citationData;
+  const { citingPapers: allCitingPapers, locations, stats, lastUpdated, scholar } = citationData;
   const [activeTab, setActiveTab] = useState('map');
+  const [selectedLocation, setSelectedLocation] = useState<CitationLocation | null>(null);
 
   // Filter out self-citations
   const citingPapers = useMemo(() => {
@@ -109,16 +59,6 @@ const Citations = () => {
   }, [citingPapers, allCitingPapers, stats]);
 
   // Geographic breakdown by country (filter out noisy geocoding results)
-  const EXCLUDED_COUNTRIES = ['Papua New Guinea', 'Mali'];
-  
-  // Normalize country names
-  const normalizeCountry = (country: string): string => {
-    const normalized = country.trim();
-    if (normalized === 'USA' || normalized === 'US') return 'United States';
-    if (normalized === 'UK') return 'United Kingdom';
-    return normalized;
-  };
-  
   const countryStats = useMemo(() => {
     const countryMap = new Map<string, { count: number; cities: Set<string>; affiliations: Set<string> }>();
     
@@ -181,30 +121,47 @@ const Citations = () => {
           <title>Citations | Vineeth Sai Narajala - Cybersecurity Engineer</title>
           <meta 
             name="description" 
-            content={`Research citations and impact visualization for Vineeth Sai Narajala. ${filteredStats.totalCitations} external citations from ${filteredStats.uniqueLocations} locations worldwide.`} 
+            content={`Research citations and impact visualization for Vineeth Sai Narajala. ${scholar.totalCitations} Google Scholar citations and ${filteredStats.totalCitations} mapped external citing papers.`}
           />
           <meta property="og:title" content="Citations | Vineeth Sai Narajala" />
-          <meta property="og:description" content={`${filteredStats.totalCitations} external citations from ${filteredStats.uniqueLocations} locations worldwide`} />
+          <meta property="og:description" content={`${scholar.totalCitations} Google Scholar citations and ${filteredStats.totalCitations} mapped external citing papers`} />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://vineethsai.com/citations" />
         </Helmet>
         
         <Navbar />
-        <main className="pt-16 pb-20">
-          <div className="container mx-auto px-4">
-            {/* Header Section */}
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Research Citations
-              </h1>
-              <div className="w-20 h-1 bg-cyber-green mx-auto mb-6"></div>
-              <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-4">
-                Explore the global impact of my research through citations from researchers around the world
+        <main className="pb-20">
+          <PageHeader
+            kicker="Research Impact"
+            title="Research Citations"
+            subtitle="Explore the global impact of my research through citations from researchers around the world"
+          >
+            <div className="mt-4 space-y-1 text-sm text-gray-500">
+              <p>
+                <a
+                  href={scholar.profileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-cyber-green"
+                >
+                  Google Scholar metrics
+                </a>{' '}
+                updated: {formatDate(scholar.lastUpdated)}
               </p>
-              <p className="text-sm text-gray-400">
-                Last updated: {formatDate(lastUpdated)}
-              </p>
+              <p>Citation-map records updated: {formatDate(lastUpdated)}</p>
             </div>
+            <div className="mt-4 flex justify-center">
+              <Link
+                to="/research-impact"
+                className="inline-flex items-center gap-2 px-5 py-2 bg-cyber-green/10 border border-cyber-green/30 rounded-lg text-cyber-green text-sm hover:bg-cyber-green/20 hover:border-cyber-green/60 hover:shadow-glow-sm transition-all duration-300 group"
+              >
+                <TrendingUp className="h-4 w-4" />
+                <span>View impact analytics</span>
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </PageHeader>
+          <div className="container mx-auto px-4">
 
             {/* Self-citation notice */}
             {filteredStats.selfCitationsFiltered > 0 && (
@@ -219,85 +176,93 @@ const Citations = () => {
             )}
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <Card className="bg-cyber-grey border-cyber-green/20">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
-                    <FileText className="h-4 w-4" />
-                    External Citations
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-cyber-green">
-                    {filteredStats.totalCitations}
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                    From {publications.length} publication{publications.length !== 1 ? 's' : ''}
-                  </p>
-                </CardContent>
-              </Card>
+            <StaggerGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <StaggerItem>
+                <Card className="bg-cyber-grey/80 border-cyber-green/20 h-full transition-all duration-300 hover:border-cyber-green/50 hover:shadow-glow-sm hover:-translate-y-0.5">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                      <FileText className="h-4 w-4" />
+                      Google Scholar Citations
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold text-cyber-green">
+                      <CountUp to={scholar.totalCitations} />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Across {scholar.publicationCount} profile entries
+                    </p>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
 
-              <Card className="bg-cyber-grey border-cyber-green/20">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
-                    <MapPin className="h-4 w-4" />
-                    Locations
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-cyber-green">
-                    {filteredStats.uniqueLocations}
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                    Worldwide institutions
-                  </p>
-                </CardContent>
-              </Card>
+              <StaggerItem>
+                <Card className="bg-cyber-grey/80 border-cyber-green/20 h-full transition-all duration-300 hover:border-cyber-green/50 hover:shadow-glow-sm hover:-translate-y-0.5">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                      <MapPin className="h-4 w-4" />
+                      Locations
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold text-cyber-green">
+                      <CountUp to={filteredStats.uniqueLocations} />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Worldwide institutions
+                    </p>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
 
-              <Card className="bg-cyber-grey border-cyber-green/20">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
-                    <Award className="h-4 w-4" />
-                    High Influence
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-cyber-green">
-                    {filteredStats.highInfluenceCount}
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                    Top venues & institutions
-                  </p>
-                </CardContent>
-              </Card>
+              <StaggerItem>
+                <Card className="bg-cyber-grey/80 border-cyber-green/20 h-full transition-all duration-300 hover:border-cyber-green/50 hover:shadow-glow-sm hover:-translate-y-0.5">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                      <Award className="h-4 w-4" />
+                      High Influence
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold text-cyber-green">
+                      <CountUp to={filteredStats.highInfluenceCount} />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Top venues & institutions
+                    </p>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
 
-              <Card className="bg-cyber-grey border-cyber-green/20">
-                <CardHeader className="pb-3">
-                  <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
-                    <Users className="h-4 w-4" />
-                    Citing Authors
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="text-3xl font-bold text-cyber-green">
-                    {stats?.totalAuthorCitations || citingPapers.reduce((acc, p) => acc + p.authors.length, 0)}
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">
-                    Researchers citing
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+              <StaggerItem>
+                <Card className="bg-cyber-grey/80 border-cyber-green/20 h-full transition-all duration-300 hover:border-cyber-green/50 hover:shadow-glow-sm hover:-translate-y-0.5">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-sm font-medium text-gray-400 flex items-center gap-2">
+                      <Users className="h-4 w-4" />
+                      Citing Authors
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold text-cyber-green">
+                      <CountUp to={stats?.totalAuthorCitations || citingPapers.reduce((acc, p) => acc + p.authors.length, 0)} />
+                    </div>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Researchers citing
+                    </p>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
+            </StaggerGroup>
 
             {/* Tabs for different views */}
             <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
               <TabsList className="bg-cyber-grey border border-cyber-green/20">
-                <TabsTrigger 
-                  value="map" 
+                <TabsTrigger
+                  value="map"
                   className="data-[state=active]:bg-cyber-green data-[state=active]:text-cyber-dark"
                 >
                   <Globe className="h-4 w-4 mr-2" />
-                  World Map
+                  3D Globe
                 </TabsTrigger>
                 <TabsTrigger 
                   value="venues" 
@@ -331,17 +296,87 @@ const Citations = () => {
                 )}
               </TabsList>
 
-              {/* World Map Tab */}
+              {/* 3D Globe Tab */}
               <TabsContent value="map" className="space-y-6">
                 <div className="bg-cyber-grey/50 border border-cyber-green/20 rounded-lg p-4 flex items-start gap-3">
                   <Info className="h-5 w-5 text-cyber-green shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-300">
-                      This map shows the geographic distribution of researchers who have cited my work. Each marker represents an institution or research group, sized by the number of citations from that location.
+                      This globe shows the geographic distribution of researchers who have cited my work. Each glowing marker represents an institution or research group, sized by the number of citations from that location.
                     </p>
                   </div>
                 </div>
-                <CitationMap locations={locations} />
+                <Suspense
+                  fallback={
+                    <div className="w-full h-[560px] rounded-xl border border-cyber-green/20 bg-cyber-darker flex items-center justify-center">
+                      <div className="flex flex-col items-center gap-3 text-cyber-green/70">
+                        <Globe className="h-8 w-8 animate-pulse" />
+                        <span className="font-mono text-xs tracking-widest uppercase">Loading globe…</span>
+                      </div>
+                    </div>
+                  }
+                >
+                  <CitationGlobe
+                    locations={locations}
+                    onSelectLocation={setSelectedLocation}
+                    fallback={<CitationMap locations={locations} />}
+                  />
+                </Suspense>
+
+                {/* Selected location papers panel */}
+                <AnimatePresence>
+                  {selectedLocation && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 16, height: 0 }}
+                      animate={{ opacity: 1, y: 0, height: 'auto' }}
+                      exit={{ opacity: 0, y: 16, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="glass-card p-6 border-cyber-green/30">
+                        <div className="flex items-start justify-between mb-4">
+                          <div>
+                            <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                              <MapPin className="h-5 w-5 text-cyber-green" />
+                              {selectedLocation.city ? `${selectedLocation.city}, ` : ''}{selectedLocation.country}
+                            </h3>
+                            <p className="text-sm text-cyber-green font-mono mt-1">
+                              {selectedLocation.count} citation{selectedLocation.count === 1 ? '' : 's'} from this location
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => setSelectedLocation(null)}
+                            className="p-1.5 rounded-md text-gray-400 hover:text-white hover:bg-cyber-green/15 transition-colors"
+                            aria-label="Close panel"
+                          >
+                            <X className="h-4 w-4" />
+                          </button>
+                        </div>
+
+                        {selectedLocation.affiliations?.length > 0 && (
+                          <div className="flex items-center gap-2 mb-4 flex-wrap">
+                            <Building2 className="h-4 w-4 text-cyber-green/70" />
+                            {selectedLocation.affiliations.slice(0, 4).map((aff) => (
+                              <span key={aff} className="text-xs bg-cyber-green/10 border border-cyber-green/25 text-cyber-green px-2 py-0.5 rounded">
+                                {aff}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+
+                        <p className="text-xs text-gray-500 mb-2 uppercase tracking-wider font-mono">Papers citing from here</p>
+                        <ul className="space-y-2 max-h-56 overflow-y-auto pr-2">
+                          {selectedLocation.papers.map((paper, i) => (
+                            <li key={i} className="text-sm text-gray-300 flex items-start gap-2">
+                              <FileText className="h-4 w-4 text-cyber-green/60 shrink-0 mt-0.5" />
+                              <span>{paper}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </TabsContent>
 
               {/* Peer-Reviewed Venues Tab */}

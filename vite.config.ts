@@ -28,6 +28,13 @@ export default defineConfig(({ mode }) => ({
     commonjsOptions: {
       transformMixedEsModules: true,
     },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three', '@react-three/fiber', '@react-three/drei'],
+        },
+      },
+    },
   },
   define: {
     // Add a global Buffer definition for browser environments

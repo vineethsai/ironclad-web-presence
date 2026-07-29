@@ -94,8 +94,38 @@
   text-shadow: 0 0 5px #33CC66, 0 0 10px #33CC66, 0 0 15px #33CC66;
 }
 
+/* Refined glow — subtler, more professional */
+.cyber-glow-soft {
+  text-shadow: 0 0 18px rgba(51, 204, 102, 0.45);
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-cyber-green-light via-cyber-green to-cyber-green-muted bg-clip-text text-transparent;
+}
+
 .cyber-card {
-  @apply bg-cyber-grey border border-cyber-green/30 rounded-lg transition-all duration-300 hover:border-cyber-green/80 hover:shadow-md hover:shadow-cyber-green/20;
+  @apply bg-cyber-grey/80 border border-cyber-green/20 rounded-lg transition-all duration-300 hover:border-cyber-green/60 hover:shadow-glow hover:-translate-y-0.5;
+}
+
+/* Frosted glass panel */
+.glass-card {
+  @apply bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-xl;
+}
+
+/* Grid-lines background with radial fade mask */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(51, 204, 102, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(51, 204, 102, 0.07) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 75%);
+}
+
+/* Soft aurora glow blob */
+.glow-blob {
+  @apply absolute rounded-full pointer-events-none blur-[120px];
+  background: radial-gradient(circle, rgba(51, 204, 102, 0.14) 0%, transparent 70%);
 }
 
 .cyber-gradient {
@@ -228,7 +258,7 @@
   }
 
   body {
-    @apply bg-cyber-dark text-foreground;
+    @apply bg-cyber-dark text-foreground overflow-x-hidden;
   }
 }
 
@@ -236,6 +266,68 @@
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Green selection + styled scrollbar */
+::selection {
+  background: rgba(51, 204, 102, 0.28);
+  color: #eafff2;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 6px;
+  border: 2px solid #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(51, 204, 102, 0.5);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Infinite marquee ticker */
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-x 36s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Custom cursor — only on precise pointers */
+@media (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active a,
+  .custom-cursor-active button,
+  .custom-cursor-active [role='button'] {
+    cursor: none;
+  }
 }
 
 /* Improved mobile optimization */
@@ -261,6 +353,7 @@ img {
 
 /* Core theme transition */
 html {
+  position: relative;
   transition: background-color 0.3s ease;
 }
 

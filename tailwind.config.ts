@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
 	darkMode: "class",
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				mono: ['"Roboto Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -65,13 +70,21 @@ export default {
 				cyber: {
 					dark: '#121212',
 					darker: '#0A0A0A',
+					black: '#060606',
 					green: '#33CC66',
+					'green-light': '#5CE68A',
 					'green-muted': '#2DB058',
+					teal: '#2DD4BF',
 					blue: '#0EA5E9', // kept for backward compatibility
 					'blue-dark': '#0284C7', // kept for backward compatibility
 					grey: '#222222',
 					'grey-light': '#2A2A2A'
 				}
+			},
+			boxShadow: {
+				'glow-sm': '0 0 8px rgba(51, 204, 102, 0.25)',
+				'glow': '0 0 20px rgba(51, 204, 102, 0.3)',
+				'glow-lg': '0 0 44px rgba(51, 204, 102, 0.4)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -178,6 +191,46 @@ export default {
 						transform: 'translateY(5px)',
 						opacity: '0'
 					}
+				},
+				shimmer: {
+					'0%': {
+						backgroundPosition: '-200% 0'
+					},
+					'100%': {
+						backgroundPosition: '200% 0'
+					}
+				},
+				'pulse-soft': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.6',
+						transform: 'scale(0.92)'
+					}
+				},
+				aurora: {
+					'0%, 100%': {
+						transform: 'translate(0%, 0%) rotate(0deg)',
+						opacity: '0.5'
+					},
+					'33%': {
+						transform: 'translate(4%, -3%) rotate(3deg)',
+						opacity: '0.8'
+					},
+					'66%': {
+						transform: 'translate(-3%, 3%) rotate(-3deg)',
+						opacity: '0.6'
+					}
+				},
+				'spin-slow': {
+					from: {
+						transform: 'rotate(0deg)'
+					},
+					to: {
+						transform: 'rotate(360deg)'
+					}
 				}
 			},
 			animation: {
@@ -196,8 +249,12 @@ export default {
 				'float-circle': 'float-circle 8s linear infinite',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'scroll-hint': 'scroll-hint 1.5s ease-in-out infinite',
+				shimmer: 'shimmer 2.5s linear infinite',
+				'pulse-soft': 'pulse-soft 2.4s ease-in-out infinite',
+				aurora: 'aurora 14s ease-in-out infinite',
+				'spin-slow': 'spin-slow 24s linear infinite',
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [animate],
 } satisfies Config;
