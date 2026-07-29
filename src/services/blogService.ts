@@ -22,20 +22,18 @@ export async function getAllPosts(): Promise<BlogPost[]> {
   try {
     // Import all markdown files
     // This uses Vite's import.meta.glob which is processed at build time
-    const modules = import.meta.glob('../data/blog/*.md', { eager: true, as: 'raw' });
-    console.log('Found markdown files:', Object.keys(modules));
+    const modules = import.meta.glob<string>('../data/blog/*.md', {
+      eager: true,
+      query: '?raw',
+      import: 'default',
+    });
     
     // Process each file
     const posts = Object.entries(modules).map(([path, content]) => {
       try {
-        console.log(`Processing file: ${path}, content length: ${(content as string).length}`);
         // Parse frontmatter
-        const matterResult = matter(content as string);
+        const matterResult = matter(content);
         const { data, content: markdownContent } = matterResult;
-        
-        console.log(`Frontmatter data:`, data);
-        console.log(`Markdown content length: ${markdownContent.length}`);
-        console.log(`Markdown content starts with: ${markdownContent.substring(0, 50)}`);
         
         // Extract ID from filename
         const id = path.split('/').pop()?.replace(/\.md$/, '') || '';
@@ -76,9 +74,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
  */
 export async function getPostById(id: string): Promise<BlogPost | null> {
   const posts = await getAllPosts();
-  const post = posts.find(post => post.id === id) || null;
-  console.log(`Retrieved post by ID ${id}:`, post);
-  return post;
+  return posts.find(post => post.id === id) || null;
 }
 
 /**
@@ -119,4 +115,4 @@ export async function getRelatedPosts(currentPostId: string, tags: string[], lim
     .filter(item => item.score > 0) // Only posts with at least one shared tag
     .slice(0, limit)
     .map(item => item.post);
-} 
+}

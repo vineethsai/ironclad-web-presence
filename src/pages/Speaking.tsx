@@ -5,6 +5,13 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
 import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { PageHeader, Reveal } from '@/components/motion';
+import QuoteCarousel from '@/components/motion/QuoteCarousel';
+
+const getYouTubeId = (url: string): string | null => {
+  const match = url.match(/(?:youtube\.com\/(?:watch\?.*v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{6,})/);
+  return match ? match[1] : null;
+};
 
 const ConferenceTalk = ({ title, event, year, description, link, abstract, videoLink }: {
   title: string;
@@ -16,6 +23,8 @@ const ConferenceTalk = ({ title, event, year, description, link, abstract, video
   videoLink?: string;
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const videoId = videoLink ? getYouTubeId(videoLink) : null;
 
   const openAbstractModal = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -40,15 +49,25 @@ const ConferenceTalk = ({ title, event, year, description, link, abstract, video
             View conference details
           </a>
           {videoLink && (
-            <a 
-              href={videoLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-red-400 underline text-sm flex items-center hover:text-red-300"
-            >
-              <Youtube className="h-4 w-4 mr-1" />
-              Watch Recording
-            </a>
+            videoId ? (
+              <button
+                onClick={() => setIsVideoOpen(true)}
+                className="text-red-400 underline text-sm flex items-center hover:text-red-300 cursor-pointer"
+              >
+                <Youtube className="h-4 w-4 mr-1" />
+                Watch Recording
+              </button>
+            ) : (
+              <a
+                href={videoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-400 underline text-sm flex items-center hover:text-red-300"
+              >
+                <Youtube className="h-4 w-4 mr-1" />
+                Watch Recording
+              </a>
+            )
           )}
           <button 
             onClick={openAbstractModal} 
@@ -59,6 +78,38 @@ const ConferenceTalk = ({ title, event, year, description, link, abstract, video
           </button>
         </div>
       </div>
+
+      {/* In-place YouTube embed modal */}
+      {videoId && (
+        <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+          <DialogOverlay className="bg-cyber-dark/85 backdrop-blur-sm" />
+          <DialogContent className="max-w-3xl bg-cyber-darker border border-cyber-green/30 p-0 overflow-hidden">
+            <DialogTitle className="sr-only">{title} — recording</DialogTitle>
+            <div className="aspect-video w-full">
+              {isVideoOpen && (
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
+                  title={`${title} — recording`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              )}
+            </div>
+            <div className="px-5 py-3 border-t border-cyber-green/15 flex items-center justify-between">
+              <span className="text-sm text-gray-400 truncate">{title} · {event} {year}</span>
+              <a
+                href={videoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-red-400 hover:text-red-300 shrink-0 ml-3"
+              >
+                Open on YouTube ↗
+              </a>
+            </div>
+          </DialogContent>
+        </Dialog>
+      )}
 
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogOverlay className="bg-cyber-dark/80 backdrop-blur-sm" />
@@ -402,17 +453,33 @@ const Speaking = () => {
         
         <Navbar />
         <main>
-          <section className="py-20 bg-cyber-darker relative overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
-            
+          <PageHeader
+            kicker="Talks & Adoption"
+            title="Speaking & Industry"
+            subtitle="Conference presentations, industry contributions, open source projects, and real-world adoption of security frameworks."
+          />
+          <section className="pt-10 pb-20 bg-cyber-darker relative overflow-hidden">
+            <div className="absolute inset-0 bg-grid"></div>
+
             <div className="container mx-auto px-4 relative z-10">
-              <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Speaking & Industry</h1>
-                <div className="w-20 h-1 bg-cyber-green mx-auto mb-4"></div>
-                <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                  Conference presentations, industry contributions, open source projects, and real-world adoption of security frameworks.
-                </p>
-              </div>
+              {/* Industry endorsements */}
+              <Reveal className="max-w-4xl mx-auto mb-14">
+                <QuoteCarousel
+                  quotes={[
+                    {
+                      quote: 'Just as HTTPS was necessary to enable secure transactions on the web, the ANS framework is a necessary foundation to enable verifiable, high-stakes transactions between autonomous digital assets.',
+                      author: 'Scott Courtney, VP Engineering',
+                      org: 'GoDaddy',
+                    },
+                    {
+                      quote: 'The HUMAN Verified AI Agent leverages ANS to establish trust and prevent impersonation in AI ecosystems.',
+                      author: 'HUMAN Security',
+                      org: 'AI Agent Verification Service',
+                    },
+                  ]}
+                />
+              </Reveal>
+
 
               <div className="grid grid-cols-1 gap-6">
                 {/* Conference Talks */}
@@ -437,7 +504,7 @@ const Speaking = () => {
                   </button>
                   
                   {expandedSections.conferences && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {conferenceTalks.map((talk) => (
                           <div key={talk.id} className="bg-cyber-darker rounded-lg p-6 border border-cyber-green/20">
@@ -471,7 +538,7 @@ const Speaking = () => {
                   </button>
                   
                   {expandedSections.thoughtLeadership && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <p className="text-gray-300 mb-6">
                         Co-authored articles and technical content published by leading industry organizations.
                       </p>
@@ -589,7 +656,7 @@ const Speaking = () => {
                   </button>
                   
                   {expandedSections.openSource && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       {/* GitHub Stats Card */}
                       <div className="mb-8 flex justify-center">
                         <a href="https://github.com/vineethsai" target="_blank" rel="noopener noreferrer">
@@ -689,7 +756,7 @@ const Speaking = () => {
                   </button>
                   
                   {expandedSections.adoption && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <p className="text-gray-300 mb-6">
                         Research frameworks and protocols adopted by industry leaders for production deployments.
                       </p>
@@ -748,7 +815,7 @@ const Speaking = () => {
                   </button>
                   
                   {expandedSections.launches && (
-                    <div className="p-8 pt-0">
+                    <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
                       <p className="text-gray-300 mb-6">
                         Led security efforts for AWS Analytics services, including work supporting the <a href="https://www.nextgov.com/modernization/2021/08/nsa-awards-secret-10-billion-contract-amazon/184390/" target="_blank" rel="noopener noreferrer" className="text-cyber-green hover:underline">$10 billion NSA contract</a>. Launched projects at <a href="https://reinvent.awsevents.com/" target="_blank" rel="noopener noreferrer" className="text-cyber-green hover:underline">AWS re:Invent</a>.
                       </p>

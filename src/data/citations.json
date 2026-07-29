@@ -1,134 +1,354 @@
 {
   "lastUpdated": "2026-02-02T15:44:06.000Z",
   "scholarId": "hIVoKbIAAAAJ",
+  "scholar": {
+    "totalCitations": 467,
+    "publicationCount": 21,
+    "lastUpdated": "2026-07-28T12:00:00.000Z",
+    "profileUrl": "https://scholar.google.com/citations?user=hIVoKbIAAAAJ&hl=en"
+  },
   "publications": [
     {
       "title": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2504.08623, 2025",
-      "citationCount": 47,
+      "authors": [
+        "VS Narajala",
+        "I Habler"
+      ],
+      "year": 2026,
+      "venue": "2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC), 1-8, 2026",
+      "citationCount": 105,
+      "resultId": "hIVoKbIAAAAJ:d1gkVwhDpl0C",
       "citesId": "15267171941055013572,17459911323587386857",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:d1gkVwhDpl0C"
-    },
-    {
-      "title": "Building a secure agentic AI application leveraging A2A protocol",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2504.16902, 2025",
-      "citationCount": 40,
-      "citesId": "14382310009962598153,5964462861595011662",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:2osOgNQ5qMEC"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:d1gkVwhDpl0C"
     },
     {
       "title": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "authors": [
+        "VS Narajala",
+        "O Narayan"
+      ],
       "year": 2025,
       "venue": "arXiv preprint arXiv:2504.19956, 2025",
-      "citationCount": 30,
-      "citesId": "17825582858179417987",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:UeHWp8X0CEIC"
+      "citationCount": 83,
+      "resultId": "hIVoKbIAAAAJ:UeHWp8X0CEIC",
+      "citesId": "17825582858179417987,11905897919904289371",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:UeHWp8X0CEIC"
     },
     {
-      "title": "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
+      "title": "Building A Secure Agentic AI Application Leveraging Google’s A2A Protocol",
+      "authors": [
+        "VS Narajala",
+        "I Habler",
+        "K Huang",
+        "P Kulkarni"
+      ],
       "year": 2025,
-      "venue": "arXiv preprint arXiv:2504.19951, 2025",
-      "citationCount": 18,
-      "citesId": "446402774516204275",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:qjMakFHDy7sC"
+      "venue": "2025 Annual Computer Security Applications Conference Workshops (ACSAC …, 2025",
+      "citationCount": 71,
+      "resultId": "hIVoKbIAAAAJ:kNdYIx-mwKoC",
+      "citesId": "14382310009962598153,479420215403297712,5964462861595011662",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:kNdYIx-mwKoC"
     },
     {
-      "title": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2505.10609, 2025",
-      "citationCount": 16,
-      "citesId": "5955838716911568342,5488886650208587921",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:IjCSPb-OGe4C"
-    },
-    {
-      "title": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2505.19301, 2025",
-      "citationCount": 15,
+      "title": "A novel zero-trust identity framework for agentic AI: Decentralized authentication and fine-grained access control",
+      "authors": [
+        "K Huang",
+        "VS Narajala",
+        "J Yeoh",
+        "J Ross",
+        "M Lambe",
+        "R Raskar",
+        "Y Harkati",
+        "..."
+      ],
+      "year": 2026,
+      "venue": "2026 International Conference on AI x Data and Knowledge Engineering (AIxDKE …, 2026",
+      "citationCount": 58,
+      "resultId": "hIVoKbIAAAAJ:zYLM7Y9cAGgC",
       "citesId": "12724746446010012607",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:zYLM7Y9cAGgC"
-    },
-    {
-      "title": "Multi-agentic system threat modelling guide OWASP GenAI security project",
-      "year": 2025,
-      "venue": "Apr, 2025",
-      "citationCount": 9,
-      "citesId": "6849152770386278089",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:eQOLeE2rZwMC"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:zYLM7Y9cAGgC"
     },
     {
       "title": "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+      "authors": [
+        "M Bhatt",
+        "VS Narajala",
+        "I Habler"
+      ],
       "year": 2025,
-      "venue": "arXiv preprint arXiv:2506.01333, 2025",
-      "citationCount": 8,
+      "venue": "2025 Cyber Awareness and Research Symposium (CARS), 1-6, 2025",
+      "citationCount": 29,
+      "resultId": "hIVoKbIAAAAJ:Y0pCki6q_DkC",
       "citesId": "17482540236625831000",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:Y0pCki6q_DkC"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:Y0pCki6q_DkC"
+    },
+    {
+      "title": "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
+      "authors": [
+        "VS Narajala",
+        "K Huang",
+        "I Habler"
+      ],
+      "year": 2026,
+      "venue": "2026 International Conference on AI x Data and Knowledge Engineering (AIxDKE …, 2026",
+      "citationCount": 28,
+      "resultId": "hIVoKbIAAAAJ:qjMakFHDy7sC",
+      "citesId": "446402774516204275",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:qjMakFHDy7sC"
+    },
+    {
+      "title": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
+      "authors": [
+        "K Huang",
+        "VS Narajala",
+        "I Habler",
+        "A Sheriff"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2505.10609, 2025",
+      "citationCount": 28,
+      "resultId": "hIVoKbIAAAAJ:IjCSPb-OGe4C",
+      "citesId": "5955838716911568342,5488886650208587921",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:IjCSPb-OGe4C"
     },
     {
       "title": "A novel zero-trust identity framework for agentic AI: Decentralized authentication and fine-grained access control. arXiv",
+      "authors": [
+        "K Huang",
+        "VS Narajala",
+        "J Yeoh",
+        "J Ross",
+        "R Raskar",
+        "Y Harkati",
+        "J Huang",
+        "..."
+      ],
       "year": 2025,
       "venue": "May, 2025",
-      "citationCount": 7,
+      "citationCount": 12,
+      "resultId": "hIVoKbIAAAAJ:8k81kl-MbHgC",
       "citesId": "2331984907074360202",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:8k81kl-MbHgC"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:8k81kl-MbHgC"
+    },
+    {
+      "title": "Multi-agentic system threat modelling guide OWASP GenAI security project",
+      "authors": [
+        "K Huang",
+        "A Sheriff",
+        "J Sotiropoulos",
+        "RF Del",
+        "VSN Lu",
+        "V"
+      ],
+      "year": 2025,
+      "venue": "Apr, 2025",
+      "citationCount": 10,
+      "resultId": "hIVoKbIAAAAJ:eQOLeE2rZwMC",
+      "citesId": "6849152770386278089",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:eQOLeE2rZwMC"
     },
     {
       "title": "LLM and GenAI data security best practices",
+      "authors": [
+        "EG Junior",
+        "S Clinton",
+        "C Hughes",
+        "VS Narajala",
+        "T Holmes"
+      ],
       "year": 2025,
       "venue": "Feb, 2025",
-      "citationCount": 6,
+      "citationCount": 9,
+      "resultId": "hIVoKbIAAAAJ:YsMSGLbcyi4C",
       "citesId": "12873029780238499209",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:YsMSGLbcyi4C"
-    },
-    {
-      "title": "Agent Capability Negotiation and Binding Protocol (ACNBP)",
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2506.13590, 2025",
-      "citationCount": 2,
-      "citesId": "14278932045888396326",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:W7OEmFMy1HYC"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:YsMSGLbcyi4C"
     },
     {
       "title": "AAGATE: A NIST AI RMF-Aligned Governance Platform for Agentic AI",
+      "authors": [
+        "K Huang",
+        "KR Lambros",
+        "J Huang",
+        "Y Mehmood",
+        "H Atta",
+        "J Beck",
+        "VS Narajala",
+        "..."
+      ],
       "year": 2025,
       "venue": "arXiv preprint arXiv:2510.25863, 2025",
-      "citationCount": 1,
+      "citationCount": 8,
+      "resultId": "hIVoKbIAAAAJ:5nxA0vEk-isC",
       "citesId": "15412644234156940079",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:5nxA0vEk-isC"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:5nxA0vEk-isC"
     },
     {
-      "title": "A2AS: Agentic AI Runtime Security and Self-Defense",
+      "title": "A2AS: agentic AI runtime security and Self-Defense",
+      "authors": [
+        "E Neelou",
+        "I Novikov",
+        "M Moroz",
+        "O Narayan",
+        "T Saade",
+        "M Ayenson",
+        "..."
+      ],
       "year": 2025,
       "venue": "arXiv preprint arXiv:2510.13825, 2025",
-      "citationCount": 1,
+      "citationCount": 7,
+      "resultId": "hIVoKbIAAAAJ:LkGwnXOMwfcC",
       "citesId": "3446723537141411754",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:LkGwnXOMwfcC"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:LkGwnXOMwfcC"
     },
     {
-      "title": "Coalesce: Economic and security dynamics of skill-based task outsourcing among team of autonomous llm agents",
+      "title": "Enterprise-grade security for the model context protocol (MCP): Frameworks and mitigation strategies. arXiv 2025",
+      "authors": [
+        "VS Narajala",
+        "I Habler"
+      ],
       "year": 2025,
-      "venue": "arXiv preprint arXiv:2506.01900, 2025",
-      "citationCount": 1,
-      "citesId": "1026196920029622873",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:Tyk-4Ss8FVUC"
+      "venue": "arXiv preprint arXiv:2504.08623, 2025",
+      "citationCount": 5,
+      "resultId": "hIVoKbIAAAAJ:_kc_bZDykSQC",
+      "citesId": "15590845932611997310",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:_kc_bZDykSQC"
     },
     {
       "title": "MAIF: Enforcing AI Trust and Provenance with an Artifact-Centric Agentic Paradigm",
+      "authors": [
+        "VS Narajala",
+        "M Bhatt",
+        "I Habler",
+        "RF Del Rosario",
+        "A Dawson"
+      ],
       "year": 2025,
       "venue": "arXiv preprint arXiv:2511.15097, 2025",
+      "citationCount": 3,
+      "resultId": "hIVoKbIAAAAJ:UebtZRa9Y70C",
+      "citesId": "3930768425976759707",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:UebtZRa9Y70C"
+    },
+    {
+      "title": "Coalesce: Economic and security dynamics of skill-based task outsourcing among team of autonomous llm agents",
+      "authors": [
+        "M Bhatt",
+        "RF Del Rosario",
+        "VS Narajala",
+        "I Habler"
+      ],
+      "year": 2025,
+      "venue": "2025 Cyber Awareness and Research Symposium (CARS), 1-9, 2025",
+      "citationCount": 3,
+      "resultId": "hIVoKbIAAAAJ:Tyk-4Ss8FVUC",
+      "citesId": "1026196920029622873",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:Tyk-4Ss8FVUC"
+    },
+    {
+      "title": "Agent capability negotiation and binding protocol (acnbp)",
+      "authors": [
+        "K Huang",
+        "A Sheriff",
+        "VS Narajala",
+        "I Habler"
+      ],
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2506.13590, 2025",
+      "citationCount": 3,
+      "resultId": "hIVoKbIAAAAJ:W7OEmFMy1HYC",
+      "citesId": "14278932045888396326",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:W7OEmFMy1HYC"
+    },
+    {
+      "title": "The Defense Trilemma: Why Prompt Injection Defense Wrappers Fail?",
+      "authors": [
+        "M Bhatt",
+        "S Munshi",
+        "VS Narajala",
+        "I Habler",
+        "A Al-Kahfah",
+        "K Huang",
+        "J Webb",
+        "..."
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2604.06436, 2026",
+      "citationCount": 2,
+      "resultId": "hIVoKbIAAAAJ:YOwf2qJgpHMC",
+      "citesId": "13196570058561240762",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:YOwf2qJgpHMC"
+    },
+    {
+      "title": "Adversarial Hubness Detector: Detecting Hubness Poisoning in Retrieval-Augmented Generation Systems",
+      "authors": [
+        "I Habler",
+        "VS Narajala",
+        "S Koren",
+        "A Chang",
+        "T Saade"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2602.22427, 2026",
+      "citationCount": 2,
+      "resultId": "hIVoKbIAAAAJ:KlAtU1dfN6UC",
+      "citesId": "16267378707192880656",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:KlAtU1dfN6UC"
+    },
+    {
+      "title": "Manifold of Failure: Behavioral Attraction Basins in Language Models",
+      "authors": [
+        "S Munshi",
+        "M Bhatt",
+        "VS Narajala",
+        "I Habler",
+        "A Al-Kahfah",
+        "K Huang",
+        "B Gatto"
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2602.22291, 2026",
+      "citationCount": 1,
+      "resultId": "hIVoKbIAAAAJ:MXK_kJrjxJIC",
+      "citesId": "722192276485050452",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:MXK_kJrjxJIC"
+    },
+    {
+      "title": "LAAF: Logic-layer Automated Attack Framework A Systematic Red-Teaming Methodology for LPCI Vulnerabilities in Agentic Large Language Model Systems",
+      "authors": [
+        "H Atta",
+        "K Huang",
+        "KR Lambros",
+        "Y Mehmood",
+        "Z Baig",
+        "MA Rahman",
+        "M Bhatt",
+        "..."
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2603.17239, 2026",
       "citationCount": 0,
+      "resultId": "hIVoKbIAAAAJ:Zph67rFs4hoC",
       "citesId": "",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:UebtZRa9Y70C"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:Zph67rFs4hoC"
     },
     {
       "title": "Securing Agentic Applications Guide",
+      "authors": [
+        "VS Narajala",
+        "I Habler",
+        "R Truesdell",
+        "T Elias",
+        "E Delcourt",
+        "J Beck",
+        "V Kutal",
+        "..."
+      ],
       "year": 2025,
       "venue": "OWASP, 2025",
       "citationCount": 0,
+      "resultId": "hIVoKbIAAAAJ:ufrVoPGSRksC",
       "citesId": "",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&citation_for_view=hIVoKbIAAAAJ:ufrVoPGSRksC"
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:ufrVoPGSRksC"
     }
   ],
   "citingPapers": [

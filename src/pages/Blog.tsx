@@ -8,6 +8,7 @@ import ViewCounter from '@/components/ViewCounter';
 import { BlogPost } from '@/data/blogPosts';
 import { getAllPosts, getPostById, getPostsByTag } from '@/services/blogService';
 import PageTransition from '@/components/PageTransition';
+import { PageHeader, StaggerGroup, StaggerItem, SpotlightCard } from '@/components/motion';
 
 const Blog = () => {
   const { id, tag } = useParams();
@@ -145,7 +146,7 @@ const Blog = () => {
 
   // Set up page title and description based on tag filter
   let pageTitle = "Blog | Vineeth Sai - Cybersecurity Engineer";
-  let pageDescription = "Expert insights on AI security, cloud security, and cybersecurity best practices from Vineeth Sai, a Cybersecurity Engineer at Amazon.";
+  let pageDescription = "Expert insights on AI security, cloud security, and cybersecurity best practices from Vineeth Sai, an AI Security Researcher at Cisco.";
   
   if (tag) {
     pageTitle = `${tag} Articles | Vineeth Sai - Cybersecurity Engineer`;
@@ -180,7 +181,7 @@ const Blog = () => {
                 "jobTitle": "Cybersecurity Engineer",
                 "worksFor": {
                   "@type": "Organization",
-                  "name": "Amazon Web Services"
+                  "name": "Cisco"
                 }
               },
               "publisher": {
@@ -202,21 +203,16 @@ const Blog = () => {
         </Helmet>
         
         <Navbar />
-        <main className="pt-16 pb-20">
+        <main className="pb-20">
+          <PageHeader
+            kicker="Writing"
+            title={tag ? `${tag} Articles` : 'Cybersecurity Insights'}
+            subtitle={tag
+              ? `Expert perspectives on ${tag} from Vineeth Sai, an AI Security Researcher at Cisco.`
+              : 'Expert perspectives on AI security, cloud security, and emerging cybersecurity threats from Vineeth Sai.'
+            }
+          />
           <div className="container mx-auto px-4">
-            <div className="text-center mb-10">
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                {tag ? `${tag} Articles` : "Cybersecurity Insights"}
-              </h1>
-              <div className="w-20 h-1 bg-cyber-green mx-auto"></div>
-              <p className="mt-8 text-lg text-gray-300 max-w-3xl mx-auto">
-                {tag 
-                  ? `Expert perspectives on ${tag} from Vineeth Sai, a Cybersecurity Engineer at Amazon.`
-                  : "Expert perspectives on AI security, cloud security, and emerging cybersecurity threats from Vineeth Sai."
-                }
-              </p>
-            </div>
-            
             {/* Search and tag filtering */}
             <div className="mb-12">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
@@ -297,44 +293,48 @@ const Blog = () => {
             
             {/* Blog post grid */}
             {filteredPosts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <StaggerGroup className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {filteredPosts.map((post) => (
-                  <article key={post.id} className="bg-cyber-grey rounded-lg overflow-hidden border border-cyber-green/20 hover:border-cyber-green/50 transition-all duration-300">
-                    <Link to={`/blog/${post.id}`} className="block h-full">
-                      <div className="p-6">
-                        <h2 className="text-2xl font-bold text-white mb-3 hover:text-cyber-green transition-colors">
-                          {post.title}
-                        </h2>
-                        <div className="flex flex-wrap items-center mb-4 text-sm text-gray-400">
-                          <span>{post.date}</span>
-                          <span className="mx-2">•</span>
-                          <span>{post.author}</span>
-                          <span className="mx-2">•</span>
-                          <ViewCounter postId={post.id} />
-                        </div>
-                        <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {post.tags.map((tagName, index) => (
-                            <span 
-                              key={index} 
-                              className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                navigate(`/blog/tag/${encodeURIComponent(tagName.toLowerCase())}`);
-                              }}
-                            >
-                              #{tagName}
-                            </span>
-                          ))}
-                        </div>
-                        <div className="text-cyber-green font-medium hover:underline">
-                          Read more →
-                        </div>
-                      </div>
-                    </Link>
-                  </article>
+                  <StaggerItem key={post.id}>
+                    <article className="h-full">
+                      <SpotlightCard className="cyber-card h-full bg-cyber-grey/80 overflow-hidden">
+                        <Link to={`/blog/${post.id}`} className="block h-full">
+                          <div className="p-6">
+                            <h2 className="text-2xl font-bold text-white mb-3 hover:text-cyber-green transition-colors">
+                              {post.title}
+                            </h2>
+                            <div className="flex flex-wrap items-center mb-4 text-sm text-gray-400">
+                              <span>{post.date}</span>
+                              <span className="mx-2">•</span>
+                              <span>{post.author}</span>
+                              <span className="mx-2">•</span>
+                              <ViewCounter postId={post.id} />
+                            </div>
+                            <p className="text-gray-300 mb-4">{post.excerpt}</p>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              {post.tags.map((tagName, index) => (
+                                <span
+                                  key={index}
+                                  className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm hover:bg-cyber-green/20 transition-colors"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    navigate(`/blog/tag/${encodeURIComponent(tagName.toLowerCase())}`);
+                                  }}
+                                >
+                                  #{tagName}
+                                </span>
+                              ))}
+                            </div>
+                            <div className="text-cyber-green font-medium hover:underline">
+                              Read more →
+                            </div>
+                          </div>
+                        </Link>
+                      </SpotlightCard>
+                    </article>
+                  </StaggerItem>
                 ))}
-              </div>
+              </StaggerGroup>
             ) : (
               <div className="text-center py-12">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-700 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

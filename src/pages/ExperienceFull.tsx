@@ -4,6 +4,8 @@ import { Calendar, Award, Briefcase, Shield, ChevronDown, ChevronUp, BookOpen } 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
+import { PageHeader } from '@/components/motion';
+import { ScrollTimeline, TimelineItem } from '@/components/motion/ScrollTimeline';
 
 const ExperienceFull = () => {
   const [expandedJobs, setExpandedJobs] = useState({
@@ -220,14 +222,15 @@ const ExperienceFull = () => {
         
         <Navbar />
         <main>
+          <PageHeader
+            kicker="Career"
+            title="Experience & Career"
+            subtitle="Complete work history, education, and professional certifications."
+          />
           <section className="py-20 bg-cyber-darker relative overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30"></div>
-            
+            <div className="absolute inset-0 bg-grid"></div>
+
             <div className="container mx-auto px-4 relative z-10">
-              <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Experience & Career</h1>
-                <div className="w-20 h-1 bg-cyber-green mx-auto"></div>
-              </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div>
@@ -236,23 +239,19 @@ const ExperienceFull = () => {
                     <h3 className="text-2xl font-bold text-white">Work Experience</h3>
                   </div>
 
-                  <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:w-0.5 before:bg-cyber-green/30">
+                  <ScrollTimeline>
                     {workExperience.map((job, index) => (
-                      <div key={index} className="relative pl-10">
-                        <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-cyber-dark border-4 border-cyber-green flex items-center justify-center">
-                          <Calendar className="h-4 w-4 text-cyber-green" />
-                        </div>
-                        
-                        <div className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20">
+                      <TimelineItem key={index} icon={<Calendar className="h-4 w-4 text-cyber-green" />} side={index % 2 === 0 ? 'right' : 'left'}>
+                        <div className="cyber-card p-6 bg-cyber-grey/80">
                           <div className="flex flex-wrap justify-between items-start mb-2">
                             <h4 className="text-xl font-semibold text-white">{job.title}</h4>
-                            <span className="px-3 py-1 bg-cyber-green/10 text-cyber-green rounded text-sm">
+                            <span className="px-3 py-1 bg-cyber-green/10 text-cyber-green rounded text-sm border border-cyber-green/20">
                               {job.period}
                             </span>
                           </div>
                           <h5 className="text-lg text-cyber-green mb-4">{job.company}</h5>
-                          
-                          <button 
+
+                          <button
                             onClick={() => toggleJob(index)}
                             className="flex items-center text-cyber-green hover:text-cyber-green-light mb-2 transition-colors"
                           >
@@ -270,7 +269,7 @@ const ExperienceFull = () => {
                           </button>
 
                           {expandedJobs[index] && (
-                            <>
+                            <div className="animate-in fade-in slide-in-from-top-2 duration-300">
                               <div dangerouslySetInnerHTML={{ __html: job.description }} className="text-gray-300 mt-4" />
                               <div className="flex flex-wrap gap-2 mt-4">
                                 {job.skills.map((skill, skillIndex) => (
@@ -279,37 +278,33 @@ const ExperienceFull = () => {
                                   </span>
                                 ))}
                               </div>
-                            </>
+                            </div>
                           )}
                         </div>
-                      </div>
+                      </TimelineItem>
                     ))}
-                  </div>
+                  </ScrollTimeline>
 
                   <div className="flex items-center mt-12 mb-8">
                     <Award className="h-6 w-6 text-cyber-green mr-3" />
                     <h3 className="text-2xl font-bold text-white">Education</h3>
                   </div>
 
-                  <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:w-0.5 before:bg-cyber-green/30">
+                  <ScrollTimeline>
                     {education.map((edu, index) => (
-                      <div key={index} className="relative pl-10">
-                        <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-cyber-dark border-4 border-cyber-green flex items-center justify-center">
-                          <Calendar className="h-4 w-4 text-cyber-green" />
-                        </div>
-                        
-                        <div className="bg-cyber-grey p-6 rounded-lg border border-cyber-green/20">
+                      <TimelineItem key={index} icon={<Calendar className="h-4 w-4 text-cyber-green" />} side={index % 2 === 0 ? 'right' : 'left'}>
+                        <div className="cyber-card p-6 bg-cyber-grey/80">
                           <div className="flex flex-wrap justify-between items-start mb-2">
                             <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
                             {edu.period && (
-                              <span className="px-3 py-1 bg-cyber-green/10 text-cyber-green rounded text-sm">
+                              <span className="px-3 py-1 bg-cyber-green/10 text-cyber-green rounded text-sm border border-cyber-green/20">
                                 {edu.period}
                               </span>
                             )}
                           </div>
                           <h5 className="text-lg text-cyber-green mb-4">{edu.institution}</h5>
-                          
-                          <button 
+
+                          <button
                             onClick={() => toggleEducation(index)}
                             className="flex items-center text-cyber-green hover:text-cyber-green-light mb-2 transition-colors"
                           >
@@ -327,7 +322,7 @@ const ExperienceFull = () => {
                           </button>
 
                           {expandedEducation[index] ? (
-                            <p className="text-gray-300 mt-4">{edu.description}</p>
+                            <p className="text-gray-300 mt-4 animate-in fade-in slide-in-from-top-2 duration-300">{edu.description}</p>
                           ) : (
                             <div className="mt-4">
                               <div className="flex flex-wrap gap-2">
@@ -344,9 +339,9 @@ const ExperienceFull = () => {
                             </div>
                           )}
                         </div>
-                      </div>
+                      </TimelineItem>
                     ))}
-                  </div>
+                  </ScrollTimeline>
                 </div>
 
                 <div>

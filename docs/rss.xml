@@ -3,7 +3,7 @@
   <channel>
     <title>Vineeth Sai | Cybersecurity Blog</title>
     <link>https://vineethsai.com/#/blog</link>
-    <description>Expert insights on AI security, cloud security, and emerging cybersecurity threats from Vineeth Sai, a Cybersecurity Engineer at Amazon.</description>
+    <description>Expert insights on AI security, cloud security, and emerging cybersecurity threats from Vineeth Sai, an AI Security Researcher at Cisco.</description>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Apr 2025 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://vineethsai.com/rss.xml" rel="self" type="application/rss+xml"/>
@@ -48,4 +48,4 @@
       <category>Enterprise Security</category>
     </item>
   </channel>
-</rss> 
+</rss>
