@@ -61,7 +61,7 @@ const BlogPost = () => {
     return (
       <div className="min-h-screen bg-cyber-dark text-white">
         <Navbar />
-        <main className="pt-16 pb-20">
+        <main id="main-content" tabIndex={-1} className="pt-16 pb-20">
           <div className="container mx-auto px-4">
             <div className="animate-pulse text-center">
               <div className="h-8 bg-cyber-grey/30 rounded w-1/2 mx-auto mb-4"></div>
@@ -180,7 +180,7 @@ const BlogPost = () => {
       </Helmet>
       
       <Navbar />
-      <main className="pt-16 pb-20">
+      <main id="main-content" tabIndex={-1} className="pt-16 pb-20">
         <div className="container mx-auto px-4">
           <div className="mb-8">
             <Link to="/writing" className="text-cyber-green hover:underline flex items-center space-x-2">

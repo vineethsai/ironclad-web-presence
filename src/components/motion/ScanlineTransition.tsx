@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { useReducedMotion } from './useReducedMotion';
 
 /** Fast cyber scanline wipe shown on each route change. Keyed by pathname by the parent. */
 const ScanlineTransition: React.FC = () => {

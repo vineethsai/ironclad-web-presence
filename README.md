@@ -11,7 +11,13 @@ npm install
 npm run dev        # http://localhost:8080
 ```
 
-`npm run build` writes the production site to `dist/`, and `npm run preview` serves that build.
+`npm run build` writes the production site to `dist/`, and `npm run preview` serves that build. The build has three steps:
+
+1. `vite build` bundles the app.
+2. `scripts/generateFeeds.ts` writes `sitemap.xml` and `rss.xml` from the routes and content.
+3. `scripts/prerender.ts` opens every page in headless Chrome and saves it as static HTML (`dist/publications.html`, etc.), so search engines and link previews see each page's content and metadata without running JavaScript. It uses your installed Google Chrome; set `PRERENDER=0` to skip it.
+
+Pages live at real URLs (`/publications`, `/speaking`, …). Old `/#/...` links redirect automatically.
 
 ## Updating content
 
@@ -27,6 +33,8 @@ Everything on the site comes from plain data files in `src/content/`. Edit the l
 | `writing.ts` | Articles published elsewhere (Cisco, CSA, OWASP) |
 | `openSource.ts` | Open-source projects (star counts are fetched, not typed) |
 | `featured.ts` | "Selected work" cards on the home page |
+
+Adding a page? Add its route in `src/App.tsx` and `src/routes.tsx`, and in `scripts/siteRoutes.ts` so it gets prerendered and listed in the sitemap.
 
 Numbers like citation counts, paper counts, and talk counts are computed from these files and from `src/data/`.
 
