@@ -22,7 +22,7 @@ const formatCount = (n: number) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : St
 const FeaturedWorkSection = () => (
   <section id="featured" className="py-20 bg-cyber-darker relative overflow-hidden">
     <div className="absolute inset-0 bg-grid" />
-    <div className="glow-blob w-[28rem] h-[28rem] top-10 -right-40" />
+    <div className="glow-blob w-md h-112 top-10 -right-40" />
 
     <div className="container mx-auto px-4 relative z-10">
       <SectionHeading

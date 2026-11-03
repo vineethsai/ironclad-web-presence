@@ -14,7 +14,7 @@ const ImpactStrip: React.FC = () => {
 
   return (
     <section className="relative py-14 bg-cyber-darker border-y border-cyber-green/10 overflow-hidden">
-      <div className="glow-blob w-[24rem] h-[24rem] -top-32 left-1/2 -translate-x-1/2" />
+      <div className="glow-blob w-[24rem] h-96 -top-32 left-1/2 -translate-x-1/2" />
       <div className="container mx-auto px-4 relative z-10">
         <StaggerGroup className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {stats.map((stat) => (

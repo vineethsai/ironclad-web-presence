@@ -338,7 +338,7 @@ const CitationGlobe: React.FC<CitationGlobeProps> = ({
             rotateSpeed={0.5}
           />
         </Canvas>
-        <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-cyber-green/25 bg-cyber-darker/80 px-4 py-1.5 backdrop-blur-sm">
+        <div className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-cyber-green/25 bg-cyber-darker/80 px-4 py-1.5 backdrop-blur-xs">
           <span className="font-mono text-[11px] tracking-wider text-cyber-green/80">
             drag to orbit · hover a marker · click for papers
           </span>

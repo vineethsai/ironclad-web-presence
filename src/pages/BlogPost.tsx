@@ -189,7 +189,7 @@ const BlogPost = () => {
               </svg>
               <span>Back to Writing</span>
             </Link>
-            <p className="mt-4 text-sm text-gray-400 border border-white/10 bg-white/[0.03] rounded-md px-4 py-3 max-w-3xl">
+            <p className="mt-4 text-sm text-gray-400 border border-white/10 bg-white/3 rounded-md px-4 py-3 max-w-3xl">
               Archived post from {new Date(post.date).getFullYear()}. For my current work, see{' '}
               <Link to="/writing" className="text-cyber-green hover:underline">Writing</Link> and{' '}
               <Link to="/publications" className="text-cyber-green hover:underline">Research</Link>.
@@ -239,7 +239,7 @@ const BlogPost = () => {
             {/* Author bio for E-E-A-T signals */}
             <div className="mt-12 pt-8 border-t border-cyber-green/20">
               <div className="flex items-start">
-                <div className="flex-shrink-0 mr-4">
+                <div className="shrink-0 mr-4">
                   <div className="w-16 h-16 rounded-full bg-cyber-blue/30 flex items-center justify-center">
                     <span className="text-2xl font-bold text-cyber-blue">VS</span>
                   </div>

@@ -25,7 +25,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ kicker, title, subtitle, childr
   return (
     <section className="relative py-16 md:py-20 bg-cyber-darker overflow-hidden">
       <div className="absolute inset-0 bg-grid" />
-      <div className="glow-blob w-[36rem] h-[36rem] -top-48 left-1/2 -translate-x-1/2 animate-aurora" />
+      <div className="glow-blob w-xl h-144 -top-48 left-1/2 -translate-x-1/2 animate-aurora" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto">
           {kicker && (
@@ -43,7 +43,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ kicker, title, subtitle, childr
             {title}
           </motion.h1>
           <motion.div
-            className="h-1 w-24 mx-auto mt-5 rounded-full bg-gradient-to-r from-cyber-green via-cyber-green-light to-transparent"
+            className="h-1 w-24 mx-auto mt-5 rounded-full bg-linear-to-r from-cyber-green via-cyber-green-light to-transparent"
             {...(reduceMotion
               ? {}
               : {

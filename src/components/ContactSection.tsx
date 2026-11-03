@@ -49,7 +49,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-cyber-darker relative overflow-hidden">
       <div className="absolute inset-0 bg-grid" />
-      <div className="glow-blob w-[32rem] h-[32rem] -bottom-20 left-1/2 -translate-x-1/2" />
+      <div className="glow-blob w-lg h-128 -bottom-20 left-1/2 -translate-x-1/2" />
 
       <div className="container mx-auto px-4 relative z-10">
         <SectionHeading

@@ -41,7 +41,7 @@ const QuoteCarousel: React.FC<QuoteCarouselProps> = ({ quotes, intervalMs = 6500
       <div className="glow-blob w-72 h-72 -top-20 -right-20" />
       <Quote className="h-8 w-8 text-cyber-green/50 mb-5" />
 
-      <div className="min-h-[9rem] md:min-h-[7.5rem]">
+      <div className="min-h-36 md:min-h-30">
         <AnimatePresence mode="wait">
           <motion.figure
             key={index}

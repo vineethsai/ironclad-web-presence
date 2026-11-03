@@ -28,7 +28,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
       )}
       <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
       <motion.div
-        className="h-1 mt-4 rounded-full bg-gradient-to-r from-cyber-green via-cyber-green-light to-transparent"
+        className="h-1 mt-4 rounded-full bg-linear-to-r from-cyber-green via-cyber-green-light to-transparent"
         initial={reduceMotion ? false : { width: 0, opacity: 0 }}
         whileInView={reduceMotion ? undefined : { width: 96, opacity: 1 }}
         viewport={{ once: true, margin: '-40px' }}

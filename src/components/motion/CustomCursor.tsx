@@ -45,12 +45,12 @@ const CustomCursor: React.FC = () => {
     <>
       {/* Center dot — follows instantly */}
       <motion.div
-        className="fixed top-0 left-0 z-[100] pointer-events-none rounded-full bg-cyber-green-light"
+        className="fixed top-0 left-0 z-100 pointer-events-none rounded-full bg-cyber-green-light"
         style={{ x, y, width: 7, height: 7, translateX: '-50%', translateY: '-50%' }}
       />
       {/* Trailing ring */}
       <motion.div
-        className="fixed top-0 left-0 z-[99] pointer-events-none rounded-full border border-cyber-green/60"
+        className="fixed top-0 left-0 z-99 pointer-events-none rounded-full border border-cyber-green/60"
         style={{ x: ringX, y: ringY, translateX: '-50%', translateY: '-50%' }}
         animate={{
           width: hovering ? 46 : 32,
