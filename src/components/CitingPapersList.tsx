@@ -253,7 +253,7 @@ const CitingPapersList: React.FC<CitingPapersListProps> = ({ papers }) => {
                 href={paper.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-shrink-0"
+                className="shrink-0"
               >
                 <Button
                   variant="outline"

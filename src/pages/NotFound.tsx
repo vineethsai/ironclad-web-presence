@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
@@ -19,9 +18,9 @@ const NotFound = () => {
         </Helmet>
 
         <Navbar />
-        <main className="flex-grow flex items-center justify-center relative overflow-hidden">
+        <main className="grow flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-grid" />
-          <div className="glow-blob w-[30rem] h-[30rem] top-1/3 left-1/2 -translate-x-1/2" />
+          <div className="glow-blob w-120 h-120 top-1/3 left-1/2 -translate-x-1/2" />
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.h1
               className="text-7xl md:text-9xl font-bold text-gradient cyber-glow-soft mb-6 font-mono"

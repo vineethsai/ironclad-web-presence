@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -99,7 +99,7 @@ const ResearchImpact = () => {
       icon: MapPin,
       label: 'Global Locations',
       value: stats.uniqueLocations,
-      caption: `${stats.topCountries.length} countries reached`,
+      caption: `${new Set(locations.map((l) => l.country)).size} countries reached`,
     },
     {
       icon: Award,
@@ -205,7 +205,7 @@ const ResearchImpact = () => {
                         <Tooltip
                           contentStyle={tooltipStyle}
                           cursor={{ fill: 'rgba(51, 204, 102, 0.06)' }}
-                          formatter={(value: number, _name, item) => [`${value} citations`, item.payload.fullTitle]}
+                          formatter={(value, _name, item) => [`${value} citations`, (item.payload as { fullTitle: string }).fullTitle]}
                         />
                         <Bar dataKey="citations" fill={GREEN} radius={[0, 6, 6, 0]} maxBarSize={22} />
                       </BarChart>
@@ -311,7 +311,7 @@ const ResearchImpact = () => {
 
             <Reveal className="mt-8">
               <p className="text-center text-sm text-gray-500">
-                Data sourced from Google Scholar. Self-citations are excluded from external citation counts.
+                Citation counts from Google Scholar; citing papers and locations from Google Scholar (via CitationMap) and OpenAlex. Self-citations are excluded.
               </p>
             </Reveal>
           </div>

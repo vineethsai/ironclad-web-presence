@@ -33,7 +33,12 @@ for (const { repo } of openSourceProjects) {
   try {
     const res = await fetch(`https://api.github.com/repos/${repo}`, { headers });
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-    const data = await res.json();
+    const data = (await res.json()) as {
+      stargazers_count: number;
+      forks_count: number;
+      description: string | null;
+      pushed_at: string;
+    };
     repos[repo] = {
       stars: data.stargazers_count,
       forks: data.forks_count,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Youtube } from 'lucide-react';
+import { Youtube } from '@/components/icons/BrandIcons';
 import { Dialog, DialogContent, DialogOverlay, DialogTitle } from '@/components/ui/dialog';
 
 const getYouTubeId = (url: string): string | null => {
@@ -27,7 +27,7 @@ const VideoButton: React.FC<{ url: string; title: string; label?: string }> = ({
         <Youtube className="h-4 w-4" aria-hidden="true" /> {label}
       </button>
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogOverlay className="bg-cyber-dark/85 backdrop-blur-sm" />
+        <DialogOverlay className="bg-cyber-dark/85 backdrop-blur-xs" />
         <DialogContent className="max-w-3xl bg-cyber-darker border border-cyber-green/30 p-0 overflow-hidden">
           <DialogTitle className="sr-only">{title}</DialogTitle>
           <div className="aspect-video w-full">

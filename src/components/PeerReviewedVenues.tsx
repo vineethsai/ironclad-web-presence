@@ -179,7 +179,7 @@ const PeerReviewedVenues: React.FC<PeerReviewedVenuesProps> = ({ papers }) => {
     setExpandedSections(prev => ({ ...prev, [section]: !prev[section] }));
   };
 
-  const { venueData, institutionData, publisherFrequency, prestigiousInstitutions, hasVenueData } = useMemo(() => {
+  const { venueData, publisherFrequency, prestigiousInstitutions, hasVenueData } = useMemo(() => {
     const venueMap = new Map<string, VenueInfo>();
     const institutionMap = new Map<string, InstitutionInfo>();
     let knownVenueCount = 0;

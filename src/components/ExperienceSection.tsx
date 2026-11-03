@@ -1,5 +1,4 @@
-import React from 'react';
-import { Award, Briefcase, ArrowRight, Shield } from 'lucide-react';
+import { Briefcase, ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Reveal, StaggerGroup, StaggerItem, SectionHeading, SpotlightCard } from '@/components/motion';
 import { workExperience, leadership } from '@/content/experience';
@@ -11,7 +10,7 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20 bg-cyber-darker relative overflow-hidden">
       <div className="absolute inset-0 bg-grid" />
-      <div className="glow-blob w-[30rem] h-[30rem] bottom-0 -right-40" />
+      <div className="glow-blob w-120 h-120 bottom-0 -right-40" />
 
       <div className="container mx-auto px-4 relative z-10">
         <SectionHeading kicker="02 · Career" title="Current Role & Leadership" />

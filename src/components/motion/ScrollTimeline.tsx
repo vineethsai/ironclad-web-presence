@@ -26,7 +26,7 @@ export const ScrollTimeline: React.FC<ScrollTimelineProps> = ({ children, classN
         <div className="absolute left-[15px] top-2 bottom-2 w-0.5 rounded bg-cyber-green" />
       ) : (
         <motion.div
-          className="absolute left-[15px] top-2 bottom-2 w-0.5 rounded bg-gradient-to-b from-cyber-green-light via-cyber-green to-cyber-green-muted origin-top shadow-glow-sm"
+          className="absolute left-[15px] top-2 bottom-2 w-0.5 rounded bg-linear-to-b from-cyber-green-light via-cyber-green to-cyber-green-muted origin-top shadow-glow-sm"
           style={{ scaleY }}
         />
       )}

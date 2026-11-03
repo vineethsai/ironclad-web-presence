@@ -1,5 +1,5 @@
-import React from 'react';
-import { Github, Star, GitFork, Globe, Newspaper } from 'lucide-react';
+import { Star, GitFork, Globe, Newspaper } from 'lucide-react';
+import { Github } from '@/components/icons/BrandIcons';
 import PageShell from '@/components/content/PageShell';
 import { Chip } from '@/components/content/ContentBlocks';
 import { StaggerGroup, StaggerItem, SpotlightCard } from '@/components/motion';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { BookOpen, Briefcase, ArrowRight, Globe, Mic } from 'lucide-react';
@@ -82,7 +81,7 @@ const Index = () => {
           {/* Preview Cards Section */}
           <section className="py-20 bg-cyber-darker relative overflow-hidden">
             <div className="absolute inset-0 bg-grid" />
-            <div className="glow-blob w-[26rem] h-[26rem] top-0 -left-32" />
+            <div className="glow-blob w-104 h-104 top-0 -left-32" />
 
             <div className="container mx-auto px-4 relative z-10">
               <SectionHeading kicker="04 · Explore" title="Dive Deeper" />

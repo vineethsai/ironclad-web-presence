@@ -9,10 +9,8 @@ import {
   CommandList,
   CommandSeparator,
 } from '@/components/ui/command';
-import {
-  Home, User, Briefcase, BookOpen, Mic, Newspaper, PenLine, Globe, TrendingUp,
-  Mail, FileText, ExternalLink, Search, Github,
-} from 'lucide-react';
+import { Home, User, Briefcase, BookOpen, Mic, Newspaper, PenLine, Globe, TrendingUp, Mail, FileText, ExternalLink, Search } from 'lucide-react';
+import { Github } from '@/components/icons/BrandIcons';
 import type { BlogPost } from '@/data/blogPosts';
 import type { Publication } from '@/types/citations';
 
@@ -89,7 +87,7 @@ const CommandPalette: React.FC = () => {
             </div>
           </CommandEmpty>
 
-          <CommandGroup heading="Pages" className="[&_[cmdk-group-heading]]:text-cyber-green/70 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-xs">
+          <CommandGroup heading="Pages" className="**:[[cmdk-group-heading]]:text-cyber-green/70 **:[[cmdk-group-heading]]:font-mono **:[[cmdk-group-heading]]:text-xs">
             {pages.map((page) => (
               <CommandItem
                 key={page.path}
@@ -106,7 +104,7 @@ const CommandPalette: React.FC = () => {
           <CommandSeparator className="bg-cyber-green/10" />
 
           {posts.length > 0 && (
-            <CommandGroup heading="Blog Posts" className="[&_[cmdk-group-heading]]:text-cyber-green/70 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-xs">
+            <CommandGroup heading="Blog Posts" className="**:[[cmdk-group-heading]]:text-cyber-green/70 **:[[cmdk-group-heading]]:font-mono **:[[cmdk-group-heading]]:text-xs">
               {posts.map((post) => (
                 <CommandItem
                   key={post.id}
@@ -124,7 +122,7 @@ const CommandPalette: React.FC = () => {
           {publications.length > 0 && (
             <>
               <CommandSeparator className="bg-cyber-green/10" />
-              <CommandGroup heading="Publications" className="[&_[cmdk-group-heading]]:text-cyber-green/70 [&_[cmdk-group-heading]]:font-mono [&_[cmdk-group-heading]]:text-xs">
+              <CommandGroup heading="Publications" className="**:[[cmdk-group-heading]]:text-cyber-green/70 **:[[cmdk-group-heading]]:font-mono **:[[cmdk-group-heading]]:text-xs">
                 {publications.map((pub) => (
                   <CommandItem
                     key={pub.title}

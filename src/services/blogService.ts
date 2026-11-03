@@ -1,11 +1,27 @@
 import { BlogPost } from '../data/blogPosts';
-import matter from 'gray-matter';
 
-// Polyfill for Buffer in browser environments
-import { Buffer } from 'buffer';
-if (typeof window !== 'undefined') {
-  window.Buffer = Buffer;
-}
+/**
+ * Minimal front-matter parser for the posts in src/data/blog. Each line between the
+ * leading `---` fences is `key: value`, where value is a JSON string or array.
+ * (Replaces gray-matter, which needed a Buffer polyfill and ~110 KB in the browser.)
+ */
+const parseFrontMatter = (raw: string): { data: Record<string, unknown>; content: string } => {
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+  if (!match) return { data: {}, content: raw };
+  const data: Record<string, unknown> = {};
+  for (const line of match[1].split(/\r?\n/)) {
+    const i = line.indexOf(':');
+    if (i < 1) continue;
+    const key = line.slice(0, i).trim();
+    const value = line.slice(i + 1).trim();
+    try {
+      data[key] = JSON.parse(value);
+    } catch {
+      data[key] = value.replace(/^['"]|['"]$/g, '');
+    }
+  }
+  return { data, content: raw.slice(match[0].length) };
+};
 
 // Cache for blog posts
 let blogPostsCache: BlogPost[] | null = null;
@@ -32,21 +48,21 @@ export async function getAllPosts(): Promise<BlogPost[]> {
     const posts = Object.entries(modules).map(([path, content]) => {
       try {
         // Parse frontmatter
-        const matterResult = matter(content);
-        const { data, content: markdownContent } = matterResult;
+        const { data, content: markdownContent } = parseFrontMatter(content);
         
         // Extract ID from filename
         const id = path.split('/').pop()?.replace(/\.md$/, '') || '';
         
         return {
           id,
-          title: data.title || '',
-          excerpt: data.excerpt || '',
+          title: String(data.title ?? ''),
+          excerpt: String(data.excerpt ?? ''),
           content: markdownContent,
-          date: data.date || '',
-          author: data.author || '',
-          tags: data.tags || [],
-          image: data.image,
+          date: String(data.date ?? ''),
+          lastModified: data.lastModified ? String(data.lastModified) : undefined,
+          author: String(data.author ?? ''),
+          tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
+          image: data.image ? String(data.image) : undefined,
         } as BlogPost;
       } catch (err) {
         console.error(`Error processing markdown file ${path}:`, err);

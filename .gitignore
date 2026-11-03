@@ -27,6 +27,7 @@ dist-ssr
 .env.local
 .env.*.local
 
-# Build output and caches
+# Build output and caches (the site is built and deployed by GitHub Actions)
 dist
+docs
 .vite

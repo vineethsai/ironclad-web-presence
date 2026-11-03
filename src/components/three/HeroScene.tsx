@@ -212,7 +212,7 @@ class SceneBoundary extends Component<{ fallback: ReactNode; children: ReactNode
 const StaticFallback: React.FC = () => (
   <div className="absolute inset-0 z-0" aria-hidden>
     <div className="absolute inset-0 bg-grid opacity-60" />
-    <div className="glow-blob w-[40rem] h-[40rem] top-1/4 left-1/2 -translate-x-1/2" />
+    <div className="glow-blob w-160 h-160 top-1/4 left-1/2 -translate-x-1/2" />
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#0A0A0A_92%)]" />
   </div>
 );

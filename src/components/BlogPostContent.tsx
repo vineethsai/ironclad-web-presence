@@ -180,7 +180,7 @@ export const BlogPostContent: React.FC<BlogPostContentProps> = ({ post }) => {
                 </code>
               );
             },
-            img: ({ src, alt, title, ...props }: ImageProps) => {
+            img: ({ src, alt, title }: ImageProps) => {
               if (!src) return null;
 
               return (

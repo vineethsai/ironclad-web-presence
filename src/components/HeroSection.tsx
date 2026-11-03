@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, Suspense, lazy } from 'react';
+import { useEffect, useRef, useState, Suspense, lazy } from 'react';
 import { ArrowDown, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
@@ -124,7 +124,7 @@ const HeroSection = () => {
 
           {/* Availability badge */}
           <motion.div className="flex justify-center" {...entrance(0.1)}>
-            <span className="inline-flex items-center gap-2 rounded-full border border-cyber-green/30 bg-cyber-green/10 px-4 py-1.5 text-xs font-mono tracking-wider text-cyber-green-light backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 rounded-full border border-cyber-green/30 bg-cyber-green/10 px-4 py-1.5 text-xs font-mono tracking-wider text-cyber-green-light backdrop-blur-xs">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full rounded-full bg-cyber-green opacity-75 animate-ping" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-cyber-green-light" />
@@ -164,7 +164,7 @@ const HeroSection = () => {
             <MagneticButton>
               <Link
                 to="/contact"
-                className="inline-block px-6 py-2 bg-white/[0.03] backdrop-blur-sm border border-white/20 text-white rounded transition-all duration-300 hover:border-cyber-green/60 hover:text-cyber-green-light hover:shadow-glow"
+                className="inline-block px-6 py-2 bg-white/3 backdrop-blur-xs border border-white/20 text-white rounded transition-all duration-300 hover:border-cyber-green/60 hover:text-cyber-green-light hover:shadow-glow"
               >
                 Get in Touch
               </Link>

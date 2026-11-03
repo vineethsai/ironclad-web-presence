@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, Award, Briefcase, Shield, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 import Navbar from '@/components/Navbar';
