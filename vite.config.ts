@@ -16,7 +16,6 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'docs',
     // three.js (the 3D hero and citation globe) is large but loads lazily, off the critical path
     chunkSizeWarningLimit: 1100,
   },

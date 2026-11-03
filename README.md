@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# vineethsai.com
 
-## Project info
+Personal site of Vineeth Sai Narajala, AI security researcher at Cisco. Built with React 19, Vite 8, Tailwind CSS 4, and TypeScript; hosted on GitHub Pages behind Cloudflare.
 
-**URL**: https://lovable.dev/projects/cd33e947-660d-4f86-98d7-2dfa6fd70f66
+## Run it locally
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/cd33e947-660d-4f86-98d7-2dfa6fd70f66) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Needs Node 20.19 or newer.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev        # http://localhost:8080
 ```
 
-**Edit a file directly in GitHub**
+`npm run build` writes the production site to `dist/`, and `npm run preview` serves that build.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Updating content
 
-**Use GitHub Codespaces**
+Everything on the site comes from plain data files in `src/content/`. Edit the list, and every page and count that uses it updates:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+| File | What it holds |
+|---|---|
+| `profile.ts` | Name, title, bio, links, focus areas |
+| `experience.ts` | Roles, leadership, education, projects, AWS launches |
+| `research.ts` | Papers, standards (IETF/OWASP), peer review, awards, industry adoption |
+| `talks.ts` | Talks and recordings |
+| `media.ts` | Press coverage and podcasts |
+| `writing.ts` | Articles published elsewhere (Cisco, CSA, OWASP) |
+| `openSource.ts` | Open-source projects (star counts are fetched, not typed) |
+| `featured.ts` | "Selected work" cards on the home page |
 
-## What technologies are used for this project?
+Numbers like citation counts, paper counts, and talk counts are computed from these files and from `src/data/`.
 
-This project is built with:
+### Refreshing data
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```sh
+npm run fetch-github      # GitHub stars and forks -> src/data/github.json
+npm run fetch-citations   # Google Scholar counts + OpenAlex citing papers -> src/data/citations.json
+```
 
-## How can I deploy this project?
+Neither needs an API key. The citation script keeps every existing citing paper and only adds new ones. It also tries Google Scholar once for per-paper counts; if Scholar blocks the request, the old counts are kept.
 
-Simply open [Lovable](https://lovable.dev/projects/cd33e947-660d-4f86-98d7-2dfa6fd70f66) and click on Share -> Publish.
+Update the Google Scholar totals (citations, h-index) by hand in `src/data/scholarMetrics.json`.
 
-## Can I connect a custom domain to my Lovable project?
+## Deploying
 
-Yes it is!
+Pushing to `main` runs `.github/workflows/deploy.yml`, which type-checks, lints, builds, and deploys to GitHub Pages. Pull requests run the same checks without deploying. A weekly scheduled run rebuilds the site so GitHub star counts stay current.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The custom domain lives in `public/CNAME`, so every build includes it.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Checks
+
+```sh
+npm run typecheck
+npm run lint
+```

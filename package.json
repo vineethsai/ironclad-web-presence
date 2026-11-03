@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "fetch-citations": "tsx scripts/refreshCitations.ts",
-    "build": "vite build && cp CNAME docs/CNAME",
+    "build": "vite build",
     "build:fresh": "npm run fetch-citations && npm run fetch-github && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -64,5 +64,8 @@
   },
   "overrides": {
     "minimatch": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=20.19"
   }
 }
