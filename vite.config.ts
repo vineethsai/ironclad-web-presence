@@ -2,8 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig(() => ({
+export default defineConfig({
   base: "/",
   server: {
     host: "::",
@@ -12,27 +11,12 @@ export default defineConfig(() => ({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
-  },
-  optimizeDeps: {
-    include: ['gray-matter']
   },
   build: {
     outDir: 'docs',
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          three: ['three', '@react-three/fiber', '@react-three/drei'],
-        },
-      },
-    },
+    // three.js (the 3D hero and citation globe) is large but loads lazily, off the critical path
+    chunkSizeWarningLimit: 1100,
   },
-  define: {
-    // Add a global Buffer definition for browser environments
-    'global': {},
-  }
-}));
+});

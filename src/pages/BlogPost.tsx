@@ -100,7 +100,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-cyber-dark text-white">
       <Helmet>
-        <title>{post.title} | Vineeth Sai Narajala</title>
+        <title>{`${post.title} | Vineeth Sai Narajala`}</title>
         <meta name="description" content={cleanDescription} />
         <meta name="keywords" content={allKeywords.join(', ')} />
         <meta name="author" content={post.author} />
