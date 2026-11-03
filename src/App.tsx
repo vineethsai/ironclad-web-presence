@@ -1,7 +1,3 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Suspense, lazy, useEffect, useRef } from "react";
@@ -23,8 +19,6 @@ const ExperienceFull = lazy(() => import("./pages/ExperienceFull"));
 const ResearchImpact = lazy(() => import("./pages/ResearchImpact"));
 const OpenSource = lazy(() => import("./pages/OpenSource"));
 const Writing = lazy(() => import("./pages/Writing"));
-
-const queryClient = new QueryClient();
 
 const PageLoader = () => (
   <div className="min-h-screen bg-cyber-dark flex items-center justify-center">
@@ -91,18 +85,14 @@ const AnimatedRoutes = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <Preloader />
-      <CustomCursor />
-      <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-        <CommandPalette />
-        <AnimatedRoutes />
-      </HashRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <>
+    <Preloader />
+    <CustomCursor />
+    <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <CommandPalette />
+      <AnimatedRoutes />
+    </HashRouter>
+  </>
 );
 
 export default App;
