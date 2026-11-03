@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Zap, Code, Shield, Database, Server, CheckCircle, Award, Cpu, Activity, Radar } from 'lucide-react';
+import { Zap, Code, Shield, Database, Server, Cpu, Activity, Radar } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Reveal, StaggerGroup, StaggerItem, SectionHeading } from '@/components/motion';
 import { EASE } from '@/components/motion/easing';
@@ -55,13 +55,6 @@ const SkillsSection = () => {
     { name: 'CI/CD Security', level: 85, icon: <Server className="h-5 w-5 text-cyber-green" /> }
   ];
 
-  const certifications = [
-    { name: 'AWS Certified Security Specialty', icon: <Award className="h-5 w-5 text-cyber-teal" /> },
-    { name: 'GIAC Enterprise Penetration Tester (GPEN)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> },
-    { name: 'GIAC Cloud Penetration Tester (GCPN)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> },
-    { name: 'AWS Certified Solutions Architect', icon: <Server className="h-5 w-5 text-cyber-teal" /> },
-    { name: 'CompTIA Security+', icon: <CheckCircle className="h-5 w-5 text-cyber-teal" /> }
-  ];
 
   const tools = [
     'AWS Security', 'Generative AI', 'IAM', 'Hadoop', 'Spark', 'OWASP', 'Terraform', 'Malware Analysis',
@@ -106,22 +99,7 @@ const SkillsSection = () => {
 
           <StaggerItem>
             <div className="glass-card h-full p-8 hover:border-cyber-teal/30 hover:shadow-glow-sm transition-all duration-300">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <Award className="h-6 w-6 text-cyber-teal mr-2" />
-                <span>Certifications</span>
-              </h3>
-              <ul className="space-y-4">
-                {certifications.map((cert, index) => (
-                  <li key={index} className="flex items-start p-2 hover:bg-cyber-dark/40 rounded-md transition-all duration-300">
-                    <div className="flex-shrink-0 mr-3 mt-1">
-                      {cert.icon}
-                    </div>
-                    <span className="text-gray-200">{cert.name}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 pt-6 border-t border-white/10">
+              <div>
                 <h4 className="text-xl font-semibold text-white mb-4 flex items-center">
                   <Cpu className="h-5 w-5 text-cyber-teal mr-2" />
                   <span>Tools & Technologies</span>

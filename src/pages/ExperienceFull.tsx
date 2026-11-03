@@ -181,9 +181,6 @@ const ExperienceFull = () => {
     }
   ];
 
-  const certifications = [
-    { name: 'GIAC Cloud Penetration Tester (GCPN)', icon: <Shield className="h-5 w-5 text-cyber-teal" /> }
-  ];
 
   const projects = [
     {
@@ -217,7 +214,7 @@ const ExperienceFull = () => {
       <div className="min-h-screen bg-cyber-dark text-white">
         <Helmet>
           <title>Experience & Career | Vineeth Sai Narajala</title>
-          <meta name="description" content="Complete work experience, projects, academic background, and certifications of Vineeth Sai Narajala." />
+          <meta name="description" content="Work experience, projects, and education of Vineeth Sai Narajala." />
         </Helmet>
         
         <Navbar />
@@ -225,7 +222,7 @@ const ExperienceFull = () => {
           <PageHeader
             kicker="Career"
             title="Experience & Career"
-            subtitle="Complete work history, education, and professional certifications."
+            subtitle="Work history, projects, and education."
           />
           <section className="py-20 bg-cyber-darker relative overflow-hidden">
             <div className="absolute inset-0 bg-grid"></div>
@@ -404,24 +401,6 @@ const ExperienceFull = () => {
                         </div>
                       </div>
                     ))}
-                  </div>
-                  
-                  <div className="flex items-center mb-8">
-                    <Award className="h-6 w-6 text-cyber-teal mr-3" />
-                    <h3 className="text-2xl font-bold text-white">Certifications</h3>
-                  </div>
-                  
-                  <div className="bg-cyber-darker/80 backdrop-blur-sm rounded-lg p-6 border border-teal-500/20 shadow-lg hover:shadow-teal-500/5 transition-all duration-300">
-                    <ul className="space-y-4">
-                      {certifications.map((cert, index) => (
-                        <li key={index} className="flex items-start p-2 hover:bg-cyber-dark/40 rounded-md transition-all duration-300">
-                          <div className="flex-shrink-0 mr-3 mt-1">
-                            {cert.icon}
-                          </div>
-                          <span className="text-gray-200">{cert.name}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
               </div>

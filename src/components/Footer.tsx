@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
 
           <p className="text-gray-400 text-center max-w-md mb-8">
-            Cybersecurity Engineer specializing in cloud security, application security, and security automation.
+            AI security researcher at Cisco, working on securing AI agents.
           </p>
 
           <div className="flex items-center space-x-6 mb-8">
