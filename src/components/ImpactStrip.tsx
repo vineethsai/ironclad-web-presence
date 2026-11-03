@@ -1,15 +1,15 @@
 import React from 'react';
-import { BookOpen, Mic, Globe, Quote } from 'lucide-react';
+import { BookOpen, Mic, Globe, TrendingUp } from 'lucide-react';
 import { CountUp, StaggerGroup, StaggerItem } from '@/components/motion';
-import scholar from '@/data/scholarMetrics.json';
+import { siteStats } from '@/content/metrics';
 
-/** "Impact at a glance" animated counter band for the home page. */
+/** "Impact at a glance" animated counter band for the home page. Every number comes from the data files. */
 const ImpactStrip: React.FC = () => {
   const stats = [
-    { icon: BookOpen, value: scholar.publicationCount, suffix: '', label: 'Scholar-Listed Works' },
-    { icon: Mic, value: 12, suffix: '', label: 'Conference Talks' },
-    { icon: Globe, value: scholar.totalCitations, suffix: '', label: 'Google Scholar Citations' },
-    { icon: Quote, value: 15, suffix: '', label: 'Press Mentions' },
+    { icon: Globe, value: siteStats.citations, suffix: '', label: 'Google Scholar Citations' },
+    { icon: TrendingUp, value: siteStats.hIndex, suffix: '', label: 'h-index' },
+    { icon: BookOpen, value: siteStats.peerReviewed, suffix: '', label: 'Peer-Reviewed Papers' },
+    { icon: Mic, value: siteStats.talks, suffix: '', label: 'Talks' },
   ];
 
   return (

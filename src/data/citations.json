@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-02-02T15:44:06.000Z",
+  "lastUpdated": "2026-11-03T00:48:33.245Z",
   "scholarId": "hIVoKbIAAAAJ",
   "scholar": {
-    "totalCitations": 467,
-    "publicationCount": 21,
-    "lastUpdated": "2026-07-28T12:00:00.000Z",
+    "totalCitations": 643,
+    "publicationCount": 20,
+    "lastUpdated": "2026-11-02T12:00:00.000Z",
     "profileUrl": "https://scholar.google.com/citations?user=hIVoKbIAAAAJ&hl=en"
   },
   "publications": [
@@ -16,9 +16,9 @@
       ],
       "year": 2026,
       "venue": "2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC), 1-8, 2026",
-      "citationCount": 105,
+      "citationCount": 135,
       "resultId": "hIVoKbIAAAAJ:d1gkVwhDpl0C",
-      "citesId": "15267171941055013572,17459911323587386857",
+      "citesId": "2397391654822107513,17459911323587386857,15590845932611997310",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:d1gkVwhDpl0C"
     },
     {
@@ -28,10 +28,10 @@
         "O Narayan"
       ],
       "year": 2025,
-      "venue": "arXiv preprint arXiv:2504.19956, 2025",
-      "citationCount": 83,
+      "venue": "2025 8th International Conference on Algorithms, Computing and Artificial …, 2025",
+      "citationCount": 113,
       "resultId": "hIVoKbIAAAAJ:UeHWp8X0CEIC",
-      "citesId": "17825582858179417987,11905897919904289371",
+      "citesId": "17825582858179417987,11905897919904289371,1743334670728918965,7788837130923166949",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:UeHWp8X0CEIC"
     },
     {
@@ -44,9 +44,9 @@
       ],
       "year": 2025,
       "venue": "2025 Annual Computer Security Applications Conference Workshops (ACSAC …, 2025",
-      "citationCount": 71,
+      "citationCount": 105,
       "resultId": "hIVoKbIAAAAJ:kNdYIx-mwKoC",
-      "citesId": "14382310009962598153,479420215403297712,5964462861595011662",
+      "citesId": "14382310009962598153,479420215403297712,1746533623304406883,11662410522114190133",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:kNdYIx-mwKoC"
     },
     {
@@ -63,9 +63,9 @@
       ],
       "year": 2026,
       "venue": "2026 International Conference on AI x Data and Knowledge Engineering (AIxDKE …, 2026",
-      "citationCount": 58,
+      "citationCount": 102,
       "resultId": "hIVoKbIAAAAJ:zYLM7Y9cAGgC",
-      "citesId": "12724746446010012607",
+      "citesId": "8718418209013037461",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:zYLM7Y9cAGgC"
     },
     {
@@ -77,10 +77,25 @@
       ],
       "year": 2025,
       "venue": "2025 Cyber Awareness and Research Symposium (CARS), 1-6, 2025",
-      "citationCount": 29,
+      "citationCount": 47,
       "resultId": "hIVoKbIAAAAJ:Y0pCki6q_DkC",
-      "citesId": "17482540236625831000",
+      "citesId": "17482540236625831000,839858257670341008",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:Y0pCki6q_DkC"
+    },
+    {
+      "title": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
+      "authors": [
+        "K Huang",
+        "VS Narajala",
+        "I Habler",
+        "A Sheriff"
+      ],
+      "year": 2026,
+      "venue": "2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC), 1-9, 2026",
+      "citationCount": 40,
+      "resultId": "hIVoKbIAAAAJ:IjCSPb-OGe4C",
+      "citesId": "8141762965900298288,5488886650208587921",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:IjCSPb-OGe4C"
     },
     {
       "title": "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
@@ -91,44 +106,29 @@
       ],
       "year": 2026,
       "venue": "2026 International Conference on AI x Data and Knowledge Engineering (AIxDKE …, 2026",
-      "citationCount": 28,
+      "citationCount": 34,
       "resultId": "hIVoKbIAAAAJ:qjMakFHDy7sC",
-      "citesId": "446402774516204275",
+      "citesId": "10904989783253181707",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:qjMakFHDy7sC"
     },
     {
-      "title": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
+      "title": "AAGATE: A NIST AI RMF-Aligned Governance Platform for Agentic AI",
       "authors": [
         "K Huang",
-        "VS Narajala",
-        "I Habler",
-        "A Sheriff"
-      ],
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2505.10609, 2025",
-      "citationCount": 28,
-      "resultId": "hIVoKbIAAAAJ:IjCSPb-OGe4C",
-      "citesId": "5955838716911568342,5488886650208587921",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:IjCSPb-OGe4C"
-    },
-    {
-      "title": "A novel zero-trust identity framework for agentic AI: Decentralized authentication and fine-grained access control. arXiv",
-      "authors": [
-        "K Huang",
-        "VS Narajala",
-        "J Yeoh",
-        "J Ross",
-        "R Raskar",
-        "Y Harkati",
+        "KR Lambros",
         "J Huang",
+        "Y Mehmood",
+        "H Atta",
+        "J Beck",
+        "VS Narajala",
         "..."
       ],
       "year": 2025,
-      "venue": "May, 2025",
+      "venue": "arXiv preprint arXiv:2510.25863, 2025",
       "citationCount": 12,
-      "resultId": "hIVoKbIAAAAJ:8k81kl-MbHgC",
-      "citesId": "2331984907074360202",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:8k81kl-MbHgC"
+      "resultId": "hIVoKbIAAAAJ:5nxA0vEk-isC",
+      "citesId": "15412644234156940079",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:5nxA0vEk-isC"
     },
     {
       "title": "Multi-agentic system threat modelling guide OWASP GenAI security project",
@@ -164,25 +164,6 @@
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:YsMSGLbcyi4C"
     },
     {
-      "title": "AAGATE: A NIST AI RMF-Aligned Governance Platform for Agentic AI",
-      "authors": [
-        "K Huang",
-        "KR Lambros",
-        "J Huang",
-        "Y Mehmood",
-        "H Atta",
-        "J Beck",
-        "VS Narajala",
-        "..."
-      ],
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2510.25863, 2025",
-      "citationCount": 8,
-      "resultId": "hIVoKbIAAAAJ:5nxA0vEk-isC",
-      "citesId": "15412644234156940079",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:5nxA0vEk-isC"
-    },
-    {
       "title": "A2AS: agentic AI runtime security and Self-Defense",
       "authors": [
         "E Neelou",
@@ -195,23 +176,73 @@
       ],
       "year": 2025,
       "venue": "arXiv preprint arXiv:2510.13825, 2025",
-      "citationCount": 7,
+      "citationCount": 8,
       "resultId": "hIVoKbIAAAAJ:LkGwnXOMwfcC",
       "citesId": "3446723537141411754",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:LkGwnXOMwfcC"
     },
     {
-      "title": "Enterprise-grade security for the model context protocol (MCP): Frameworks and mitigation strategies. arXiv 2025",
+      "title": "Coalesce: Economic and security dynamics of skill-based task outsourcing among team of autonomous llm agents",
       "authors": [
+        "M Bhatt",
+        "RF Del Rosario",
         "VS Narajala",
         "I Habler"
       ],
       "year": 2025,
-      "venue": "arXiv preprint arXiv:2504.08623, 2025",
+      "venue": "2025 Cyber Awareness and Research Symposium (CARS), 1-9, 2025",
+      "citationCount": 6,
+      "resultId": "hIVoKbIAAAAJ:Tyk-4Ss8FVUC",
+      "citesId": "1026196920029622873",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:Tyk-4Ss8FVUC"
+    },
+    {
+      "title": "Agent capability negotiation and binding protocol (acnbp)",
+      "authors": [
+        "K Huang",
+        "A Sheriff",
+        "VS Narajala",
+        "I Habler"
+      ],
+      "year": 2026,
+      "venue": "2026 International Conference on AI x Data and Knowledge Engineering (AIxDKE …, 2026",
       "citationCount": 5,
-      "resultId": "hIVoKbIAAAAJ:_kc_bZDykSQC",
-      "citesId": "15590845932611997310",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:_kc_bZDykSQC"
+      "resultId": "hIVoKbIAAAAJ:W7OEmFMy1HYC",
+      "citesId": "13131434348576707644",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:W7OEmFMy1HYC"
+    },
+    {
+      "title": "Personal AI agents like OpenClaw are a security nightmare",
+      "authors": [
+        "A Chang",
+        "VS Narajala",
+        "I Habler"
+      ],
+      "year": 2026,
+      "venue": "Cisco Blogs, January, 2026",
+      "citationCount": 5,
+      "resultId": "hIVoKbIAAAAJ:4DMP91E08xMC",
+      "citesId": "1132809493531817915",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:4DMP91E08xMC"
+    },
+    {
+      "title": "The Defense Trilemma: Why Prompt Injection Defense Wrappers Fail?",
+      "authors": [
+        "M Bhatt",
+        "S Munshi",
+        "VS Narajala",
+        "I Habler",
+        "A Al-Kahfah",
+        "K Huang",
+        "J Webb",
+        "..."
+      ],
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2604.06436, 2026",
+      "citationCount": 4,
+      "resultId": "hIVoKbIAAAAJ:YOwf2qJgpHMC",
+      "citesId": "13196570058561240762",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:YOwf2qJgpHMC"
     },
     {
       "title": "MAIF: Enforcing AI Trust and Provenance with an Artifact-Centric Agentic Paradigm",
@@ -230,53 +261,23 @@
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:UebtZRa9Y70C"
     },
     {
-      "title": "Coalesce: Economic and security dynamics of skill-based task outsourcing among team of autonomous llm agents",
+      "title": "LAAF: Logic-layer Automated Attack Framework A Systematic Red-Teaming Methodology for LPCI Vulnerabilities in Agentic Large Language Model Systems",
       "authors": [
-        "M Bhatt",
-        "RF Del Rosario",
-        "VS Narajala",
-        "I Habler"
-      ],
-      "year": 2025,
-      "venue": "2025 Cyber Awareness and Research Symposium (CARS), 1-9, 2025",
-      "citationCount": 3,
-      "resultId": "hIVoKbIAAAAJ:Tyk-4Ss8FVUC",
-      "citesId": "1026196920029622873",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:Tyk-4Ss8FVUC"
-    },
-    {
-      "title": "Agent capability negotiation and binding protocol (acnbp)",
-      "authors": [
+        "H Atta",
         "K Huang",
-        "A Sheriff",
-        "VS Narajala",
-        "I Habler"
-      ],
-      "year": 2025,
-      "venue": "arXiv preprint arXiv:2506.13590, 2025",
-      "citationCount": 3,
-      "resultId": "hIVoKbIAAAAJ:W7OEmFMy1HYC",
-      "citesId": "14278932045888396326",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:W7OEmFMy1HYC"
-    },
-    {
-      "title": "The Defense Trilemma: Why Prompt Injection Defense Wrappers Fail?",
-      "authors": [
+        "KR Lambros",
+        "Y Mehmood",
+        "Z Baig",
+        "MA Rahman",
         "M Bhatt",
-        "S Munshi",
-        "VS Narajala",
-        "I Habler",
-        "A Al-Kahfah",
-        "K Huang",
-        "J Webb",
         "..."
       ],
       "year": 2026,
-      "venue": "arXiv preprint arXiv:2604.06436, 2026",
+      "venue": "arXiv preprint arXiv:2603.17239, 2026",
       "citationCount": 2,
-      "resultId": "hIVoKbIAAAAJ:YOwf2qJgpHMC",
-      "citesId": "13196570058561240762",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:YOwf2qJgpHMC"
+      "resultId": "hIVoKbIAAAAJ:Zph67rFs4hoC",
+      "citesId": "32508296220829767",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:Zph67rFs4hoC"
     },
     {
       "title": "Adversarial Hubness Detector: Detecting Hubness Poisoning in Retrieval-Augmented Generation Systems",
@@ -313,25 +314,6 @@
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:MXK_kJrjxJIC"
     },
     {
-      "title": "LAAF: Logic-layer Automated Attack Framework A Systematic Red-Teaming Methodology for LPCI Vulnerabilities in Agentic Large Language Model Systems",
-      "authors": [
-        "H Atta",
-        "K Huang",
-        "KR Lambros",
-        "Y Mehmood",
-        "Z Baig",
-        "MA Rahman",
-        "M Bhatt",
-        "..."
-      ],
-      "year": 2026,
-      "venue": "arXiv preprint arXiv:2603.17239, 2026",
-      "citationCount": 0,
-      "resultId": "hIVoKbIAAAAJ:Zph67rFs4hoC",
-      "citesId": "",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hIVoKbIAAAAJ&pagesize=100&citation_for_view=hIVoKbIAAAAJ:Zph67rFs4hoC"
-    },
-    {
       "title": "Securing Agentic Applications Guide",
       "authors": [
         "VS Narajala",
@@ -358,6 +340,7 @@
         "AKRAM SHERIFF",
         "Ken Huang"
       ],
+      "year": 2025,
       "venue": "A Sheriff, K Huang, Z Nemeth, M Nakhjiri - arXiv preprint arXiv:2505.23805, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2505.23805",
       "citationCount": 0,
@@ -385,11 +368,12 @@
         "Edan Habler",
         "Ken Huang"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=Agent%20Capability%20Negotiation%20and%20Binding%20Protocol%20%28ACNBP%29",
+      "year": 2026,
+      "venue": "International Conference on AI x Data and Knowledge Engineering (AIxDKE) - IEEE",
+      "link": "https://doi.org/10.1109/aixdke67294.2026.00023",
       "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
+      "influenceScore": 50,
+      "venueScore": 50,
       "citationScore": 0,
       "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
       "citedPublications": [
@@ -411,7 +395,7 @@
         "University of San Francisco"
       ],
       "country": "Argentina",
-      "tier": "other",
+      "tier": "tier1",
       "isPrestigious": true
     },
     {
@@ -421,12 +405,13 @@
         "Edan Habler",
         "Ken Huang"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=Agent%20name%20service%20%28ans%29%3A%20A%20universal%20directory%20for%20secure%20ai%20agent%20discovery%20and%20interoperability",
-      "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
-      "citationScore": 0,
+      "year": 2026,
+      "venue": "IEEE International Conference on AI in Cybersecurity (ICAIC)",
+      "link": "https://doi.org/10.1109/icaic67076.2026.11395757",
+      "citationCount": 3,
+      "influenceScore": 62,
+      "venueScore": 50,
+      "citationScore": 12,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol",
@@ -442,7 +427,7 @@
         "University of San Francisco"
       ],
       "country": "Argentina",
-      "tier": "other",
+      "tier": "tier1",
       "isPrestigious": true
     },
     {
@@ -479,12 +464,13 @@
         "Bashir Olaniyi Sadiq, PhD",
         "Ibrahim Adabara"
       ],
+      "year": 2025,
       "venue": "I Adabara, BO Sadiq, AN Shuaibu… - …, 2025 - pmc.ncbi.nlm.nih.gov",
       "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12569510/",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 34,
+      "influenceScore": 66,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 31,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol"
@@ -508,12 +494,13 @@
         "Ibrahim Adabara",
         "Yale Ibrahim Danjuma"
       ],
+      "year": 2025,
       "venue": "I Adabara, BO Sadiq, AN Shuaibu, YI Danjuma… - …, 2025 - f1000research.com",
       "link": "https://f1000research.com/articles/14-905?utm_source=chatgpt.com",
-      "citationCount": 0,
-      "influenceScore": 20,
+      "citationCount": 38,
+      "influenceScore": 52,
       "venueScore": 20,
-      "citationScore": 0,
+      "citationScore": 32,
       "citedPublication": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
       "citedPublications": [
         "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
@@ -570,6 +557,7 @@
         "Ariel Stulman",
         "Yedidel Louck"
       ],
+      "year": 2025,
       "venue": "Y Louck, A Stulman, A Dvir - arXiv preprint arXiv:2511.03841, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2511.03841",
       "citationCount": 0,
@@ -599,6 +587,7 @@
         "Anand Todkar",
         "Jitendra Solanki"
       ],
+      "year": 2025,
       "venue": "M Sarkar, A Todkar, J Solanki - … Workshop on Middleware for IT/OT …, 2025 - dl.acm.org",
       "link": "https://dl.acm.org/doi/abs/10.1145/3774900.3776637",
       "citationCount": 0,
@@ -623,6 +612,7 @@
         "Ananth Shreekumar",
         "Z. Berkay Celik"
       ],
+      "year": 2025,
       "venue": "E Allegrini, A Shreekumar, ZB Celik - arXiv preprint arXiv:2510.14133, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2510.14133",
       "citationCount": 0,
@@ -650,12 +640,13 @@
         "Kawser Wazed Nafi",
         "Saeid Jamshidi"
       ],
+      "year": 2025,
       "venue": "S Jamshidi, KW Nafi, AM Dakhel, N Shahabi… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2512.06556",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
@@ -680,6 +671,7 @@
         "Md Nafiu Rahman",
         "Sadif Ahmed"
       ],
+      "year": 2025,
       "venue": "A Shahriar, MN Rahman, S Ahmed, F Sadeque… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2510.06445",
       "citationCount": 0,
@@ -711,6 +703,7 @@
         "Xiaoyu Liang",
         "Zhiqiang Wang"
       ],
+      "year": 2025,
       "venue": "G Shi, H Du, Z Wang, X Liang, W Liu, S Bian… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2512.06914",
       "citationCount": 0,
@@ -741,12 +734,13 @@
         "Yujun Cai",
         "Yuyao Ge"
       ],
+      "year": 2025,
       "venue": "L Mei, J Yao, Y Ge, Y Wang, B Bi, Y Cai, J Liu… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2507.13334",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 18,
+      "influenceScore": 36,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 26,
       "citedPublication": "Agent Capability Negotiation and Binding Protocol (ACNBP)",
       "citedPublications": [
         "Agent Capability Negotiation and Binding Protocol (ACNBP)",
@@ -769,12 +763,13 @@
       "authors": [
         "Beni Ifland"
       ],
+      "year": 2026,
       "venue": "PA Gandhi, A Shukla, D Tayouri, B Ifland… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2506.02859",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 2,
+      "influenceScore": 20,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 10,
       "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
       "citedPublications": [
         "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
@@ -827,6 +822,7 @@
       "authors": [
         "Bin Wang"
       ],
+      "year": 2025,
       "venue": "B Wang, Z Liu, H Yu, A Yang, Y Huang, J Guo… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2510.23673",
       "citationCount": 0,
@@ -852,6 +848,7 @@
         "Ivor W. Tsang, IEEE Fellow",
         "Xingrui Yu"
       ],
+      "year": 2025,
       "venue": "B Wang, J Quan, X Yu, H Hu, I Tsang - arXiv preprint arXiv:2512.21354, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2512.21354",
       "citationCount": 0,
@@ -881,12 +878,13 @@
         "Shouling Ji",
         "Tianyu Du"
       ],
+      "year": 2026,
       "venue": "P He, C Li, B Zhao, T Du, S Ji - arXiv preprint arXiv:2509.21011, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2509.21011",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 3,
+      "influenceScore": 22,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 12,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -910,12 +908,13 @@
         "Tianqing Zhu",
         "Wanlei Zhou"
       ],
+      "year": 2025,
       "venue": "S Wang, T Zhu, B Liu, M Ding, D Ye, W Zhou… - ACM Computing …, 2025 - dl.acm.org",
       "link": "https://dl.acm.org/doi/abs/10.1145/3764113",
-      "citationCount": 0,
-      "influenceScore": 50,
+      "citationCount": 47,
+      "influenceScore": 84,
       "venueScore": 50,
-      "citationScore": 0,
+      "citationScore": 34,
       "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
       "citedPublications": [
         "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
@@ -945,12 +944,13 @@
         "Shaofei Li",
         "Zhenkai Liang"
       ],
+      "year": 2025,
       "venue": "W Zhao, J Liu, B Ruan, S Li, Z Liang - arXiv preprint arXiv:2509.24272, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2509.24272",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -999,12 +999,13 @@
         "Wenpeng Xing",
         "Zhonghao Qi"
       ],
+      "year": 2025,
       "venue": "W Xing, Z Qi, Y Qin, Y Li, C Chang, J Yu, C Lin… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2508.10991",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
       "citedPublications": [
         "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
@@ -1024,12 +1025,13 @@
       "authors": [
         "Charles L. Wang"
       ],
+      "year": 2025,
       "venue": "CL Wang, T Singhal, A Kelkar, J Tuo - arXiv preprint arXiv:2508.03858, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2508.03858",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
       "citedPublications": [
         "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
@@ -1049,6 +1051,7 @@
         "Xiaohui Xie",
         "Yong Cui"
       ],
+      "year": 2025,
       "venue": "C Du, C Wang, Y Chao, X Xie, Y Cui - arXiv preprint arXiv:2509.02317, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2509.02317",
       "citationCount": 0,
@@ -1101,12 +1104,13 @@
         "Kezhi Wang",
         "Octavia A. Dobre"
       ],
+      "year": 2026,
       "venue": "F Jiang, C Pan, L Dong, K Wang, OA Dobre… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2505.22311",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 54,
+      "influenceScore": 45,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 35,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol"
@@ -1156,12 +1160,13 @@
         "Daoyuan Wu",
         "Yixuan Yang"
       ],
+      "year": 2025,
       "venue": "Y Yang, D Wu, Y Chen - arXiv preprint arXiv:2508.13220, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2508.13220",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -1217,12 +1222,13 @@
         "Zhebo Wang",
         "Zhenhua Xu"
       ],
+      "year": 2025,
       "venue": "D Kong, S Lin, Z Xu, Z Wang, M Li, Y Li… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2506.19676",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 2,
+      "influenceScore": 20,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 10,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol",
@@ -1327,6 +1333,7 @@
         "Dong Du（杜冬冬）",
         "Erhu Feng"
       ],
+      "year": 2025,
       "venue": "E Feng, W Zhou, Z Liu, L Chen, Y Dong… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2505.17716",
       "citationCount": 0,
@@ -1353,12 +1360,13 @@
         "Sunggu Kyung",
         "Yoojin Nam"
       ],
+      "year": 2025,
       "venue": "Y Nam, DY Kim, S Kyung, J Seo… - Korean Journal of …, 2025 - pmc.ncbi.nlm.nih.gov",
       "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12479233/",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 99,
+      "influenceScore": 75,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 40,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -1383,6 +1391,7 @@
         "Xiaohan Yuan",
         "Yuchuan Fu"
       ],
+      "year": 2025,
       "venue": "Y Fu, X Yuan, D Wang - arXiv preprint arXiv:2506.15253, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2506.15253",
       "citationCount": 0,
@@ -1463,12 +1472,13 @@
         "Ken Huang",
         "Prashant Kulkarni"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=Building%20a%20secure%20agentic%20AI%20application%20leveraging%20A2A%20protocol",
-      "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
-      "citationScore": 0,
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2504.16902",
+      "link": "https://doi.org/10.48550/arxiv.2504.16902",
+      "citationCount": 6,
+      "influenceScore": 27,
+      "venueScore": 10,
+      "citationScore": 17,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
@@ -1483,7 +1493,7 @@
         "Google"
       ],
       "country": "Israel",
-      "tier": "other",
+      "tier": "preprint",
       "isPrestigious": true
     },
     {
@@ -1491,12 +1501,13 @@
       "authors": [
         "Edan Habler"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=Enterprise-grade%20security%20for%20the%20model%20context%20protocol%20%28mcp%29%3A%20Frameworks%20and%20mitigation%20strategies",
-      "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
-      "citationScore": 0,
+      "year": 2026,
+      "venue": "IEEE International Conference on AI in Cybersecurity (ICAIC)",
+      "link": "https://doi.org/10.1109/icaic67076.2026.11395723",
+      "citationCount": 15,
+      "influenceScore": 74,
+      "venueScore": 50,
+      "citationScore": 24,
       "citedPublication": "Multi-agentic system threat modelling guide OWASP GenAI security project",
       "citedPublications": [
         "Multi-agentic system threat modelling guide OWASP GenAI security project"
@@ -1506,7 +1517,7 @@
         "Ben Gurion University"
       ],
       "country": "Israel",
-      "tier": "other",
+      "tier": "tier1",
       "isPrestigious": true
     },
     {
@@ -1515,12 +1526,13 @@
         "Edan Habler",
         "Manish Bhatt"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=Etdi%3A%20Mitigating%20tool%20squatting%20and%20rug%20pull%20attacks%20in%20model%20context%20protocol%20%28mcp%29%20by%20using%20oauth-enhanced%20tool%20definitions%20and%20policy-based%20access%20control",
-      "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
-      "citationScore": 0,
+      "year": 2025,
+      "venue": "Cyber Awareness and Research Symposium (CARS) - IEEE",
+      "link": "https://doi.org/10.1109/cars67163.2025.11337310",
+      "citationCount": 6,
+      "influenceScore": 67,
+      "venueScore": 50,
+      "citationScore": 17,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
@@ -1532,7 +1544,7 @@
         "OWASP/ Project Kuiper - Ex-Meta"
       ],
       "country": "Israel",
-      "tier": "other",
+      "tier": "tier1",
       "isPrestigious": true
     },
     {
@@ -1542,11 +1554,12 @@
         "Manish Bhatt",
         "Ronald F. Del Rosario"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=MAIF%3A%20Enforcing%20AI%20Trust%20and%20Provenance%20with%20an%20Artifact-Centric%20Agentic%20Paradigm",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2511.15097",
+      "link": "https://doi.org/10.48550/arxiv.2511.15097",
       "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
+      "influenceScore": 10,
+      "venueScore": 10,
       "citationScore": 0,
       "citedPublication": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
       "citedPublications": [
@@ -1562,7 +1575,7 @@
         "SAP"
       ],
       "country": "Israel",
-      "tier": "other",
+      "tier": "preprint",
       "isPrestigious": true
     },
     {
@@ -1571,12 +1584,13 @@
         "Edan Habler",
         "Ken Huang"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=Securing%20genai%20multi-agent%20systems%20against%20tool%20squatting%3A%20A%20zero%20trust%20registry-based%20approach",
-      "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
-      "citationScore": 0,
+      "year": 2026,
+      "venue": "International Conference on AI x Data and Knowledge Engineering (AIxDKE) - IEEE",
+      "link": "https://doi.org/10.1109/aixdke67294.2026.00022",
+      "citationCount": 4,
+      "influenceScore": 64,
+      "venueScore": 50,
+      "citationScore": 14,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol",
@@ -1591,7 +1605,7 @@
         "University of San Francisco"
       ],
       "country": "Israel",
-      "tier": "other",
+      "tier": "tier1",
       "isPrestigious": true
     },
     {
@@ -1630,12 +1644,13 @@
         "Maanak Gupta",
         "Sahaya Jestus Lazer"
       ],
+      "year": 2026,
       "venue": "SJ Lazer, K Aryal, M Gupta, E Bertino - arXiv preprint arXiv:2601.05293, 2026 - arxiv.org",
       "link": "https://arxiv.org/abs/2601.05293",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
       "citedPublications": [
         "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
@@ -1663,12 +1678,13 @@
         "Hao Li",
         "Mohammed Mehedi  Hasan"
       ],
+      "year": 2026,
       "venue": "MM Hasan, H Li, E Fallahzadeh… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2506.13538",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 20,
+      "influenceScore": 36,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 26,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -1693,12 +1709,13 @@
         "Ramesh Raskar",
         "Sree Bhargavi Balija"
       ],
+      "year": 2025,
       "venue": "SB Balija, R Singal, R Raskar, E Darzi, R Bala… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2507.07901",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol"
@@ -1743,6 +1760,7 @@
         "Gauri Sharma",
         "Ken Huang"
       ],
+      "year": 2025,
       "venue": "G Sharma, V Kulkarni, M King, K Huang - arXiv preprint arXiv:2507.21146, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2507.21146",
       "citationCount": 0,
@@ -1771,6 +1789,7 @@
         "Ken Huang",
         "Yasir Mehmood, PhD"
       ],
+      "year": 2025,
       "venue": "K Huang, Y Mehmood, H Atta, J Huang… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2508.12259",
       "citationCount": 0,
@@ -1828,12 +1847,13 @@
         "Xiao Yang",
         "Yichi Zhang"
       ],
+      "year": 2026,
       "venue": "H Su, J Luo, C Liu, X Yang, Y Zhang, Y Dong… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2506.23844",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 11,
+      "influenceScore": 32,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 22,
       "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
       "citedPublications": [
         "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
@@ -1856,6 +1876,7 @@
         "Yuekang Li",
         "Ziqi Ding"
       ],
+      "year": 2026,
       "venue": "W Song, H Zhong, Z Ding, J Xue, Y Li - arXiv preprint arXiv:2508.12566, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2508.12566",
       "citationCount": 0,
@@ -1884,12 +1905,13 @@
         "Xinyi Hou (侯心怡)",
         "Yanjie Zhao"
       ],
+      "year": 2025,
       "venue": "H Rao, Y Zhao, X Hou, S Wang, H Wang - arXiv preprint arXiv:2506.23762, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2506.23762",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -1913,12 +1935,13 @@
         "Helena H Rong",
         "Yuhan Liu"
       ],
+      "year": 2025,
       "venue": "BA Hu, Y Liu, H Rong - arXiv preprint arXiv:2505.09757, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2505.09757",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 3,
+      "influenceScore": 22,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 12,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol"
@@ -1966,6 +1989,7 @@
       "authors": [
         "Insu Yun"
       ],
+      "year": 2025,
       "venue": "E Lee, D Kim, W Kim, I Yun - arXiv preprint arXiv:2509.24240, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2509.24240",
       "citationCount": 0,
@@ -1989,6 +2013,7 @@
       "authors": [
         "Jaouaher Zouari"
       ],
+      "year": 2025,
       "venue": "J Zouari - Proceedings of the IEEE/ACM 12th International …, 2025 - dl.acm.org",
       "link": "https://dl.acm.org/doi/abs/10.1145/3773276.3776564",
       "citationCount": 0,
@@ -2037,12 +2062,13 @@
       "authors": [
         "Jiaheng Liu (刘佳恒)"
       ],
+      "year": 2025,
       "venue": "J Yang, X Liu, W Lv, K Deng, S Guo, L Jing, Y Li… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2511.18538",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol",
@@ -2116,6 +2142,7 @@
       "authors": [
         "Jihen Bennaceur"
       ],
+      "year": 2025,
       "venue": "T Gasmi, R Guesmi, I Belhadj, J Bennaceur - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2507.06323",
       "citationCount": 0,
@@ -2141,12 +2168,13 @@
       "authors": [
         "Jinan CHARAFEDDINE"
       ],
+      "year": 2025,
       "venue": "M Abou Ali, F Dornaika, J Charafeddine - Artificial Intelligence Review, 2025 - Springer",
       "link": "https://link.springer.com/article/10.1007/s10462-025-11422-4",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 184,
+      "influenceScore": 80,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 45,
       "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
       "citedPublications": [
         "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
@@ -2155,7 +2183,7 @@
       "affiliations": [
         "Ph.D BioMedical Engineering. Researcher @ De Vinci Research Center, France"
       ],
-      "country": "Unknown",
+      "country": "Spain",
       "tier": "tier2",
       "isPrestigious": false
     },
@@ -2165,6 +2193,7 @@
         "Jugal Kalita",
         "Smita Khapre"
       ],
+      "year": 2025,
       "venue": "B Bowers, S Khapre, J Kalita - arXiv preprint arXiv:2512.21818, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2512.21818",
       "citationCount": 0,
@@ -2194,6 +2223,7 @@
         "Nenad Tomasev",
         "Sébastien Krier"
       ],
+      "year": 2025,
       "venue": "N Tomašev, M Franklin, J Jacobs, S Krier… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2512.16856",
       "citationCount": 0,
@@ -2220,12 +2250,13 @@
         "Kamran Gholizadeh HamlAbadi",
         "Monica Vahdati"
       ],
+      "year": 2025,
       "venue": "K Gholizadeh HamlAbadi, M Vahdati… - Proceedings of the 33rd …, 2025 - dl.acm.org",
       "link": "https://dl.acm.org/doi/abs/10.1145/3746027.3758176",
-      "citationCount": 0,
-      "influenceScore": 50,
+      "citationCount": 3,
+      "influenceScore": 62,
       "venueScore": 50,
-      "citationScore": 0,
+      "citationScore": 12,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol"
@@ -2246,12 +2277,13 @@
       "authors": [
         "Ken Huang"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=A%20novel%20zero-trust%20identity%20framework%20for%20agentic%20ai%3A%20Decentralized%20authentication%20and%20fine-grained%20access%20control",
-      "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
-      "citationScore": 0,
+      "year": 2026,
+      "venue": "International Conference on AI x Data and Knowledge Engineering (AIxDKE) - IEEE",
+      "link": "https://doi.org/10.1109/aixdke67294.2026.00024",
+      "citationCount": 16,
+      "influenceScore": 75,
+      "venueScore": 50,
+      "citationScore": 25,
       "citedPublication": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
       "citedPublications": [
         "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
@@ -2267,7 +2299,7 @@
         "University of San Francisco"
       ],
       "country": "United States",
-      "tier": "other",
+      "tier": "tier1",
       "isPrestigious": true
     },
     {
@@ -2275,6 +2307,7 @@
       "authors": [
         "Ken Huang"
       ],
+      "year": 2025,
       "venue": "K Huang, C Hughes - Securing AI Agents: Foundations, Frameworks, and …, 2025 - Springer",
       "link": "https://link.springer.com/chapter/10.1007/978-3-032-02130-4_5",
       "citationCount": 0,
@@ -2299,12 +2332,13 @@
       "authors": [
         "Ken Huang"
       ],
+      "year": 2025,
       "venue": "K Huang, C Hughes - Securing AI Agents: Foundations, Frameworks, and …, 2025 - Springer",
       "link": "https://link.springer.com/chapter/10.1007/978-3-032-02130-4_4",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 4,
+      "influenceScore": 49,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 14,
       "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
       "citedPublications": [
         "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
@@ -2324,12 +2358,13 @@
       "authors": [
         "Ken Huang"
       ],
+      "year": 2025,
       "venue": "K Huang, C Hughes - Securing AI Agents: Foundations, Frameworks, and …, 2025 - Springer",
       "link": "https://link.springer.com/chapter/10.1007/978-3-032-02130-4_3",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 2,
+      "influenceScore": 45,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 10,
       "citedPublication": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
       "citedPublications": [
         "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability"
@@ -2348,12 +2383,13 @@
       "authors": [
         "Ken Huang"
       ],
+      "year": 2025,
       "venue": "K Huang, C Hughes - Securing AI Agents: Foundations, Frameworks, and …, 2025 - Springer",
       "link": "https://link.springer.com/chapter/10.1007/978-3-032-02130-4_11",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 2,
+      "influenceScore": 45,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 10,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol"
@@ -2372,12 +2408,13 @@
       "authors": [
         "Ken Huang"
       ],
+      "year": 2025,
       "venue": "K Huang, C Hughes - Securing AI Agents: Foundations, Frameworks, and …, 2025 - Springer",
       "link": "https://link.springer.com/chapter/10.1007/978-3-032-02130-4_12",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 2,
+      "influenceScore": 45,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 10,
       "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
       "citedPublications": [
         "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
@@ -2398,12 +2435,13 @@
         "Kevin Bauer",
         "Mari-Klara Stein"
       ],
+      "year": 2025,
       "venue": "M Adam, K Bauer, E Jussupow, MK Stein… - Business & Information …, 2025 - Springer",
       "link": "https://link.springer.com/article/10.1007/s12599-025-00961-3",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 8,
+      "influenceScore": 54,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 19,
       "citedPublication": "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
       "citedPublications": [
         "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach"
@@ -2427,12 +2465,13 @@
         "Manoj Karkee",
         "Ranjan Sapkota"
       ],
+      "year": 2025,
       "venue": "R Sapkota, KI Roumeliotis, M Karkee - arXiv preprint arXiv:2505.19443, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2505.19443",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 32,
+      "influenceScore": 40,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 30,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol"
@@ -2451,6 +2490,7 @@
       "authors": [
         "Libo Wang"
       ],
+      "year": 2025,
       "venue": "L Wang - arXiv preprint arXiv:2505.19339, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2505.19339",
       "citationCount": 0,
@@ -2504,6 +2544,7 @@
         "Lorenzo Giusti",
         "Riccardo Taiello"
       ],
+      "year": 2025,
       "venue": "L Giusti, OA Werner, R Taiello, MC Costa… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2509.20175",
       "citationCount": 0,
@@ -2551,6 +2592,7 @@
       "authors": [
         "MANIDEEP REDDY CHINTHAREDDY"
       ],
+      "year": 2026,
       "venue": "MR Chinthareddy - arXiv preprint arXiv:2601.02698, 2026 - arxiv.org",
       "link": "https://arxiv.org/abs/2601.02698",
       "citationCount": 0,
@@ -2575,11 +2617,12 @@
         "Manish Bhatt",
         "Ronald F. Del Rosario"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=Coalesce%3A%20Economic%20and%20security%20dynamics%20of%20skill-based%20task%20outsourcing%20among%20team%20of%20autonomous%20llm%20agents",
+      "year": 2025,
+      "venue": "Cyber Awareness and Research Symposium (CARS) - IEEE",
+      "link": "https://doi.org/10.1109/cars67163.2025.11337769",
       "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
+      "influenceScore": 50,
+      "venueScore": 50,
       "citationScore": 0,
       "citedPublication": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
       "citedPublications": [
@@ -2595,7 +2638,7 @@
         "SAP"
       ],
       "country": "United States",
-      "tier": "other",
+      "tier": "tier1",
       "isPrestigious": true
     },
     {
@@ -2605,12 +2648,13 @@
         "Ranjan Sapkota",
         "Shaina Raza , PhD"
       ],
+      "year": 2026,
       "venue": "S Raza, R Sapkota, M Karkee… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2506.04133",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 58,
+      "influenceScore": 45,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 35,
       "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
       "citedPublications": [
         "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
@@ -2689,12 +2733,13 @@
         "Yingxuan Yang",
         "Yuxuan Huang"
       ],
+      "year": 2025,
       "venue": "Y Yang, M Ma, Y Huang, H Chai, C Gong… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2507.21206",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 2,
+      "influenceScore": 20,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 10,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
@@ -2863,6 +2908,7 @@
       "authors": [
         "No_author_found"
       ],
+      "year": 2025,
       "venue": "Z Luo, Y Fan, Y Li, Y Zhang, H Lin, Z Wang - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2512.20649",
       "citationCount": 0,
@@ -3053,6 +3099,7 @@
       "authors": [
         "No_author_found"
       ],
+      "year": 2025,
       "venue": "FC Xavier - arXiv preprint arXiv:2507.00907, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2507.00907",
       "citationCount": 0,
@@ -3075,12 +3122,13 @@
       "authors": [
         "No_author_found"
       ],
+      "year": 2025,
       "venue": "G Jing, H Qi - arXiv preprint arXiv:2512.14737, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2512.14737",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -3138,12 +3186,13 @@
       "authors": [
         "Om Narayan"
       ],
+      "year": 2025,
       "venue": "E Neelou, I Novikov, M Moroz, O Narayan… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2510.13825",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 2,
+      "influenceScore": 20,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 10,
       "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
       "citedPublications": [
         "Building a secure agentic AI application leveraging A2A protocol",
@@ -3162,12 +3211,13 @@
       "authors": [
         "Om Narayan"
       ],
-      "venue": "",
-      "link": "https://scholar.google.com/scholar?q=Securing%20agentic%20ai%3A%20A%20comprehensive%20threat%20model%20and%20mitigation%20framework%20for%20generative%20ai%20agents",
-      "citationCount": 0,
-      "influenceScore": 20,
-      "venueScore": 20,
-      "citationScore": 0,
+      "year": 2025,
+      "venue": "International Conference on Algorithms, Computing and Artificial Intelligence (ACAI) - IEEE",
+      "link": "https://doi.org/10.1109/acai68217.2025.11406310",
+      "citationCount": 27,
+      "influenceScore": 79,
+      "venueScore": 50,
+      "citationScore": 29,
       "citedPublication": "LLM and GenAI data security best practices",
       "citedPublications": [
         "LLM and GenAI data security best practices",
@@ -3178,7 +3228,7 @@
         "New York University"
       ],
       "country": "United States",
-      "tier": "other",
+      "tier": "tier1",
       "isPrestigious": false
     },
     {
@@ -3186,12 +3236,13 @@
       "authors": [
         "Partha Pratim Ray"
       ],
+      "year": 2026,
       "venue": "PP Ray - Iran Journal of Computer Science, 2026 - Springer",
       "link": "https://link.springer.com/article/10.1007/s42044-025-00370-5",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 11,
+      "influenceScore": 57,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 22,
       "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
       "citedPublications": [
         "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
@@ -3242,12 +3293,13 @@
         "Yilong Liu",
         "Yucheng Ning"
       ],
+      "year": 2025,
       "venue": "X Lin, Y Ning, J Zhang, Y Dong, Y Liu, Y Wu… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2509.18970",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 5,
+      "influenceScore": 26,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 16,
       "citedPublication": "Agent Capability Negotiation and Binding Protocol (ACNBP)",
       "citedPublications": [
         "Agent Capability Negotiation and Binding Protocol (ACNBP)"
@@ -3270,12 +3322,13 @@
       "authors": [
         "Prof. Dr. Bishwajeet Pandey"
       ],
+      "year": 2026,
       "venue": "L Alva, B Pandey - Artificial Intelligence Review, 2026 - Springer",
       "link": "https://link.springer.com/article/10.1007/s10462-025-11458-6",
-      "citationCount": 0,
-      "influenceScore": 35,
+      "citationCount": 34,
+      "influenceScore": 66,
       "venueScore": 35,
-      "citationScore": 0,
+      "citationScore": 31,
       "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
       "citedPublications": [
         "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
@@ -3319,6 +3372,7 @@
         "Qiaomu Li",
         "Ying Xie"
       ],
+      "year": 2025,
       "venue": "Q Li, Y Xie - arXiv preprint arXiv:2505.03864, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2505.03864",
       "citationCount": 0,
@@ -3345,12 +3399,13 @@
         "Wenbo Jiang",
         "Zihan Wang"
       ],
+      "year": 2025,
       "venue": "Z Wang, R Zhang, Y Liu, W Fan, W Jiang… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2505.11154",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 1,
+      "influenceScore": 16,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 6,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -3371,12 +3426,13 @@
         "Saroj Kanta Mishra",
         "Suman Niroula"
       ],
+      "year": 2026,
       "venue": "S Gaire, S Gyawali, S Mishra, S Niroula… - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2512.08290",
-      "citationCount": 0,
-      "influenceScore": 10,
+      "citationCount": 3,
+      "influenceScore": 22,
       "venueScore": 10,
-      "citationScore": 0,
+      "citationScore": 12,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
@@ -3397,6 +3453,7 @@
       "authors": [
         "Tatiana Petrova"
       ],
+      "year": 2025,
       "venue": "T Petrova, B Bliznioukov, A Puzikov, R State - arXiv preprint arXiv …, 2025 - arxiv.org",
       "link": "https://arxiv.org/abs/2507.10644",
       "citationCount": 0,
@@ -3422,12 +3479,13 @@
       "authors": [
         "Xinghai Wei"
       ],
+      "year": 2025,
       "venue": "S Li, X Wei, J Yuan, X Wang, K Miao - … of the 20th Workshop on Mobility …, 2025 - dl.acm.org",
       "link": "https://dl.acm.org/doi/abs/10.1145/3737897.3767287",
-      "citationCount": 0,
-      "influenceScore": 50,
+      "citationCount": 2,
+      "influenceScore": 60,
       "venueScore": 50,
-      "citationScore": 0,
+      "citationScore": 10,
       "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
       "citedPublications": [
         "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
@@ -3513,6 +3571,1722 @@
       "country": "Ukraine",
       "tier": "other",
       "isPrestigious": false
+    },
+    {
+      "title": "Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions",
+      "authors": [
+        "Xinyi Hou",
+        "Yanjie Zhao",
+        "Shenao Wang",
+        "Haoyu Wang"
+      ],
+      "year": 2026,
+      "venue": "ACM Transactions on Software Engineering and Methodology",
+      "link": "https://doi.org/10.1145/3796519",
+      "citationCount": 167,
+      "influenceScore": 95,
+      "venueScore": 50,
+      "citationScore": 45,
+      "citedPublication": "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+      "citedPublications": [
+        "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control"
+      ],
+      "affiliation": "Huazhong University of Science and Technology",
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ],
+      "country": "China",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Model Context Protocol Threat Modeling and Analysis of Vulnerabilities to Prompt Injection with Tool Poisoning",
+      "authors": [
+        "Charoes Huang",
+        "Xin Huang",
+        "Ngoc Phu Tran",
+        "Amin Milani Fard"
+      ],
+      "year": 2026,
+      "venue": "Journal of Cybersecurity and Privacy - MDPI",
+      "link": "https://doi.org/10.3390/jcp6030084",
+      "citationCount": 9,
+      "influenceScore": 55,
+      "venueScore": 35,
+      "citationScore": 20,
+      "citedPublication": "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+      "citedPublications": [
+        "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "New York Institute of Technology",
+      "affiliations": [
+        "New York Institute of Technology"
+      ],
+      "country": "Canada",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Adversarial Machine Learning: A 20-Year Survey of Attacks, Defenses, and Standards",
+      "authors": [
+        "Benhur Tekeste",
+        "Khalil Al-Hussaeni",
+        "Benjamin C. M. Fung",
+        "Ibtesam Mohammed Alawadhi",
+        "Claude Fachkha"
+      ],
+      "year": 2026,
+      "venue": "IEEE Access",
+      "link": "https://doi.org/10.1109/access.2026.3690620",
+      "citationCount": 6,
+      "influenceScore": 67,
+      "venueScore": 50,
+      "citationScore": 17,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Rochester Institute of Technology - Dubai",
+      "affiliations": [
+        "Rochester Institute of Technology - Dubai",
+        "McGill University",
+        "Dubai Police Academy",
+        "University of Dubai"
+      ],
+      "country": "United Arab Emirates",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Reliability and security: from swarm robots to AI agents",
+      "authors": [
+        "Yuping Yan",
+        "Yuhan Xie",
+        "Junfeng Tang",
+        "Yuanshuai Li",
+        "Yaochu Jin"
+      ],
+      "year": 2025,
+      "venue": "Journal of Reliability Science and Engineering",
+      "link": "https://doi.org/10.1088/3050-2454/adea7a",
+      "citationCount": 5,
+      "influenceScore": 51,
+      "venueScore": 35,
+      "citationScore": 16,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "Westlake University",
+      "affiliations": [
+        "Westlake University",
+        "Xidian University",
+        "Nantong University"
+      ],
+      "country": "China",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "MCP-Secure: A Runtime Access Control Layer for Privilege-Aware LLM Agent Tooling",
+      "authors": [
+        "Gamini Singh",
+        "Vijay Krishna Madisetti"
+      ],
+      "year": 2026,
+      "venue": "IEEE Open Journal of the Computer Society",
+      "link": "https://doi.org/10.1109/ojcs.2026.3664314",
+      "citationCount": 4,
+      "influenceScore": 64,
+      "venueScore": 50,
+      "citationScore": 14,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "Georgia Institute of Technology",
+      "affiliations": [
+        "Georgia Institute of Technology"
+      ],
+      "country": "United States",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Securing LLM agents: From prompt sanitization to autonomous red teaming and beyond",
+      "authors": [
+        "Mohamed Amine Ferrag",
+        "Abderrahmane Lakas",
+        "Norbert Tihanyi",
+        "Merouane Abdelkader Debbah"
+      ],
+      "year": 2025,
+      "venue": "Internet of Things and Cyber-Physical Systems - Elsevier",
+      "link": "https://doi.org/10.1016/j.iotcps.2026.03.001",
+      "citationCount": 4,
+      "influenceScore": 49,
+      "venueScore": 35,
+      "citationScore": 14,
+      "citedPublication": "A2AS: Agentic AI Runtime Security and Self-Defense",
+      "citedPublications": [
+        "A2AS: Agentic AI Runtime Security and Self-Defense"
+      ],
+      "affiliation": "Unknown",
+      "affiliations": [],
+      "country": "Unknown",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Safety and security of large language models in healthcare",
+      "authors": [
+        "Jan Clusmann",
+        "Oscar Freyer",
+        "Max Ostermann",
+        "Dyke Ferber",
+        "Narmin Ghaffari Laleh",
+        "Lars Hilgers",
+        "Fiona R. Kolbinger",
+        "Carolin V. Schneider",
+        "Andrea Downing",
+        "Magdalena Wekenborg",
+        "Stephen Gilbert",
+        "Sebastian Foersch",
+        "Daniel Truhn",
+        "Isabella C. Wiest",
+        "Jakob Nikolas Kather"
+      ],
+      "year": 2026,
+      "venue": "Nature - Springer",
+      "link": "https://doi.org/10.1038/s41586-026-10687-1",
+      "citationCount": 3,
+      "influenceScore": 47,
+      "venueScore": 35,
+      "citationScore": 12,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "German Cancer Research Center",
+      "affiliations": [
+        "German Cancer Research Center",
+        "Universitätsklinikum Aachen",
+        "University Hospital Carl Gustav Carus",
+        "German Cancer Research Center (DKFZ) Dresden",
+        "Else Kröner Fresenius Center for Digital Health",
+        "German Cancer Consortium (DKTK) Dresden",
+        "Technische Universität Dresden",
+        "RWTH Aachen University",
+        "Heidelberg University",
+        "University Hospital Heidelberg",
+        "National Center for Tumor Diseases",
+        "Purdue University West Lafayette",
+        "University of Pennsylvania",
+        "University Medical Center of the Johannes Gutenberg University Mainz",
+        "Medizinische Fakultät Mannheim"
+      ],
+      "country": "Germany",
+      "tier": "tier2",
+      "isPrestigious": true
+    },
+    {
+      "title": "Enhancing the A2A Protocol with Blockchain-Based Identities and x402 Micropayments for Agentic AI",
+      "authors": [
+        "Awid Vaziry",
+        "Sandro Rodriguez Garzon",
+        "Axel Küpper"
+      ],
+      "year": 2026,
+      "venue": "Communications in computer and information science - Springer",
+      "link": "https://doi.org/10.1007/978-3-032-15632-7_25",
+      "citationCount": 2,
+      "influenceScore": 45,
+      "venueScore": 35,
+      "citationScore": 10,
+      "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
+      "citedPublications": [
+        "Building a secure agentic AI application leveraging A2A protocol",
+        "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability"
+      ],
+      "affiliation": "Technische Universität Berlin",
+      "affiliations": [
+        "Technische Universität Berlin"
+      ],
+      "country": "Germany",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Design and implementation of an interface architecture for automated IoT device testing platforms",
+      "authors": [
+        "Ainur Mukhiyadin",
+        "Anara Akmoldina",
+        "Karlygash Tainova",
+        "Darkhan Abdrahmanov"
+      ],
+      "year": 2026,
+      "venue": "Energy Informatics - Springer",
+      "link": "https://doi.org/10.1186/s42162-026-00629-6",
+      "citationCount": 1,
+      "influenceScore": 41,
+      "venueScore": 35,
+      "citationScore": 6,
+      "citedPublication": "A2AS: Agentic AI Runtime Security and Self-Defense",
+      "citedPublications": [
+        "A2AS: Agentic AI Runtime Security and Self-Defense"
+      ],
+      "affiliation": "Esil University",
+      "affiliations": [
+        "Esil University"
+      ],
+      "country": "Kazakhstan",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "A Comprehensive Security Framework for the Model Context Protocol (MCP) in Multi-Agent AI Systems",
+      "authors": [
+        "Om Narayan",
+        "Ramkinker Singh",
+        "Praveen Baskar"
+      ],
+      "year": 2025,
+      "venue": "International Conference on Algorithms, Computing and Artificial Intelligence (ACAI) - IEEE",
+      "link": "https://doi.org/10.1109/acai68217.2025.11406667",
+      "citationCount": 1,
+      "influenceScore": 56,
+      "venueScore": 50,
+      "citationScore": 6,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "New York University",
+      "affiliations": [
+        "New York University",
+        "Carnegie Mellon University",
+        "Google (United States)"
+      ],
+      "country": "United States",
+      "tier": "tier1",
+      "isPrestigious": true
+    },
+    {
+      "title": "Cybersecurity in governing artificial intelligence – the case of Polish cities",
+      "authors": [
+        "Katarzyna Sienkiewicz-Małyjurek"
+      ],
+      "year": 2026,
+      "venue": "Journal of Information Communication and Ethics in Society - Emerald Publishing Limited",
+      "link": "https://doi.org/10.1108/jices-11-2025-0327",
+      "citationCount": 1,
+      "influenceScore": 41,
+      "venueScore": 35,
+      "citationScore": 6,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Silesian University of Technology",
+      "affiliations": [
+        "Silesian University of Technology"
+      ],
+      "country": "Poland",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Impact of Progress of AI on Circular Bioeconomy: Applications, Challenges, and Future Directions",
+      "authors": [
+        "Charles Qing Cao",
+        "Jie Zhuang",
+        "Jie Jayne Wu",
+        "Wenjun Zhou"
+      ],
+      "year": 2026,
+      "venue": "Natural resource management and policy - Springer",
+      "link": "https://doi.org/10.1007/978-3-032-07112-5_18",
+      "citationCount": 1,
+      "influenceScore": 41,
+      "venueScore": 35,
+      "citationScore": 6,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "University of Tennessee at Knoxville",
+      "affiliations": [
+        "University of Tennessee at Knoxville"
+      ],
+      "country": "United States",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Trusted but not trustworthy: a conceptual analysis of AI agent risks in the metaverse and EU policy responses",
+      "authors": [
+        "Anselm Küsters"
+      ],
+      "year": 2026,
+      "venue": "Frontiers in Virtual Reality",
+      "link": "https://doi.org/10.3389/frvir.2026.1813331",
+      "citationCount": 1,
+      "influenceScore": 26,
+      "venueScore": 20,
+      "citationScore": 6,
+      "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
+      "citedPublications": [
+        "Building a secure agentic AI application leveraging A2A protocol"
+      ],
+      "affiliation": "Max Planck Institute for Legal History and Legal Theory",
+      "affiliations": [
+        "Max Planck Institute for Legal History and Legal Theory"
+      ],
+      "country": "Germany",
+      "tier": "other",
+      "isPrestigious": false
+    },
+    {
+      "title": "Access Control Mechanisms for Agentic AI in Multi-tenant Cloud Environments",
+      "authors": [
+        "Arun Ganapathi",
+        "Dishant Banga"
+      ],
+      "year": 2026,
+      "venue": "IEEE International Conference on AI and Data Analytics (ICAD)",
+      "link": "https://doi.org/10.1109/icad69378.2026.11608520",
+      "citationCount": 1,
+      "influenceScore": 56,
+      "venueScore": 50,
+      "citationScore": 6,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Unknown",
+      "affiliations": [],
+      "country": "Unknown",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Separating intent from execution: A defense-in-depth security architecture for LLM-based multi-agent systems",
+      "authors": [
+        "Khaled Chahine"
+      ],
+      "year": 2026,
+      "venue": "Expert Systems with Applications - Elsevier",
+      "link": "https://doi.org/10.1016/j.eswa.2026.133781",
+      "citationCount": 1,
+      "influenceScore": 41,
+      "venueScore": 35,
+      "citationScore": 6,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "American University of the Middle East",
+      "affiliations": [
+        "American University of the Middle East"
+      ],
+      "country": "Kuwait",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "AgentDID: Trustless Identity Authentication for AI Agents",
+      "authors": [
+        "Minghui Xu",
+        "Xiaoyu Liu",
+        "Yihao Guo",
+        "Chunchi Liu",
+        "Yue Zhang",
+        "Xiuzhen Cheng"
+      ],
+      "year": 2026,
+      "venue": "IEEE International Conference on Distributed Computing Systems (ICDCS)",
+      "link": "https://doi.org/10.1109/2575-8411.2026.00116",
+      "citationCount": 1,
+      "influenceScore": 56,
+      "venueScore": 50,
+      "citationScore": 6,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Shandong University",
+      "affiliations": [
+        "Shandong University",
+        "Hong Kong Polytechnic University"
+      ],
+      "country": "China",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Agentic AI Security in Industry 5.0: Emerging Threats, Forensic Readiness, and Trustworthy Human–Agent Collaboration",
+      "authors": [
+        "Maurice Eugene Dawson",
+        "Ahmed Ben Ayed",
+        "Samson Quaye"
+      ],
+      "year": 2026,
+      "venue": "Information - MDPI",
+      "link": "https://doi.org/10.3390/info17090826",
+      "citationCount": 1,
+      "influenceScore": 41,
+      "venueScore": 35,
+      "citationScore": 6,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Illinois Institute of Technology",
+      "affiliations": [
+        "Illinois Institute of Technology",
+        "Talladega College"
+      ],
+      "country": "United States",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Emerging Agent Communication Protocols for Healthcare AI Systems: A Scoping Review of Model Context Protocol (MCP) and Agent-to-Agent (A2A) Frameworks (Preprint)",
+      "authors": [
+        "Syed Ali Haider",
+        "Srinivasagam Prabha",
+        "Cesar Abraham Gomez-Cabello",
+        "Ariana Genovese",
+        "Bernardo Gabriele Collaço",
+        "Nadia G. Wood",
+        "Mark A. Lifson",
+        "Cui Tao",
+        "Sanjay Prakash Bagaria",
+        "Antonio J. Forte"
+      ],
+      "year": 2026,
+      "venue": "Preprint",
+      "link": "https://doi.org/10.2196/preprints.93344",
+      "citationCount": 0,
+      "influenceScore": 10,
+      "venueScore": 10,
+      "citationScore": 0,
+      "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
+      "citedPublications": [
+        "Building a secure agentic AI application leveraging A2A protocol"
+      ],
+      "affiliation": "Unknown",
+      "affiliations": [],
+      "country": "Unknown",
+      "tier": "preprint",
+      "isPrestigious": false
+    },
+    {
+      "title": "Securing Agentic AI: A Policy-Driven Governance Architecture for Cloud Security Workflows",
+      "authors": [
+        "Tingting Lin"
+      ],
+      "year": 2025,
+      "venue": "International Academic Exchange Conference on Science and Technology Innovation (IAECST) - IEEE",
+      "link": "https://doi.org/10.1109/iaecst68792.2025.11415118",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Systems, Applications & Products in Data Processing (United States)",
+      "affiliations": [
+        "Systems, Applications & Products in Data Processing (United States)"
+      ],
+      "country": "United States",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Agentic AI for Recon, Threat Analysis and Mitigation Reporting",
+      "authors": [
+        "Kalaivani T",
+        "Charanya P",
+        "Abhindhira KP",
+        "Barath kumar L",
+        "Santhosraj BS",
+        "Srinithi S"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Sentiment Analysis and Deep Learning (ICSADL) - IEEE",
+      "link": "https://doi.org/10.1109/icsadl67539.2026.11452094",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Sri Eshwar College of Engineering",
+      "affiliations": [
+        "Sri Eshwar College of Engineering"
+      ],
+      "country": "India",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "The dark side of autonomous intelligence: a survey on data leakage and privacy failures in agentic AI",
+      "authors": [
+        "Rohini Bhosale",
+        "Pankaj Ramchandra Chandre",
+        "Sushma Mehetre",
+        "Swati Powar",
+        "Shubhra Mukherjee Mathur",
+        "Arun Bhau Ghandat"
+      ],
+      "year": 2026,
+      "venue": "Frontiers in Computer Science",
+      "link": "https://doi.org/10.3389/fcomp.2026.1802727",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "MIT Art, Design and Technology University",
+      "affiliations": [
+        "MIT Art, Design and Technology University"
+      ],
+      "country": "India",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Unified Protocols and Pipelines: Rethinking Model Context Serving in the Era of MaaS",
+      "authors": [
+        "Chirag Sanjay Ferwani",
+        "Ankita Avthankar",
+        "Krishan K. Pandey",
+        "Nisha Gongal",
+        "Sarojini Naik"
+      ],
+      "year": 2026,
+      "venue": "Lecture notes in networks and systems - Springer",
+      "link": "https://doi.org/10.1007/978-3-032-14186-6_39",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "Symbiosis International University",
+      "affiliations": [
+        "Symbiosis International University",
+        "JSPM University"
+      ],
+      "country": "India",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Topology Linearization for Multi-Agent Systems Security: Mitigating Malicious Propagation via Path Decomposition",
+      "authors": [
+        "Yan Liu",
+        "Sujie Shao",
+        "Shaoyong Guo",
+        "Chenyu Wang",
+        "Chao Yang",
+        "Zhibin Zang"
+      ],
+      "year": 2026,
+      "venue": "IEEE Transactions on Network Science and Engineering",
+      "link": "https://doi.org/10.1109/tnse.2026.3680460",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Beijing University of Posts and Telecommunications",
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications",
+        "State Key Laboratory of Networking and Switching Technology",
+        "State Grid Liaoning Electric Power Company (China)",
+        "State Grid Corporation of China (China)"
+      ],
+      "country": "China",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "State-Verification in Asynchronous Blockchain-Driven Agentic AI Systems",
+      "authors": [
+        "Gyan Wickremasinghe",
+        "Fannya Ratana Sandjaja",
+        "Karen Rafferty",
+        "Vishal Sharma"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Information Networking - IEEE",
+      "link": "https://doi.org/10.1109/icoin68469.2026.11480549",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Queen's University Belfast",
+      "affiliations": [
+        "Queen's University Belfast"
+      ],
+      "country": "United Kingdom",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "APPLICATION OF MODEL CONTEXT PROTOCOL FOR CREATING INTELLIGENT MARKETING ANALYTICS AGENTS: ARCHITECTURE OF ADAPTIVE CONTEXTUALIZATION IN MARKET RESEARCH SYSTEMS",
+      "authors": [
+        "Г.А. НИЖНИЧЕНКО",
+        "Valeriy Pavlov"
+      ],
+      "year": 2026,
+      "venue": "All-Russian Scientific and Practical Conference \"Education-Science-Practice\"",
+      "link": "https://doi.org/10.64007/conferencearticle_69f88838a740b4.60159103",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "Moscow State University of Civil Engineering",
+      "affiliations": [
+        "Moscow State University of Civil Engineering"
+      ],
+      "country": "Russia",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "The Trustworthy Model Context Protocol (MCP) Registry: An Architectural Blueprint for Cryptographic Provenance and Runtime Integrity",
+      "authors": [
+        "Lluis Mas Ruiz",
+        "Jordi Vilaplana",
+        "Josep Rius",
+        "Radu Spaimoc",
+        "Jordi Mateo"
+      ],
+      "year": 2026,
+      "venue": "Future Internet - MDPI",
+      "link": "https://doi.org/10.3390/fi18050243",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+      "citedPublications": [
+        "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "Universitat de Lleida",
+      "affiliations": [
+        "Universitat de Lleida"
+      ],
+      "country": "Spain",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Next-Gen Access Control with AI-Powered Behavioral Defense",
+      "authors": [
+        "Dr.M. Supriya",
+        "K. Tamilselvi",
+        "Thota Anitha",
+        "S. P. Santhoshkumar",
+        "D. Vikram",
+        "Kanakaprabha. S"
+      ],
+      "year": 2025,
+      "venue": "International Conference on Sustainable Computing and Smart Systems (ICSCSS) - IEEE",
+      "link": "https://doi.org/10.1109/icscss64956.2025.11501145",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology",
+      "affiliations": [
+        "Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology"
+      ],
+      "country": "India",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "A Governance Embedded Agentic Artificial Intelligence Framework for Healthcare Cybersecurity in Resource Constrained Settings",
+      "authors": [
+        "IBRAHIM ADABARA",
+        "Bashir Olaniyi Sadiq",
+        "Aliyu Nuhu Shuaibu",
+        "Yale Ibrahim Danjuma",
+        "Venkateswarlu Maninti",
+        "Mutebi Joe"
+      ],
+      "year": 2026,
+      "venue": "Research Square (preprint)",
+      "link": "https://doi.org/10.21203/rs.3.rs-9231871/v1",
+      "citationCount": 0,
+      "influenceScore": 10,
+      "venueScore": 10,
+      "citationScore": 0,
+      "citedPublication": "AAGATE: A NIST AI RMF-Aligned Governance Platform for Agentic AI",
+      "citedPublications": [
+        "AAGATE: A NIST AI RMF-Aligned Governance Platform for Agentic AI"
+      ],
+      "affiliation": "Kampala International University",
+      "affiliations": [
+        "Kampala International University"
+      ],
+      "country": "Uganda",
+      "tier": "preprint",
+      "isPrestigious": false
+    },
+    {
+      "title": "Reframing Internal Audit Through Emerging AI Technologies: Toward an Integration Framework and Assessment Model",
+      "authors": [
+        "Ionuț Anica-Popa",
+        "Cä tÄ lin Georgel Tudor",
+        "Liana-Elena Anica-Popa",
+        "Marinela Vrîncianu"
+      ],
+      "year": 2026,
+      "venue": "Electronics - MDPI",
+      "link": "https://doi.org/10.3390/electronics15112280",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "Bucharest University of Economic Studies",
+      "affiliations": [
+        "Bucharest University of Economic Studies"
+      ],
+      "country": "Romania",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "From Artificial Intelligence to Artificial General Intelligence: A Paradigm Shift in Cybersecurity Defense",
+      "authors": [
+        "Arun Bhau Ghandat",
+        "Sheetal Aher",
+        "Moushmee Milind Kuri",
+        "Suruchi Deshmukh",
+        "Madhukar Nimbalkar",
+        "Pankaj R. Chandre"
+      ],
+      "year": 2026,
+      "venue": "Lecture notes in networks and systems - Springer",
+      "link": "https://doi.org/10.1007/978-3-032-27160-0_26",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "MIT Art, Design and Technology University",
+      "affiliations": [
+        "MIT Art, Design and Technology University"
+      ],
+      "country": "India",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "AgentQE-Bench: A Reproducible Evaluation Framework for Agentic AI Reliability, Safety, and ROI in CI/CD Pipelines",
+      "authors": [
+        "Yogeesh Kunigal Gangaiah",
+        "Lakshmi Vidya Peri"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET) - IEEE",
+      "link": "https://doi.org/10.1109/icaiset66439.2026.11542102",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Unknown",
+      "affiliations": [],
+      "country": "Unknown",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Future-Proofing Identity Security for Agentic AI Systems: Design, Implementation, and Evaluation of an Identity Fabric",
+      "authors": [
+        "Karthik Pappu",
+        "Badal Bhushan",
+        "Nilesh Jaiswal"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET) - IEEE",
+      "link": "https://doi.org/10.1109/icaiset66439.2026.11541783",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Dakota State University",
+      "affiliations": [
+        "Dakota State University",
+        "The University of Texas at Austin"
+      ],
+      "country": "United States",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "SECURITY THREATS TO AI AGENTS: REVIEW ON THREATS, DEFENSE STRATEGIES AND THREAT MODELLING",
+      "authors": [
+        "Geethu Merin Mathew",
+        "Kapil Shukla",
+        "Krishna Modi"
+      ],
+      "year": 2026,
+      "venue": "Journal of Digital Security and Forensics - Granthaalayah Publications and Printers",
+      "link": "https://doi.org/10.29121/digisecforensics.v3.i1.2026.98",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "National Forensic Sciences University",
+      "affiliations": [
+        "National Forensic Sciences University"
+      ],
+      "country": "India",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "The Resilient Community Index: A Convergence Framework for Socio-Ecological Indicators of Resilience and Ecosystem Responses to Climate Change",
+      "authors": [
+        "J.  Eric Mathis",
+        "Mohammad Ali Javidian",
+        "Michael Eng",
+        "Stephanie Daniel",
+        "Philip Beesley",
+        "John C. Havens"
+      ],
+      "year": 2026,
+      "venue": "SSRN Electronic Journal",
+      "link": "https://doi.org/10.2139/ssrn.6956712",
+      "citationCount": 0,
+      "influenceScore": 10,
+      "venueScore": 10,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Purdue Global",
+      "affiliations": [
+        "Purdue Global",
+        "Appalachian State University",
+        "Wake Forest University",
+        "University of Waterloo"
+      ],
+      "country": "United States",
+      "tier": "preprint",
+      "isPrestigious": true
+    },
+    {
+      "title": "Evaluating risk and auditability in workflow agents for safety-critical domains",
+      "authors": [
+        "Md. Motaleb Hossen Manik",
+        "Ge Wang"
+      ],
+      "year": 2026,
+      "venue": "Journal of Information and Intelligence - Elsevier",
+      "link": "https://doi.org/10.1016/j.jiixd.2026.06.003",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Rensselaer Polytechnic Institute",
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ],
+      "country": "United States",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Semantic Manipulation Attacks in Agentic AI Systems with Agent-to-Agent Communication and Model-Context-Protocol–Based Tool Invocation",
+      "authors": [
+        "Seo-Yi Kim",
+        "So‐Hyun Park",
+        "Ayoung Jeon",
+        "Ye-Rim Jeong",
+        "손규하",
+        "Il-Gu Lee"
+      ],
+      "year": 2026,
+      "venue": "IEEE Conference on Computer Communications (INFOCOM)",
+      "link": "https://doi.org/10.1109/infocom59046.2026.11571532",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+      "citedPublications": [
+        "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control"
+      ],
+      "affiliation": "Sungshin Women's University",
+      "affiliations": [
+        "Sungshin Women's University"
+      ],
+      "country": "South Korea",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "A Zero-Trust Identity Framework for Autonomous AI Agents: Cryptographic Attestation and Policy-Driven Authorization",
+      "authors": [
+        "Harshvardhan Singh Nirban",
+        "Bharat Hinduja",
+        "Bhaskar Mangal",
+        "Venugopal Chakka",
+        "Yashvardhan Sharma",
+        "Sharanya Rajan Srivastava",
+        "Shaurya Rajan Srivastava",
+        "Rohan Vaidya",
+        "Sumit Rajan Srivastava",
+        "Ashutosh Bhatia"
+      ],
+      "year": 2026,
+      "venue": "Lecture notes on data engineering and communications technologies - Springer",
+      "link": "https://doi.org/10.1007/978-3-032-23311-0_22",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Birla Institute of Technology and Science, Pilani",
+      "affiliations": [
+        "Birla Institute of Technology and Science, Pilani"
+      ],
+      "country": "India",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Enforcing Data Security Posture Management In AI Agents Through Policy-Aware APIS",
+      "authors": [
+        "Robin Britto",
+        "Srivatsav Auswin",
+        "Shreejith Suresh"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Computing, Communication and Green Engineering (CCGE) - IEEE",
+      "link": "https://doi.org/10.1109/ccge67142.2026.11581842",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Unknown",
+      "affiliations": [],
+      "country": "Unknown",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Differential Privacy in Generative AI Agents: Analysis and Optimal Tradeoffs",
+      "authors": [
+        "Ya-Ting Carolyn Yang",
+        "Quanyan Zhu"
+      ],
+      "year": 2026,
+      "venue": "IEEE Control Systems Letters",
+      "link": "https://doi.org/10.1109/lcsys.2026.3709885",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "New York University",
+      "affiliations": [
+        "New York University"
+      ],
+      "country": "United States",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "SADOG: Secure Agent Discovery and Orchestration via DID-Based Endorsement and Blockchain Interaction Graphs",
+      "authors": [
+        "Haihua Li",
+        "Jinlinag Xu",
+        "Yizhong Liu",
+        "Zhenyu Guan",
+        "Bingqi Li",
+        "Zian Jin"
+      ],
+      "year": 2026,
+      "venue": "Lecture notes in computer science - Springer",
+      "link": "https://doi.org/10.1007/978-981-92-2859-1_4",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability",
+      "citedPublications": [
+        "Agent name service (ans): A universal directory for secure ai agent discovery and interoperability"
+      ],
+      "affiliation": "China Academy of Information and Communications Technology",
+      "affiliations": [
+        "China Academy of Information and Communications Technology",
+        "Beihang University"
+      ],
+      "country": "China",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "407Chapter 18 Explaining the Important Challenges in Agentic AI Systems",
+      "authors": [
+        "Vatsal Gupta",
+        "Anant Wairagade"
+      ],
+      "year": 2026,
+      "venue": "De Gruyter eBooks",
+      "link": "https://doi.org/10.1515/9783112223062-018",
+      "citationCount": 0,
+      "influenceScore": 20,
+      "venueScore": 20,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Unknown",
+      "affiliations": [],
+      "country": "Unknown",
+      "tier": "other",
+      "isPrestigious": false
+    },
+    {
+      "title": "Hydrascale: Trust-Coupled Elastic Scaling for Federated Ci/Cd Pipelines Using Bounded Autonomous Agents",
+      "authors": [
+        "Nilesh Jaiswal",
+        "Karthik Pappu",
+        "Deepak Pai"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Machine Learning and Intelligent Systems Engineering (MLISE) - IEEE",
+      "link": "https://doi.org/10.1109/mlise70044.2026.11607515",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Dakota State University",
+      "affiliations": [
+        "Dakota State University"
+      ],
+      "country": "United States",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Security Vulnerabilities in AI Assistants and Their Implications for IoT-Based Environmental Systems",
+      "authors": [
+        "Navya Gupta",
+        "Bhoomika Saxena",
+        "Sunil Kumar"
+      ],
+      "year": 2026,
+      "venue": "Lecture notes in networks and systems - Springer",
+      "link": "https://doi.org/10.1007/978-3-032-27163-1_20",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Manipal University Jaipur",
+      "affiliations": [
+        "Manipal University Jaipur"
+      ],
+      "country": "India",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Design of a Security Framework for Multi-Agent Systems Based on Model Context Protocol in SOC Environments",
+      "authors": [
+        "Rodrigo Tavares de Pina Simões",
+        "Xavier Larriva-Novo",
+        "Carmen Sánchez-Zas",
+        "Víctor A. Villagrá",
+        "Andrés I. Marín López"
+      ],
+      "year": 2026,
+      "venue": "Applied Sciences - MDPI",
+      "link": "https://doi.org/10.3390/app16167915",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Universidad Politécnica de Madrid",
+      "affiliations": [
+        "Universidad Politécnica de Madrid"
+      ],
+      "country": "Spain",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "An Action-Centric Zero Trust Maturity Model for Agentic AI Environments",
+      "authors": [
+        "Jung-Hyun Mok",
+        "Hyun Jo",
+        "Sokjoon Lee"
+      ],
+      "year": 2026,
+      "venue": "Sensors - MDPI",
+      "link": "https://doi.org/10.3390/s26165205",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
+      "citedPublications": [
+        "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Gachon University",
+      "affiliations": [
+        "Gachon University",
+        "Korea Western Power (South Korea)"
+      ],
+      "country": "South Korea",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "PQ-MedTrust: Coupling Continuous Trust to Post-Quantum Credential Revocation for Autonomous Clinical Agents",
+      "authors": [
+        "Firdous Kausar",
+        "Lei Qian",
+        "Asmah Muallem",
+        "Sajid Hussain"
+      ],
+      "year": 2026,
+      "venue": "Future Internet - MDPI",
+      "link": "https://doi.org/10.3390/fi18100548",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Unknown",
+      "affiliations": [],
+      "country": "Unknown",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "(POSTER) Auditable Access Control for Physical AI Agents in Multi-Organisation Spaces",
+      "authors": [
+        "Akash Lanard",
+        "Muthucumaru Maheswaran"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT) - IEEE",
+      "link": "https://doi.org/10.1109/dcoss-iot69657.2026.00064",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "McGill University",
+      "affiliations": [
+        "McGill University"
+      ],
+      "country": "Canada",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "From Service Accounts to Agentic Identities: A Zero Trust Governance Framework for Delegated Authority, Runtime Tool Control, and Accountable Non-Human Actors in Enterprise Cybersecurity",
+      "authors": [
+        "Mohammad Nizamuddin",
+        "Ryana Sikder"
+      ],
+      "year": 2026,
+      "venue": "Informatics - MDPI",
+      "link": "https://doi.org/10.3390/informatics13090146",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "City University of New York",
+      "affiliations": [
+        "City University of New York",
+        "Bronx Community College",
+        "Medidata (United States)"
+      ],
+      "country": "United States",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "The Model Context Protocol Security Landscape: A Systematic Analysis of Inherent Vulnerabilities and Defensive Inadequacies",
+      "authors": [
+        "Manish Nandish",
+        "Rajiv Misra",
+        "Vivekanandam Balasubramaniam"
+      ],
+      "year": 2026,
+      "venue": "Lecture notes in networks and systems - Springer",
+      "link": "https://doi.org/10.1007/978-3-032-31998-2_13",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies",
+      "citedPublications": [
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "Indian Institute of Technology Patna",
+      "affiliations": [
+        "Indian Institute of Technology Patna",
+        "Lincoln University College"
+      ],
+      "country": "India",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "The Use of AI by Banks in Financial Crime Risk Management",
+      "authors": [
+        "Adam Abukari",
+        "Julia Esteves Lima Werberich",
+        "Ololade Durodola"
+      ],
+      "year": 2026,
+      "venue": "Cambridge University Press eBooks",
+      "link": "https://doi.org/10.1017/9781009623605.009",
+      "citationCount": 0,
+      "influenceScore": 20,
+      "venueScore": 20,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Coventry University",
+      "affiliations": [
+        "Coventry University"
+      ],
+      "country": "United Kingdom",
+      "tier": "other",
+      "isPrestigious": false
+    },
+    {
+      "title": "Autonomous AI agents and recursive self-improvement: a comprehensive survey of contemporary architectures, capabilities, and safety frameworks",
+      "authors": [
+        "Nadir iBRAHIMOĞLU",
+        "Mustafa Umut Demi̇rezen",
+        "Furkan Yıldız"
+      ],
+      "year": 2026,
+      "venue": "Cluster Computing - Springer",
+      "link": "https://doi.org/10.1007/s10586-026-06537-4",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
+      "citedPublications": [
+        "Building a secure agentic AI application leveraging A2A protocol"
+      ],
+      "affiliation": "Ankara Bilim Üniversitesi",
+      "affiliations": [
+        "Ankara Bilim Üniversitesi"
+      ],
+      "country": "Turkey",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "A systematic mapping study of AI agent–Tool communication: protocols, security, and orchestration",
+      "authors": [
+        "HAFIZ SIDDIQ UMER",
+        "Naeem Ahmed Haq Nawaz",
+        "Kashif Ishaq",
+        "Awais Ahmad"
+      ],
+      "year": 2026,
+      "venue": "Intelligent Systems with Applications - Elsevier",
+      "link": "https://doi.org/10.1016/j.iswa.2026.200733",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
+      "citedPublications": [
+        "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
+        "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "University of Management and Technology",
+      "affiliations": [
+        "University of Management and Technology",
+        "Mid Sweden University"
+      ],
+      "country": "Pakistan",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Agentic AI in FinTech Digital Transformation",
+      "authors": [
+        "Muntadher Sallal",
+        "Samuel Mariwa",
+        "Kevin Ocansey"
+      ],
+      "year": 2026,
+      "venue": "Advances in computational intelligence and robotics book series - IGI Global",
+      "link": "https://doi.org/10.4018/979-8-3373-9594-4.ch001",
+      "citationCount": 0,
+      "influenceScore": 20,
+      "venueScore": 20,
+      "citationScore": 0,
+      "citedPublication": "Building a secure agentic AI application leveraging A2A protocol",
+      "citedPublications": [
+        "Building a secure agentic AI application leveraging A2A protocol"
+      ],
+      "affiliation": "Bournemouth University",
+      "affiliations": [
+        "Bournemouth University"
+      ],
+      "country": "United Kingdom",
+      "tier": "other",
+      "isPrestigious": false
+    },
+    {
+      "title": "Blockchain-based Trust Mechanisms for Artificial Intelligence Agents: A Brief Survey",
+      "authors": [
+        "Jiantao Cai",
+        "Qinglin Yang",
+        "Pengdeng Li",
+        "Yuan Liu"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Computer Science and Blockchain (CCSB) - IEEE",
+      "link": "https://doi.org/10.1109/ccsb71176.2026.11716306",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Guangzhou University",
+      "affiliations": [
+        "Guangzhou University"
+      ],
+      "country": "China",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Identity-Backed Biometric Authentication: a Zero-Trust Framework for Defeating Synthetic Identity Attacks in Regulated Financial Institutions",
+      "authors": [
+        "Prudhvi Ananthula",
+        "Deepak Kumar Saxena",
+        "Sneha Malshetti"
+      ],
+      "year": 2026,
+      "venue": "International Conference on Soft Computing for Security Applications (ICSCSA) - IEEE",
+      "link": "https://doi.org/10.1109/icscsa69367.2026.11708265",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "University of Michigan",
+      "affiliations": [
+        "University of Michigan",
+        "Northeastern University"
+      ],
+      "country": "United States",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "Agents in Disguise - Weaknesses in Authentication and Authorization in Public AI Ecosystems",
+      "authors": [
+        "Jan Staněk",
+        "Lukáš Kencl"
+      ],
+      "year": 2026,
+      "venue": "Lecture notes in computer science - Springer",
+      "link": "https://doi.org/10.1007/978-3-032-38702-8_15",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+        "Building a secure agentic AI application leveraging A2A protocol"
+      ],
+      "affiliation": "Czech Technical University in Prague",
+      "affiliations": [
+        "Czech Technical University in Prague"
+      ],
+      "country": "Czechia",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Agentic AI Trustworthiness Is a Full-Stack Problem: A Framework from Hardware to Governance",
+      "authors": [
+        "Bahar Farahani",
+        "Mohammad Rouintan",
+        "Parichehr Vahidinia",
+        "Farshad Firouzi"
+      ],
+      "year": 2026,
+      "venue": "IEEE International Conference on Omni-layer Intelligent Systems (COINS)",
+      "link": "https://doi.org/10.1109/coins69995.2026.11715577",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Shahid Beheshti University",
+      "affiliations": [
+        "Shahid Beheshti University",
+        "Sharif University of Technology",
+        "Johns Hopkins University"
+      ],
+      "country": "Iran",
+      "tier": "tier1",
+      "isPrestigious": true
+    },
+    {
+      "title": "Requisitos para Concepção de Soluções de Gestão de Identidade Adequadas para IA Agêntica",
+      "authors": [
+        "Gabriel Spanhol Abreu",
+        "Yan Vitor Pires Pereira",
+        "Rodrigo Cesar Lira da Silva",
+        "Emerson Ribeiro de Mello"
+      ],
+      "year": 2026,
+      "venue": "Simpósio Brasileiro de Cibersegurança (SBSeg)",
+      "link": "https://doi.org/10.5753/sbseg_estendido.2026.33319",
+      "citationCount": 0,
+      "influenceScore": 20,
+      "venueScore": 20,
+      "citationScore": 0,
+      "citedPublication": "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control",
+      "citedPublications": [
+        "A novel zero-trust identity framework for agentic ai: Decentralized authentication and fine-grained access control"
+      ],
+      "affiliation": "Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco",
+      "affiliations": [
+        "Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco"
+      ],
+      "country": "Brazil",
+      "tier": "other",
+      "isPrestigious": false
+    },
+    {
+      "title": "Integrating LLM Agents with Heterogeneous Systems via the Web of Things",
+      "authors": [
+        "S. Ensiye Kiyamousavi",
+        "Boris Kraychev",
+        "Jan Bosch",
+        "Helena Holmström Olsson"
+      ],
+      "year": 2026,
+      "venue": "International Joint Conference on Neural Networks (IJCNN) - IEEE",
+      "link": "https://doi.org/10.1109/ijcnn69854.2026.11729087",
+      "citationCount": 0,
+      "influenceScore": 50,
+      "venueScore": 50,
+      "citationScore": 0,
+      "citedPublication": "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
+      "citedPublications": [
+        "Securing genai multi-agent systems against tool squatting: A zero trust registry-based approach",
+        "Etdi: Mitigating tool squatting and rug pull attacks in model context protocol (mcp) by using oauth-enhanced tool definitions and policy-based access control",
+        "Enterprise-grade security for the model context protocol (mcp): Frameworks and mitigation strategies"
+      ],
+      "affiliation": "Sofia University \"St. Kliment Ohridski\"",
+      "affiliations": [
+        "Sofia University \"St. Kliment Ohridski\"",
+        "Eindhoven University of Technology",
+        "Malmö University"
+      ],
+      "country": "Bulgaria",
+      "tier": "tier1",
+      "isPrestigious": false
+    },
+    {
+      "title": "THE DUAL ROLE OF LARGE LANGUAGE MODELS IN CYBERSECURITY: THREATS, DEFENSES, AND RESEARCH DIRECTIONS",
+      "authors": [
+        "Muhammad Ali",
+        "Adnan R. Manzoor"
+      ],
+      "year": 2026,
+      "venue": "“ADVANCED JOURNAL OF UNIVERSITY SCIENCE AND CREATIVE INNOVATIONS” AJOU SCI",
+      "link": "https://doi.org/10.67620/ajousci.240001",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Ajou University in Tashkent",
+      "affiliations": [
+        "Ajou University in Tashkent"
+      ],
+      "country": "Uzbekistan",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "Gateway-Centered Predictive and Preventive Security Framework for Agentic AI Systems",
+      "authors": [
+        "Jaden Shen",
+        "Joshua Wang",
+        "Chris Lin",
+        "Linda Shi",
+        "Yin Ling Liong"
+      ],
+      "year": 2026,
+      "venue": "Journal of Machine Intelligence and Data Science",
+      "link": "https://doi.org/10.11159/jmids.2026.007",
+      "citationCount": 0,
+      "influenceScore": 35,
+      "venueScore": 35,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Unknown",
+      "affiliations": [],
+      "country": "Unknown",
+      "tier": "tier2",
+      "isPrestigious": false
+    },
+    {
+      "title": "The Dual-Use Nature of Large Language Models in Cybersecurity: A Bibliometric Analysis and Critical Review",
+      "authors": [
+        "Muhammad Sharjeel Aziz",
+        "Muhammad Ali",
+        "Adnan R. Manzoor",
+        "Muhammad Younis",
+        "Zulfiya Khabirova"
+      ],
+      "year": 2026,
+      "venue": "Research Square (preprint)",
+      "link": "https://doi.org/10.21203/rs.3.rs-11434787/v1",
+      "citationCount": 0,
+      "influenceScore": 10,
+      "venueScore": 10,
+      "citationScore": 0,
+      "citedPublication": "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents",
+      "citedPublications": [
+        "Securing agentic ai: A comprehensive threat model and mitigation framework for generative ai agents"
+      ],
+      "affiliation": "Riga Technical University",
+      "affiliations": [
+        "Riga Technical University",
+        "Ajou University in Tashkent",
+        "Central Asian University"
+      ],
+      "country": "Latvia",
+      "tier": "preprint",
+      "isPrestigious": false
     }
   ],
   "locations": [
@@ -3561,6 +5335,26 @@
       ]
     },
     {
+      "latitude": 39.9093367,
+      "longitude": 116.3297146,
+      "country": "China",
+      "city": "Beijing",
+      "count": 19,
+      "papers": [
+        "A survey of context engineering for large language models",
+        "LLM-based Agents Suffer from Hallucinations: A Survey of Taxonomy, Methods, and Directions",
+        "Topology Linearization for Multi-Agent Systems Security: Mitigating Malicious Propagation via Path Decomposition",
+        "SADOG: Secure Agent Discovery and Orchestration via DID-Based Endorsement and Blockchain Interaction Graphs"
+      ],
+      "affiliations": [
+        "Chinese Academy of Sciences",
+        "Beijing University of Posts and Telecommunications",
+        "State Grid Corporation of China (China)",
+        "China Academy of Information and Communications Technology",
+        "Beihang University"
+      ]
+    },
+    {
       "latitude": 30.521595,
       "longitude": 120.7195312,
       "country": "China",
@@ -3574,6 +5368,23 @@
       ],
       "affiliations": [
         "Zhejiang University"
+      ]
+    },
+    {
+      "latitude": 18.51957,
+      "longitude": 73.85535,
+      "country": "India",
+      "city": "Pune",
+      "count": 15,
+      "papers": [
+        "The dark side of autonomous intelligence: a survey on data leakage and privacy failures in agentic AI",
+        "Unified Protocols and Pipelines: Rethinking Model Context Serving in the Era of MaaS",
+        "From Artificial Intelligence to Artificial General Intelligence: A Paradigm Shift in Cybersecurity Defense"
+      ],
+      "affiliations": [
+        "MIT Art, Design and Technology University",
+        "Symbiosis International University",
+        "JSPM University"
       ]
     },
     {
@@ -3618,6 +5429,40 @@
       "affiliations": []
     },
     {
+      "latitude": 0.2946397,
+      "longitude": 32.6049284,
+      "country": "Uganda",
+      "city": "Kampala",
+      "count": 14,
+      "papers": [
+        " A Review of Agentic AI in Cybersecurity: Cognitive Autonomy, Ethical Governance, and Quantum-Resilient Defense",
+        " Trustworthy agentic AI systems: a cross-layer review of architectures, threat models, and governance strategies for real-world deployment",
+        "A Governance Embedded Agentic Artificial Intelligence Framework for Healthcare Cybersecurity in Resource Constrained Settings"
+      ],
+      "affiliations": [
+        "Kampala International University"
+      ]
+    },
+    {
+      "latitude": 37.421473,
+      "longitude": -122.080679,
+      "country": "United States",
+      "city": "Mountain View",
+      "count": 11,
+      "papers": [
+        "Distributional AGI safety",
+        "Building a secure agentic AI application leveraging A2A protocol",
+        "[CITATION][C] Building A Secure Agentic AI Application Leveraging Google's A2A Protocol",
+        "A Comprehensive Security Framework for the Model Context Protocol (MCP) in Multi-Agent AI Systems"
+      ],
+      "affiliations": [
+        "Google DeepMind",
+        "University of Oxford and Google DeepMind",
+        "Google",
+        "Google (United States)"
+      ]
+    },
+    {
       "latitude": 37.4851,
       "longitude": -122.1483,
       "country": "United States",
@@ -3637,37 +5482,83 @@
       "longitude": -71.1032247,
       "country": "United States",
       "city": "Boston",
-      "count": 9,
+      "count": 10,
       "papers": [
         " AI Agents in Finance and Fintech: A Scientific Review of Agent-Based Systems, Applications, and Future Horizons",
         "The Trust Fabric: Decentralized Interoperability and Economic Coordination for the Agentic Web",
         " Agent Communications in Edge Computing toward Agentic AI-driven Internet of Things",
         "A Survey on Agentic Security: Applications, Threats and Defenses",
         "Software Engineering for Large Language Models: Research Status, Challenges and the Road Ahead",
-        "We urgently need privilege management in mcp: A measurement of api usage in mcp ecosystems"
+        "We urgently need privilege management in mcp: A measurement of api usage in mcp ecosystems",
+        "Identity-Backed Biometric Authentication: a Zero-Trust Framework for Defeating Synthetic Identity Attacks in Regulated Financial Institutions"
       ],
       "affiliations": [
         "Boston University, US",
         "Harvard University",
         "Technology",
-        "Boston University"
+        "Boston University",
+        "Northeastern University"
       ]
     },
     {
-      "latitude": 37.421473,
-      "longitude": -122.080679,
-      "country": "United States",
-      "city": "Mountain View",
-      "count": 9,
+      "latitude": 41.61674,
+      "longitude": 0.62218,
+      "country": "Spain",
+      "city": "Lleida",
+      "count": 10,
       "papers": [
-        "Distributional AGI safety",
-        "Building a secure agentic AI application leveraging A2A protocol",
-        "[CITATION][C] Building A Secure Agentic AI Application Leveraging Google's A2A Protocol"
+        "The Trustworthy Model Context Protocol (MCP) Registry: An Architectural Blueprint for Cryptographic Provenance and Runtime Integrity"
       ],
       "affiliations": [
-        "Google DeepMind",
-        "University of Oxford and Google DeepMind",
-        "Google"
+        "Universitat de Lleida"
+      ]
+    },
+    {
+      "latitude": 40.4165,
+      "longitude": -3.70256,
+      "country": "Spain",
+      "city": "Madrid",
+      "count": 10,
+      "papers": [
+        "Design of a Security Framework for Multi-Agent Systems Based on Model Context Protocol in SOC Environments"
+      ],
+      "affiliations": [
+        "Universidad Politécnica de Madrid"
+      ]
+    },
+    {
+      "latitude": 40.430028,
+      "longitude": -86.9264211,
+      "country": "United States",
+      "city": "",
+      "count": 9,
+      "papers": [
+        "Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems",
+        "A Survey of Agentic AI and Cybersecurity: Challenges, Opportunities and Use-case Prototypes",
+        "A Comprehensive Survey on Model Context Protocol: Architecture, Tool Integration, and the Future of AI Interoperability",
+        "Safety and security of large language models in healthcare",
+        "The Resilient Community Index: A Convergence Framework for Socio-Ecological Indicators of Resilience and Ecosystem Responses to Climate Change"
+      ],
+      "affiliations": [
+        "Purdue University",
+        "Purdue University West Lafayette",
+        "Purdue Global"
+      ]
+    },
+    {
+      "latitude": 37.5263041,
+      "longitude": 127.1096013,
+      "country": "South Korea",
+      "city": "Seoul",
+      "count": 9,
+      "papers": [
+        " Multimodal large language models in medical imaging: current state and future directions",
+        "Semantic Manipulation Attacks in Agentic AI Systems with Agent-to-Agent Communication and Model-Context-Protocol–Based Tool Invocation"
+      ],
+      "affiliations": [
+        "Asan Medical Center",
+        "University of Ulsan College of Medicine",
+        "Sungshin Women's University"
       ]
     },
     {
@@ -3702,17 +5593,44 @@
       ]
     },
     {
-      "latitude": 0.2946397,
-      "longitude": 32.6049284,
-      "country": "Uganda",
-      "city": "Kampala",
-      "count": 8,
+      "latitude": 49.2744449,
+      "longitude": -123.1298151,
+      "country": "Canada",
+      "city": "Vancouver",
+      "count": 9,
       "papers": [
-        " A Review of Agentic AI in Cybersecurity: Cognitive Autonomy, Ethical Governance, and Quantum-Resilient Defense",
-        " Trustworthy agentic AI systems: a cross-layer review of architectures, threat models, and governance strategies for real-world deployment"
+        "A Comprehensive Survey on Model Context Protocol: Architecture, Tool Integration, and the Future of AI Interoperability",
+        "Model Context Protocol Threat Modeling and Analysis of Vulnerabilities to Prompt Injection with Tool Poisoning"
       ],
       "affiliations": [
-        "Kampala International University"
+        "University Canada West",
+        "New York Institute of Technology"
+      ]
+    },
+    {
+      "latitude": 37.43861,
+      "longitude": 127.13778,
+      "country": "South Korea",
+      "city": "Seongnam-si",
+      "count": 9,
+      "papers": [
+        "An Action-Centric Zero Trust Maturity Model for Agentic AI Environments"
+      ],
+      "affiliations": [
+        "Gachon University"
+      ]
+    },
+    {
+      "latitude": 31.558,
+      "longitude": 74.35071,
+      "country": "Pakistan",
+      "city": "Lahore",
+      "count": 9,
+      "papers": [
+        "A systematic mapping study of AI agent–Tool communication: protocols, security, and orchestration"
+      ],
+      "affiliations": [
+        "University of Management and Technology"
       ]
     },
     {
@@ -3732,20 +5650,6 @@
         "University of Technology, Sydney",
         "University of New South Wales",
         "UNSW Sydney"
-      ]
-    },
-    {
-      "latitude": 39.9093367,
-      "longitude": 116.3297146,
-      "country": "China",
-      "city": "Beijing",
-      "count": 8,
-      "papers": [
-        "A survey of context engineering for large language models",
-        "LLM-based Agents Suffer from Hallucinations: A Survey of Taxonomy, Methods, and Directions"
-      ],
-      "affiliations": [
-        "Chinese Academy of Sciences"
       ]
     },
     {
@@ -3777,21 +5681,6 @@
       ]
     },
     {
-      "latitude": 40.430028,
-      "longitude": -86.9264211,
-      "country": "United States",
-      "city": "",
-      "count": 7,
-      "papers": [
-        "Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems",
-        "A Survey of Agentic AI and Cybersecurity: Challenges, Opportunities and Use-case Prototypes",
-        "A Comprehensive Survey on Model Context Protocol: Architecture, Tool Integration, and the Future of AI Interoperability"
-      ],
-      "affiliations": [
-        "Purdue University"
-      ]
-    },
-    {
       "latitude": 39.9809427,
       "longitude": 116.3409787,
       "country": "China",
@@ -3805,6 +5694,38 @@
       "affiliations": [
         "Beihang University",
         "Tsinghua University"
+      ]
+    },
+    {
+      "latitude": 40.8077508,
+      "longitude": -73.9624901,
+      "country": "United States",
+      "city": "New York",
+      "count": 7,
+      "papers": [
+        "MI9: An Integrated Runtime Governance Framework for Agentic AI",
+        "A Comprehensive Security Framework for the Model Context Protocol (MCP) in Multi-Agent AI Systems",
+        "Differential Privacy in Generative AI Agents: Analysis and Optimal Tradeoffs",
+        "From Service Accounts to Agentic Identities: A Zero Trust Governance Framework for Delegated Authority, Runtime Tool Control, and Accountable Non-Human Actors in Enterprise Cybersecurity"
+      ],
+      "affiliations": [
+        "Columbia University",
+        "New York University",
+        "City University of New York",
+        "Medidata (United States)"
+      ]
+    },
+    {
+      "latitude": 28.367250442504883,
+      "longitude": 75.60352325439453,
+      "country": "India",
+      "city": "Pilāni",
+      "count": 7,
+      "papers": [
+        "A Zero-Trust Identity Framework for Autonomous AI Agents: Cryptographic Attestation and Policy-Driven Authorization"
+      ],
+      "affiliations": [
+        "Birla Institute of Technology and Science, Pilani"
       ]
     },
     {
@@ -3855,6 +5776,36 @@
       ]
     },
     {
+      "latitude": 54.5842117,
+      "longitude": -5.9364324,
+      "country": "United Kingdom",
+      "city": "Belfast",
+      "count": 6,
+      "papers": [
+        "Model context protocol (mcp) at first glance: Studying the security and maintainability of mcp servers",
+        "State-Verification in Asynchronous Blockchain-Driven Agentic AI Systems"
+      ],
+      "affiliations": [
+        "Queen's University",
+        "Queen's University Belfast"
+      ]
+    },
+    {
+      "latitude": 23.0996034,
+      "longitude": 113.2923509,
+      "country": "China",
+      "city": "Haizhu District",
+      "count": 6,
+      "papers": [
+        "BetaWeb: Towards a Blockchain-enabled Trustworthy Agentic Web",
+        "Blockchain-based Trust Mechanisms for Artificial Intelligence Agents: A Brief Survey"
+      ],
+      "affiliations": [
+        "Sun Yat-sen University",
+        "Guangzhou University"
+      ]
+    },
+    {
       "latitude": 32.104434,
       "longitude": 35.2052702,
       "country": "Palestinian Territories",
@@ -3866,6 +5817,45 @@
       ],
       "affiliations": [
         "Ariel University"
+      ]
+    },
+    {
+      "latitude": 52.52437,
+      "longitude": 13.41053,
+      "country": "Germany",
+      "city": "Berlin",
+      "count": 6,
+      "papers": [
+        "Enhancing the A2A Protocol with Blockchain-Based Identities and x402 Micropayments for Agentic AI"
+      ],
+      "affiliations": [
+        "Technische Universität Berlin"
+      ]
+    },
+    {
+      "latitude": 11.005550384521484,
+      "longitude": 76.96611785888672,
+      "country": "India",
+      "city": "Coimbatore",
+      "count": 6,
+      "papers": [
+        "Agentic AI for Recon, Threat Analysis and Mitigation Reporting"
+      ],
+      "affiliations": [
+        "Sri Eshwar College of Engineering"
+      ]
+    },
+    {
+      "latitude": 42.69751,
+      "longitude": 23.32415,
+      "country": "Bulgaria",
+      "city": "Sofia",
+      "count": 6,
+      "papers": [
+        "Integrating LLM Agents with Heterogeneous Systems via the Web of Things"
+      ],
+      "affiliations": [
+        "Sofia University \"St. Kliment Ohridski\""
       ]
     },
     {
@@ -3882,6 +5872,48 @@
       "affiliations": [
         "NYU Shanghai",
         "New York University"
+      ]
+    },
+    {
+      "latitude": 49.40768,
+      "longitude": 8.69079,
+      "country": "Germany",
+      "city": "Heidelberg",
+      "count": 5,
+      "papers": [
+        "Safety and security of large language models in healthcare"
+      ],
+      "affiliations": [
+        "German Cancer Research Center",
+        "Heidelberg University"
+      ]
+    },
+    {
+      "latitude": 51.05089,
+      "longitude": 13.73832,
+      "country": "Germany",
+      "city": "Dresden",
+      "count": 5,
+      "papers": [
+        "Safety and security of large language models in healthcare"
+      ],
+      "affiliations": [
+        "University Hospital Carl Gustav Carus"
+      ]
+    },
+    {
+      "latitude": 41.2646484375,
+      "longitude": 69.21627044677734,
+      "country": "Uzbekistan",
+      "city": "Tashkent",
+      "count": 5,
+      "papers": [
+        "THE DUAL ROLE OF LARGE LANGUAGE MODELS IN CYBERSECURITY: THREATS, DEFENSES, AND RESEARCH DIRECTIONS",
+        "The Dual-Use Nature of Large Language Models in Cybersecurity: A Bibliometric Analysis and Critical Review"
+      ],
+      "affiliations": [
+        "Ajou University in Tashkent",
+        "Central Asian University"
       ]
     },
     {
@@ -3924,6 +5956,21 @@
       ],
       "affiliations": [
         "Zaria Nigeria"
+      ]
+    },
+    {
+      "latitude": 33.7760948,
+      "longitude": -84.3988077,
+      "country": "United States",
+      "city": "Atlanta",
+      "count": 4,
+      "papers": [
+        "Towards Unifying Quantitative Security Benchmarking for Multi Agent Systems",
+        "MCP-Secure: A Runtime Access Control Layer for Privilege-Aware LLM Agent Tooling"
+      ],
+      "affiliations": [
+        "Georgia Tech",
+        "Georgia Institute of Technology"
       ]
     },
     {
@@ -3982,6 +6029,99 @@
       ]
     },
     {
+      "latitude": 30.58333,
+      "longitude": 114.26667,
+      "country": "China",
+      "city": "Wuhan",
+      "count": 4,
+      "papers": [
+        "Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions"
+      ],
+      "affiliations": [
+        "Huazhong University of Science and Technology"
+      ]
+    },
+    {
+      "latitude": 25.12254524230957,
+      "longitude": 55.378135681152344,
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "count": 4,
+      "papers": [
+        "Adversarial Machine Learning: A 20-Year Survey of Attacks, Defenses, and Standards"
+      ],
+      "affiliations": [
+        "Rochester Institute of Technology - Dubai",
+        "Dubai Police Academy",
+        "University of Dubai"
+      ]
+    },
+    {
+      "latitude": 51.1801,
+      "longitude": 71.44598,
+      "country": "Kazakhstan",
+      "city": "Astana",
+      "count": 4,
+      "papers": [
+        "Design and implementation of an interface architecture for automated IoT device testing platforms"
+      ],
+      "affiliations": [
+        "Esil University"
+      ]
+    },
+    {
+      "latitude": 35.96064,
+      "longitude": -83.92074,
+      "country": "United States",
+      "city": "Knoxville",
+      "count": 4,
+      "papers": [
+        "Impact of Progress of AI on Circular Bioeconomy: Applications, Challenges, and Future Directions"
+      ],
+      "affiliations": [
+        "University of Tennessee at Knoxville"
+      ]
+    },
+    {
+      "latitude": 36.66833,
+      "longitude": 116.99722,
+      "country": "China",
+      "city": "Jinan",
+      "count": 4,
+      "papers": [
+        "AgentDID: Trustless Identity Authentication for AI Agents"
+      ],
+      "affiliations": [
+        "Shandong University"
+      ]
+    },
+    {
+      "latitude": 44.4322509765625,
+      "longitude": 26.106260299682617,
+      "country": "Romania",
+      "city": "Bucharest",
+      "count": 4,
+      "papers": [
+        "Reframing Internal Audit Through Emerging AI Technologies: Toward an Integration Framework and Assessment Model"
+      ],
+      "affiliations": [
+        "Bucharest University of Economic Studies"
+      ]
+    },
+    {
+      "latitude": 50.08804,
+      "longitude": 14.42076,
+      "country": "Czechia",
+      "city": "Prague",
+      "count": 4,
+      "papers": [
+        "Agents in Disguise - Weaknesses in Authentication and Authorization in Public AI Ecosystems"
+      ],
+      "affiliations": [
+        "Czech Technical University in Prague"
+      ]
+    },
+    {
       "latitude": 40.1750746,
       "longitude": 116.1593872,
       "country": "China",
@@ -4026,17 +6166,18 @@
       ]
     },
     {
-      "latitude": 37.5263041,
-      "longitude": 127.1096013,
-      "country": "South Korea",
-      "city": "Seoul",
+      "latitude": 55.7011843,
+      "longitude": 37.5276192,
+      "country": "Russia",
+      "city": "Moscow",
       "count": 3,
       "papers": [
-        " Multimodal large language models in medical imaging: current state and future directions"
+        "On MCP Ecosystem Vulnerabilities",
+        "APPLICATION OF MODEL CONTEXT PROTOCOL FOR CREATING INTELLIGENT MARKETING ANALYTICS AGENTS: ARCHITECTURE OF ADAPTIVE CONTEXTUALIZATION IN MARKET RESEARCH SYSTEMS"
       ],
       "affiliations": [
-        "Asan Medical Center",
-        "University of Ulsan College of Medicine"
+        "Lomonosov Moscow State University",
+        "Moscow State University of Civil Engineering"
       ]
     },
     {
@@ -4065,6 +6206,38 @@
       "affiliations": [
         "Technology (Guangzhou)",
         "Guangzhou University"
+      ]
+    },
+    {
+      "latitude": 3.0632813,
+      "longitude": 101.6170616,
+      "country": "Malaysia",
+      "city": "Subang Jaya City Council",
+      "count": 3,
+      "papers": [
+        " A research landscape of Agentic AI and large language models: Applications, challenges and future directions",
+        "The Model Context Protocol Security Landscape: A Systematic Analysis of Inherent Vulnerabilities and Defensive Inadequacies"
+      ],
+      "affiliations": [
+        "Taylor's University",
+        "Taylors University",
+        "Lincoln University College"
+      ]
+    },
+    {
+      "latitude": 39.8905838,
+      "longitude": -75.1712184,
+      "country": "United States",
+      "city": "Philadelphia",
+      "count": 3,
+      "papers": [
+        " Agent Communications in Edge Computing toward Agentic AI-driven Internet of Things",
+        "Agent Communications toward Agentic AI at Edge--A Case Study of the Agent2Agent Protocol",
+        "Securing Agentic AI: A Policy-Driven Governance Architecture for Cloud Security Workflows"
+      ],
+      "affiliations": [
+        "the Penn State University",
+        "Systems, Applications & Products in Data Processing (United States)"
       ]
     },
     {
@@ -4117,6 +6290,112 @@
       ],
       "affiliations": [
         "University of Bremen"
+      ]
+    },
+    {
+      "latitude": 45.50884,
+      "longitude": -73.58781,
+      "country": "Canada",
+      "city": "Montreal",
+      "count": 3,
+      "papers": [
+        "Adversarial Machine Learning: A 20-Year Survey of Attacks, Defenses, and Standards",
+        "(POSTER) Auditable Access Control for Physical AI Agents in Multi-Organisation Spaces"
+      ],
+      "affiliations": [
+        "McGill University"
+      ]
+    },
+    {
+      "latitude": 30.293649673461914,
+      "longitude": 120.16142272949219,
+      "country": "China",
+      "city": "Hangzhou",
+      "count": 3,
+      "papers": [
+        "Reliability and security: from swarm robots to AI agents"
+      ],
+      "affiliations": [
+        "Westlake University"
+      ]
+    },
+    {
+      "latitude": 23.21667,
+      "longitude": 72.68333,
+      "country": "India",
+      "city": "Gandhinagar",
+      "count": 3,
+      "papers": [
+        "SECURITY THREATS TO AI AGENTS: REVIEW ON THREATS, DEFENSE STRATEGIES AND THREAT MODELLING"
+      ],
+      "affiliations": [
+        "National Forensic Sciences University"
+      ]
+    },
+    {
+      "latitude": 26.919620513916016,
+      "longitude": 75.78781127929688,
+      "country": "India",
+      "city": "Jaipur",
+      "count": 3,
+      "papers": [
+        "Security Vulnerabilities in AI Assistants and Their Implications for IoT-Based Environmental Systems"
+      ],
+      "affiliations": [
+        "Manipal University Jaipur"
+      ]
+    },
+    {
+      "latitude": 62.39129,
+      "longitude": 17.3063,
+      "country": "Sweden",
+      "city": "Sundsvall",
+      "count": 3,
+      "papers": [
+        "A systematic mapping study of AI agent–Tool communication: protocols, security, and orchestration"
+      ],
+      "affiliations": [
+        "Mid Sweden University"
+      ]
+    },
+    {
+      "latitude": 35.69439,
+      "longitude": 51.42151,
+      "country": "Iran",
+      "city": "Tehran",
+      "count": 3,
+      "papers": [
+        "Agentic AI Trustworthiness Is a Full-Stack Problem: A Framework from Hardware to Governance"
+      ],
+      "affiliations": [
+        "Shahid Beheshti University",
+        "Sharif University of Technology"
+      ]
+    },
+    {
+      "latitude": 51.44083,
+      "longitude": 5.47778,
+      "country": "The Netherlands",
+      "city": "Eindhoven",
+      "count": 3,
+      "papers": [
+        "Integrating LLM Agents with Heterogeneous Systems via the Web of Things"
+      ],
+      "affiliations": [
+        "Eindhoven University of Technology"
+      ]
+    },
+    {
+      "latitude": 55.60586929321289,
+      "longitude": 13.00072956085205,
+      "country": "Sweden",
+      "city": "Malmo",
+      "count": 3,
+      "papers": [
+        "Integrating LLM Agents with Heterogeneous Systems via the Web of Things"
+      ],
+      "affiliations": [
+        "Malmö University"
       ]
     },
     {
@@ -4174,16 +6453,18 @@
       ]
     },
     {
-      "latitude": 55.7011843,
-      "longitude": 37.5276192,
-      "country": "Russia",
-      "city": "Moscow",
+      "latitude": 22.4123588,
+      "longitude": 113.9812852,
+      "country": "China",
+      "city": "Hong Kong",
       "count": 2,
       "papers": [
-        "On MCP Ecosystem Vulnerabilities"
+        "Mcpsecbench: A systematic security benchmark and playground for testing model context protocols",
+        "AgentDID: Trustless Identity Authentication for AI Agents"
       ],
       "affiliations": [
-        "Lomonosov Moscow State University"
+        "Lingnan University",
+        "Hong Kong Polytechnic University"
       ]
     },
     {
@@ -4198,32 +6479,6 @@
       "affiliations": [
         "University of the West of England",
         "Bristol"
-      ]
-    },
-    {
-      "latitude": 54.5842117,
-      "longitude": -5.9364324,
-      "country": "United Kingdom",
-      "city": "Belfast",
-      "count": 2,
-      "papers": [
-        "Model context protocol (mcp) at first glance: Studying the security and maintainability of mcp servers"
-      ],
-      "affiliations": [
-        "Queen's University"
-      ]
-    },
-    {
-      "latitude": 33.7760948,
-      "longitude": -84.3988077,
-      "country": "United States",
-      "city": "Atlanta",
-      "count": 2,
-      "papers": [
-        "Towards Unifying Quantitative Security Benchmarking for Multi Agent Systems"
-      ],
-      "affiliations": [
-        "Georgia Tech"
       ]
     },
     {
@@ -4359,19 +6614,6 @@
       ]
     },
     {
-      "latitude": 23.0996034,
-      "longitude": 113.2923509,
-      "country": "China",
-      "city": "Haizhu District",
-      "count": 2,
-      "papers": [
-        "BetaWeb: Towards a Blockchain-enabled Trustworthy Agentic Web"
-      ],
-      "affiliations": [
-        "Sun Yat-sen University"
-      ]
-    },
-    {
       "latitude": 29.5699826,
       "longitude": 106.4597701,
       "country": "China",
@@ -4395,34 +6637,6 @@
       ],
       "affiliations": [
         "Emerging Sciences"
-      ]
-    },
-    {
-      "latitude": 3.0632813,
-      "longitude": 101.6170616,
-      "country": "Malaysia",
-      "city": "Subang Jaya City Council",
-      "count": 2,
-      "papers": [
-        " A research landscape of Agentic AI and large language models: Applications, challenges and future directions"
-      ],
-      "affiliations": [
-        "Taylor's University",
-        "Taylors University"
-      ]
-    },
-    {
-      "latitude": 39.8905838,
-      "longitude": -75.1712184,
-      "country": "United States",
-      "city": "Philadelphia",
-      "count": 2,
-      "papers": [
-        " Agent Communications in Edge Computing toward Agentic AI-driven Internet of Things",
-        "Agent Communications toward Agentic AI at Edge--A Case Study of the Agent2Agent Protocol"
-      ],
-      "affiliations": [
-        "the Penn State University"
       ]
     },
     {
@@ -4543,6 +6757,85 @@
       ]
     },
     {
+      "latitude": 50.77664,
+      "longitude": 6.08342,
+      "country": "Germany",
+      "city": "Aachen",
+      "count": 2,
+      "papers": [
+        "Safety and security of large language models in healthcare"
+      ],
+      "affiliations": [
+        "Universitätsklinikum Aachen"
+      ]
+    },
+    {
+      "latitude": 40.44062,
+      "longitude": -79.99589,
+      "country": "United States",
+      "city": "Pittsburgh",
+      "count": 2,
+      "papers": [
+        "A Comprehensive Security Framework for the Model Context Protocol (MCP) in Multi-Agent AI Systems"
+      ],
+      "affiliations": [
+        "Carnegie Mellon University"
+      ]
+    },
+    {
+      "latitude": 41.85003,
+      "longitude": -87.65005,
+      "country": "United States",
+      "city": "Chicago",
+      "count": 2,
+      "papers": [
+        "Agentic AI Security in Industry 5.0: Emerging Threats, Forensic Readiness, and Trustworthy Human–Agent Collaboration"
+      ],
+      "affiliations": [
+        "Illinois Institute of Technology"
+      ]
+    },
+    {
+      "latitude": 44.00608,
+      "longitude": -97.11395,
+      "country": "United States",
+      "city": "Madison",
+      "count": 2,
+      "papers": [
+        "Future-Proofing Identity Security for Agentic AI Systems: Design, Implementation, and Evaluation of an Identity Fabric",
+        "Hydrascale: Trust-Coupled Elastic Scaling for Federated Ci/Cd Pipelines Using Bounded Autonomous Agents"
+      ],
+      "affiliations": [
+        "Dakota State University"
+      ]
+    },
+    {
+      "latitude": 42.72841,
+      "longitude": -73.69179,
+      "country": "United States",
+      "city": "Troy",
+      "count": 2,
+      "papers": [
+        "Evaluating risk and auditability in workflow agents for safety-critical domains"
+      ],
+      "affiliations": [
+        "Rensselaer Polytechnic Institute"
+      ]
+    },
+    {
+      "latitude": 56.94599914550781,
+      "longitude": 24.10589027404785,
+      "country": "Latvia",
+      "city": "Riga",
+      "count": 2,
+      "papers": [
+        "The Dual-Use Nature of Large Language Models in Cybersecurity: A Bibliometric Analysis and Critical Review"
+      ],
+      "affiliations": [
+        "Riga Technical University"
+      ]
+    },
+    {
       "latitude": -12.9104657,
       "longitude": 14.0356608,
       "country": "Angola",
@@ -4579,19 +6872,6 @@
       ],
       "affiliations": [
         "Stony Brook"
-      ]
-    },
-    {
-      "latitude": 40.8077508,
-      "longitude": -73.9624901,
-      "country": "United States",
-      "city": "New York",
-      "count": 1,
-      "papers": [
-        "MI9: An Integrated Runtime Governance Framework for Agentic AI"
-      ],
-      "affiliations": [
-        "Columbia University"
       ]
     },
     {
@@ -4644,19 +6924,6 @@
       ],
       "affiliations": [
         "U.S. Geological Survey"
-      ]
-    },
-    {
-      "latitude": 22.4123588,
-      "longitude": 113.9812852,
-      "country": "China",
-      "city": "Hong Kong",
-      "count": 1,
-      "papers": [
-        "Mcpsecbench: A systematic security benchmark and playground for testing model context protocols"
-      ],
-      "affiliations": [
-        "Lingnan University"
       ]
     },
     {
@@ -5219,19 +7486,6 @@
       ]
     },
     {
-      "latitude": 49.2744449,
-      "longitude": -123.1298151,
-      "country": "Canada",
-      "city": "Vancouver",
-      "count": 1,
-      "papers": [
-        "A Comprehensive Survey on Model Context Protocol: Architecture, Tool Integration, and the Future of AI Interoperability"
-      ],
-      "affiliations": [
-        "University Canada West"
-      ]
-    },
-    {
       "latitude": 3.0394855,
       "longitude": 101.7941135,
       "country": "Malaysia",
@@ -5260,7 +7514,7 @@
     {
       "latitude": 52.2493304,
       "longitude": 6.8511958,
-      "country": "Netherlands",
+      "country": "The Netherlands",
       "city": "Enschede",
       "count": 1,
       "papers": [
@@ -5334,15 +7588,350 @@
       "affiliations": [
         "Киев"
       ]
+    },
+    {
+      "latitude": 34.258331298828125,
+      "longitude": 108.9286117553711,
+      "country": "China",
+      "city": "Xi'an",
+      "count": 1,
+      "papers": [
+        "Reliability and security: from swarm robots to AI agents"
+      ],
+      "affiliations": [
+        "Xidian University"
+      ]
+    },
+    {
+      "latitude": 32.03028,
+      "longitude": 120.87472,
+      "country": "China",
+      "city": "Nantong",
+      "count": 1,
+      "papers": [
+        "Reliability and security: from swarm robots to AI agents"
+      ],
+      "affiliations": [
+        "Nantong University"
+      ]
+    },
+    {
+      "latitude": 49.98185,
+      "longitude": 8.28008,
+      "country": "Germany",
+      "city": "Mainz",
+      "count": 1,
+      "papers": [
+        "Safety and security of large language models in healthcare"
+      ],
+      "affiliations": [
+        "University Medical Center of the Johannes Gutenberg University Mainz"
+      ]
+    },
+    {
+      "latitude": 50.29761,
+      "longitude": 18.67658,
+      "country": "Poland",
+      "city": "Gliwice",
+      "count": 1,
+      "papers": [
+        "Cybersecurity in governing artificial intelligence – the case of Polish cities"
+      ],
+      "affiliations": [
+        "Silesian University of Technology"
+      ]
+    },
+    {
+      "latitude": 50.11552047729492,
+      "longitude": 8.68416976928711,
+      "country": "Germany",
+      "city": "Frankfurt am Main",
+      "count": 1,
+      "papers": [
+        "Trusted but not trustworthy: a conceptual analysis of AI agent risks in the metaverse and EU policy responses"
+      ],
+      "affiliations": [
+        "Max Planck Institute for Legal History and Legal Theory"
+      ]
+    },
+    {
+      "latitude": 29.17778,
+      "longitude": 48.09472,
+      "country": "Kuwait",
+      "city": "Al ‘Uqaylah",
+      "count": 1,
+      "papers": [
+        "Separating intent from execution: A defense-in-depth security architecture for LLM-based multi-agent systems"
+      ],
+      "affiliations": [
+        "American University of the Middle East"
+      ]
+    },
+    {
+      "latitude": 33.43442916870117,
+      "longitude": -86.11353302001953,
+      "country": "United States",
+      "city": "Talladega",
+      "count": 1,
+      "papers": [
+        "Agentic AI Security in Industry 5.0: Emerging Threats, Forensic Readiness, and Trustworthy Human–Agent Collaboration"
+      ],
+      "affiliations": [
+        "Talladega College"
+      ]
+    },
+    {
+      "latitude": 41.79222,
+      "longitude": 123.43278,
+      "country": "China",
+      "city": "Shenyang",
+      "count": 1,
+      "papers": [
+        "Topology Linearization for Multi-Agent Systems Security: Mitigating Malicious Propagation via Path Decomposition"
+      ],
+      "affiliations": [
+        "State Grid Liaoning Electric Power Company (China)"
+      ]
+    },
+    {
+      "latitude": 13.08784,
+      "longitude": 80.27847,
+      "country": "India",
+      "city": "Chennai",
+      "count": 1,
+      "papers": [
+        "Next-Gen Access Control with AI-Powered Behavioral Defense"
+      ],
+      "affiliations": [
+        "Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology"
+      ]
+    },
+    {
+      "latitude": 30.26715,
+      "longitude": -97.74306,
+      "country": "United States",
+      "city": "Austin",
+      "count": 1,
+      "papers": [
+        "Future-Proofing Identity Security for Agentic AI Systems: Design, Implementation, and Evaluation of an Identity Fabric"
+      ],
+      "affiliations": [
+        "The University of Texas at Austin"
+      ]
+    },
+    {
+      "latitude": 36.21679,
+      "longitude": -81.67455,
+      "country": "United States",
+      "city": "Boone",
+      "count": 1,
+      "papers": [
+        "The Resilient Community Index: A Convergence Framework for Socio-Ecological Indicators of Resilience and Ecosystem Responses to Climate Change"
+      ],
+      "affiliations": [
+        "Appalachian State University"
+      ]
+    },
+    {
+      "latitude": 36.09986,
+      "longitude": -80.24422,
+      "country": "United States",
+      "city": "Winston-Salem",
+      "count": 1,
+      "papers": [
+        "The Resilient Community Index: A Convergence Framework for Socio-Ecological Indicators of Resilience and Ecosystem Responses to Climate Change"
+      ],
+      "affiliations": [
+        "Wake Forest University"
+      ]
+    },
+    {
+      "latitude": 43.4668,
+      "longitude": -80.51639,
+      "country": "Canada",
+      "city": "Waterloo",
+      "count": 1,
+      "papers": [
+        "The Resilient Community Index: A Convergence Framework for Socio-Ecological Indicators of Resilience and Ecosystem Responses to Climate Change"
+      ],
+      "affiliations": [
+        "University of Waterloo"
+      ]
+    },
+    {
+      "latitude": 25.59408,
+      "longitude": 85.13563,
+      "country": "India",
+      "city": "Patna",
+      "count": 1,
+      "papers": [
+        "The Model Context Protocol Security Landscape: A Systematic Analysis of Inherent Vulnerabilities and Defensive Inadequacies"
+      ],
+      "affiliations": [
+        "Indian Institute of Technology Patna"
+      ]
+    },
+    {
+      "latitude": 52.40656,
+      "longitude": -1.51217,
+      "country": "United Kingdom",
+      "city": "Coventry",
+      "count": 1,
+      "papers": [
+        "The Use of AI by Banks in Financial Crime Risk Management"
+      ],
+      "affiliations": [
+        "Coventry University"
+      ]
+    },
+    {
+      "latitude": 39.97787094116211,
+      "longitude": 32.80147171020508,
+      "country": "Turkey",
+      "city": "Yenimahalle",
+      "count": 1,
+      "papers": [
+        "Autonomous AI agents and recursive self-improvement: a comprehensive survey of contemporary architectures, capabilities, and safety frameworks"
+      ],
+      "affiliations": [
+        "Ankara Bilim Üniversitesi"
+      ]
+    },
+    {
+      "latitude": 50.71429,
+      "longitude": -1.98458,
+      "country": "United Kingdom",
+      "city": "Poole",
+      "count": 1,
+      "papers": [
+        "Agentic AI in FinTech Digital Transformation"
+      ],
+      "affiliations": [
+        "Bournemouth University"
+      ]
+    },
+    {
+      "latitude": 42.27756,
+      "longitude": -83.74088,
+      "country": "United States",
+      "city": "Ann Arbor",
+      "count": 1,
+      "papers": [
+        "Identity-Backed Biometric Authentication: a Zero-Trust Framework for Defeating Synthetic Identity Attacks in Regulated Financial Institutions"
+      ],
+      "affiliations": [
+        "University of Michigan"
+      ]
+    },
+    {
+      "latitude": 39.29038,
+      "longitude": -76.61219,
+      "country": "United States",
+      "city": "Baltimore",
+      "count": 1,
+      "papers": [
+        "Agentic AI Trustworthiness Is a Full-Stack Problem: A Framework from Hardware to Governance"
+      ],
+      "affiliations": [
+        "Johns Hopkins University"
+      ]
+    },
+    {
+      "latitude": -8.053890228271484,
+      "longitude": -34.88111114501953,
+      "country": "Brazil",
+      "city": "Recife",
+      "count": 1,
+      "papers": [
+        "Requisitos para Concepção de Soluções de Gestão de Identidade Adequadas para IA Agêntica"
+      ],
+      "affiliations": [
+        "Instituto Federal de Educação, Ciência e Tecnologia de Pernambuco"
+      ]
+    },
+    {
+      "latitude": 43.32686,
+      "longitude": -2.98884,
+      "country": "Spain",
+      "city": "Leioa",
+      "count": 1,
+      "papers": [
+        "Agentic AI: a comprehensive survey of architectures, applications, and future directions"
+      ],
+      "affiliations": [
+        "University of the Basque Country"
+      ]
+    },
+    {
+      "latitude": 43.26271,
+      "longitude": -2.92528,
+      "country": "Spain",
+      "city": "Bilbao",
+      "count": 1,
+      "papers": [
+        "Agentic AI: a comprehensive survey of architectures, applications, and future directions"
+      ],
+      "affiliations": [
+        "Ikerbasque"
+      ]
+    },
+    {
+      "latitude": 48.89672,
+      "longitude": 2.25666,
+      "country": "France",
+      "city": "Courbevoie",
+      "count": 1,
+      "papers": [
+        "Agentic AI: a comprehensive survey of architectures, applications, and future directions"
+      ],
+      "affiliations": [
+        "Pôle Léonard de Vinci"
+      ]
     }
   ],
   "stats": {
-    "totalCitations": 121,
-    "uniqueLocations": 133,
+    "totalCitations": 183,
+    "uniqueLocations": 189,
     "topVenues": [
       {
         "name": "K Huang, C Hughes - Securing AI Agents: Foundations, Frameworks, and …, 2025 - Springer",
         "count": 5
+      },
+      {
+        "name": "Lecture notes in networks and systems - Springer",
+        "count": 4
+      },
+      {
+        "name": "International Conference on AI x Data and Knowledge Engineering (AIxDKE) - IEEE",
+        "count": 3
+      },
+      {
+        "name": "IEEE International Conference on AI in Cybersecurity (ICAIC)",
+        "count": 2
+      },
+      {
+        "name": "Cyber Awareness and Research Symposium (CARS) - IEEE",
+        "count": 2
+      },
+      {
+        "name": "International Conference on Algorithms, Computing and Artificial Intelligence (ACAI) - IEEE",
+        "count": 2
+      },
+      {
+        "name": "Future Internet - MDPI",
+        "count": 2
+      },
+      {
+        "name": "Research Square (preprint)",
+        "count": 2
+      },
+      {
+        "name": "International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET) - IEEE",
+        "count": 2
+      },
+      {
+        "name": "Lecture notes in computer science - Springer",
+        "count": 2
       },
       {
         "name": "A Sheriff, K Huang, Z Nemeth, M Nakhjiri - arXiv preprint arXiv:2505.23805, 2025 - arxiv.org",
@@ -5363,63 +7952,31 @@
       {
         "name": "Y Louck, A Stulman, A Dvir - arXiv preprint arXiv:2511.03841, 2025 - arxiv.org",
         "count": 1
-      },
-      {
-        "name": "M Sarkar, A Todkar, J Solanki - … Workshop on Middleware for IT/OT …, 2025 - dl.acm.org",
-        "count": 1
-      },
-      {
-        "name": "E Allegrini, A Shreekumar, ZB Celik - arXiv preprint arXiv:2510.14133, 2025 - arxiv.org",
-        "count": 1
-      },
-      {
-        "name": "S Jamshidi, KW Nafi, AM Dakhel, N Shahabi… - arXiv preprint arXiv …, 2025 - arxiv.org",
-        "count": 1
-      },
-      {
-        "name": "A Shahriar, MN Rahman, S Ahmed, F Sadeque… - arXiv preprint arXiv …, 2025 - arxiv.org",
-        "count": 1
-      },
-      {
-        "name": "G Shi, H Du, Z Wang, X Liang, W Liu, S Bian… - arXiv preprint arXiv …, 2025 - arxiv.org",
-        "count": 1
-      },
-      {
-        "name": "L Mei, J Yao, Y Ge, Y Wang, B Bi, Y Cai, J Liu… - arXiv preprint arXiv …, 2025 - arxiv.org",
-        "count": 1
-      },
-      {
-        "name": "PA Gandhi, A Shukla, D Tayouri, B Ifland… - arXiv preprint arXiv …, 2025 - arxiv.org",
-        "count": 1
-      },
-      {
-        "name": "B Metin, HS Karaca, F Iradat… - 2025 16th International …, 2025 - ieeexplore.ieee.org",
-        "count": 1
-      },
-      {
-        "name": "B Wang, Z Liu, H Yu, A Yang, Y Huang, J Guo… - arXiv preprint arXiv …, 2025 - arxiv.org",
-        "count": 1
       }
     ],
     "influenceDistribution": {
-      "high": 58,
-      "medium": 24,
-      "low": 85
+      "high": 92,
+      "medium": 55,
+      "low": 86
     },
     "tierDistribution": {
-      "tier1": 12,
-      "tier2": 24,
-      "other": 21,
-      "preprint": 64
+      "tier1": 42,
+      "tier2": 55,
+      "other": 16,
+      "preprint": 70
     },
     "topCountries": [
       {
         "name": "United States",
-        "count": 28
+        "count": 40
       },
       {
         "name": "China",
-        "count": 22
+        "count": 28
+      },
+      {
+        "name": "India",
+        "count": 10
       },
       {
         "name": "Israel",
@@ -5427,6 +7984,10 @@
       },
       {
         "name": "United Kingdom",
+        "count": 8
+      },
+      {
+        "name": "Canada",
         "count": 5
       },
       {
@@ -5434,28 +7995,20 @@
         "count": 4
       },
       {
-        "name": "Canada",
-        "count": 3
-      },
-      {
-        "name": "Greece",
-        "count": 2
+        "name": "South Korea",
+        "count": 4
       },
       {
         "name": "Uganda",
-        "count": 2
+        "count": 3
       },
       {
         "name": "Turkey",
-        "count": 2
-      },
-      {
-        "name": "Australia",
-        "count": 2
+        "count": 3
       }
     ],
-    "prestigiousCount": 46,
-    "uniqueAuthors": 202,
-    "totalAuthorCitations": 411
+    "prestigiousCount": 50,
+    "uniqueAuthors": 440,
+    "totalAuthorCitations": 705
   }
 }

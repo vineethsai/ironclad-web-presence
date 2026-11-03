@@ -13,7 +13,6 @@ import ScanlineTransition from "@/components/motion/ScanlineTransition";
 import CommandPalette from "@/components/CommandPalette";
 
 // Route-level code splitting: heavy pages (recharts, leaflet, markdown) load on demand
-const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Citations = lazy(() => import("./pages/Citations"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -22,6 +21,8 @@ const Speaking = lazy(() => import("./pages/Speaking"));
 const Media = lazy(() => import("./pages/Media"));
 const ExperienceFull = lazy(() => import("./pages/ExperienceFull"));
 const ResearchImpact = lazy(() => import("./pages/ResearchImpact"));
+const OpenSource = lazy(() => import("./pages/OpenSource"));
+const Writing = lazy(() => import("./pages/Writing"));
 
 const queryClient = new QueryClient();
 
@@ -62,8 +63,10 @@ const AnimatedRoutes = () => {
         <Suspense fallback={<PageLoader />} key={location.pathname}>
           <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Index />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/tag/:tag" element={<Blog />} />
+          <Route path="/writing" element={<Writing />} />
+          {/* Old blog list URLs now point to Writing; individual posts keep their URLs */}
+          <Route path="/blog" element={<Navigate to="/writing" replace />} />
+          <Route path="/blog/tag/:tag" element={<Navigate to="/writing" replace />} />
           <Route path="/blog/:postId" element={<BlogPost />} />
           <Route path="/citations" element={<Citations />} />
           <Route path="/publications" element={<Publications />} />
@@ -74,8 +77,8 @@ const AnimatedRoutes = () => {
 
           {/* Section routes */}
           <Route path="/about" element={<SectionRoute sectionId="about" />} />
-          <Route path="/skills" element={<SectionRoute sectionId="skills" />} />
-          <Route path="/open-source" element={<Navigate to="/publications" replace />} />
+          <Route path="/skills" element={<SectionRoute sectionId="featured" />} />
+          <Route path="/open-source" element={<OpenSource />} />
           <Route path="/contact" element={<SectionRoute sectionId="contact" />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "fetch-citations": "npx tsx scripts/fetchCitations.ts",
+    "fetch-citations": "tsx scripts/refreshCitations.ts",
     "build": "vite build && cp CNAME docs/CNAME",
-    "build:fresh": "npm run fetch-citations && vite build",
+    "build:fresh": "npm run fetch-citations && npm run fetch-github && npm run build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fetch-github": "tsx scripts/fetchGithubStats.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

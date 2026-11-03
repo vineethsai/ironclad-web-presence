@@ -1,0 +1,71 @@
+{
+  "fetchedAt": "2026-11-03T01:14:28.216Z",
+  "repos": {
+    "cisco-ai-defense/defenseclaw": {
+      "stars": 903,
+      "forks": 162,
+      "description": "Security Governance for Agentic AI",
+      "pushedAt": "2026-11-03T00:19:31Z"
+    },
+    "cisco-ai-defense/skill-scanner": {
+      "stars": 2682,
+      "forks": 342,
+      "description": "Security Scanner for Agent Skills",
+      "pushedAt": "2026-10-26T19:46:46Z"
+    },
+    "cisco-ai-defense/a2a-scanner": {
+      "stars": 169,
+      "forks": 32,
+      "description": "Scan A2A agents for potential threats and security issues",
+      "pushedAt": "2026-04-16T15:50:37Z"
+    },
+    "cisco-ai-defense/adversarial-hubness-detector": {
+      "stars": 19,
+      "forks": 3,
+      "description": "Scanner for adversarial hubs in RAG and vector databases",
+      "pushedAt": "2026-03-17T12:51:00Z"
+    },
+    "vineethsai/vulnerablemcp": {
+      "stars": 40,
+      "forks": 11,
+      "description": "A comprehensive database of Model Context Protocol vulnerabilities, security research, and exploits",
+      "pushedAt": "2026-02-16T08:06:18Z"
+    },
+    "mbhatt1/maif": {
+      "stars": 6,
+      "forks": 2,
+      "description": "Cryptographically-secure, auditable file format for AI agent memory with provenance tracking",
+      "pushedAt": "2026-04-17T23:54:17Z"
+    },
+    "vineethsai/asi": {
+      "stars": 21,
+      "forks": 11,
+      "description": "Threat models, verification standards, and security controls for AI agent architectures. Built on OWASP AISVS and NIST AI RMF.",
+      "pushedAt": "2026-02-17T05:37:44Z"
+    },
+    "vineethsai/aivss": {
+      "stars": 6,
+      "forks": 0,
+      "description": null,
+      "pushedAt": "2025-08-06T05:42:32Z"
+    },
+    "vineethsai/MCP-ETDI-docs": {
+      "stars": 8,
+      "forks": 3,
+      "description": null,
+      "pushedAt": "2025-05-29T15:25:28Z"
+    },
+    "vineethsai/tool-registry": {
+      "stars": 3,
+      "forks": 0,
+      "description": "A GenAI agent and tool registry system to securely vend scoped down JIT credentials",
+      "pushedAt": "2025-04-17T01:02:41Z"
+    },
+    "vineethsai/ANS": {
+      "stars": 0,
+      "forks": 1,
+      "description": null,
+      "pushedAt": "2025-05-09T17:52:07Z"
+    }
+  }
+}

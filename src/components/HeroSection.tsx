@@ -4,18 +4,17 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { MagneticButton } from '@/components/motion';
 import { EASE } from '@/components/motion/easing';
+import { profile } from '@/content/profile';
 
 const HeroScene = lazy(() => import('@/components/three/HeroScene'));
 
+// What I secure, typed after "Securing" in the hero
 const HERO_PHRASES = [
-  'Defending Digital Frontiers',
-  'Securing Applications',
-  'Protecting the Nation',
-  'Building Secure Systems',
-  'Empowering Developer Security',
-  'Safeguarding Digital Assets',
-  'Enhancing Cyber Resilience',
-  'Leading Security Innovation',
+  'AI agents',
+  'agent identity',
+  'MCP and agent tools',
+  'coding agents',
+  'RAG pipelines',
 ];
 
 // Component for animated text with typing and cursor effect
@@ -66,12 +65,14 @@ const AnimatedText = ({ phrases, className }: { phrases: string[], className?: s
   }, [reduceMotion]);
 
   return (
-    <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold mb-6 min-h-[1.2em] ${className}`}>
+    <p className={`font-mono text-xl md:text-3xl min-h-[1.4em] text-gray-200 ${className ?? ''}`}>
+      <span className="text-cyber-green">&gt;</span> Securing{' '}
       <span className="text-gradient cyber-glow-soft">{displayText}</span>
       <span
-        className={`inline-block w-[3px] h-[0.9em] align-[-0.08em] bg-cyber-green-light ml-2 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
+        aria-hidden="true"
+        className={`inline-block w-[3px] h-[0.9em] align-[-0.08em] bg-cyber-green-light ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
       />
-    </h1>
+    </p>
   );
 };
 
@@ -128,12 +129,19 @@ const HeroSection = () => {
                 <span className="absolute inline-flex h-full w-full rounded-full bg-cyber-green opacity-75 animate-ping" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-cyber-green-light" />
               </span>
-              CYBERSECURITY ENGINEER
+              {profile.title.toUpperCase()} · {profile.employer.toUpperCase()}
             </span>
           </motion.div>
 
-          {/* Animated text with rotating phrases and typing effect */}
-          <motion.div {...entrance(0.2)}>
+          <motion.h1
+            className="text-5xl md:text-7xl font-bold tracking-tight text-white"
+            {...entrance(0.15)}
+          >
+            {profile.name}
+          </motion.h1>
+
+          {/* Rotating focus areas with a typing effect */}
+          <motion.div {...entrance(0.25)}>
             <AnimatedText phrases={HERO_PHRASES} />
           </motion.div>
 
@@ -141,7 +149,7 @@ const HeroSection = () => {
             className="text-lg md:text-xl text-gray-300/90 max-w-2xl mx-auto leading-relaxed"
             {...entrance(0.35)}
           >
-            Specialized in penetration testing, threat analysis, and implementing robust security frameworks to keep your systems impenetrable.
+            I build open standards and tools that make AI agents safe to deploy, including the Agent Name Service, OWASP's AI Vulnerability Scoring System, and Cisco's open-source DefenseClaw.
           </motion.p>
 
           <motion.div
@@ -149,8 +157,8 @@ const HeroSection = () => {
             {...entrance(0.5)}
           >
             <MagneticButton>
-              <Link to="/blog" className="cyber-terminal-button animate-glow-pulse inline-block">
-                Read my Blog
+              <Link to="/publications" className="cyber-terminal-button animate-glow-pulse inline-block">
+                See my research
               </Link>
             </MagneticButton>
             <MagneticButton>
@@ -167,7 +175,7 @@ const HeroSection = () => {
 
       {/* Scroll cue */}
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2"
         initial={reduceMotion ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}

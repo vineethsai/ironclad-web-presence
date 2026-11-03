@@ -2,25 +2,26 @@ import React from 'react';
 import { MapPin, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Reveal, StaggerGroup, StaggerItem, SectionHeading, SpotlightCard, MagneticButton } from '@/components/motion';
+import { profile } from '@/content/profile';
 
 const contactRows = [
   {
     icon: <Linkedin className="h-6 w-6 text-cyber-green" />,
     title: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/vineethsai/',
+    link: profile.links.linkedin,
     label: 'Connect with me on LinkedIn',
   },
   {
     icon: <MapPin className="h-6 w-6 text-cyber-green" />,
     title: 'Location',
-    label: 'New York, NY, United States',
+    label: profile.location,
   },
   {
     icon: (
       <svg className="h-6 w-6 text-cyber-green" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2C7.03 2 2.73 6.11 2.07 11h3.02c.56-3.36 3.47-6 6.91-6s6.35 2.64 6.91 6h3.02C21.27 6.11 16.97 2 12 2zm0 20c-4.97 0-9.27-4.11-9.93-9h3.02c.56 3.36 3.47 6 6.91 6s6.35-2.64 6.91-6h3.02c-.66 4.89-4.96 9-9.93 9z"/></svg>
     ),
     title: 'Google Scholar',
-    link: 'https://scholar.google.com/citations?user=hIVoKbIAAAAJ&hl=en',
+    link: profile.links.scholar,
     label: 'View my Google Scholar profile',
   },
   {
@@ -28,7 +29,7 @@ const contactRows = [
       <svg className="h-6 w-6 text-cyber-green" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/><text x="12" y="16" textAnchor="middle" fontSize="10" fill="currentColor">iD</text></svg>
     ),
     title: 'ORCID',
-    link: 'https://orcid.org/0009-0007-4553-9930',
+    link: profile.links.orcid,
     label: 'View my ORCID profile',
   },
   {
@@ -36,12 +37,12 @@ const contactRows = [
       <svg className="h-6 w-6 text-cyber-green" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/><text x="12" y="16" textAnchor="middle" fontSize="8" fill="currentColor">S2</text></svg>
     ),
     title: 'Semantic Scholar',
-    link: 'https://www.semanticscholar.org/author/Vineeth-Sai-Narajala/2355085670',
+    link: profile.links.semanticScholar,
     label: 'View my Semantic Scholar profile',
   },
 ];
 
-const availableFor = ['Security Consulting', 'Penetration Testing', 'Security Training', 'Speaking Engagements'];
+const availableFor = profile.openTo;
 
 const ContactSection = () => {
   return (
@@ -53,7 +54,7 @@ const ContactSection = () => {
         <SectionHeading
           kicker="05 · Contact"
           title="Get In Touch"
-          subtitle="Want to get a coffee? Feel free to reach out on LinkedIn and I'll get back to you as soon as possible."
+          subtitle="Working on AI agent security, or want to grab a coffee in New York? Message me on LinkedIn and I'll get back to you."
         />
 
         <div className="max-w-2xl mx-auto">

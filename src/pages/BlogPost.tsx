@@ -76,7 +76,7 @@ const BlogPost = () => {
 
   // Redirect if post not found
   if (notFound || !post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to="/writing" replace />;
   }
 
   // Generate an optimized meta description
@@ -183,12 +183,17 @@ const BlogPost = () => {
       <main className="pt-16 pb-20">
         <div className="container mx-auto px-4">
           <div className="mb-8">
-            <Link to="/blog" className="text-cyber-green hover:underline flex items-center space-x-2">
+            <Link to="/writing" className="text-cyber-green hover:underline flex items-center space-x-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M15.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
               </svg>
-              <span>Back to Blog</span>
+              <span>Back to Writing</span>
             </Link>
+            <p className="mt-4 text-sm text-gray-400 border border-white/10 bg-white/[0.03] rounded-md px-4 py-3 max-w-3xl">
+              Archived post from {new Date(post.date).getFullYear()}. For my current work, see{' '}
+              <Link to="/writing" className="text-cyber-green hover:underline">Writing</Link> and{' '}
+              <Link to="/publications" className="text-cyber-green hover:underline">Research</Link>.
+            </p>
           </div>
           
           <article className="max-w-4xl mx-auto bg-cyber-grey rounded-lg p-8 border border-cyber-green/20" itemScope itemType="https://schema.org/BlogPosting">
@@ -216,14 +221,13 @@ const BlogPost = () => {
               </div>
               
               <div className="flex flex-wrap gap-2 mb-4">
-                {post.tags.map((tag, index) => (
-                  <Link 
-                    to={`/blog/tag/${encodeURIComponent(tag.toLowerCase())}`} 
-                    key={index} 
-                    className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm hover:bg-cyber-green/20 transition-colors"
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 bg-cyber-green/10 border border-cyber-green/30 rounded text-cyber-green text-sm"
                   >
                     #{tag}
-                  </Link>
+                  </span>
                 ))}
               </div>
             </header>
