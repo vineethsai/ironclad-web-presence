@@ -4,7 +4,6 @@ excerpt: "Discover effective security patterns for protecting big data workloads
 date: "March 26, 2025"
 author: "Vineeth Sai"
 tags: ["Cloud Security", "Big Data", "AWS", "Security Architecture", "Data Protection"]
-image: "https://vineethsai.com/images/cloud-security-patterns.jpg"
 lastModified: "March 30, 2025"
 ---
 

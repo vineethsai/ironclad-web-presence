@@ -73,36 +73,12 @@ const Media = () => {
         description: "Coverage of ANS as a protocol-agnostic registry system for secure AI agent discovery and interoperability."
       },
       {
-        title: "Agent Name Service: A Secure Pathway for AI Agent Discovery",
-        source: "BlogSec",
-        sourceType: "security-blog",
-        year: "2025",
-        link: "https://www.blogsec.info/agent-name-service-ans-a-secure-pathway-for-ai-agent-discovery-in-decentralised-ecosystems/",
-        description: "In-depth analysis of ANS for secure AI agent discovery in decentralized ecosystems."
-      },
-      {
-        title: "Agent Name Service for Secure AI Agent Discovery",
-        source: "AIGL Blog",
-        sourceType: "ai-blog",
-        year: "2025",
-        link: "https://www.aigl.blog/agent-name-service-ans-for-secure-ai-agent-discovery/",
-        description: "Technical overview of the ANS framework and its applications."
-      },
-      {
         title: "Agent Name Service Resource",
         source: "OWASP GenAI",
         sourceType: "owasp",
         year: "2025",
-        link: "https://genai.owasp.org/resource/agent-name-service-ans-for-secure-ai-agent-discovery-v1-0/",
+        link: "https://genai.owasp.org/resource/agent-name-service-ans-for-secure-al-agent-discovery-v1-0/",
         description: "Official OWASP resource page for the Agent Name Service specification."
-      },
-      {
-        title: "The Agent Name Service: It's Like DNS But for AI Agents",
-        source: "Daily.dev",
-        sourceType: "developer",
-        year: "2025",
-        link: "https://app.daily.dev/posts/the-agent-name-service-it-s-like-dns-but-for-ai-agents-hbb4keyl",
-        description: "Developer community coverage of ANS and its implications for AI agent ecosystems."
       }
     ],
     mcp: [
@@ -155,11 +131,11 @@ const Media = () => {
         description: "Discussion on balancing MCP security with functionality."
       },
       {
-        title: "Setting the New Frontier: Open Collaboration on MCP Security",
+        title: "Securing AI's New Frontier: The Power of Open Collaboration on MCP Security",
         source: "OWASP GenAI",
         sourceType: "owasp",
         year: "2025",
-        link: "https://genai.owasp.org/resource/2504/17/setting-the-new-frontier-the-power-of-open-collaboration-on-mcp-security/",
+        link: "https://genai.owasp.org/2025/04/22/securing-ais-new-frontier-the-power-of-open-collaboration-on-mcp-security/",
         description: "OWASP article on collaborative MCP security research."
       },
       {
@@ -169,14 +145,6 @@ const Media = () => {
         year: "2025",
         link: "https://marketresearch.com/2025/04/17/researchers-from-aws-and-intuit-propose-a-zero-trust-security-framework-to-protect-the-model-context-protocol-mcp-from-tool-poisoning-and-unauthorized-access/",
         description: "Coverage of the Zero Trust security framework proposal for MCP protection."
-      },
-      {
-        title: "MCP Security Research Briefing: A Safety Analysis Tutorial",
-        source: "Cy3erSec",
-        sourceType: "security-blog",
-        year: "2025",
-        link: "https://cy3ersec.uk/blog/mcp-security-research-briefing-a-safety-analysis-tutorial",
-        description: "Tutorial on MCP safety analysis methodologies."
       }
     ],
     aivss: [
@@ -213,22 +181,6 @@ const Media = () => {
         year: "2025",
         link: "https://blogs.cisco.com/ai/securing-ai-agents-with-ciscos-open-source-a2a-scanner",
         description: "Official Cisco blog announcing the A2A Scanner open-source security framework for autonomous agent networks."
-      },
-      {
-        title: "AI Security Integration",
-        source: "Lumeau.ai",
-        sourceType: "ai-platform",
-        year: "2025",
-        link: "https://lumeau.ai/",
-        description: "Integration of AI security frameworks and tools."
-      },
-      {
-        title: "MCP Audit Trails Implementation",
-        source: "Dhanu.one",
-        sourceType: "developer",
-        year: "2025",
-        link: "https://www.dhanu.one/blog/mcp-audit-trails",
-        description: "Implementation guide for MCP audit trails."
       }
     ]
   };
@@ -259,36 +211,6 @@ const Media = () => {
       link: "https://www.resilientcyber.io/p/resilient-cyber-w-vineeth-sai-narajala",
       description: "Discussion on MCP's role in the emerging Agentic AI ecosystem and security considerations for practitioners. Covered tool poisoning, rug pull attacks, and enterprise security best practices.",
       tags: ["MCP Security", "Agentic AI", "Enterprise Security"]
-    },
-    {
-      title: "MCP Security Research Deep Dive",
-      show: "Security Research Interview",
-      host: "Industry Security Researchers",
-      date: "2025",
-      type: "video",
-      link: "https://www.youtube.com/watch?v=IHGfv-7I2gI",
-      description: "Video interview discussing MCP security research, vulnerability assessments, and enterprise security considerations for AI agent deployments.",
-      tags: ["Video Interview", "MCP Research", "Vulnerability Assessment"]
-    },
-    {
-      title: "Agentic AI Security: Frameworks and Best Practices",
-      show: "AI Security Insights",
-      host: "Security Community",
-      date: "2025",
-      type: "video",
-      link: "https://www.youtube.com/watch?v=BrgqP6AStks",
-      description: "Comprehensive discussion on securing agentic AI systems, covering threat modeling approaches, security frameworks, and practical implementation strategies for enterprise environments.",
-      tags: ["Agentic AI", "Security Frameworks", "Enterprise Security"]
-    },
-    {
-      title: "AI Security Technical Deep Dive",
-      show: "Technical Deep Dive Series",
-      host: "Security Practitioners",
-      date: "2025",
-      type: "video",
-      link: "https://www.youtube.com/watch?v=ESxdT2dWMtc&list=PLbIIzrns6QE_SV0_N2Nkkuo_CWgZuHjUN&index=3",
-      description: "Part of a technical series discussing advanced AI security topics, threat modeling for LLM applications, and practical implementation of security frameworks.",
-      tags: ["Technical Series", "AI Security", "Threat Modeling"]
     }
   ];
 

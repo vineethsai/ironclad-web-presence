@@ -7,9 +7,9 @@ import scholar from '@/data/scholarMetrics.json';
 const ImpactStrip: React.FC = () => {
   const stats = [
     { icon: BookOpen, value: scholar.publicationCount, suffix: '', label: 'Scholar-Listed Works' },
-    { icon: Mic, value: 11, suffix: '+', label: 'Conference Talks' },
+    { icon: Mic, value: 12, suffix: '', label: 'Conference Talks' },
     { icon: Globe, value: scholar.totalCitations, suffix: '', label: 'Google Scholar Citations' },
-    { icon: Quote, value: 21, suffix: '+', label: 'Press Mentions' },
+    { icon: Quote, value: 15, suffix: '', label: 'Press Mentions' },
   ];
 
   return (

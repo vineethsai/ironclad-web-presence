@@ -4,7 +4,6 @@ excerpt: "Learn essential security considerations for implementing generative AI
 date: "April 2, 2025"
 author: "Vineeth Sai"
 tags: ["AI Security", "GenAI", "Cybersecurity", "Enterprise Security", "Prompt Injection"]
-image: "https://vineethsai.com/images/generative-ai-security.jpg"
 lastModified: "April 8, 2025"
 ---
 

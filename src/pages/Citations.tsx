@@ -118,7 +118,7 @@ const Citations = () => {
     <PageTransition>
       <div className="min-h-screen bg-cyber-dark text-white">
         <Helmet>
-          <title>Citations | Vineeth Sai Narajala - Cybersecurity Engineer</title>
+          <title>Citations | Vineeth Sai Narajala</title>
           <meta 
             name="description" 
             content={`Research citations and impact visualization for Vineeth Sai Narajala. ${scholar.totalCitations} Google Scholar citations and ${filteredStats.totalCitations} mapped external citing papers.`}

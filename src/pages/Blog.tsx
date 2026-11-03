@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { BlogPostContent } from '@/components/BlogPostContent';
-import ViewCounter from '@/components/ViewCounter';
 import { BlogPost } from '@/data/blogPosts';
 import { getAllPosts, getPostById, getPostsByTag } from '@/services/blogService';
 import PageTransition from '@/components/PageTransition';
@@ -124,7 +123,7 @@ const Blog = () => {
       <PageTransition>
         <div className="min-h-screen bg-cyber-dark text-white">
           <Helmet>
-            <title>{currentPost.title} | Vineeth Sai Narajala - Cybersecurity Engineer</title>
+            <title>{currentPost.title} | Vineeth Sai Narajala</title>
             <meta name="description" content={currentPost.excerpt} />
             <meta property="og:title" content={currentPost.title} />
             <meta property="og:description" content={currentPost.excerpt} />
@@ -145,12 +144,12 @@ const Blog = () => {
   }
 
   // Set up page title and description based on tag filter
-  let pageTitle = "Blog | Vineeth Sai - Cybersecurity Engineer";
+  let pageTitle = "Blog | Vineeth Sai Narajala";
   let pageDescription = "Expert insights on AI security, cloud security, and cybersecurity best practices from Vineeth Sai, an AI Security Researcher at Cisco.";
   
   if (tag) {
-    pageTitle = `${tag} Articles | Vineeth Sai - Cybersecurity Engineer`;
-    pageDescription = `Expert articles about ${tag} from Vineeth Sai, a Cybersecurity Engineer specializing in cloud security and AI safety.`;
+    pageTitle = `${tag} Articles | Vineeth Sai Narajala`;
+    pageDescription = `Expert articles about ${tag} from Vineeth Sai Narajala, an AI security researcher at Cisco.`;
   }
 
   // Otherwise, show the blog list
@@ -160,7 +159,7 @@ const Blog = () => {
         <Helmet>
           <title>{pageTitle}</title>
           <meta name="description" content={pageDescription} />
-          <meta name="keywords" content={`Vineeth Sai, Cybersecurity Engineer, Amazon, ${allTags.join(', ')}`} />
+          <meta name="keywords" content={`Vineeth Sai Narajala, AI Security, ${allTags.join(', ')}`} />
           <meta property="og:title" content={pageTitle} />
           <meta property="og:description" content={pageDescription} />
           <meta property="og:type" content="website" />
@@ -176,9 +175,9 @@ const Blog = () => {
               "description": pageDescription,
               "author": {
                 "@type": "Person",
-                "name": "Vineeth Sai",
+                "name": "Vineeth Sai Narajala",
                 "url": "https://vineethsai.com",
-                "jobTitle": "Cybersecurity Engineer",
+                "jobTitle": "AI Security Researcher",
                 "worksFor": {
                   "@type": "Organization",
                   "name": "Cisco"
@@ -186,7 +185,7 @@ const Blog = () => {
               },
               "publisher": {
                 "@type": "Organization",
-                "name": "Vineeth Sai",
+                "name": "Vineeth Sai Narajala",
                 "logo": {
                   "@type": "ImageObject",
                   "url": "https://vineethsai.com/favicon.svg"
@@ -307,8 +306,6 @@ const Blog = () => {
                               <span>{post.date}</span>
                               <span className="mx-2">•</span>
                               <span>{post.author}</span>
-                              <span className="mx-2">•</span>
-                              <ViewCounter postId={post.id} />
                             </div>
                             <p className="text-gray-300 mb-4">{post.excerpt}</p>
                             <div className="flex flex-wrap gap-2 mb-4">

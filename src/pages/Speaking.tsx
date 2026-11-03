@@ -18,7 +18,7 @@ const ConferenceTalk = ({ title, event, year, description, link, abstract, video
   event: string;
   year: string;
   description: string;
-  link: string;
+  link?: string;
   abstract: string;
   videoLink?: string;
 }) => {
@@ -45,9 +45,11 @@ const ConferenceTalk = ({ title, event, year, description, link, abstract, video
         </div>
         <p className="text-gray-300 text-sm">{description}</p>
         <div className="flex flex-wrap gap-4 mt-2">
-          <a href={link} target="_blank" rel="noopener noreferrer" className="text-cyber-green underline text-sm">
-            View conference details
-          </a>
+          {link && (
+            <a href={link} target="_blank" rel="noopener noreferrer" className="text-cyber-green underline text-sm">
+              View conference details
+            </a>
+          )}
           {videoLink && (
             videoId ? (
               <button
@@ -164,7 +166,7 @@ const Speaking = () => {
       event: "MIT Media Lab NANDA Initiative",
       year: "2025",
       description: "Presented ANS framework to the Networked Agents and Decentralized AI initiative, a pioneering project bringing together 18 leading research institutions led by Professor Ramesh Raskar.",
-      link: "https://www.media.mit.edu/projects/nanda/overview/",
+      link: "https://nanda.media.mit.edu/",
       abstract: "Presented the Agent Name Service (ANS) framework to MIT Media Lab's NANDA (Networked Agents and Decentralized AI) Initiative, a pioneering project developing foundational infrastructure for the 'Internet of AI Agents.' The presentation covered secure agent discovery, identity verification, and interoperability mechanisms for multi-agent systems."
     },
     {
@@ -182,7 +184,7 @@ const Speaking = () => {
       event: "ACM SIGCOMM NAIC",
       year: "2025",
       description: "Presented research on networking requirements and security considerations for AI agent communication at scale.",
-      link: "https://www.sigcomm.org/",
+      link: "https://conferences.sigcomm.org/sigcomm/2025/workshop/naic/",
       abstract: "Discussed the unique networking challenges posed by multi-agent AI systems, including latency requirements, bandwidth considerations, and security protocols for agent-to-agent communication in distributed computing environments."
     },
     {
@@ -191,7 +193,6 @@ const Speaking = () => {
       event: "Patchwork by Advanced AI Society",
       year: "2025",
       description: "Panel discussion on AI security standards and the future of enterprise AI governance.",
-      link: "https://advancedai.org/",
       abstract: "Participated in a panel discussion hosted by the Advanced AI Society, an industry association advancing enterprise-grade adoption of Proof-of-Control AI solutions. Discussed the evolving landscape of AI security standards and governance frameworks."
     },
     {
@@ -205,7 +206,7 @@ const Speaking = () => {
     },
     {
       id: 5,
-      title: "Threat Modelling for LLM Applications via SafeGen",
+      title: "Threat Modeling for LLM Applications via SafeGen",
       event: "BSides Seattle",
       year: "2025",
       description: "Shared methodologies for identifying and mitigating security risks in applications using large language models.",
@@ -218,7 +219,6 @@ const Speaking = () => {
       event: "BSides Harrisburg",
       year: "2025",
       description: "Presented techniques for implementing robust security controls for enterprise GenAI deployments.",
-      link: "https://bsidesharrisburg.com/",
       abstract: "The rapid adoption of Generative AI (GenAI) presents unique security challenges that organizations must address while maintaining development velocity. This presentation provides practical strategies for building secure GenAI applications, addressing threat modeling for GenAI systems, secure integration patterns, and robust output validation mechanisms."
     },
     {
@@ -251,20 +251,20 @@ const Speaking = () => {
     },
     {
       id: 10,
-      title: "Threat Modeling for LLM Applications",
-      event: "BSides Baltimore",
+      title: "Scaling the Security Wall: Agile Threat Modeling for Complex Systems",
+      event: "BSidesCharm (Baltimore)",
       year: "2024",
-      description: "Shared methodologies for identifying and mitigating security risks in applications using large language models.",
-      link: "https://bsidesbaltimore.org/",
+      description: "Making threat modeling fast enough to keep up with cloud architectures, microservices, and rapid release cycles, without adding security bottlenecks.",
+      link: "https://bsidescharm.org/",
       abstract: "This talk explores the urgent need for a paradigm shift in threat modeling to address the complexities of large-scale systems. Adding more security bottlenecks to the development process is not only expensive but also risks losing developers' trust. However, identifying security issues later in the Software Development Life Cycle (SDLC) or after launch proves to be even more expensive. Threat modeling provides an ideal and cost-effective approach to incorporating security into the development process.",
       videoLink: "https://www.youtube.com/watch?v=lZYATxO0rMA"
     },
     {
       id: 11,
-      title: "Agile Threat Modelling for Complex Systems",
+      title: "Agile Threat Modeling for Complex Systems",
       event: "BSides Austin",
       year: "2024",
-      description: "Exploring innovative approaches to threat modelling with AI assistance for rapidly evolving systems.",
+      description: "Exploring innovative approaches to threat modeling with AI assistance for rapidly evolving systems.",
       link: "https://bsidesaustin.com/schedule/",
       abstract: "This talk explores the urgent need for a paradigm shift in threat modeling to address the complexities of large-scale systems. The presentation delves into the challenges presented by cloud architectures, microservices, and rapid development practices, highlighting the shortcomings of traditional threat modeling approaches like STRIDE and DREAD. It also presents ways to integrate a fast and scalable threat modeling stage into the SDLC."
     }
@@ -430,16 +430,16 @@ const Speaking = () => {
 
   const videoRecordings = [
     {
-      title: "Threat Modeling for LLM Applications",
-      event: "BSides Baltimore 2024",
+      title: "Scaling the Security Wall: Agile Threat Modeling for Complex Systems",
+      event: "BSidesCharm 2024",
       link: "https://www.youtube.com/watch?v=lZYATxO0rMA",
-      description: "Full recording of the BSides Baltimore presentation on threat modeling methodologies for LLM applications."
+      description: "Full recording of the BSidesCharm (Baltimore) talk on fast, scalable threat modeling for complex systems."
     },
     {
-      title: "AI Security and Agentic Systems",
-      event: "Security Conference",
+      title: "NANDA & Agent Name Service (ANS) Security",
+      event: "Project NANDA (MIT Media Lab)",
       link: "https://www.youtube.com/watch?v=yVgy5VqgvxE",
-      description: "Discussion on securing AI systems and agentic architectures in enterprise environments."
+      description: "Project NANDA session on the Agent Name Service and secure identity for AI agents."
     }
   ];
 
@@ -657,16 +657,6 @@ const Speaking = () => {
                   
                   {expandedSections.openSource && (
                     <div className="p-8 pt-0 animate-in fade-in slide-in-from-top-2 duration-300">
-                      {/* GitHub Stats Card */}
-                      <div className="mb-8 flex justify-center">
-                        <a href="https://github.com/vineethsai" target="_blank" rel="noopener noreferrer">
-                          <img 
-                            src="https://github-readme-stats.vercel.app/api?username=vineethsai&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117" 
-                            alt="GitHub Stats"
-                            className="rounded-lg"
-                          />
-                        </a>
-                      </div>
 
                       {/* Project Cards */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

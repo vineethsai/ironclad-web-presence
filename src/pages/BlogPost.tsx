@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { BlogPostContent } from '@/components/BlogPostContent';
-import ViewCounter from '@/components/ViewCounter';
 import { BlogPost as BlogPostType } from '@/data/blogPosts';
 import { getPostById, getRelatedPosts } from '@/services/blogService';
 import { extractKeywords, extractFAQSchema } from '@/services/seoHelpers';
@@ -101,7 +100,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-cyber-dark text-white">
       <Helmet>
-        <title>{post.title} | Vineeth Sai - Cybersecurity Engineer</title>
+        <title>{post.title} | Vineeth Sai Narajala</title>
         <meta name="description" content={cleanDescription} />
         <meta name="keywords" content={allKeywords.join(', ')} />
         <meta name="author" content={post.author} />
@@ -111,14 +110,13 @@ const BlogPost = () => {
         <meta property="og:description" content={cleanDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={postUrl} />
-        {post.image && <meta property="og:image" content={post.image} />}
-        {!post.image && <meta property="og:image" content="https://vineethsai.com/placeholder.svg" />}
+        <meta property="og:image" content={post.image || "https://vineethsai.com/og-image.png"} />
         
         {/* Twitter Card data */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={cleanDescription} />
-        {post.image && <meta name="twitter:image" content={post.image} />}
+        <meta name="twitter:image" content={post.image || "https://vineethsai.com/og-image.png"} />
         
         {/* Article specific tags */}
         <meta property="article:published_time" content={publicationDate} />
@@ -137,7 +135,7 @@ const BlogPost = () => {
             "@type": "BlogPosting",
             "headline": post.title,
             "description": post.excerpt,
-            "image": post.image || "https://vineethsai.com/placeholder.svg",
+            "image": post.image || "https://vineethsai.com/og-image.png",
             "author": {
               "@type": "Person",
               "name": post.author,
@@ -215,8 +213,6 @@ const BlogPost = () => {
                   </svg>
                   {post.author}
                 </span>
-                <span className="mx-2">•</span>
-                <ViewCounter postId={post.id} />
               </div>
               
               <div className="flex flex-wrap gap-2 mb-4">
@@ -246,7 +242,7 @@ const BlogPost = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">About {post.author}</h3>
-                  <p className="text-gray-300">Vineeth Sai is a Cybersecurity Engineer specializing in cloud security, application security, and AI safety protocols. With experience at Amazon Web Services, he helps organizations implement robust security solutions for modern technology stacks.</p>
+                  <p className="text-gray-300">Vineeth Sai Narajala is an AI security researcher at Cisco. He works on securing AI agents, including agent identity, MCP and tool security, and AI vulnerability scoring, and previously worked on security at Meta and AWS.</p>
                 </div>
               </div>
             </div>
