@@ -26,13 +26,13 @@ const Navbar = () => {
 
   // Fix paths for HashRouter - remove # prefix since HashRouter adds it automatically
   const navLinks = [
-    { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Experience', path: '/experience' },
-    { name: 'Publications', path: '/publications' },
+    { name: 'Research', path: '/publications' },
+    { name: 'Open Source', path: '/open-source' },
     { name: 'Speaking', path: '/speaking' },
     { name: 'Media', path: '/media' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'Writing', path: '/writing' },
     { name: 'Citations', path: '/citations' },
     { name: 'Contact', path: '/contact' },
   ];

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Shield, Github, Linkedin, Heart } from 'lucide-react';
+import { Shield, Github, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { profile } from '@/content/profile';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,44 +12,49 @@ const Footer = () => {
         <div className="flex flex-col items-center">
           <div className="flex items-center mb-6">
             <Shield className="h-8 w-8 text-cyber-green mr-2" />
-            <span className="text-xl font-bold text-white">Vineeth Sai</span>
+            <span className="text-xl font-bold text-white">{profile.name}</span>
           </div>
 
           <p className="text-gray-400 text-center max-w-md mb-8">
-            AI security researcher at Cisco, working on securing AI agents.
+            {profile.title} at {profile.employer}, working on securing AI agents.
           </p>
 
           <div className="flex items-center space-x-6 mb-8">
-            <a href="https://github.com/vineethsai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
+            <a href={profile.links.github} aria-label="GitHub" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://www.linkedin.com/in/vineethsai/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
+            <a href={profile.links.linkedin} aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="https://orcid.org/0009-0007-4553-9930" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
+            <a href={profile.links.orcid} aria-label="ORCID" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
               <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/><text x="12" y="16" textAnchor="middle" fontSize="10" fill="currentColor">iD</text></svg>
             </a>
-            <a href="https://www.semanticscholar.org/author/Vineeth-Sai-Narajala/2355085670" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
+            <a href={profile.links.semanticScholar} aria-label="Semantic Scholar" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-green transition-colors">
               <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/><text x="12" y="16" textAnchor="middle" fontSize="8" fill="currentColor">S2</text></svg>
             </a>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Link to="/" className="text-gray-400 hover:text-cyber-green transition-colors">Home</Link>
-            <Link to="/about" className="text-gray-400 hover:text-cyber-green transition-colors">About</Link>
-            <Link to="/skills" className="text-gray-400 hover:text-cyber-green transition-colors">Skills</Link>
-            <Link to="/experience" className="text-gray-400 hover:text-cyber-green transition-colors">Experience</Link>
-            <Link to="/blog" className="text-gray-400 hover:text-cyber-green transition-colors">Blog</Link>
-            <Link to="/contact" className="text-gray-400 hover:text-cyber-green transition-colors">Contact</Link>
+            {[
+              ['/', 'Home'],
+              ['/experience', 'Experience'],
+              ['/publications', 'Research'],
+              ['/open-source', 'Open Source'],
+              ['/speaking', 'Speaking'],
+              ['/media', 'Media'],
+              ['/writing', 'Writing'],
+              ['/citations', 'Citations'],
+              ['/contact', 'Contact'],
+            ].map(([to, label]) => (
+              <Link key={to} to={to} className="text-gray-400 hover:text-cyber-green transition-colors">
+                {label}
+              </Link>
+            ))}
           </div>
 
           <div className="border-t border-cyber-green/10 pt-8 w-full">
-            <p className="text-gray-500 text-center flex items-center justify-center">
-              <span>© {currentYear} Vineeth Sai. All rights reserved.</span>
-              <span className="mx-2">|</span>
-              <span className="flex items-center">
-                Made with <Heart className="h-4 w-4 text-cyber-green mx-1" /> for digital security
-              </span>
+            <p className="text-gray-500 text-center text-sm">
+              © {currentYear} {profile.name}
             </p>
           </div>
         </div>

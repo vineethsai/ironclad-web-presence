@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection';
-import SkillsSection from '@/components/SkillsSection';
+import FeaturedWorkSection from '@/components/FeaturedWorkSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import PageTransition from '@/components/PageTransition';
@@ -24,14 +24,14 @@ const previewCards = [
   {
     to: '/publications',
     icon: BookOpen,
-    title: 'Publications',
-    description: 'Peer-reviewed papers, OWASP guides, and awards.',
+    title: 'Research',
+    description: 'Peer-reviewed papers, preprints, IETF and OWASP standards.',
   },
   {
     to: '/speaking',
     icon: Globe,
     title: 'Speaking',
-    description: 'Conference talks, open source projects, and industry adoption.',
+    description: 'Conference talks, workshops, and recordings.',
   },
   {
     to: '/media',
@@ -62,21 +62,22 @@ const Index = () => {
           <Marquee
             items={[
               'IEEE',
+              'IETF',
               'OWASP',
+              'Linux Foundation',
+              'Cloud Security Alliance',
+              'ACSAC',
+              'MIT Project NANDA',
               'arXiv',
               'BSides',
-              'Cloud Security Alliance',
-              'USENIX',
-              'Agentic AI Security',
-              'Zero Trust',
-              'Threat Modeling',
-              'GenAI Security',
+              'Agent Identity',
+              'MCP Security',
             ]}
             className="py-5 bg-cyber-darker border-b border-cyber-green/10"
           />
           <AboutSection />
           <ExperienceSection />
-          <SkillsSection />
+          <FeaturedWorkSection />
 
           {/* Preview Cards Section */}
           <section className="py-20 bg-cyber-darker relative overflow-hidden">

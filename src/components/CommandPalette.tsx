@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/command';
 import {
   Home, User, Briefcase, BookOpen, Mic, Newspaper, PenLine, Globe, TrendingUp,
-  Mail, FileText, ExternalLink, Search,
+  Mail, FileText, ExternalLink, Search, Github,
 } from 'lucide-react';
 import type { BlogPost } from '@/data/blogPosts';
 import type { Publication } from '@/types/citations';
@@ -20,10 +20,11 @@ const pages = [
   { name: 'Home', path: '/', icon: Home, keywords: 'index main' },
   { name: 'About', path: '/about', icon: User, keywords: 'bio who' },
   { name: 'Experience & Career', path: '/experience', icon: Briefcase, keywords: 'work jobs career history' },
-  { name: 'Publications', path: '/publications', icon: BookOpen, keywords: 'papers research ieee' },
-  { name: 'Speaking & Industry', path: '/speaking', icon: Mic, keywords: 'talks conferences presentations' },
+  { name: 'Research & Publications', path: '/publications', icon: BookOpen, keywords: 'papers research ieee arxiv ietf owasp' },
+  { name: 'Open Source', path: '/open-source', icon: Github, keywords: 'github code tools defenseclaw scanner' },
+  { name: 'Speaking', path: '/speaking', icon: Mic, keywords: 'talks conferences presentations videos' },
   { name: 'Media', path: '/media', icon: Newspaper, keywords: 'press coverage podcasts' },
-  { name: 'Blog', path: '/blog', icon: PenLine, keywords: 'articles writing posts' },
+  { name: 'Writing', path: '/writing', icon: PenLine, keywords: 'articles blog posts cisco' },
   { name: 'Citations (3D Globe)', path: '/citations', icon: Globe, keywords: 'research impact map globe' },
   { name: 'Research Impact', path: '/research-impact', icon: TrendingUp, keywords: 'analytics charts metrics' },
   { name: 'Contact', path: '/contact', icon: Mail, keywords: 'email reach connect' },

@@ -2,43 +2,11 @@ import React from 'react';
 import { Award, Briefcase, ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Reveal, StaggerGroup, StaggerItem, SectionHeading, SpotlightCard } from '@/components/motion';
+import { workExperience, leadership } from '@/content/experience';
 
-const leadership = [
-  {
-    title: 'Co Leader and Founding Member of AIVSS',
-    period: 'Jun 2025 - Present',
-    org: 'OWASP AIVSS Project ↗',
-    link: 'https://aivss.owasp.org/',
-    description:
-      'AI Vulnerability Scoring System and Agentic AI Top 10 - Leading the development of comprehensive vulnerability scoring methodologies specifically designed for AI systems, including agentic AI applications.',
-    skills: ['AI Security', 'Vulnerability Assessment', 'Open Source Leadership'],
-  },
-  {
-    title: 'Co Lead for Agentic Application Security',
-    period: 'Mar 2025 - Present',
-    org: 'OWASP GenAI Project - Agentic Security Initiative (ASI) ↗',
-    link: 'http://genai.owasp.org/',
-    description:
-      'Working with the open source community to advance the security of Agentic AI and GenAI generally by contributing and authoring white papers, security frameworks, and best practices for the industry.',
-    skills: ['Agentic AI Security', 'GenAI Security', 'Community Leadership'],
-  },
-];
 
 const ExperienceSection = () => {
-  const currentRole = {
-    title: 'Senior Technical Leader - AI Security Researcher',
-    company: 'Cisco',
-    period: 'November 2025 - Present',
-    location: 'New York, United States',
-    description: `
-      <ul>
-        <li>Leading research and development of AI security frameworks, agentic AI threat modeling, and zero-trust protocols for multi-agent systems</li>
-        <li>Architecting enterprise-grade security solutions for generative AI and autonomous agent deployments</li>
-        <li>Driving thought leadership in agentic AI security through cutting-edge research, publications, and industry collaboration</li>
-      </ul>
-    `,
-    skills: ['Agentic AI Security', 'Zero Trust Architecture', 'AI Security Research', 'Threat Modeling']
-  };
+  const currentRole = workExperience[0];
 
   return (
     <section id="experience" className="py-20 bg-cyber-darker relative overflow-hidden">
@@ -65,7 +33,11 @@ const ExperienceSection = () => {
                 </div>
                 <h5 className="text-lg text-cyber-green mb-4">{currentRole.company}</h5>
 
-                <div dangerouslySetInnerHTML={{ __html: currentRole.description }} className="text-gray-300 mt-4" />
+                <ul className="text-gray-300 mt-4 space-y-2 list-disc pl-5 marker:text-cyber-green/70">
+                  {currentRole.highlights.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {currentRole.skills.map((skill, skillIndex) => (
                     <span
@@ -113,7 +85,7 @@ const ExperienceSection = () => {
                         rel="noopener noreferrer"
                         className="hover:text-cyber-green-light transition-colors"
                       >
-                        {role.org}
+                        {role.org} ↗
                       </a>
                     </h5>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{role.description}</p>
