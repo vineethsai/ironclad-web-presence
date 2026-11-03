@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -205,7 +205,7 @@ const ResearchImpact = () => {
                         <Tooltip
                           contentStyle={tooltipStyle}
                           cursor={{ fill: 'rgba(51, 204, 102, 0.06)' }}
-                          formatter={(value: number, _name, item) => [`${value} citations`, item.payload.fullTitle]}
+                          formatter={(value, _name, item) => [`${value} citations`, (item.payload as { fullTitle: string }).fullTitle]}
                         />
                         <Bar dataKey="citations" fill={GREEN} radius={[0, 6, 6, 0]} maxBarSize={22} />
                       </BarChart>

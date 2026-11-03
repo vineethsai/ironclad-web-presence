@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, GitFork, Globe, Newspaper } from 'lucide-react';
 import { Github } from '@/components/icons/BrandIcons';
 import PageShell from '@/components/content/PageShell';

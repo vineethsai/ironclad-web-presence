@@ -1,4 +1,3 @@
-import React from 'react';
 import { Newspaper, Headphones, Star } from 'lucide-react';
 import PageShell from '@/components/content/PageShell';
 import { CollapsibleSection, Chip, ExternalButton, formatMonth } from '@/components/content/ContentBlocks';

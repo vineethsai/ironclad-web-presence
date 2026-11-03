@@ -1,5 +1,4 @@
-import React from 'react';
-import { Award, Briefcase, ArrowRight, Shield } from 'lucide-react';
+import { Briefcase, ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Reveal, StaggerGroup, StaggerItem, SectionHeading, SpotlightCard } from '@/components/motion';
 import { workExperience, leadership } from '@/content/experience';

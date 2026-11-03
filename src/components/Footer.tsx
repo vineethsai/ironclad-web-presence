@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield } from 'lucide-react';
 import { Github, Linkedin } from '@/components/icons/BrandIcons';
 import { Link } from 'react-router-dom';

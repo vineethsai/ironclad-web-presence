@@ -1,4 +1,3 @@
-import React from 'react';
 import { Fingerprint, Wrench, Gauge, ShieldCheck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Reveal, StaggerGroup, StaggerItem, SectionHeading, SpotlightCard, TiltCard } from '@/components/motion';

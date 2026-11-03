@@ -1,4 +1,3 @@
-import React from 'react';
 import { MapPin } from 'lucide-react';
 import { Linkedin } from '@/components/icons/BrandIcons';
 import { Button } from '@/components/ui/button';

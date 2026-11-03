@@ -1,5 +1,5 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "vineethsai-com",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,8 @@
     "build:fresh": "npm run fetch-citations && npm run fetch-github && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "fetch-github": "tsx scripts/fetchGithubStats.ts"
+    "fetch-github": "tsx scripts/fetchGithubStats.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.3.1",
@@ -33,16 +34,16 @@
     "react-router-dom": "^7.18.5",
     "recharts": "^3.10.1",
     "remark-gfm": "^4.0.1",
-    "tailwind-merge": "^2.5.2",
+    "tailwind-merge": "^3.7.0",
     "three": "^0.187.0",
     "topojson-client": "^3.1.0",
     "world-atlas": "^2.0.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
+    "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.3.4",
     "@types/geojson": "^7946.0.16",
-    "@types/leaflet": "^1.9.8",
+    "@types/leaflet": "^1.9.22",
     "@types/node": "^24.0.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
@@ -50,15 +51,18 @@
     "@types/topojson-client": "^3.1.5",
     "@types/topojson-specification": "^1.0.5",
     "@vitejs/plugin-react-swc": "^4.3.3",
-    "eslint": "^9.9.0",
-    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-    "eslint-plugin-react-refresh": "^0.4.9",
-    "globals": "^15.9.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.14.0",
     "tailwindcss": "^4.3.4",
     "tsx": "^4.23.15",
     "tw-animate-css": "^1.4.0",
-    "typescript": "^5.5.3",
-    "typescript-eslint": "^8.65.0",
+    "typescript": "~6.0",
+    "typescript-eslint": "^8.72.1",
     "vite": "^8.3.5"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1"
   }
 }

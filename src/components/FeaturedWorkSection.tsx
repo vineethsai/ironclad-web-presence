@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Fingerprint, Gauge, ShieldCheck, ScanSearch, Wrench, Network } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
