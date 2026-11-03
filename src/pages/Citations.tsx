@@ -643,7 +643,7 @@ const Citations = () => {
             {/* Data Source Notice */}
             <div className="mt-8 text-center text-sm text-gray-500">
               <p>
-                Data sourced from Google Scholar using{' '}
+                Citing papers from Google Scholar (via{' '}
                 <a 
                   href="https://github.com/ChenLiu-1996/CitationMap" 
                   target="_blank" 
@@ -652,7 +652,11 @@ const Citations = () => {
                 >
                   CitationMap
                 </a>
-                . Geographic data from OpenStreetMap Nominatim.
+                ) and{' '}
+                <a href="https://openalex.org/" target="_blank" rel="noopener noreferrer" className="text-cyber-green hover:underline">
+                  OpenAlex
+                </a>
+                . Locations from OpenStreetMap Nominatim and OpenAlex.
               </p>
             </div>
           </div>

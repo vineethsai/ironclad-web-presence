@@ -1,5 +1,6 @@
 import React from 'react';
-import { Shield, Github, Linkedin } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Github, Linkedin } from '@/components/icons/BrandIcons';
 import { Link } from 'react-router-dom';
 import { profile } from '@/content/profile';
 

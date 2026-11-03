@@ -1,5 +1,6 @@
 import React from 'react';
-import { MapPin, Linkedin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Linkedin } from '@/components/icons/BrandIcons';
 import { Button } from '@/components/ui/button';
 import { Reveal, StaggerGroup, StaggerItem, SectionHeading, SpotlightCard, MagneticButton } from '@/components/motion';
 import { profile } from '@/content/profile';

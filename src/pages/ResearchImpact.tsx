@@ -99,7 +99,7 @@ const ResearchImpact = () => {
       icon: MapPin,
       label: 'Global Locations',
       value: stats.uniqueLocations,
-      caption: `${stats.topCountries.length} countries reached`,
+      caption: `${new Set(locations.map((l) => l.country)).size} countries reached`,
     },
     {
       icon: Award,
@@ -311,7 +311,7 @@ const ResearchImpact = () => {
 
             <Reveal className="mt-8">
               <p className="text-center text-sm text-gray-500">
-                Data sourced from Google Scholar. Self-citations are excluded from external citation counts.
+                Citation counts from Google Scholar; citing papers and locations from Google Scholar (via CitationMap) and OpenAlex. Self-citations are excluded.
               </p>
             </Reveal>
           </div>

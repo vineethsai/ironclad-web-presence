@@ -1,4 +1,4 @@
-import{f as getAugmentedNamespace,g as getDefaultExportFromCjs}from"./three-B5WNcbJQ.js";const __vite_glob_0_0=`---
+import{e as getAugmentedNamespace,g as getDefaultExportFromCjs}from"./three-D0zW4Oqw.js";const __vite_glob_0_0=`---
 title: "Modern Cloud Security Patterns for Big Data Workloads"
 excerpt: "Discover effective security patterns for protecting big data workloads in the cloud, with practical examples for AWS, encryption strategies, network segmentation, and continuous compliance monitoring."
 date: "March 26, 2025"

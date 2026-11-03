@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Youtube } from 'lucide-react';
+import { Youtube } from '@/components/icons/BrandIcons';
 import { Dialog, DialogContent, DialogOverlay, DialogTitle } from '@/components/ui/dialog';
 
 const getYouTubeId = (url: string): string | null => {

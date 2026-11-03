@@ -9,10 +9,8 @@ import {
   CommandList,
   CommandSeparator,
 } from '@/components/ui/command';
-import {
-  Home, User, Briefcase, BookOpen, Mic, Newspaper, PenLine, Globe, TrendingUp,
-  Mail, FileText, ExternalLink, Search, Github,
-} from 'lucide-react';
+import { Home, User, Briefcase, BookOpen, Mic, Newspaper, PenLine, Globe, TrendingUp, Mail, FileText, ExternalLink, Search } from 'lucide-react';
+import { Github } from '@/components/icons/BrandIcons';
 import type { BlogPost } from '@/data/blogPosts';
 import type { Publication } from '@/types/citations';
 

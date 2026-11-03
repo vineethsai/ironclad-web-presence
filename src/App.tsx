@@ -88,7 +88,7 @@ const App = () => (
   <>
     <Preloader />
     <CustomCursor />
-    <HashRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <HashRouter>
       <CommandPalette />
       <AnimatedRoutes />
     </HashRouter>
