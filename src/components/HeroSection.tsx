@@ -2,11 +2,28 @@ import { useEffect, useRef, useState, Suspense, lazy } from 'react';
 import { ArrowDown, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
+import { useReducedMotion as useEntranceReducedMotion } from '@/components/motion/useReducedMotion';
 import { MagneticButton } from '@/components/motion';
 import { EASE } from '@/components/motion/easing';
 import { profile } from '@/content/profile';
 
 const HeroScene = lazy(() => import('@/components/three/HeroScene'));
+
+/**
+ * Load the 3D background only on larger screens with motion allowed, and only once the
+ * browser is idle, so it never delays the text. Phones get the static grid.
+ */
+const useDeferredScene = (reduceMotion: boolean | null) => {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    if (reduceMotion || !window.matchMedia('(min-width: 768px) and (pointer: fine)').matches) return;
+    const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 1200));
+    const cancel = window.cancelIdleCallback ?? window.clearTimeout;
+    const id = idle(() => setShow(true));
+    return () => cancel(id);
+  }, [reduceMotion]);
+  return show;
+};
 
 // What I secure, typed after "Securing" in the hero
 const HERO_PHRASES = [
@@ -19,9 +36,11 @@ const HERO_PHRASES = [
 
 // Component for animated text with typing and cursor effect
 const AnimatedText = ({ phrases, className }: { phrases: string[], className?: string }) => {
-  const [displayText, setDisplayText] = useState('');
+  // Start with the first phrase fully shown (it's what the prerendered page shows), then cycle
+  const [displayText, setDisplayText] = useState(phrases[0] ?? '');
   const [showCursor, setShowCursor] = useState(true);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const hasCycled = useRef(false);
   const reduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -30,8 +49,14 @@ const AnimatedText = ({ phrases, className }: { phrases: string[], className?: s
       return;
     }
 
-    let currentIndex = 0;
     let timeout: ReturnType<typeof setTimeout>;
+    if (!hasCycled.current) {
+      hasCycled.current = true;
+      timeout = setTimeout(() => setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length), 2600);
+      return () => clearTimeout(timeout);
+    }
+
+    let currentIndex = 0;
     const currentPhrase = phrases[currentPhraseIndex] ?? '';
 
     const typePhrase = () => {
@@ -78,7 +103,8 @@ const AnimatedText = ({ phrases, className }: { phrases: string[], className?: s
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useEntranceReducedMotion();
+  const showScene = useDeferredScene(useReducedMotion());
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end start'],
@@ -104,9 +130,13 @@ const HeroSection = () => {
     >
       {/* 3D particle-network backdrop (lazy) with static fallback */}
       <motion.div className="absolute inset-0 z-0" style={reduceMotion ? undefined : { opacity: sceneOpacity }}>
-        <Suspense fallback={<div className="absolute inset-0 bg-grid opacity-60" />}>
-          <HeroScene />
-        </Suspense>
+        {showScene ? (
+          <Suspense fallback={<div className="absolute inset-0 bg-grid opacity-60" />}>
+            <HeroScene />
+          </Suspense>
+        ) : (
+          <div className="absolute inset-0 bg-grid opacity-60" aria-hidden="true" />
+        )}
       </motion.div>
 
       {/* Content with scroll parallax */}

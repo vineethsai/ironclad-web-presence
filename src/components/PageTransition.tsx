@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { useReducedMotion } from '@/components/motion/useReducedMotion';
 
 interface PageTransitionProps {
   children: React.ReactNode;

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Old links used hash URLs (vineethsai.com/#/publications); send them to the real page
+      if (location.hash.indexOf('#/') === 0) location.replace(location.hash.slice(1) || '/');
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJJ5BYLGDH"></script>
     <script>
@@ -12,8 +16,8 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vineeth Sai Narajala | AI Security Researcher</title>
-    <meta name="description" content="Vineeth Sai Narajala is an AI security researcher at Cisco working on securing AI agents: agent identity (Agent Name Service), MCP and tool security, and the OWASP AI Vulnerability Scoring System." />
+    <title data-default>Vineeth Sai Narajala | AI Security Researcher</title>
+    <meta data-default name="description" content="Vineeth Sai Narajala is an AI security researcher at Cisco working on securing AI agents: agent identity (Agent Name Service), MCP and tool security, and the OWASP AI Vulnerability Scoring System." />
     <meta name="author" content="Vineeth Sai Narajala" />
     <meta name="theme-color" content="#0a0d0b" />
 
@@ -22,24 +26,21 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="alternate" type="application/rss+xml" title="Vineeth Sai Narajala: Writing" href="/rss.xml">
     
     <!-- Link previews (LinkedIn, Slack, X, etc.) -->
     <meta property="og:site_name" content="Vineeth Sai Narajala" />
-    <meta property="og:title" content="Vineeth Sai Narajala | AI Security Researcher" />
-    <meta property="og:description" content="Vineeth Sai Narajala is an AI security researcher at Cisco working on securing AI agents: agent identity (Agent Name Service), MCP and tool security, and the OWASP AI Vulnerability Scoring System." />
+    <meta data-default property="og:title" content="Vineeth Sai Narajala | AI Security Researcher" />
+    <meta data-default property="og:description" content="Vineeth Sai Narajala is an AI security researcher at Cisco working on securing AI agents: agent identity (Agent Name Service), MCP and tool security, and the OWASP AI Vulnerability Scoring System." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://vineethsai.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Vineeth Sai Narajala, AI Security Researcher" />
-    <meta property="og:url" content="https://vineethsai.com/" />
+    <meta data-default property="og:url" content="https://vineethsai.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://vineethsai.com/og-image.png" />
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Structured Data -->
     <script type="application/ld+json">

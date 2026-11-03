@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useSpring, useReducedMotion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { useReducedMotion } from './useReducedMotion';
 import { EASE } from './easing';
 
 interface ScrollTimelineProps {

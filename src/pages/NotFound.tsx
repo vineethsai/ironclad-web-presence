@@ -13,12 +13,12 @@ const NotFound = () => {
       <div className="min-h-screen bg-cyber-dark text-white flex flex-col">
         <Helmet>
           <title>Page Not Found | Vineeth Sai Narajala</title>
-          <meta name="description" content="The page you're looking for cannot be found. Return to Vineeth Sai Narajala's cybersecurity portfolio." />
+          <meta name="description" content="This page doesn't exist. Head back to Vineeth Sai Narajala's site." />
           <meta name="robots" content="noindex, follow" />
         </Helmet>
 
         <Navbar />
-        <main className="grow flex items-center justify-center relative overflow-hidden">
+        <main id="main-content" tabIndex={-1} className="grow flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-grid" />
           <div className="glow-blob w-120 h-120 top-1/3 left-1/2 -translate-x-1/2" />
           <div className="container mx-auto px-4 text-center relative z-10">

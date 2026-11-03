@@ -12,7 +12,7 @@ const Marquee: React.FC<MarqueeProps> = ({ items, className = '' }) => {
     <div className="flex shrink-0 items-center" aria-hidden={ariaHidden}>
       {items.map((item, i) => (
         <span key={`${item}-${i}`} className="flex items-center">
-          <span className="font-mono text-sm tracking-[0.2em] uppercase text-gray-500 px-6 whitespace-nowrap">
+          <span className="font-mono text-sm tracking-[0.2em] uppercase text-gray-400 px-6 whitespace-nowrap">
             {item}
           </span>
           <Shield className="h-3.5 w-3.5 text-cyber-green/40 shrink-0" />

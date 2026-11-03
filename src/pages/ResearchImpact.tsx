@@ -127,10 +127,11 @@ const ResearchImpact = () => {
           <meta property="og:title" content="Research Impact | Vineeth Sai Narajala" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://vineethsai.com/research-impact" />
+          <meta property="og:url" content="https://vineethsai.com/research-impact" />
         </Helmet>
 
         <Navbar />
-        <main className="pb-20">
+        <main id="main-content" tabIndex={-1} className="pb-20">
           <PageHeader
             kicker="Analytics"
             title="Research Impact"

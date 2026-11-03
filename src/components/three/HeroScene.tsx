@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useEffect, Component, ReactNode } from 'react';
+import React, { useMemo, useRef, useEffect, useState, Component, type ReactNode } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useReducedMotion } from 'framer-motion';
@@ -233,13 +233,27 @@ const HeroScene: React.FC = () => {
     return () => window.removeEventListener('mousemove', handleMove);
   }, []);
 
+  // Only render frames while the hero is on screen
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting));
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  if (reduceMotion) return <StaticFallback />;
+
   return (
     <SceneBoundary fallback={<StaticFallback />}>
-      <div className="absolute inset-0 z-0" aria-hidden>
+      <div ref={containerRef} className="absolute inset-0 z-0" aria-hidden>
         <Canvas
           dpr={[1, 1.75]}
+          frameloop={visible ? 'always' : 'never'}
           camera={{ position: [0, 0, 5.4], fov: 48 }}
-          gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
+          gl={{ antialias: true, alpha: true, powerPreference: 'default' }}
         >
           <NetworkMesh reduceMotion={!!reduceMotion} mouse={mouse} />
           <DustField />

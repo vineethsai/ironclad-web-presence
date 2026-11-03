@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           <div className="border-t border-cyber-green/10 pt-8 w-full">
-            <p className="text-gray-500 text-center text-sm">
+            <p className="text-gray-400 text-center text-sm">
               © {currentYear} {profile.name}
             </p>
           </div>

@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { animate, useInView, useReducedMotion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { animate, useInView } from 'framer-motion';
+import { useReducedMotion } from './useReducedMotion';
 
 interface CountUpProps {
   to: number;
@@ -20,7 +21,8 @@ const CountUp: React.FC<CountUpProps> = ({
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: '-40px' });
   const reduceMotion = useReducedMotion();
-  const [value, setValue] = useState(0);
+  // With reduced motion (and when pages are prerendered) show the final number right away
+  const [value, setValue] = useState(reduceMotion ? to : 0);
 
   useEffect(() => {
     if (!inView) return;

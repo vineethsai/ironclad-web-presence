@@ -50,12 +50,12 @@ const Index = () => {
           <meta property="og:title" content="Vineeth Sai Narajala | AI Security Researcher" />
           <meta property="og:description" content="Vineeth Sai Narajala is an AI security researcher at Cisco working on securing AI agents: agent identity (Agent Name Service), MCP and tool security, and the OWASP AI Vulnerability Scoring System." />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://vineethsai.com" />
-          <link rel="canonical" href="https://vineethsai.com" />
+          <meta property="og:url" content="https://vineethsai.com/" />
+          <link rel="canonical" href="https://vineethsai.com/" />
         </Helmet>
 
         <Navbar />
-        <main>
+        <main id="main-content" tabIndex={-1}>
           <HeroSection />
           <ImpactStrip />
           <Marquee

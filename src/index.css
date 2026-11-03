@@ -15,7 +15,7 @@
 }
 
 @theme {
-  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter Variable', Inter, system-ui, -apple-system, sans-serif;
   --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, monospace;
 
   --color-border: hsl(var(--border));
@@ -261,6 +261,15 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  /* Visible keyboard focus everywhere */
+  :focus-visible {
+    outline: 2px solid var(--color-cyber-green);
+    outline-offset: 2px;
+  }
+  main:focus {
+    outline: none;
   }
 
   /* Tailwind v4 gives buttons the default cursor; keep v3's pointer cursor */

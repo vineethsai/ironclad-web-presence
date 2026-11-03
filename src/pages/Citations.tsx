@@ -127,10 +127,11 @@ const Citations = () => {
           <meta property="og:description" content={`${scholar.totalCitations} Google Scholar citations and ${filteredStats.totalCitations} mapped external citing papers`} />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://vineethsai.com/citations" />
+          <meta property="og:url" content="https://vineethsai.com/citations" />
         </Helmet>
         
         <Navbar />
-        <main className="pb-20">
+        <main id="main-content" tabIndex={-1} className="pb-20">
           <PageHeader
             kicker="Research Impact"
             title="Research Citations"

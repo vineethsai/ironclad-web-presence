@@ -1,24 +1,16 @@
-import { HashRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { Suspense, lazy, useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import Index from "./pages/Index";
 import SectionRoute from "./components/SectionRoute";
-import Preloader from "@/components/motion/Preloader";
 import CustomCursor from "@/components/motion/CustomCursor";
 import ScanlineTransition from "@/components/motion/ScanlineTransition";
 import CommandPalette from "@/components/CommandPalette";
 
+import { pages } from "./routes";
+
 // Route-level code splitting: heavy pages (recharts, leaflet, markdown) load on demand
-const BlogPost = lazy(() => import("./pages/BlogPost"));
-const Citations = lazy(() => import("./pages/Citations"));
-const NotFound = lazy(() => import("./pages/NotFound"));
-const Publications = lazy(() => import("./pages/Publications"));
-const Speaking = lazy(() => import("./pages/Speaking"));
-const Media = lazy(() => import("./pages/Media"));
-const ExperienceFull = lazy(() => import("./pages/ExperienceFull"));
-const ResearchImpact = lazy(() => import("./pages/ResearchImpact"));
-const OpenSource = lazy(() => import("./pages/OpenSource"));
-const Writing = lazy(() => import("./pages/Writing"));
+const { BlogPost, Citations, NotFound, Publications, Speaking, Media, ExperienceFull, ResearchImpact, OpenSource, Writing } = pages;
 
 const PageLoader = () => (
   <div className="min-h-screen bg-cyber-dark flex items-center justify-center">
@@ -33,13 +25,15 @@ const PageLoader = () => (
 const AnimatedRoutes = () => {
   const location = useLocation();
 
-  // Google Analytics only records the first page load on its own, so report in-app navigation too
+  // On each new page: start at the top, and report the page view to Google Analytics
+  // (gtag only records the first page load on its own)
   const isFirstLoad = useRef(true);
   useEffect(() => {
     if (isFirstLoad.current) {
       isFirstLoad.current = false;
       return;
     }
+    if (!window.location.hash) window.scrollTo(0, 0);
     const gtag = (window as { gtag?: (...args: unknown[]) => void }).gtag;
     gtag?.("event", "page_view", {
       page_path: location.pathname,
@@ -86,12 +80,17 @@ const AnimatedRoutes = () => {
 
 const App = () => (
   <>
-    <Preloader />
+    <a
+      href="#main-content"
+      className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-md focus:bg-cyber-green focus:text-cyber-dark focus:font-medium"
+    >
+      Skip to content
+    </a>
     <CustomCursor />
-    <HashRouter>
+    <BrowserRouter>
       <CommandPalette />
       <AnimatedRoutes />
-    </HashRouter>
+    </BrowserRouter>
   </>
 );
 

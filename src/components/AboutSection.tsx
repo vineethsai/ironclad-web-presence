@@ -25,11 +25,14 @@ const AboutSection = () => {
               <div className="glass-card p-3 shadow-glow-sm">
                 <div className="relative overflow-hidden rounded-lg">
                   <img
-                    src="/conference.jpg"
+                    src="/conference-1600.webp"
+                    srcSet="/conference-800.webp 800w, /conference-1600.webp 1600w"
+                    sizes="(min-width: 1024px) 40vw, 100vw"
                     alt="Vineeth Sai Narajala speaking at a conference"
                     width={1600}
                     height={1067}
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-auto rounded-lg transition-transform duration-700 hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-cyber-darker/60 via-transparent to-transparent pointer-events-none" />

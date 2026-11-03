@@ -36,11 +36,14 @@ const ExperienceFull = () => {
       <div className="min-h-screen bg-cyber-dark text-white">
         <Helmet>
           <title>Experience & Career | Vineeth Sai Narajala</title>
-          <meta name="description" content="Work experience, projects, and education of Vineeth Sai Narajala." />
+          <meta name="description" content="Work experience, leadership, projects, and education of Vineeth Sai Narajala: AI security research at Cisco, and security at Meta, AWS, and Nordstrom." />
+          <meta property="og:title" content="Experience & Career | Vineeth Sai Narajala" />
+          <meta property="og:url" content="https://vineethsai.com/experience" />
+          <link rel="canonical" href="https://vineethsai.com/experience" />
         </Helmet>
         
         <Navbar />
-        <main>
+        <main id="main-content" tabIndex={-1}>
           <PageHeader
             kicker="Career"
             title="Experience & Career"
